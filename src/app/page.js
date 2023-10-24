@@ -8,3 +8,9 @@ export default function Home() {
     </main>
   )
 }
+
+export async function getData() {
+  return Client.fetch(`{
+    "heroSub": *[_type == "heroSub"]{title, "image":image.asset->url, content},
+  }`)
+}
