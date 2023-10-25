@@ -1,4 +1,5 @@
-import Image from 'next/image'
+import { Client } from '../../lib/sanity';
+import Image from 'next/image';
 
 export default function Home() {
   return (
@@ -7,4 +8,10 @@ export default function Home() {
       <p>Dette blir Kodehodes nye nettside på kodehode.no</p>
     </main>
   )
+}
+
+export async function getData() {
+  return Client.fetch(`{
+    "heroSub": *[_type == "heroSub"]{title, "image":image.asset->url, content},
+  }`)
 }
