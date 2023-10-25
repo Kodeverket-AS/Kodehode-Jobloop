@@ -12,6 +12,6 @@ export default function Home() {
 
 export async function getData() {
   return Client.fetch(`{
-    "heroSub": *[_type == "heroSub"]{title, "image":image.asset->url, content},
+    "heroSub": *[_type == "heroSub"]{title, "image":image.asset->url, content, _id},
   }`)
 }

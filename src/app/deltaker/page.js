@@ -6,7 +6,7 @@ export default async function Deltaker() {
   const data = await getData();
   return (
     <main className="flex flex-col items-center min-h-screen p-24">
-      <HeroSub content={data.herosub[0]} />
+      <HeroSub content={data.herosub[0]} key={data.herosub[0]._id} />
       <p>Denne siden er under oppbygging!</p>
       <p>Dette blir Deltakersiden til Kodehode</p>
     </main>
