@@ -4,6 +4,7 @@ import { getData } from "../page";
 
 export default async function Deltaker() {
   const data = await getData();
+  console.log(data.heroSub);
   return (
     <main className="flex flex-col items-center min-h-screen p-24">
       <HeroSub content={data.heroSub[0]} key={data.heroSub[0]._id} />
