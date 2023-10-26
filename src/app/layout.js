@@ -1,5 +1,8 @@
 import './globals.css'
 import { Inter } from 'next/font/google'
+import Navbar from '../../components/navigation/Navbar'
+import Footer from '../../components/Footer'
+import { ScrollToTopButton } from '../../components/Buttons'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -10,8 +13,11 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
-    </html>
-  )
+    <div className="flex flex-col min-h-screen">
+      <Navbar />
+      <div className="flex-1">{children}</div>
+      <ScrollToTopButton />
+      <Footer />
+    </div>
+  );
 }
