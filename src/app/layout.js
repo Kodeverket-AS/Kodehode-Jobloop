@@ -13,11 +13,13 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <div className="flex flex-col min-h-screen">
-      <Navbar />
-      <div className="flex-1">{children}</div>
-      <ScrollToTopButton />
-      <Footer />
-    </div>
+    <html lang="en">
+      <body className={inter.className}>
+        <Navbar />
+        <div className="flex-1">{children}</div>
+        <ScrollToTopButton />
+        <Footer />
+      </body>
+    </html>
   );
 }
