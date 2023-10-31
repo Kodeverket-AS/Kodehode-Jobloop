@@ -18,10 +18,10 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        "alt-purple": "412F39",
+        "alt-purple": "#412F39",
         jobloop: {
-          green: "77C4B4",
-          orange: "F5B58A",
+          green: "#77C4B4",
+          orange: "#F5B58A",
         }
       }
     }
