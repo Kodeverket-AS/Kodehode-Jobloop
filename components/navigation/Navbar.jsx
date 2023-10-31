@@ -6,12 +6,12 @@ import logoHvit from "../../public/logoHvit.png";
 
 export default function Navbar() {
   return (
-    <nav className="flex w-full bg-jobloop-green">
-      <div className="flex justify-center bg-alt-purple">
+    <nav className="w-full">
+      <div className="flex items-center justify-between">
         <div className="p-4">
           <Link href="/" aria-label="Lenke til hovedside">
             <Image
-              className=""
+              className=" w-80"
               src={logoHvit}
               width={350}
               height={220}
@@ -26,28 +26,32 @@ export default function Navbar() {
               />*/}
           </Link>
         </div>
-        <div className="">
+        <div className="h-auto p-4">
           <Link
             href="/visjon"
             aria-label="gå til denne undersiden for å lese om vår visjon"
+            className="px-4"
           >
             Vår Visjon
           </Link>
           <Link
             href="/FAQ"
             aria-label="gå til denne undersiden for å få svar på ofte stilte spørsmål"
+            className="px-4"
           >
             FAQ
           </Link>
           <Link
             href="/about"
             aria-label="gå til denne undersiden for å lese mer om oss"
+            className="px-4"
           >
             Om Oss
           </Link>
           <Link
             href="/techstack"
             aria-label="gå til denne undersiden for å lese mer om kodespråkene våre"
+            className="px-4"
           >
             Kodespråk
           </Link>
