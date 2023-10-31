@@ -6,8 +6,8 @@ import logoHvit from "../../public/logoHvit.png";
 
 export default function Navbar() {
   return (
-    <nav className="flex w-full bg-blue-600">
-      <div className="flex justify-center bg-jobloop-orange">
+    <nav className="flex w-full bg-jobloop-green">
+      <div className="flex justify-center bg-alt-purple">
         <div className="p-4">
           <Link href="/" aria-label="Lenke til hovedside">
             <Image
