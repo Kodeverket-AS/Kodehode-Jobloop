@@ -23,6 +23,10 @@ module.exports = {
           green: "#77C4B4",
           orange: "#F5B58A",
         }
+      },
+      fontFamily: {
+        head: "Futura, ui-sans",
+        paragraph: "Roboto, ui-sans",
       }
     }
   }
