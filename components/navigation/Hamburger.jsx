@@ -29,7 +29,7 @@ const HamburgerMenu = () => {
   return (
     <div className="block md:hidden">
       <button
-        className="flex items-center justify-center w-10 h-10 transition duration-500 rounded-md top-4 right-4 hover:text-jobloop-orange"
+        className="flex items-center justify-center w-10 h-10 transition duration-500 rounded-md top-4 right-4"
         onClick={handleMenuToggle}
         aria-label="Åpne navigasjonsmeny"
       >
@@ -56,7 +56,7 @@ const HamburgerMenu = () => {
       </button>
 
       <div
-        className={`fixed top-0 z-40 right-0 w-64 bg-hawii-background h-screen transition-transform duration-300 transform ${
+        className={`fixed top-0 z-40 right-0 w-64 bg-white h-screen transition-transform duration-300 transform ${
           isOpen ? "translate-x-0" : "translate-x-full"
         }`}
         ref={menuRef}
@@ -71,7 +71,7 @@ const HamburgerMenu = () => {
             <IoCloseSharp
               className={` ${
                 isOpen ? "block" : "hidden"
-              } text-black rounded-full transition duration-500 hover:text-hawii-greyBlue  z-50 w-12 h-12`}
+              } text-black rounded-full transition duration-500 z-50 w-12 h-12`}
             />
           </button>
 
@@ -85,8 +85,9 @@ const HamburgerMenu = () => {
               }}
             >
               <div className="relative">
-                <li>Vår Visjon</li>
-                <div className="absolute w-full h-0 transition-all group-hover:h-2" />
+                <li>
+                  <b className="text-jobloop-orange">Vår Visjon</b>
+                </li>
               </div>
             </Link>
             <Link
@@ -98,8 +99,9 @@ const HamburgerMenu = () => {
               }}
             >
               <div className="relative">
-                <li>FAQ</li>
-                <div className="absolute w-full h-0 transition-all group-hover:h-2" />
+                <li>
+                  <b className="text-jobloop-orange">FAQ</b>
+                </li>
               </div>
             </Link>
             <Link
@@ -111,8 +113,9 @@ const HamburgerMenu = () => {
               }}
             >
               <div className="relative">
-                <li>Om Oss</li>
-                <div className="absolute w-full h-0 transition-all group-hover:h-2" />
+                <li>
+                  <b className="text-jobloop-orange">Om Oss</b>
+                </li>
               </div>
             </Link>
             <Link
@@ -124,8 +127,9 @@ const HamburgerMenu = () => {
               }}
             >
               <div className="relative">
-                <li>Kodespråk</li>
-                <div className="absolute w-full h-0 transition-all group-hover:h-2" />
+                <li>
+                  <b className="text-jobloop-orange">Kodespråk</b>
+                </li>
               </div>
             </Link>
           </ul>
