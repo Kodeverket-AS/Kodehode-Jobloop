@@ -6,6 +6,9 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  --jobloop-green: #77C4B4;
+  --jobloop-orange: #F5B58A;
+  --alt-purple: #412F39;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -24,4 +27,45 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+}
+
+html {
+  font-family: var(--font-roboto);
+}
+
+h1, h2, h3, h4, h5, h6, b {
+  font-family: var(--font-nunito-sans);
+}
+
+@media (width <= 375px) {
+	h1 {
+		font-size: 28px;
+	}
+
+	h2 {
+		font-size: 24px;
+	}
+}
+
+@media (max-width: 1024px) and (min-width: 376px) {
+	h1 {
+		font-size: 36px;
+	}
+
+	h2 {
+		font-size: 32px;
+	}
+}
+
+@media (width >= 1024px) {
+	h1 {
+		font-size: 48px;
+	}
+	h2 {
+		font-size: 40px;
+	}
+	p,
+	li {
+		font-size: 18px;
+	}
 }

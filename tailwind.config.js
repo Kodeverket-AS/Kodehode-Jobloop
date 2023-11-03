@@ -2,7 +2,7 @@
 module.exports = {
   content: [
     './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/components/**/*.{js,ts,jsx,tsx,mdx}',
+    './components/**/*.{js,ts,jsx,tsx,mdx}',
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
@@ -18,11 +18,15 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        "alt-purple": "412F39",
+        "alt-purple": "#412F39",
         jobloop: {
-          green: "77C4B4",
-          orange: "F5B58A",
+          green: "#77C4B4",
+          orange: "#F5B58A",
         }
+      },
+      fontFamily: {
+        head: "Futura, ui-sans",
+        paragraph: "Roboto, ui-sans",
       }
     }
   }
