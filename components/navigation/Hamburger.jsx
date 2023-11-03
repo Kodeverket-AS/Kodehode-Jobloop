@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState, useRef } from "react";
 import { IoCloseSharp } from "react-icons/io5";
+import { GiHamburgerMenu } from "react-icons/gi";
 import Link from "next/link";
 
 const HamburgerMenu = () => {
@@ -33,26 +34,7 @@ const HamburgerMenu = () => {
         onClick={handleMenuToggle}
         aria-label="Åpne navigasjonsmeny"
       >
-        <svg
-          className={` ${isOpen ? "hidden" : "block"}`}
-          width="35"
-          height="20"
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 25 13"
-          fill="none"
-          stroke="currentColor"
-          //  strokeWidth="1"
-          // strokeLinecap="round"
-          // strokeLinejoin="round"
-        >
-          {/* <line x1="5" y1="12" x2="28" y2="12" />
-          <line x1="0" y1="6" x2="28" y2="6" />
-          <line x1="0" y1="18" x2="28" y2="18" /> */}
-          <path
-            d="M0 13H25V11.8333H0V13ZM5 7.58333H25V6.41667H5V7.58333ZM0 0V2.16667H25V1H0Z"
-            fill="#1D3458"
-          />
-        </svg>
+        <GiHamburgerMenu className="w-20 h-20 fill-white" />
       </button>
 
       <div
