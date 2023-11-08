@@ -6,9 +6,14 @@ import { PortableText } from "@portabletext/react";
 
 export default function HeroSub({content}) {
   return (
-    <div>
-      <h1>{content.title}</h1>
-      <PortableText value={content.content} />
+    <div className="flex flex-row">
+      <div>
+        <h1 className="text-jobloop-green">{content.title}</h1>
+        <PortableText value={content.content} />
+      </div>
+      {/*<div>
+        <Image src={content.image} width={500} height={500} />
+  </div>*/}
     </div>
   );
 }
