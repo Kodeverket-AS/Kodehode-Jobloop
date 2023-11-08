@@ -5,6 +5,7 @@ import { NavbarAlt } from "../../../components/navigation/Navbar";
 
 export default async function Bedrift() {
   const data = await getData();
+  console.log(data.heroSub[2])
   return (
     <>
       <NavbarAlt />

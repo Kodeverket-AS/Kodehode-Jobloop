@@ -5,7 +5,7 @@ import { NavbarAlt } from "../../../components/navigation/Navbar";
 
 export default async function Deltaker() {
   const data = await getData();
-  console.log(data.heroSub);
+  console.log(data.heroSub[0]);
   return (
     <>
       <NavbarAlt />
