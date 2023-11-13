@@ -76,7 +76,7 @@ export function NavbarAlt( {subpage} ) {
             />
           </Link>
           <b className="text-jobloop-orange text-2xl">
-            <em>{subpage}</em>
+            <em>{subpage ? subpage : ""}</em>
           </b>
         </div>
         <div>
