@@ -16,7 +16,7 @@ export default async function Virksomhet() {
         <NavbarAlt subpage="Virksomhet" />
       </div>
       <main className="flex flex-col items-center min-h-screen p-24">
-        <HeroSub content={data.heroSub[1]} key={data.heroSub[1]._id} />
+        <HeroSub content={data.heroSub[2]} key={data.heroSub[2]._id} />
         <EgenskapCoop content={data.egsCoop}/>
         <p>Denne siden er under oppbygging!</p>
         <p>Dette blir Viksomhetssiden til Kodehode</p>
