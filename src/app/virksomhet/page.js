@@ -13,7 +13,7 @@ export default async function Virksomhet() {
         <Navbar />
       </div>
       <div className="hidden md:block">
-        <NavbarAlt subpage={"Virksomhet"} />
+        <NavbarAlt subpage="Virksomhet" />
       </div>
       <main className="flex flex-col items-center min-h-screen p-24">
         <HeroSub content={data.heroSub[1]} key={data.heroSub[1]._id} />
