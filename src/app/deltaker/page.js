@@ -8,7 +8,7 @@ export default async function Deltaker() {
   console.log(data.heroSub[0]);
   return (
     <>
-      <NavbarAlt />
+      <NavbarAlt subpage="Deltaker" />
       <main className="flex flex-col items-center min-h-screen p-24">
         <HeroSub content={data.heroSub[0]} key={data.heroSub[0]._id} />
         <p>Denne siden er under oppbygging!</p>

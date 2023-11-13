@@ -8,7 +8,7 @@ export default async function Bedrift() {
   console.log(data.heroSub[2])
   return (
     <>
-      <NavbarAlt />
+      <NavbarAlt subpage="Bedrift" />
       <main className="flex flex-col items-center min-h-screen p-24">
         <HeroSub content={data.heroSub[2]} key={data.heroSub[2]._id} />
         <p>Denne siden er under oppbygging!</p>
