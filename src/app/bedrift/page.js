@@ -1,7 +1,8 @@
 import Image from "next/image";
 import HeroSub from "../../../components/HeroSub";
 import { getData } from "../page";
-import { NavbarAlt } from "../../../components/navigation/Navbar";
+import Navbar, { NavbarAlt } from "../../../components/navigation/Navbar";
+import EgenskapCoop from "../../../components/EgenskapCoop";
 
 export default async function Bedrift() {
   const data = await getData();
