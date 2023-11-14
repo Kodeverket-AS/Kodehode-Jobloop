@@ -18,7 +18,6 @@ export default async function Virksomhet() {
       <main className="flex flex-col items-center min-h-screen p-24">
         <HeroSub content={data.heroSub[2]} key={data.heroSub[2]._id} />
         <div className="flex flex-col items-center mt-80 md:mt-0">
-          <EgenskapCoop content={data.egsCoop} />
           <p>Denne siden er under oppbygging!</p>
           <p>Dette blir Viksomhetssiden til Kodehode</p>
         </div>
