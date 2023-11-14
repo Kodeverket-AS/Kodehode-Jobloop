@@ -1,7 +1,7 @@
 import Image from "next/image";
 import HeroSub from "../../../components/HeroSub";
 import { getData } from "../page";
-import { NavbarAlt } from "../../../components/navigation/Navbar";
+import Navbar, { NavbarAlt } from "../../../components/navigation/Navbar";
 
 export default async function Deltaker() {
   const data = await getData();
