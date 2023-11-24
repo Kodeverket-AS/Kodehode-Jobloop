@@ -7,8 +7,8 @@ import { useState } from "react";
 import CourseCard from "./CourseCard";
 
 export default function KodehodeSummary({ content1 }, { content2 }) {
-  //const [course1, setCourse1] = useState(true);
-  //const [course2, setCourse2] = useState(false);
+  const [course1, setCourse1] = useState(true);
+  const [course2, setCourse2] = useState(false);
   
   /*const card = ({course}) => {
     return <CourseCard content={course} />
@@ -22,7 +22,7 @@ export default function KodehodeSummary({ content1 }, { content2 }) {
       </div>
       <div>
         <div>
-          {/*<button
+          <button
             type="radio"
             name="courseOne"
             onClick={() => {
@@ -37,16 +37,16 @@ export default function KodehodeSummary({ content1 }, { content2 }) {
               setCourse2(true);
               setCourse1(false);
             }}
-          />*/}
+          />
         </div>
         <div>
-          {/*course1 ? (
+          {course1 ? (
             <CourseCard content={content2[0]} />
           ) : course2 ? (
             <CourseCard content={content2[1]} />
           ) : (
             <CourseCard content={content2[0]} />
-          )*/}
+          )}
         </div>
       </div>
     </div>
