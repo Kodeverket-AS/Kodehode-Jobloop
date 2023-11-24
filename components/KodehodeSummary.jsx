@@ -4,7 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { PortableText } from "@portabletext/react";
 import { useState } from "react";
-import CourseCard from "./courseCard";
+import CourseCard from "./CourseCard";
 
 export default function KodehodeSummary({ content1 }, { content2 }) {
   //const [course1, setCourse1] = useState(true);
