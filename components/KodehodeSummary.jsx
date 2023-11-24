@@ -7,12 +7,12 @@ import { useState } from "react";
 import CourseCard from "./courseCard";
 
 export default function KodehodeSummary({ content1 }, { content2 }) {
-  const [course1, setCourse1] = useState(true);
-  const [course2, setCourse2] = useState(false);
+  //const [course1, setCourse1] = useState(true);
+  //const [course2, setCourse2] = useState(false);
   
-  const card = ({course}) => {
+  /*const card = ({course}) => {
     return <CourseCard content={course} />
-  }
+  }*/
   
   return (
     <div className="flex flex-row">
@@ -22,17 +22,31 @@ export default function KodehodeSummary({ content1 }, { content2 }) {
       </div>
       <div>
         <div>
-            <button type="radio" name="courseOne" onClick={() => {
-                setCourse1(true);
-                setCourse2(false);
-            }} />
-            <button type="radio" name="courseTwo" onClick={() => {
-                setCourse2(true);
-                setCourse1(false);
-            }} />
+          {/*<button
+            type="radio"
+            name="courseOne"
+            onClick={() => {
+              setCourse1(true);
+              setCourse2(false);
+            }}
+          />
+          <button
+            type="radio"
+            name="courseTwo"
+            onClick={() => {
+              setCourse2(true);
+              setCourse1(false);
+            }}
+          />*/}
         </div>
         <div>
-            {course1 ? card(content2[0]) : course2 ? card(content2[1]) : card(content2[0])}
+          {/*course1 ? (
+            <CourseCard content={content2[0]} />
+          ) : course2 ? (
+            <CourseCard content={content2[1]} />
+          ) : (
+            <CourseCard content={content2[0]} />
+          )*/}
         </div>
       </div>
     </div>
