@@ -6,17 +6,17 @@ import Image from "next/image";
 export default function CourseCard({content}) {
   return (
     <div className="flex flex-col">
-      <h1>{content.title}</h1>
+      <h2>{content.title}</h2>
       <p>{content.subheader}</p>
-      <h1>Forutsetninger</h1>
+      <h2>Forutsetninger</h2>
       <p>{content.expectations}</p>
-      <h1>Tidsplan</h1>
+      <h2>Tidsplan</h2>
       <p>{content.schedule}</p>
-      <h1>Undervisningsform</h1>
+      <h2>Undervisningsform</h2>
       <p>{content.educationStyle}</p>
-      <h1>Jobbmarked</h1>
+      <h2>Jobbmarked</h2>
       <p>{content.jobMarket}</p>
-      <h1>Sted</h1>
+      <h2>Sted</h2>
       <p>{content.place}</p>
     </div>
   );
