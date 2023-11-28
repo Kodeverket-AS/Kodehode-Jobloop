@@ -7,7 +7,7 @@ import KodehodeSummary from "../../../components/KodehodeSummary";
 
 export default async function Virksomhet() {
   const data = await getData();
-  //console.log(data.egsCoop);
+  //console.log(data.courseTypes);
   return (
     <>
       <div className="block md:hidden">

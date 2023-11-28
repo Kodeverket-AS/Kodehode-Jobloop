@@ -6,10 +6,10 @@ import { PortableText } from "@portabletext/react";
 import { useState } from "react";
 import CourseCard from "./CourseCard";
 
-export default function KodehodeSummary({ content1 }, { content2 }) {
+export default function KodehodeSummary({ content1, content2 }) {
   const [course1, setCourse1] = useState(true);
   const [course2, setCourse2] = useState(false);
-  
+  console.log(content2);  
   /*const card = ({course}) => {
     return <CourseCard content={course} />
   }*/
@@ -18,7 +18,7 @@ export default function KodehodeSummary({ content1 }, { content2 }) {
     <div className="flex flex-row">
       <div className="flex flex-col">
         <h1>{content1.title}</h1>
-        <PortableText value={content1.content} />
+        <PortableText value={content1[0].content} />
       </div>
       <div>
         <div>
