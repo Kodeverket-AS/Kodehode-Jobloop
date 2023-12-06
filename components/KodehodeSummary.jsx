@@ -9,6 +9,7 @@ import CourseCard from "./CourseCard";
 export default function KodehodeSummary({ content1, content2 }) {
   const [course1, setCourse1] = useState(true);
   const [course2, setCourse2] = useState(false);
+  const [active, setActive] = useState(content2[0]);
   console.log(content2);  
   /*const card = ({course}) => {
     return <CourseCard content={course} />
@@ -21,9 +22,18 @@ export default function KodehodeSummary({ content1, content2 }) {
         <PortableText value={content1[0].content} />
       </div>
       <div>
-        <div>
-          <button
-            type="radio"
+        <div className="flex flex-row">
+          {content2.map((item) => (
+              <button
+                key={item.id}
+                active={active === item}
+                onClick={() => setActive(item)}
+                className="border-2 border-black active:bg-jobloop-orange"
+              >
+                {item.title}</button>
+          ))}
+          {/*<button
+            type="button"
             name="courseOne"
             onClick={() => {
               setCourse1(true);
@@ -31,22 +41,16 @@ export default function KodehodeSummary({ content1, content2 }) {
             }}
           />
           <button
-            type="radio"
+            type="button"
             name="courseTwo"
             onClick={() => {
               setCourse2(true);
               setCourse1(false);
             }}
-          />
+          />*/}
         </div>
         <div>
-          {course1 ? (
-            <CourseCard content={content2[0]} />
-          ) : course2 ? (
-            <CourseCard content={content2[1]} />
-          ) : (
-            <CourseCard content={content2[0]} />
-          )}
+          <CourseCard key={content2[0]._id} content={active} />
         </div>
       </div>
     </div>
