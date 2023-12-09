@@ -30,9 +30,8 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={roboto.className}>
-       
-          <div className="flex-1">{children}</div>
+      <body className={roboto.className} >
+            <div className="flex-1">{children}</div>
          <ScrollToTopButton />
         <Footer />
       </body>

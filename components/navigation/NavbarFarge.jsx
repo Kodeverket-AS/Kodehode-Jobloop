@@ -34,28 +34,28 @@ export default function NavbarFarge() {
               aria-label="gå til denne undersiden for å lese om vår visjon"
               className="px-4"
             >
-              <b className="text-white">Vår Visjon</b>
+              <b className="text-jobloop-green">Vår Visjon</b>
             </Link>
             <Link
               href="/FAQ"
               aria-label="gå til denne undersiden for å få svar på ofte stilte spørsmål"
               className="px-4"
             >
-              <b className="text-['jobloop-green']">FAQ</b>
+              <b className="text-jobloop-green">FAQ</b>
             </Link>
             <Link
               href="/about"
               aria-label="gå til denne undersiden for å lese mer om oss"
               className="px-4"
             >
-              <b className="text-white">Om Oss</b>
+              <b className="text-jobloop-green">Om Oss</b>
             </Link>
             <Link
               href="/techstack"
               aria-label="gå til denne undersiden for å lese mer om kodespråkene våre"
               className="px-4"
             >
-              <b className="text-white">Kodespråk</b>
+              <b className="text-jobloop-green">Kodespråk</b>
             </Link>
           </div>
           <div className="px-4">
