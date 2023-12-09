@@ -83,9 +83,10 @@ export default function Home() {
                   <Image src={visjonlanding2}></Image>
                 </div>
 
-                <div>
+                <div className='flex flex-col gap-4'>
                   <h2> Vår visjon</h2>
                   <p> Her kommer noe tekst om visjon</p>
+                  <SeMerBtn></SeMerBtn>
                 </div>
 
               </div>
