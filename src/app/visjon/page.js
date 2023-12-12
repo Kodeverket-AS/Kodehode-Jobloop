@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { NavbarAlt } from "../../../components/navigation/Navbar";
 import surface from '../../../public/surface.jpg'
 import NavbarFarge from "../../../components/navigation/NavbarFarge";
 import lager from '../../../public/lager.jpg'
@@ -7,7 +8,7 @@ import { ColorSectionImgRight } from "../../../components/ColorSectionImgRight";
 
 export default function Vision() {
   return (
-    <div className="w-full flex flex-col " >
+    <div className="flex flex-col w-full " >
     <NavbarFarge></NavbarFarge>
       <div className="flex flex-col items-center gap-40"> 
         <div className="flex flex-col w-4/6 ">
@@ -23,7 +24,7 @@ export default function Vision() {
         
         <ColorSectionImgRight src={lager}></ColorSectionImgRight>
         
-        <div className="flex flex-col w-full items-center justify-center">
+        <div className="flex flex-col items-center justify-center w-full">
           <div className="flex flex-row gap-80">
              <div className="flex flex-col">
                 <h2>Fontenehuset</h2>

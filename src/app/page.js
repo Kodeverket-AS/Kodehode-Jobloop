@@ -20,9 +20,9 @@ export default function Home() {
       <LandingHero></LandingHero>
       </div>
       <div className='flex flex-col gap-32'>
-          <div className='w-screen flex justify-center '>
-            <div className='flex flex-row justify-center gap-x-10 w-5/6' >
-              <div className='w-3/6 flex flex-col gap-20'>
+          <div className='flex justify-center w-screen '>
+            <div className='flex flex-row justify-center w-5/6 gap-x-10' >
+              <div className='flex flex-col w-3/6 gap-20'>
                 <div>
                   <p>Vi rekrutterer kandidater som av ulike grunner har havnet utenfor arbeidslivet og lærer dem opp til å bli frontend utviklere. 
 
@@ -48,29 +48,29 @@ export default function Home() {
 
           <div className='flex flex-col gap-28' >
 
-              <div className='w-full flex justify-center'> 
-                <h1 className='font-extrabold text-5xl'>Hvordan kan vi hjelpe deg?</h1>
+              <div className='flex justify-center w-full'> 
+                <h1 className='text-5xl font-extrabold'>Hvordan kan vi hjelpe deg?</h1>
               </div>
 
               <div className='flex justify-center'>
                 <div className='flex flex-row gap-4'>
-                    <div className='flex flex-col gap-8 items-center'>
+                    <div className='flex flex-col items-center gap-8'>
                       <Image src={koffert2}></Image>
-                      <h5 className='text-center font-bold text-xl'>Bedrift</h5>
+                      <h5 className='text-xl font-bold text-center'>Bedrift</h5>
                       <p className='w-3/6 text-center'>For bedrifter som er interessert i samarbeide</p>
                       <SeMerBtn></SeMerBtn>
                     </div>
 
-                    <div className='flex flex-col gap-8 items-center'>
+                    <div className='flex flex-col items-center gap-8'>
                       <Image src={hatt}></Image>
-                      <h5 className='text-center font-bold text-xl '>Kursdeltager</h5>
+                      <h5 className='text-xl font-bold text-center '>Kursdeltager</h5>
                       <p className='w-3/6 text-center'>For deg som vil delta i Kodehode kurset</p>
                       <SeMerBtn></SeMerBtn>
                     </div>
 
-                    <div className='flex flex-col gap-8 mt-1  items-center'>
+                    <div className='flex flex-col items-center gap-8 mt-1'>
                       <Image src={mappe}></Image>
-                      <h5 className='text-center  font-bold text-xl'>Virksomhet</h5>
+                      <h5 className='text-xl font-bold text-center'>Virksomhet</h5>
                       <p className='w-3/6 text-center'> For offentlig etat, skole, eller fylkeskommune</p>
                       <SeMerBtn></SeMerBtn>
                     </div>
@@ -78,7 +78,7 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className='flex gap-10 w-5/6 justify-center mb-20'>
+              <div className='flex justify-center w-5/6 gap-10 mb-20'>
                 <div className='w-3/6'>
                   <Image src={visjonlanding2}></Image>
                 </div>
@@ -98,6 +98,9 @@ export default function Home() {
 
 export async function getData() {
   return Client.fetch(`{
-    "heroSub": *[_type == "heroSub"]{title, "image":image.asset->url, content, _id, title},
-  }`)
+    "heroSub": *[_type == "heroSub"]{title, "image":image.asset->url, content, _id},
+    "egsCoop": *[_type == "egsCoop"]{header, content, _id},
+    "origin": *[_type == "origin"]{title, content, _id},
+    "courseTypes": *[_type == "courseTypes"]{title, subheader, expectations, schedule, educationStyle, jobMarket, place, _id},
+  }`);
 }
