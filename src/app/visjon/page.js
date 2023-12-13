@@ -2,6 +2,7 @@ import Image from "next/image";
 import { NavbarAlt } from "../../../components/navigation/Navbar";
 import { getData } from "../page";
 import PortableText from "react-portable-text";
+import { SeMerBtn } from "../../../components/Buttons";
 
 export default async function Vision() {
   const data= await getData()
@@ -45,7 +46,8 @@ export default async function Vision() {
                                     className="w-2/6"  
                                     src={data.VisionSections[1].ImageOne}>
                                   </Image>
-                                      <PortableText content={data.VisionSections[1].content}></PortableText>
+                                    <PortableText content={data.VisionSections[1].content}></PortableText>
+                                    <SeMerBtn></SeMerBtn>
                                 </div>
                               </div>
                         
@@ -63,7 +65,7 @@ export default async function Vision() {
                                     src={data.VisionSections[0].ImageOne}>
                                 </Image>
                                 <PortableText content={data.VisionSections[0].content}></PortableText>
-                          
+                                <SeMerBtn></SeMerBtn>
                             </div>
                             <div className="w-full " key={data.VisionSections[0]._id}>
                               <Image 
