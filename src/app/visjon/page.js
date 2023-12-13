@@ -27,9 +27,9 @@ export default async function Vision() {
                           <p> Her kommer tekst om vår visjon</p>
                         </div>
 
-                        <div className="flex flex-col items-center justify-center   ">
-                    
-                              <div className="flex flex-row gap-40 p-24 w-full bg-jobloop-orange items-center ">
+                        <div className="flex flex-col items-center justify-center  ">
+                              <h1 className="p-20">Samarbeidsprosjekter</h1>
+                              <div className="flex flex-row gap-40 p-24 w-full  items-center bg-jobloop-orange  ">
                                 <div className="w-full" key={data.VisionSections[1]._id}>
                                     <Image 
                                       width={800}
