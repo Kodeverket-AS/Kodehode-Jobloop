@@ -35,3 +35,40 @@ export function ScrollToTopButton() {
     </button>
   );
 }
+
+export function ContactBtn(){
+
+
+
+  return(
+      <Link
+      href="/contact">
+          <button 
+          className="rounded-3xl w-52 h-12 border-solid border-black border-2 bg-white transition-all duration-600  hover:bg-jobloop-orange hover:border-none hover:text-white"
+      
+          >
+              Kontakt oss
+          </button>
+      </Link>
+  )
+
+
+} 
+
+export function SeMerBtn(){
+
+
+
+  return(
+      
+          <button 
+          className="rounded-3xl w-32 h-10 border-solid border-black border-2 bg-transparent transition-all duration-600  hover:bg-alt-purple hover:border-none hover:text-white"
+      
+          >
+              Se Mer
+          </button>
+     
+  )
+
+
+} 
