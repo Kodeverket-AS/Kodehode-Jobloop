@@ -2,7 +2,7 @@ import Image from "next/image"
 import PortableText from "react-portable-text"
 import { SeMerBtn } from "./Buttons"
 
-export default function({_id, title, content, image}){
+export default function Partners({_id, title, content, image}){
 
     return(
 

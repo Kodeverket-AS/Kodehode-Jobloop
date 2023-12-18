@@ -5,7 +5,7 @@ import PortableText from "react-portable-text";
 import { SeMerBtn } from "../../../components/Buttons";
 import EndorsementComp from "../../../components/EndorsementComp";
 import ContactComp from "../../../components/ContactComp";
-import PartnersComp from "../../../components/PartnersComp";
+import Partners from "../../../components/PartnersComp";
 
 
 export default async function Vision() {
@@ -102,29 +102,29 @@ export default async function Vision() {
                              </div>
 
                             <div className="flex flex-row w-4/6 gap-32 justify-center pl-20">
-                                  <PartnersComp
+                                  <Partners
                                   key={data.samarbeid[0]._id}
                                   title={data.samarbeid[0].title}
                                   image={data.samarbeid[0].image}
                                   content={data.samarbeid[0].content}
                                   >
-                                </PartnersComp>
+                                </Partners>
 
-                                <PartnersComp
+                                <Partners
                                   key={data.samarbeid[0]._id}
                                   title={data.samarbeid[0].title}
                                   image={data.samarbeid[0].image}
                                   content={data.samarbeid[0].content}
                                   >
-                                </PartnersComp>
+                                </Partners>
 
-                                <PartnersComp
+                                <Partners
                                   key={data.samarbeid[0]._id}
                                   title={data.samarbeid[0].title}
                                   image={data.samarbeid[0].image}
                                   content={data.samarbeid[0].content}
                                   >
-                                </PartnersComp>
+                                </Partners>
 
                           </div>
                        </div>
