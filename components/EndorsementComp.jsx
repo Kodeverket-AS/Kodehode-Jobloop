@@ -1,7 +1,7 @@
 import Image from "next/image"
 import PortableText from "react-portable-text"
 
-export default function EndorsementComp({image, _id, navn,firma, content}){
+export default function EndorsementComp({image, _id, navn, firma, content}){
     return(
         <>
         <div className="w-7/12 shadow-md flex justify-center bg-white p-20 items-center" key={_id}>
