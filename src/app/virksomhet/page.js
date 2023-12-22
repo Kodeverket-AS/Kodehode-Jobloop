@@ -16,7 +16,7 @@ export default async function Virksomhet() {
       <div className="hidden md:block">
         <NavbarAlt subpage="Virksomhet" />
       </div>
-      <main className="flex flex-col items-center min-h-screen p-24">
+      <main className="flex flex-col items-center min-h-screen p-8 md:p-24">
         <HeroSub content={data.heroSub[3]} key={data.heroSub[3]._id} />
         <div className="flex flex-col items-center mt-80 md:mt-0">
           <KodehodeSummary content1={data.origin} content2={data.courseTypes} />
