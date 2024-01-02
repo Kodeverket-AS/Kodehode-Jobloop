@@ -25,7 +25,7 @@ export default function HeroSub({content}) {
           <PortableText value={content.content} />
         </div>
       </div>
-      <div className="hidden md:flex-row md:flex">
+      <div className="hidden md:flex-row md:flex md:px-24 md:pt-24">
         <div className="w-1/2">
           <h1 className="text-jobloop-green">{content.title}</h1>
           <PortableText value={content.content} />
