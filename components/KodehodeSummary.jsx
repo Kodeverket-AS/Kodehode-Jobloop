@@ -11,7 +11,7 @@ export default function KodehodeSummary({ content1, content2 }) {
   //console.log(content1);
   
   return (
-    <div className="flex flex-col py-20 md:flex-row">
+    <div className="flex flex-col px-8 py-20 md:flex-row md:px-24">
       <div className="flex-col w-full md:w-1/2 md:flex">
         <h1 className="hidden md:block">{content1[0].title}</h1>
         <h1 className="block pb-5 md:hidden">
