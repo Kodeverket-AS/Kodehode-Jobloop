@@ -21,7 +21,7 @@ export default async function Virksomhet() {
         <HeroSub content={data.heroSub[3]} key={data.heroSub[3]._id} />
         <div className="flex flex-col items-center mt-80 md:mt-0">
           <KodehodeSummary content1={data.origin} content2={data.courseTypes} />
-          <StudyInParts content={data.courseParts} />
+          <StudyInParts content={data.CourseSections} />
           <p>Denne siden er under oppbygging!</p>
           <p>Dette blir Viksomhetssiden til Kodehode</p>
         </div>

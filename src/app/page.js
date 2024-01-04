@@ -17,6 +17,6 @@ export async function getData() {
     "egsCoop": *[_type == "egsCoop"]{header, content, _id},
     "origin": *[_type == "origin"]{title, mobileTitle, content1, content2, content3, _id},
     "courseTypes": *[_type == "courseTypes"]{title, subheader, duration, expectations, schedule, educationStyle, jobMarket, place, _id},
-    "courseParts": *[_type == "courseParts"]{title, "image":image.asset->url, content, _id},
+    "CourseSections": *[_type == "CourseSections"]{title, "image":image.asset->url, content, _id},
   }`);
 }
