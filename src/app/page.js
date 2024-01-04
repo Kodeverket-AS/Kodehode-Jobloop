@@ -15,8 +15,9 @@ export async function getData() {
   return Client.fetch(`{
     "heroSub": *[_type == "heroSub"]{title, "image":image.asset->url, content, _id},
     "egsCoop": *[_type == "egsCoop"]{header, content, _id},
-    "origin": *[_type == "origin"]{title, content, _id},
-    "courseTypes": *[_type == "courseTypes"]{title, subheader, expectations, schedule, educationStyle, jobMarket, place, _id},
-    "VisionSections": *[_type =="VisionSections"]{"ImageOne":ImageOne.asset->url, "ImageTwo":ImageTwo.asset->url, title, content,_id}
+    "origin": *[_type == "origin"]{title, mobileTitle, content1, content2, content3, _id},
+    "courseTypes": *[_type == "courseTypes"]{title, subheader, duration, expectations, schedule, educationStyle, jobMarket, place, _id},
+    "VisionSections": *[_type =="VisionSections"]{"ImageOne":ImageOne.asset->url, "ImageTwo":ImageTwo.asset->url, title, content,_id},
+    "CourseSections": *[_type == "CourseSections"]{title, "image":image.asset->url, content, _id},
   }`);
 }
