@@ -7,7 +7,7 @@ export default function Techstack() {
   return (
     <main className="bg-white flex flex-col items-center min-h-screen py-8 px-4 md:p-24">
       <section className="flex flex-col gap-32 pb-16">
-        <div className="max-w-xl flex flex-col gap-6 md:gap-8">
+        <div className="max-w-prose flex flex-col gap-6 md:gap-8 ">
           <h1
             className="font-head text-3xl font-bold md:text-5xl"
             /*
@@ -21,13 +21,14 @@ export default function Techstack() {
             style={{ color: "#F4A366" }}>
             Våre kodespråk
           </h1>
-          <p className="text-base text-gray-900 md:text-xl">
-            Våre studenter lærer de viktigste teknologiene og rammeverkene innen
-            frontend, og de har mulighet til å lære grunnleggende backend. Målet
-            er at de skal få en forståelse som gjør det enklere å lære seg nye
-            språk når det trengs, og før de begynner i praksis vil de få
-            mulighet til å få kjennskap til tech-stacken til deres bedrift slik
-            at de kan komme seg i gang så fort som mulig.
+          <p className="text-gray-900 md:text-xl">
+            Våre studenter lærer de <strong>viktigste</strong> teknologiene og
+            rammeverkene innen <strong>frontend</strong>, og de har mulighet til
+            å lære grunnleggende <strong>backend</strong>. Målet er at de skal
+            få en forståelse som gjør det enklere å lære seg nye språk når det
+            trengs, og før de begynner i <strong>praksis</strong> vil de få
+            mulighet til å få kjennskap til <strong>tech-stacken</strong> til
+            deres bedrift slik at de kan komme seg i gang så fort som mulig.
           </p>
         </div>
         <div className="max-w-5xl">

@@ -29,69 +29,73 @@ const contactInformation = [
 
 export default function Footer() {
   return (
-    <footer className=" flex flex-row justify-between items-start flex-wrap gap-8 pt-8 pb-24 px-12 text-white bg-alt-purple md:px-12">
-      <div className="flex flex-col gap-8">
-        <h2 className="font-head">Kontakt</h2>
-        {contactInformation.map((person) => (
-          <div
-            className="flex flex-col"
-            key={person.name}>
-            <b>{person.name}</b>
-            <a
-              href={`mailto:${person.email}`}
-              className="underline cursor-pointer"
-              target="_blank"
-              aria-label="Åpner email for å opprette epost til valgt person">
-              {person.email}
-            </a>
-            <a
-              href={`tel:${person.phoneLink}`}
-              className="md:hover:underline md:active:underline"
-              aria-label="Åpner telefon for å ringe valgt person">
-              {person.phoneDisplay}
-            </a>
+    <footer className="text-white bg-alt-purple pb-8">
+      <div className=" flex flex-row justify-between items-start flex-wrap gap-y-20 gap-x-8 pt-8 pb-24 px-12  md:px-12">
+        <div className="flex flex-col gap-8 ">
+          <h2 className="font-head">Kontakt</h2>
+          {contactInformation.map((person) => (
+            <div
+              className="flex flex-col "
+              key={person.name}>
+              <b>{person.name}</b>
+              <a
+                href={`mailto:${person.email}`}
+                className="underline cursor-pointer py-1"
+                target="_blank"
+                aria-label="Åpner email for å opprette epost til valgt person">
+                {person.email}
+              </a>
+              <a
+                href={`tel:${person.phoneLink}`}
+                className="md:hover:underline md:active:underline"
+                aria-label="Åpner telefon for å ringe valgt person">
+                {person.phoneDisplay}
+              </a>
+            </div>
+          ))}
+        </div>
+        <div className="flex flex-col items-center gap-8 ">
+          <h2 className="font-head text-center">Linker</h2>
+          <div className="w-32">
+            <Image
+              alt="Jobloop logo"
+              src={jobloopHvit}
+              width={350}
+              height={250}
+            />
           </div>
-        ))}
-      </div>
-      <div className="flex flex-col gap-4">
-        <h2 className="font-head mx-auto">Linker</h2>
-        <div className="mx-auto">
-          <Image
-            alt="Jobloop logo"
-            src={jobloopHvit}
-            width={350}
-            height={250}
-            className="w-[150px]"
-          />
+          <div className="w-32">
+            <Image
+              alt="Kodeverket logo"
+              src={kodeverketHvit}
+              width={350}
+              height={250}
+            />
+          </div>
         </div>
-        <div className="mx-auto">
-          <Image
-            alt="Kodeverket logo"
-            src={kodeverketHvit}
-            width={350}
-            height={250}
-            className="w-[150px]"
-          />
+        <div className="flex flex-col gap-8 ">
+          <h2 className="font-head">Sider</h2>
+          <Link
+            className="hover:underline"
+            href="/bedrift"
+            aria-label="Gå til underside for bedrift">
+            Bedrift
+          </Link>
+          <Link
+            className="hover:underline"
+            href="/deltaker"
+            aria-label="Gå til underside for deltaker">
+            Deltaker
+          </Link>
+          <Link
+            className="hover:underline"
+            href="/virksomhet"
+            aria-label="Gå til underside for virksomhet">
+            Virksomhet
+          </Link>
         </div>
       </div>
-      <div className="flex flex-col gap-4 ">
-        <h2 className="font-head">Sider</h2>
-        <Link
-          href="/bedrift"
-          aria-label="Gå til underside for bedrift">
-          Bedrift
-        </Link>
-        <Link
-          href="/deltaker"
-          aria-label="Gå til underside for deltaker">
-          Deltaker
-        </Link>
-        <Link
-          href="/virksomhet"
-          aria-label="Gå til underside for virksomhet">
-          Virksomhet
-        </Link>
-      </div>
+      <p className="text-center">&copy; {new Date().getFullYear()} Kodehode</p>
     </footer>
   );
 }
