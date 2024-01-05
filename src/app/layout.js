@@ -30,7 +30,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={roboto.className}>
-        <div className="flex-1">{children}</div>
+        <div className="flex-1 bg-[#fafafa]">{children}</div>
         <ScrollToTopButton />
         <Footer />
       </body>
