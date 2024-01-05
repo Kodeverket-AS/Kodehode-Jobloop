@@ -7,7 +7,7 @@ import { ScrollToTopButton } from "../../components/Buttons";
 
 //const inter = Inter({ subsets: ['latin'] })
 const roboto = Roboto({
-  weight: "400",
+  weight: ["400", "700"],
   subsets: ["latin"],
 });
 
