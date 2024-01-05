@@ -5,13 +5,13 @@ import Wordcloud from "../../../public/wordcloud.png";
 
 export default function Techstack() {
   return (
-    <main className="flex flex-col items-center min-h-screen p-24">
-      <section className="flex flex-col gap-12">
-        <div className="max-w-xl flex flex-col gap-8">
-          <h1 className="font-head text-5xl font-bold text-jobloop-orange">
+    <main className="flex flex-col items-center min-h-screen py-8 px-4 md:p-24">
+      <section className="flex flex-col gap-14">
+        <div className="max-w-xl flex flex-col gap-6 md:gap-8">
+          <h1 className="font-head text-2xl font-bold text-jobloop-orange md:text-5xl">
             Våre kodespråk
           </h1>
-          <p>
+          <p className="text-base md:text-xl">
             Våre studenter lærer de viktigste teknologiene og rammeverkene innen
             frontend, og de har mulighet til å lære grunnleggende backend. Målet
             er at de skal få en forståelse som gjør det enklere å lære seg nye

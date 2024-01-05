@@ -7,7 +7,7 @@ import logoHvit from "../../public/logoHvit.png";
 
 export default function Navbar() {
   return (
-    <nav className="w-screen">
+    <nav className="w-full">
       <div className="flex items-center justify-between">
         <div className="p-4">
           <Link
