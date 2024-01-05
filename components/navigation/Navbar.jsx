@@ -14,7 +14,7 @@ export default function Navbar() {
             href="/"
             aria-label="Gå til landingssiden">
             <Image
-              className=" w-80"
+              className="w-60 md:w-80"
               src={logoHvit}
               width={350}
               height={220}
