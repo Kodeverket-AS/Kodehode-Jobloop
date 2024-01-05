@@ -5,6 +5,7 @@ import Image from "next/image";
 import jobloopHvit from "../public/jobloopHvit.png";
 import kodeverketHvit from "../public/kodeverketHvit.png";
 
+// Contact information for the footer
 const contactInformation = [
   {
     name: "Stefan",
