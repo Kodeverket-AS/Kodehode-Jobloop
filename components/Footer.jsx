@@ -38,12 +38,18 @@ export default function Footer() {
             key={person.name}>
             <b>{person.name}</b>
             <a
+              href={`mailto:${person.email}`}
               className="underline cursor-pointer"
               target="_blank"
-              href={`mailto:${person.email}`}>
+              aria-label="Åpner email for å opprette epost til valgt person">
               {person.email}
             </a>
-            <a href={`tel:${person.phoneLink}`}>{person.phoneDisplay}</a>
+            <a
+              href={`tel:${person.phoneLink}`}
+              className="md:hover:underline md:active:underline"
+              aria-label="Åpner telefon for å ringe valgt person">
+              {person.phoneDisplay}
+            </a>
           </div>
         ))}
       </div>
