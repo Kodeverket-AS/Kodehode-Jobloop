@@ -7,9 +7,9 @@ import kodeverketHvit from "../public/kodeverketHvit.png";
 
 export default function Footer() {
   return (
-    <footer className=" flex flex-row justify-between p-10 text-white bg-alt-purple">
-      <div className="px-20">
-        <h2>Kontakt</h2>
+    <footer className=" flex flex-row justify-between items-start flex-wrap gap-8 py-8 px-12 text-white bg-alt-purple md:px-12">
+      <div className="">
+        <h2 className="font-head">Kontakt</h2>
         <div className="flex flex-col py-3">
           <b>stefan@jobloop.no</b>
           <b>+47 40 06 64 13</b>
@@ -23,10 +23,11 @@ export default function Footer() {
           <b>+47 95 90 40 52</b>
         </div>
       </div>
-      <div className="flex flex-col px-20">
-        <h2 className="mx-auto">Linker</h2>
-        <div className="py-3 mx-auto">
+      <div className="flex flex-col ">
+        {/* <h2 className="font-head mx-auto">Linker</h2> */}
+        <div className=" mx-auto">
           <Image
+            alt="Jobloop logo"
             src={jobloopHvit}
             width={350}
             height={250}
@@ -35,6 +36,7 @@ export default function Footer() {
         </div>
         <div className="py-3 mx-auto">
           <Image
+            alt="Kodeverket logo"
             src={kodeverketHvit}
             width={350}
             height={250}
@@ -42,8 +44,8 @@ export default function Footer() {
           />
         </div>
       </div>
-      <div className="flex flex-col px-20">
-        <h2>Sider</h2>
+      <div className="flex flex-col ">
+        <h2 className="font-head">Sider</h2>
         <Link
           href="/bedrift"
           aria-label="Gå til underside for bedrift"
