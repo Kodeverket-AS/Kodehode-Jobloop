@@ -29,7 +29,7 @@ const contactInformation = [
 
 export default function Footer() {
   return (
-    <footer className=" flex flex-row justify-between items-start flex-wrap gap-8 py-8 px-12 text-white bg-alt-purple md:px-12">
+    <footer className=" flex flex-row justify-between items-start flex-wrap gap-8 pt-8 pb-24 px-12 text-white bg-alt-purple md:px-12">
       <div className="flex flex-col gap-8">
         <h2 className="font-head">Kontakt</h2>
         {contactInformation.map((person) => (
