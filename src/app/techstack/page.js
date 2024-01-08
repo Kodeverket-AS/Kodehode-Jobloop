@@ -3,7 +3,13 @@ import Footer from "../../../components/Footer";
 import Navbar from "../../../components/navigation/Navbar";
 import Wordcloud from "../../../public/wordcloud.png";
 
-export default function Techstack() {
+import { getData } from "../page";
+import { PortableText } from "@portabletext/react";
+
+export default async function Techstack() {
+  const data = await getData();
+  console.log(data);
+
   return (
     <main className=" flex flex-col items-center min-h-screen pt-12 pb-8 px-4 md:p-24">
       <section className="flex flex-col gap-32 pb-16">
@@ -19,22 +25,19 @@ export default function Techstack() {
               - Kristian
             */
             style={{ color: "#F4A366" }}>
-            Våre kodespråk
+            {data.heroSub[4].title}
           </h1>
-          <p className="text-base md:text-xl">
-            Våre studenter lærer de <strong>viktigste</strong> teknologiene og
-            rammeverkene innen <strong>frontend</strong>, og de har mulighet til
-            å lære grunnleggende <strong>backend</strong>. Målet er at de skal
-            få en forståelse som gjør det enklere å lære seg nye språk når det
-            trengs, og før de begynner i <strong>praksis</strong> vil de få
-            mulighet til å få kjennskap til <strong>tech-stacken</strong> til
-            deres bedrift slik at de kan komme seg i gang så fort som mulig.
-          </p>
+          <PortableText
+            className="text-base md:text-xl"
+            value={data.heroSub[4].content}
+          />
         </div>
         <div className="max-w-5xl">
           <Image
             alt="Wordcloud of languages"
-            src={Wordcloud}
+            src={data.heroSub[4].image}
+            width={1000}
+            height={500}
           />
         </div>
       </section>
