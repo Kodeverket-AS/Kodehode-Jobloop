@@ -13,7 +13,7 @@ export default async function Techstack() {
       <section className="flex flex-col gap-32 pb-16">
         <div className="max-w-prose flex flex-col gap-6 md:gap-8 ">
           <h1
-            className="font-head text-3xl font-bold md:text-5xl"
+            className="text-3xl text-jobloop-primay-orange font-bold md:text-5xl"
             /*
             ok...doing this merge thing is a bit of a pain.
             eehhh..did it work?
@@ -24,13 +24,12 @@ export default async function Techstack() {
               Should update tailwind or global css with this color as main orange.
               - Kristian
             */
-            style={{ color: "#F4A366" }}>
+          >
             {data.heroSub[4].title}
           </h1>
-          <PortableText
-            className="text-base md:text-xl"
-            value={data.heroSub[4].content}
-          />
+          <div className="text-base md:text-xl">
+            <PortableText value={data.heroSub[4].content} />
+          </div>
         </div>
         <div className="max-w-5xl">
           <Image

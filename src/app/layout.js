@@ -1,6 +1,10 @@
 import "./globals.css";
+/**
+ * FONT PROBLEM:
+ * Dette ser ikke ut til å fungere i Next 13 !?
+ * import fra next/font/google
+ */
 import { Roboto, Didact_Gothic, Nunito_Sans } from "next/font/google";
-import { Inter } from "next/font/google";
 import Navbar from "../../components/navigation/Navbar";
 import Footer from "../../components/Footer";
 import { ScrollToTopButton } from "../../components/Buttons";
@@ -11,13 +15,13 @@ const roboto = Roboto({
   subsets: ["latin"],
 });
 
-const didact_gothic = Didact_Gothic({
-  weight: "400",
-  subsets: ["latin"],
-});
+// const didact_gothic = Didact_Gothic({
+//   weight: "400",
+//   subsets: ["latin"],
+// });
 
 const nunito_sans = Nunito_Sans({
-  weight: "800",
+  weight: ["400", "800"],
   subsets: ["latin"],
 });
 
