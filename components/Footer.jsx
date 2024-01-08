@@ -29,10 +29,10 @@ const contactInformation = [
 
 export default function Footer() {
   return (
-    <footer className="text-white bg-alt-purple pb-8">
+    <footer className="text-white bg-jobloop-tertiary-purple pb-8">
       <div className=" flex flex-row justify-between items-start flex-wrap gap-y-20 gap-x-8 pt-8 pb-24 px-12  md:px-12">
         <div className="flex flex-col gap-8 ">
-          <h2 className="font-head">Kontakt</h2>
+          <h2 className="font-bold">Kontakt</h2>
           {contactInformation.map((person) => (
             <div
               className="flex flex-col "
@@ -55,7 +55,7 @@ export default function Footer() {
           ))}
         </div>
         <div className="flex flex-col items-center gap-8 ">
-          <h2 className="font-head text-center">Linker</h2>
+          <h2 className="font-bold text-center">Linker</h2>
           <div className="w-32">
             <Image
               alt="Jobloop logo"
@@ -74,7 +74,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="flex flex-col gap-8 ">
-          <h2 className="font-head">Sider</h2>
+          <h2 className="font-bold">Sider</h2>
           <Link
             className="hover:underline"
             href="/bedrift"
