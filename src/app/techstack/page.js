@@ -1,14 +1,12 @@
 import Image from "next/image";
-import Footer from "../../../components/Footer";
-import Navbar from "../../../components/navigation/Navbar";
-import Wordcloud from "../../../public/wordcloud.png";
-
 import { getData } from "../page";
 import { PortableText } from "@portabletext/react";
 
 export default async function Techstack() {
   const data = await getData();
-  console.log(data);
+  if (!data) {
+    return <div>Loading...</div>;
+  }
 
   return (
     <main className=" flex flex-col items-center min-h-screen pt-12 pb-8 px-4 md:p-24">
