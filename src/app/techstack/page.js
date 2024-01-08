@@ -16,6 +16,7 @@ export default async function Techstack() {
             className="font-head text-3xl font-bold md:text-5xl"
             /*
             ok...doing this merge thing is a bit of a pain.
+            eehhh
               MESSAGE FROM KRISTIAN:
               Style below is added inline styling to change the color of the 
               text because not defined/extended in tailwind or global css.
