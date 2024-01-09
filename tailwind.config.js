@@ -27,11 +27,6 @@ module.exports = {
           },
         },
       },
-      /* Har ingen effekt foreløpig pga feil font import i layout main */
-      fontFamily: {
-        head: ["Futura", "Nunito Sans", "Roboto", "helvetica", "ui-sans"],
-        paragraph: ["Roboto, ui-sans"],
-      },
     },
   },
 
