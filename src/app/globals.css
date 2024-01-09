@@ -6,6 +6,11 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+
+  /* Jobloop colors */
+  --jobloop-primary-green: #77c4b4;
+  --jobloop-primary-orange: #f4a366;
+  --jobloop-secondary-orange: #f5b58a;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -24,4 +29,20 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 900;
+  color: var(--jobloop-primary-orange);
+}
+
+/* Global color and fx styles for the Navbar */
+nav {
+  /* background-color: rgb(232, 232, 232); */
+  /* box-shadow: rgba(0, 0, 0, 0.4) 0px 0px 10px; */
 }
