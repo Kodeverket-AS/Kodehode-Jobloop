@@ -2,18 +2,17 @@
 import React from "react";
 import { usePathname } from "next/navigation";
 import Navbar, { NavbarAlt } from "./Navbar";
+import MyPathname from "./MyPathname";
 
 const Navigation = () => {
   const pathname = usePathname();
   return (
     <div>
+      {/* Spesifiser hvilken URL endpoint som skal definere hvilken Navbar
+        som skal rendres utifra om pathname er true eller false. 
+        */}
       <div>{pathname === "/techstack" ? <NavbarAlt /> : <Navbar />}</div>
-      {/* Løsningen under kan brukes hvor somhelst for å vise hvilken side
-        brukeren befinner seg på. 
-        Importer usePathname fra next/navigation og bruk den i en div. */}
-      <div>
-        <p>du er på siden for: {pathname}</p>
-      </div>
+      <MyPathname />
     </div>
   );
 };
