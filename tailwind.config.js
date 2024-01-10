@@ -7,6 +7,7 @@ module.exports = {
   ],
   theme: {
     extend: {
+      /* Farger fra Jobloop | Kodehode Figma Design Fil */
       colors: {
         jobloop: {
           /* Hovedfarge fra Figma */
