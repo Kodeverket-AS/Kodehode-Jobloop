@@ -3,8 +3,9 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import HamburgerMenu from "./Hamburger";
-import logoHvit from "../../public/logoHvit.png";
-import logoFarge from "../../public/logoFarge.png";
+import logoDesktopHvit from "../../public/logoDesktopHvit.svg";
+
+import logoDesktopFarge from "../../public/logoDesktopFarge.svg";
 
 export default function Navbar() {
   return (
@@ -16,7 +17,7 @@ export default function Navbar() {
             aria-label="Gå til landingssiden">
             <Image
               className="w-60 md:w-80"
-              src={logoHvit}
+              src={logoDesktopHvit}
               width={350}
               height={220}
               alt="Logo"
@@ -59,15 +60,17 @@ export default function Navbar() {
   );
 }
 
-export function NavbarAlt( {subpage} ) {
+export function NavbarAlt({ subpage }) {
   return (
     <nav className="w-full">
       <div className="flex items-center justify-between">
         <div className="p-4 flex flex-row items-end">
-          <Link href="/" aria-label="Gå til landingssiden">
+          <Link
+            href="/"
+            aria-label="Gå til landingssiden">
             <Image
-              className=" w-80"
-              src={logoFarge}
+              className="w-60 md:w-80"
+              src={logoDesktopFarge}
               width={350}
               height={220}
               alt="Logo"
@@ -82,29 +85,25 @@ export function NavbarAlt( {subpage} ) {
             <Link
               href="/visjon"
               aria-label="gå til denne undersiden for å lese om vår visjon"
-              className="px-4"
-            >
+              className="px-4">
               <b className="text-jobloop-green">Vår Visjon</b>
             </Link>
             <Link
               href="/FAQ"
               aria-label="gå til denne undersiden for å få svar på ofte stilte spørsmål"
-              className="px-4"
-            >
+              className="px-4">
               <b className="text-jobloop-green">FAQ</b>
             </Link>
             <Link
               href="/about"
               aria-label="gå til denne undersiden for å lese mer om oss"
-              className="px-4"
-            >
+              className="px-4">
               <b className="text-jobloop-green">Om Oss</b>
             </Link>
             <Link
               href="/techstack"
               aria-label="gå til denne undersiden for å lese mer om kodespråkene våre"
-              className="px-4"
-            >
+              className="px-4">
               <b className="text-jobloop-green">Kodespråk</b>
             </Link>
           </div>
