@@ -18,9 +18,6 @@ export default async function Techstack() {
             <h1 className="text-4xl text-jobloop-primay-orange md:text-5xl">
               {data.heroSub[4].title}
             </h1>
-            <p className="text-base md:text-xl">
-              This is just a test for the pull
-            </p>
             <div className="text-base md:text-xl">
               <PortableText value={data.heroSub[4].content} />
             </div>
