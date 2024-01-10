@@ -44,8 +44,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-weight: 900;
-  color: var(--jobloop-primary-orange);
+  font-weight: 700;
 }
 
 /* Global color and fx styles for the Navbar */
