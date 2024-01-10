@@ -11,7 +11,7 @@ export default async function Techstack() {
 
   return (
     <>
-      <NavbarAlt />
+      {/* <NavbarAlt /> */}
       <main className=" flex flex-col items-center min-h-screen pt-12 pb-8 px-4 md:p-24">
         <section className="flex flex-col gap-32 pb-16">
           <div className="max-w-prose flex flex-col gap-6 md:gap-8 ">
