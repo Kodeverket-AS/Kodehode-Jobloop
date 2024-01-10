@@ -2,8 +2,8 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import jobloopHvit from "../public/jobloopHvit.png";
-import kodeverketHvit from "../public/kodeverketHvit.png";
+import logoJobloopHvit from "../public/logoJobloopHvit.svg";
+import logoKodeverketHvit from "../public/logoKodeverketHvit.svg";
 
 // Contact information for the footer
 const contactInformation = [
@@ -59,7 +59,7 @@ export default function Footer() {
           <div className="w-32">
             <Image
               alt="Jobloop logo"
-              src={jobloopHvit}
+              src={logoJobloopHvit}
               width={350}
               height={250}
             />
@@ -67,7 +67,7 @@ export default function Footer() {
           <div className="w-32">
             <Image
               alt="Kodeverket logo"
-              src={kodeverketHvit}
+              src={logoKodeverketHvit}
               width={350}
               height={250}
             />
