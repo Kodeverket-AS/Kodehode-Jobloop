@@ -5,39 +5,39 @@ import Image from "next/image"
 import PortableText from "react-portable-text";
 
 
-export function ScrollElement(content, Image, _id){
-  return(
+// export function ScrollElement(content, Image){
+//   return(
     
-    <div className="flex flex-col w-full p-10" > 
+//     <div  className="flex flex-col w-full p-10" > 
 
-        <div> 
-          <Image 
-          width={800}
-          height={800}
-          className="w-full"  
-          src={Image}/>
-        </div>
+//         <div> 
+//           <Image 
+//           width={800}
+//           height={800}
+//           className="w-full"  
+//           src={Image}/>
+//         </div>
 
-        <div> 
-          <PortableText content={content}></PortableText>
-        </div>
+//         <div> 
+//           <PortableText content={content}></PortableText>
+//         </div>
         
-     </div>
+//      </div>
 
-  )
-}
-
-
+//   )
+// }
 
 
-export function ProjectScroll({ImageGlod, ImageFont, contentOne, contentTwo}){
- 
-let ImageAarray =[ 
 
-  <ScrollElement content={contentTwo} Image={ImageGlod} ></ScrollElement>
-  , 
+
+// export function ProjectScroll({ImageGlod, ImageFont, keyOne, keyTwo, contentOne, contentTwo}){
+// console.log(keyTwo)
+// let ImageAarray =[ 
+
+//   <ScrollElement  content={contentTwo} Image={ImageGlod} ></ScrollElement>
+//   , 
   
-  <ScrollElement content={contentOne} Image={ImageFont} ></ScrollElement>
+//   <ScrollElement  content={contentOne} Image={ImageFont} ></ScrollElement>
   
 
 
@@ -45,176 +45,103 @@ let ImageAarray =[
  
  
       
-    ]  
+//     ]  
 
  
 
 
-// const data = content?.map((item) => {
+// // const data = content?.map((item) => {
 
-//   console.log(item.content[0])
+// //   console.log(item.content[0])
 
-//   return(
+// //   return(
    
-//         <div key={item._id} className=" flex flex-col w-full"> 
-//                <div>
-//                   <p>{item.content}</p>
-//                 </div>
-//          </div> 
+// //         <div key={item._id} className=" flex flex-col w-full"> 
+// //                <div>
+// //                   <p>{item.content}</p>
+// //                 </div>
+// //          </div> 
     
-//   )
+// //   )
 
   
     
-// })
+// // })
 
-const responsiveSettings = {
-  0: { items: 1 },
-  1024: { items: 3 },
-  1280: { items: 3 },
-};
-
-
-return(
-  <div className="w-full flex "> 
-    <AliceCarousel
-    className="flex flex-row items-center justify-center w-full overflow-hidden "
-    items={ImageAarray}
-    itemfit="cover"
-    responsive={responsiveSettings}
-    />
- </div>
-)
+// const responsiveSettings = {
+//   0: { items: 1 },
+//   1024: { items: 3 },
+//   1280: { items: 3 },
+// };
 
 
-
-
-
-}
+// return(
+//   <div className="w-full flex "> 
+//     <AliceCarousel
+//     className="flex flex-row items-center justify-center w-full overflow-hidden "
+//     items={ImageAarray}
+//     itemfit="cover"
+//     responsive={responsiveSettings}
+//     />
+//  </div>
+// )
 
 
 
 
 
-{/* <div className="flex flex-col items-center justify-center w-full ">
-    <div className="flex gap-7 w-full">
-      <div className="w-4/6 flex items-center">
-
-   
+// }
 
 
+export function ProjectScroll(content) {
+  console.log(content.content);
 
-       <Image
-                width={500}
-                height={500}
-                className="w-full" 
-                key={item._id}
-                scr={item.ImageTwo}></Image>
-        
-      <AliceCarousel
-        className="flex flex-col items-center justify-center overflow-hidden w-full "
-        items={data}
-        itemfit="cover"
-        />
-        
+  const data = content.content.map((item, index) => {
+    return (
+      <div className="flex flex-col items-center justify-center w-full h-full p-10" id={index} key={item._id}>
+        <div>
+          <Image
+            width={800}
+            height={800}
+            className="w-full m-auto"
+            src={item.ImageTwo}
+            alt="image"
+          />
+        </div>
+        <div className="flex items-center justify-center w-full">
+          {/* <p className="text-sm text-black">{item.description}</p> */}
+          {item.content.map((block, blockIndex) => (
+            <PortableText
+              className="scale-[0.7] text-black"
+              key={blockIndex}
+              content={block}
+            />
+          ))}
+        </div>
+      </div>
+    );
+  });
+
+  const responsiveSettings = {
+    1: { items: 1 },
+    768: { items: 1 },
+    1024: { items: 1 },
+    1280: { items: 1 },
+  };
+
+  return (
+    <div className="flex flex-col items-center justify-center py-16">
+      <div className="grid gap-7">
+        <div className="flex justify-center w-[320px] xl:lg:max-w-[1100px] lg:w-[1024px] md:w-[768px]">
+          <AliceCarousel
+            className="flex flex-col items-center justify-center h-fit"
+            items={data}
+            itemfit="contain"
+            responsive={responsiveSettings}
+          />
+        </div>
       </div>
     </div>
-  </div> */}
+  );
+}
 
-
-  // bilde1
-    // bilde2
-    // tekst  
-    
-    // <div  className="bg-blue w-full"> 
-    // <>{data}</>
-    // </div>
-
-
-// export function ScrollElement({image, _id, text}){
-//     return(
-//         <div key={_id}>
-                
-//               /  <Image 
-//                 width={500}
-//                 height={500}
-//                 className="w-full" 
-//                 src={image}>
-
-//                 </Image>
-
-        
-
-//          </div>
-//     )
-// }
-
-// Array av data som et hentet inn
-
-
-// scroll funksjon
-
-
-
-   
-    
-//     const [scrollImage, setScrollImage]= useState(0)
-// //gjøre klikk til neste i array
-    
- 
-    
-    
-//     const nextProjectImage = () => {
-       
-//         if (scrollImage=== ImageAarray.length - 1) setScrollImage(0);
-//         else setScrollImage(scrollImage + 1);
-
-    
-//     }
-        
-//     return(
-//         <div key={_id} className="w-full flex flex-row"> 
-       
-//              {ImageAarray.map((index, image) => {
-            
-                
-//                    <Image
-//                     width={800}
-//                     height={800}
-//                     className="w-full" 
-//                     key={index}
-//                     src={image}
-//                     alt="samarbeidsprosjekter">
-                
-//                     </Image>
-
-//                console.log(<Image/>)
-                    
-//            })}
-             
-//             <button  className="w-10px bg-jobloop-orange">neste</button>
-//          </div>   
-         
-        
-//     )   
-        
-        
-    
-            
-    
-// }
-
-
-
-
-// i++
-// let newArr = textAray[i]
-// onClick={nextProjectImage}
-
-// let i = 0
-// const textAray =['hello ', 'My name is Anders', 'I am from Bergen', 'I am bad at coding']
-
-// setScrollImage(newArr)
-// if(textAray[i] > textAray.length ){ } else {setScrollImage(textAray[0])} else {setScrollImage(textAray[0])} if(textAray[i] > textAray.length-1 ){
-    
-// ImageFont={data.VisionSections[0].ImageTwo} ImageGlod={data.VisionSections[1].ImageTwo

@@ -34,7 +34,7 @@ export default async function Vision() {
                         </div>
 
                         <div className="flex flex-col items-center justify-center hidden md:block ">
-                              <h1 className="p-20 font-extrabold">Samarbeidsprosjekter</h1>
+                              <h1 className="p-20 font-extrabold text-center">Samarbeidsprosjekter</h1>
                               <div className="p-20 w-full bg-jobloop-orange flex justify-center  ">
                                   <div className="w-5/6 flex flex-row gap-40 items-center ">
                                       <div className="w-5/6 flex mt-20" key={data.VisionSections[1]._id}>
@@ -60,10 +60,10 @@ export default async function Vision() {
                         
                         </div>
 
-                        <div className="flex flex-col items-center justify-center">
-                              <div className="p-24 w-full flex justify-center hidden md:block ">
-                                  <div className="w-5/6 flex flex-row gap-40 items-center ">
-                                     <div className=" w-5/6 flex flex-col gap-10">
+                        <div className="w-full flex flex-col items-center justify-center hidden md:block ">
+                              <div className=" w-full flex justify-center ">
+                                  <div className="p-20 w-5/6 flex flex-row gap-40 justify-center items-center ">
+                                     <div className=" w-5/6 flex flex-col gap-10 ">
                                         <Image 
                                           width={100}
                                           height={100}
@@ -85,9 +85,11 @@ export default async function Vision() {
                                      
                                   </div>  
                                </div>
-                               <div>
-                                   <ProjectScroll key={data.VisionSections[1]._id} ImageFont={data.VisionSections[0].ImageTwo} ImageGlod={data.VisionSections[1].ImageTwo} contentOne={data.VisionSections[0].content} contentTwo={data.VisionSections[1].content} ></ProjectScroll>
-                               </div>
+                             
+                        </div>
+
+                        <div className="block md:hidden"> 
+                          <ProjectScroll  content={data.VisionSections} ></ProjectScroll>
                         </div>
 
                         <div>
@@ -143,4 +145,3 @@ export default async function Vision() {
   );
 }
 
-{/* key={data.VisionSections[1]._id} ImageFont={data.VisionSections[0].ImageTwo} ImageGlod={data.VisionSections[1].ImageTwo */}
