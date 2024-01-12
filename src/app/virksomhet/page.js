@@ -5,6 +5,7 @@ import { getData } from "../page";
 import Navbar, { NavbarAlt } from "../../../components/navigation/Navbar";
 import KodehodeSummary from "../../../components/KodehodeSummary";
 import StudyInParts from "../../../components/StudyInParts";
+import FourIconRow from "../../../components/FourIconRow";
 
 export default async function Virksomhet() {
   const data = await getData();
@@ -22,6 +23,7 @@ export default async function Virksomhet() {
         <div className="flex flex-col items-center mt-80 md:mt-0">
           <KodehodeSummary content1={data.origin} content2={data.courseTypes} />
           <StudyInParts content={data.CourseSections} />
+          <FourIconRow content={data.mainTech} />
           <p>Denne siden er under oppbygging!</p>
           <p>Dette blir Viksomhetssiden til Kodehode</p>
         </div>
