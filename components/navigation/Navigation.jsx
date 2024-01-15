@@ -8,8 +8,9 @@ import MyPathname from "./MyPathname";
 const navigationUrl1 = "/techstack";
 const navigationUrl2 = "/about";
 
-// Definerer en konstant som sjekker om vinduet er mindre eller lik 1024px
-const minWindowWidth = window.innerWidth <= 1024;
+// Definerer en konstant som sjekker om vinduet er mindre eller lik 768px
+// Sett ønsket minumum bredde her. 768 er bredde for tailwind md: .
+const minWindowWidth = window.innerWidth < 768;
 
 const Navigation = () => {
   const pathname = usePathname();

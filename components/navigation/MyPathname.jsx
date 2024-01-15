@@ -14,7 +14,7 @@ import Link from "next/link";
 const MyPathname = () => {
   const pathname = usePathname();
   return (
-    <div>
+    <div className="px-4">
       MyPathname component is rendering this:{" "}
       <Link
         href="./"
