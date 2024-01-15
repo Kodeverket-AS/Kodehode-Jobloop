@@ -4,6 +4,7 @@ import { Roboto } from "next/font/google";
 import Navbar from "../../components/navigation/Navbar";
 import Footer from "../../components/Footer";
 import { ScrollToTopButton } from "../../components/Buttons";
+import Navigation from "../../components/navigation/Navigation";
 
 const roboto = Roboto({
   weight: ["400", "700", "900"],
@@ -21,6 +22,7 @@ export default function RootLayout({ children }) {
       lang="en"
       className={roboto.className}>
       <body>
+        <Navigation />
         <div className="flex-1 overflow-x-hidden">{children}</div>
         <ScrollToTopButton />
         <Footer />
