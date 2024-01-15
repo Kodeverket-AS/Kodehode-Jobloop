@@ -1,10 +1,10 @@
 "use client";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 import Image from "next/image";
 import HamburgerMenu from "./Hamburger";
-import logoDesktopHvit from "../../public/logoDesktopHvit.svg";
 
+//Nye logoer importert her. De er nå svg filer, så de kan skaleres uten å miste kvalitet.
+import logoDesktopHvit from "../../public/logoDesktopHvit.svg";
 import logoDesktopFarge from "../../public/logoDesktopFarge.svg";
 
 export default function Navbar() {
@@ -61,8 +61,6 @@ export default function Navbar() {
 }
 
 export function NavbarAlt({ subpage }) {
-  const pathname = usePathname();
-
   return (
     <nav className="w-full">
       <div className="flex items-center justify-between">
