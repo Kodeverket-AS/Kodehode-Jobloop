@@ -15,7 +15,6 @@ const MyPathname = () => {
   const pathname = usePathname();
   return (
     <div className="px-4">
-      MyPathname component is rendering this:{" "}
       <Link
         href="./"
         className="font-bold hover:underline">
