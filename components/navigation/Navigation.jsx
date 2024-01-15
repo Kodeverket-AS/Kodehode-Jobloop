@@ -4,7 +4,7 @@ import { usePathname } from "next/navigation";
 import Navbar, { NavbarAlt } from "./Navbar";
 import MyPathname from "./MyPathname";
 
-// Definer URL endpoints
+// Definer URL endpoints.
 const navigationUrl1 = "/techstack";
 const navigationUrl2 = "/about";
 
