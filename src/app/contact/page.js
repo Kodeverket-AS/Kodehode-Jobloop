@@ -1,6 +1,3 @@
-import Image from "next/image";
-import { NavbarAlt } from "../../../components/navigation/Navbar";
-
 export default function Contact() {
   return (
     <main className="flex flex-col items-center min-h-screen p-24">
