@@ -9,7 +9,7 @@ const navigationUrl1 = "/techstack";
 const navigationUrl2 = "/about";
 
 // Definerer en konstant som sjekker om vinduet er mindre eller lik 768px
-// Sett ønsket minumum bredde her. 768 er bredde for tailwind md: .
+// 768px er bredde for tailwind md: .
 const minWindowWidth = window.innerWidth < 768;
 
 const Navigation = () => {
