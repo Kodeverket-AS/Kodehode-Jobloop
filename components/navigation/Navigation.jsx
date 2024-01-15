@@ -10,7 +10,11 @@ const navigationUrl2 = "/about";
 
 // Definerer en konstant som sjekker om vinduet er mindre eller lik 768px
 // 768px er bredde for tailwind md: .
-const minWindowWidth = window.innerWidth < 768;
+// const minWindowWidth = window.innerWidth < 768;
+let minWindowWidth;
+if (typeof window !== "undefined") {
+  minWindowWidth = window.innerWidth < 768;
+}
 
 const Navigation = () => {
   const pathname = usePathname();
