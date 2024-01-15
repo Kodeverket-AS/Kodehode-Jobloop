@@ -12,11 +12,9 @@ const navigationUrl2 = "/about";
 const minWindowWidth = window.innerWidth <= 1024;
 
 const Navigation = () => {
-  // Henter ut pathname til siden vi er på aka URL-endpointet
-  // pathname kan også brukes til å vise foreksempel subpage prop fra NavbarAlt
   const pathname = usePathname();
 
-  // Sjekker om vi er på en av de to sidene vi ønsker å ha en annen navbar på
+  // Sjekker om vi er på en av de to sidene vi ønsker og at minWindowWidth matcher gitt verdig over.
   let navbar;
   if (pathname === navigationUrl1 && minWindowWidth) {
     navbar = <NavbarAlt />;
@@ -39,7 +37,7 @@ const Navigation = () => {
         */}
       {navbar}
 
-      {/* Her rendrer vi en komponent som viser hvilken URL vi er på. */}
+      {/* Les om dette komponentet i komponentfilen */}
       <MyPathname />
     </div>
   );
