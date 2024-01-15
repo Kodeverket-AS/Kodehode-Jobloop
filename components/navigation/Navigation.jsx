@@ -15,7 +15,7 @@ const minWindowWidth = window.innerWidth < 768;
 const Navigation = () => {
   const pathname = usePathname();
 
-  // Sjekker om vi er på en av de to sidene vi ønsker og at minWindowWidth matcher gitt verdig over.
+  // Sjekker om URL matcher med preDefinert URL og at minWindowWidth matcher gitt verdig over.
   let navbar;
   if (pathname === navigationUrl1 && minWindowWidth) {
     navbar = <NavbarAlt />;
