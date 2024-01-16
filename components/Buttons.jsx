@@ -44,7 +44,7 @@ export function ContactBtn(){
       <Link
       href="/contact">
           <button 
-          className="rounded-3xl w-52 h-12 border-solid border-black border-2 bg-transparent transition-all duration-600  hover:bg-jobloop-orange hover:border-none hover:text-white"
+          className="rounded-3xl  lg:w-52 w-32 h-10 lg:h-12  border-solid border-black border-2 bg-transparent transition-all duration-600  hover:bg-jobloop-orange hover:border-none hover:text-white"
       
           >
               Kontakt oss
@@ -62,7 +62,7 @@ export function SeMerBtn(){
   return(
       
           <button 
-          className="rounded-3xl w-32 h-10 border-solid border-black border-2 bg-transparent transition-all duration-600  hover:bg-alt-purple hover:border-none hover:text-white"
+          className="rounded-3xl lg:w-32 w-20 h-7 lg:h-10 border-solid border-black border-2 bg-transparent transition-all duration-600  hover:bg-alt-purple hover:border-none hover:text-white text-sm"
       
           >
               Se Mer
