@@ -30,16 +30,6 @@ export default function FourIconRow({ content }) {
         </div>
         <div className="flex flex-col items-center mx-4 w-14 md:mx-12 md:w-36">
           <Image
-            src={content[3].logo}
-            width={300}
-            height={300}
-            className="w-20 mb-2"
-          />
-          <h2>{content[3].title}</h2>
-          <p className="hidden text-center md:block">{content[3].content}</p>
-        </div>
-        <div className="flex flex-col items-center ml-4 w-14 md:ml-12 md:w-36">
-          <Image
             src={content[4].logo}
             width={300}
             height={300}
@@ -47,6 +37,16 @@ export default function FourIconRow({ content }) {
           />
           <h2>{content[4].title}</h2>
           <p className="hidden text-center md:block">{content[4].content}</p>
+        </div>
+        <div className="flex flex-col items-center ml-4 w-14 md:ml-12 md:w-36">
+          <Image
+            src={content[3].logo}
+            width={300}
+            height={300}
+            className="w-20 mb-2"
+          />
+          <h2>{content[3].title}</h2>
+          <p className="hidden text-center md:block">{content[3].content}</p>
         </div>
       </div>
     </div>

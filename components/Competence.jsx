@@ -24,6 +24,16 @@ export default function Competence({ content1, content2 }) {
         </div>
         <div className="flex flex-col items-center mx-4 w-14 md:mx-12 md:w-48">
           <Image
+            src={content2[3].logo}
+            width={300}
+            height={300}
+            className="w-auto h-24 mb-2"
+          />
+          <h2>{content2[3].title}</h2>
+          <p className="hidden text-center md:block">{content2[3].content}</p>
+        </div>
+        <div className="flex flex-col items-center mx-4 w-14 md:mx-12 md:w-48">
+          <Image
             src={content2[1].logo}
             width={300}
             height={300}
@@ -32,7 +42,7 @@ export default function Competence({ content1, content2 }) {
           <h2>{content2[1].title}</h2>
           <p className="hidden text-center md:block">{content2[1].content}</p>
         </div>
-        <div className="flex flex-col items-center mx-4 w-14 md:mx-12 md:w-48">
+        <div className="flex flex-col items-center ml-4 w-14 md:ml-12 md:w-48">
           <Image
             src={content2[2].logo}
             width={300}
@@ -41,16 +51,6 @@ export default function Competence({ content1, content2 }) {
           />
           <h2>{content2[2].title}</h2>
           <p className="hidden text-center md:block">{content2[2].content}</p>
-        </div>
-        <div className="flex flex-col items-center ml-4 w-14 md:ml-12 md:w-48">
-          <Image
-            src={content2[3].logo}
-            width={300}
-            height={300}
-            className="w-auto h-24 mb-2"
-          />
-          <h2>{content2[3].title}</h2>
-          <p className="hidden text-center md:block">{content2[3].content}</p>
         </div>
       </div>
     </>
