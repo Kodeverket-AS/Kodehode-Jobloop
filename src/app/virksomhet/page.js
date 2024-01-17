@@ -6,6 +6,7 @@ import Navbar, { NavbarAlt } from "../../../components/navigation/Navbar";
 import KodehodeSummary from "../../../components/KodehodeSummary";
 import StudyInParts from "../../../components/StudyInParts";
 import FourIconRow from "../../../components/FourIconRow";
+import Competence from "../../../components/Competence";
 
 export default async function Virksomhet() {
   const data = await getData();
@@ -24,6 +25,7 @@ export default async function Virksomhet() {
           <KodehodeSummary content1={data.origin} content2={data.courseTypes} />
           <StudyInParts content={data.CourseSections} />
           <FourIconRow content={data.mainTech} />
+          <Competence content1={data.relevantCompetence} content2={data.competenceIcons} />
           <p>Denne siden er under oppbygging!</p>
           <p>Dette blir Viksomhetssiden til Kodehode</p>
         </div>
