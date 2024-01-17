@@ -20,5 +20,7 @@ export async function getData() {
     "VisionSections": *[_type =="VisionSections"]{"ImageOne":ImageOne.asset->url, "ImageTwo":ImageTwo.asset->url, title, content,_id},
     "CourseSections": *[_type == "CourseSections"]{title, "image":image.asset->url, content, _id},
     "mainTech": *[_type == "mainTech"]{title, "logo":logo.asset->url, content, _id},
+    "relevantCompetence": *[_type == "relevantCompetence"]{title, content, _id},
+    "competenceIcons": *[_type == "competenceIcons"]{title, "logo":logo.asset->url, content, _id},
   }`);
 }
