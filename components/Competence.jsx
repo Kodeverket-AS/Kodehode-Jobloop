@@ -8,10 +8,12 @@ export default function Competence({ content1, content2 }) {
   return (
     <>
       <div className="w-1/2 py-10 text-center">
-        <h1 className="pb-10 mx-auto w-96">{content1[0].title}</h1>
-        <PortableText value={content1[0].content} />
+        <h1 className="mx-auto md:pb-10 md:w-96">{content1[0].title}</h1>
+        <div className="hidden md:block">
+          <PortableText value={content1[0].content} />
+        </div>
       </div>
-      <div className="flex py-10">
+      <div className="flex pt-0 pb-10 md:py-10">
         <div className="flex flex-col items-center mr-4 w-14 md:mr-12 md:w-48">
           <Image
             src={content2[0].logo}
