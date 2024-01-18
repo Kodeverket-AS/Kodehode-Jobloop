@@ -22,5 +22,6 @@ export async function getData() {
     "mainTech": *[_type == "mainTech"]{title, "logo":logo.asset->url, content, _id},
     "relevantCompetence": *[_type == "relevantCompetence"]{title, content, _id},
     "competenceIcons": *[_type == "competenceIcons"]{title, "logo":logo.asset->url, content, _id},
+    "OurLocals": *[_type == "OurLocals"]{title, "image":image.asset->url, adresse, postnr, _id},
   }`);
 }
