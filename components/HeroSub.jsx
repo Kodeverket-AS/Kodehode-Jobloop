@@ -7,15 +7,6 @@ import NavbarFarge from "./navigation/NavbarFarge";
 
 export default function HeroSub({content}) {
   return (
-<<<<<<< HEAD
-    <div className="w-full">
-      <div>
-          <NavbarFarge></NavbarFarge>
-      </div>
-      <h1>{content.title}</h1>
-      <PortableText value={content.content} />
-    </div>
-=======
     <>
       <div className="absolute top-0 block w-full -z-10 md:hidden">
         <div className="w-full">
@@ -50,6 +41,5 @@ export default function HeroSub({content}) {
         </div>
       </div>
     </>
->>>>>>> development
   );
 }
