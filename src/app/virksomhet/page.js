@@ -8,6 +8,7 @@ import StudyInParts from "../../../components/StudyInParts";
 import FourIconRow from "../../../components/FourIconRow";
 import Competence from "../../../components/Competence";
 import Offices from "../../../components/Offices";
+import ImageGallery from "../../../components/ImageGallery";
 
 export default async function Virksomhet() {
   const data = await getData();
@@ -28,6 +29,7 @@ export default async function Virksomhet() {
           <FourIconRow content={data.mainTech} />
           <Competence content1={data.relevantCompetence} content2={data.competenceIcons} />
           <Offices content={data.OurLocals} />
+          <ImageGallery content={data.ImageGallery} />
           <p>Denne siden er under oppbygging!</p>
           <p>Dette blir Viksomhetssiden til Kodehode</p>
         </div>
