@@ -23,5 +23,6 @@ export async function getData() {
     "relevantCompetence": *[_type == "relevantCompetence"]{title, content, _id},
     "competenceIcons": *[_type == "competenceIcons"]{title, "logo":logo.asset->url, content, _id},
     "OurLocals": *[_type == "OurLocals"]{title, "image":image.asset->url, adresse, postnr, _id},
+    "ImageGallery": *[_type == "imageGallery"]{"image1":image1.asset->url, "image2":image2.asset->url, "image3":image3.asset->url, _id},
   }`);
 }
