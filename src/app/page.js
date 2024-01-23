@@ -19,5 +19,10 @@ export async function getData() {
     "courseTypes": *[_type == "courseTypes"]{title, subheader, duration, expectations, schedule, educationStyle, jobMarket, place, _id},
     "VisionSections": *[_type =="VisionSections"]{"ImageOne":ImageOne.asset->url, "ImageTwo":ImageTwo.asset->url, title, content,_id},
     "CourseSections": *[_type == "CourseSections"]{title, "image":image.asset->url, content, _id},
+    "mainTech": *[_type == "mainTech"]{title, "logo":logo.asset->url, content, _id},
+    "relevantCompetence": *[_type == "relevantCompetence"]{title, content, _id},
+    "competenceIcons": *[_type == "competenceIcons"]{title, "logo":logo.asset->url, content, _id},
+    "OurLocals": *[_type == "OurLocals"]{title, "image":image.asset->url, adresse, postnr, _id},
+    "ImageGallery": *[_type == "imageGallery"]{"image1":image1.asset->url, "image2":image2.asset->url, "image3":image3.asset->url, _id},
   }`);
 }
