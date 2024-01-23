@@ -15,14 +15,14 @@ export default async function Vision() {
   
   return (
     <>
-      <NavbarAlt />
+      {/*<NavbarAlt />*/}
       <main className="flex flex-col items-center min-h-screen w-full">
     
           <div className="flex flex-col items-center sm:justify-center " >
                <div className="flex flex-col items-center gap-40 w-full mt-32 "> 
                         <div className="flex flex-col  gap-12 w-5/6 lg:4/6">
                           <div>
-                            <h1 className="text-center text-3xl md:text-5xl text-jobloop-green font-extrabold mb-10">{data.heroSub[2].title}</h1>
+                            <h1 className="text-center text-3xl md:text-5xl text-jobloop-primary-green font-extrabold mb-10">{data.heroSub[2].title}</h1>
                           </div>
                           <div key={data.heroSub[2]._id}>
                             <Image  
@@ -37,9 +37,9 @@ export default async function Vision() {
 
                         <div className="flex flex-col items-center justify-center  ">
                               <h1 className="p-20 text-2xl md:text-3xl font-extrabold text-center">Samarbeidsprosjekter</h1>
-                              <div className="p-20 w-full bg-jobloop-orange flex justify-center  ">
+                              <div className="p-20 w-full bg-jobloop-primary-orange flex justify-center  ">
                                   <div className="w-5/6 flex flex-col md:flex-row gap-40 items-center ">
-                                      <div className="w-5/6 flex mt-20 hidden md:block" key={data.VisionSections[1]._id}>
+                                      <div className="w-5/6 mt-20 hidden md:block" key={data.VisionSections[1]._id}>
                                           <Image 
                                             width={500}
                                             height={500}
@@ -76,7 +76,7 @@ export default async function Vision() {
                                           <SeMerBtn></SeMerBtn>
                                       </div>
 
-                                      <div className="w-5/6 flex hidden md:block " key={data.VisionSections[0]._id}>
+                                      <div className="w-5/6 hidden md:block " key={data.VisionSections[0]._id}>
                                           <Image 
                                             width={500}
                                             height={500}
