@@ -5,8 +5,16 @@ import Navbar, { NavbarAlt } from "./Navbar";
 import MyPathname from "./MyPathname";
 
 // Definer URL endpoints.
-const navigationUrl1 = "/techstack";
-const navigationUrl2 = "/about";
+const landing = "/";
+const virksomhet = "/virksomhet";
+const bedrift = "/bedrift";
+const deltaker = "/deltaker";
+const techstack = "/techstack";
+const about = "/about";
+const visjon = "/visjon";
+const faq = "/FAQ";
+const kontakt = "/contact";
+
 
 // Definerer en konstant som sjekker om vinduet er mindre eller lik 768px
 // 768px er bredde for tailwind md: .
@@ -22,10 +30,14 @@ const Navigation = () => {
 
   // Sjekker om URL matcher med preDefinert URL og at minWindowWidth matcher gitt verdig over.
   let navbar;
-  if (pathname === navigationUrl1 && minWindowWidth) {
+  if (pathname === techstack && minWindowWidth) {
     navbar = <NavbarAlt />;
-  } else if (pathname === navigationUrl2 && minWindowWidth) {
+  } else if (pathname === about && minWindowWidth) {
     navbar = <NavbarAlt />;
+  } else if (pathname === virksomhet && minWindowWidth) {
+    navbar = <Navbar />;
+  } else if (pathname === virksomhet && !minWindowWidth) {
+    navbar = <NavbarAlt subpage={"Virksomhet"} />
   } else {
     navbar = <Navbar />;
   }
@@ -44,7 +56,7 @@ const Navigation = () => {
       {navbar}
 
       {/* Les om dette komponentet i komponentfilen */}
-      <MyPathname />
+      {/*<MyPathname />*/}
     </div>
   );
 };
