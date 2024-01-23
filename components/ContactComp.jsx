@@ -5,7 +5,7 @@ import { ContactBtn } from "./Buttons"
 export default function ContactComp({imageOne, title, content, _id}){
     return(
         
-        <div className='flex justify-center bg-jobloop-green p-20'>
+        <div className='flex justify-center bg-jobloop-primary-green p-20'>
          <div className="w-5/6">
                 <div className="flex flex-col md:flex-row w-full gap-10 md:gap-7 ">
                     <div className="flex flex-row w-full ">
