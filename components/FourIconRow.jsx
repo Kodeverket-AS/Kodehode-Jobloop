@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export default function FourIconRow({ content }) {
   return (
-    <div className="flex flex-col items-center w-full py-10 bg-jobloop-green">
+    <div className="flex flex-col items-center w-full py-10 bg-jobloop-primary-green">
       <h1 className="pb-10">{content[0].title}</h1>
       <div className="flex">
         <div className="flex flex-col items-center mr-4 w-14 md:mr-12 md:w-36">

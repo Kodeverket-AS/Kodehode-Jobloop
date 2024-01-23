@@ -76,7 +76,7 @@ export function NavbarAlt({ subpage }) {
               alt="Logo"
             />
           </Link>
-          <b className="text-jobloop-orange text-2xl">
+          <b className="text-2xl text-jobloop-primary-orange mb-1">
             <em>{subpage}</em>
           </b>
         </div>
@@ -85,25 +85,25 @@ export function NavbarAlt({ subpage }) {
             <Link
               href="/visjon"
               aria-label="gå til denne undersiden for å lese om vår visjon"
-              className="text-jobloop-primay-green font-bold px-4 md:hover:underline">
+              className="text-jobloop-primary-green font-bold px-4 md:hover:underline">
               Vår Visjon
             </Link>
             <Link
               href="/FAQ"
               aria-label="gå til denne undersiden for å få svar på ofte stilte spørsmål"
-              className="text-jobloop-primay-green font-bold px-4 md:hover:underline">
+              className="text-jobloop-primary-green font-bold px-4 md:hover:underline">
               FAQ
             </Link>
             <Link
               href="/about"
               aria-label="gå til denne undersiden for å lese mer om oss"
-              className="text-jobloop-primay-green font-bold px-4 md:hover:underline">
+              className="text-jobloop-primary-green font-bold px-4 md:hover:underline">
               Om Oss
             </Link>
             <Link
               href="/techstack"
               aria-label="gå til denne undersiden for å lese mer om kodespråkene våre"
-              className="text-jobloop-primay-green font-bold px-4 md:hover:underline">
+              className="text-jobloop-primary-green font-bold px-4 md:hover:underline">
               Kodespråk
             </Link>
           </div>

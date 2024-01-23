@@ -11,7 +11,7 @@ module.exports = {
       colors: {
         jobloop: {
           /* Hovedfarge fra Figma */
-          primay: {
+          primary: {
             green: "#77C4B4",
             orange: "#F4A366",
           },
