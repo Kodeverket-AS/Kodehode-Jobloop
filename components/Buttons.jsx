@@ -36,39 +36,31 @@ export function ScrollToTopButton() {
   );
 }
 
-export function ContactBtn(){
+export function ContactBtn() {
+  return (
+    <Link href="/contact">
+      <button className="h-12 transition-all bg-white border-2 border-black border-solid rounded-3xl w-52 duration-600 hover:bg-jobloop-orange hover:border-none hover:text-white">
+        Kontakt oss
+      </button>
+    </Link>
+  );
+}
 
+export function LinkButton({ Path, Text }) {
+  return (
+    <Link
+      href={Path}
+      className="px-8 py-2 transition-all bg-white border-2 border-black border-solid rounded-3xl hover:bg-jobloop-primary-orange hover:border-none hover:text-white"
+    >
+      {Text}
+    </Link>
+  );
+}
 
-
-  return(
-      <Link
-      href="/contact">
-          <button 
-          className="rounded-3xl w-52 h-12 border-solid border-black border-2 bg-white transition-all duration-600  hover:bg-jobloop-orange hover:border-none hover:text-white"
-      
-          >
-              Kontakt oss
-          </button>
-      </Link>
-  )
-
-
-} 
-
-export function SeMerBtn(){
-
-
-
-  return(
-      
-          <button 
-          className="rounded-3xl w-32 h-10 border-solid border-black border-2 bg-transparent transition-all duration-600  hover:bg-alt-purple hover:border-none hover:text-white"
-      
-          >
-              Se Mer
-          </button>
-     
-  )
-
-
-} 
+export function SeMerBtn() {
+  return (
+    <button className="w-32 h-10 transition-all bg-transparent border-2 border-black border-solid rounded-3xl duration-600 hover:bg-alt-purple hover:border-none hover:text-white">
+      Se Mer
+    </button>
+  );
+}
