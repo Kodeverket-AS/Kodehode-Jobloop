@@ -34,10 +34,14 @@ const Navigation = () => {
     navbar = <NavbarAlt />;
   } else if (pathname === about && minWindowWidth) {
     navbar = <NavbarAlt />;
-  } else if (pathname === virksomhet && minWindowWidth) {
-    navbar = <Navbar />;
+  //} else if (pathname === virksomhet && minWindowWidth) {
+  //  navbar = <Navbar />;
   } else if (pathname === virksomhet && !minWindowWidth) {
-    navbar = <NavbarAlt subpage={"Virksomhet"} />
+    navbar = <NavbarAlt subpage={"Virksomhet"} />;
+  } else if (pathname === bedrift && !minWindowWidth) {
+    navbar = <NavbarAlt subpage={"Bedrift"} />;
+  } else if (pathname === deltaker && !minWindowWidth) {
+    navbar = <NavbarAlt subpage={"Deltaker"} />;
   } else if (pathname === visjon) {
     navbar = <NavbarAlt />;
   } else {

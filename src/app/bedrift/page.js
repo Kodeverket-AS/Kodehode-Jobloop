@@ -11,7 +11,7 @@ export default async function Bedrift() {
   const data = await getData();
   return (
     <>
-      <main className="flex flex-col items-center min-h-screen p-24">
+      <main className="flex flex-col items-center min-h-screen p-0">
         <HeroSub content={data.heroSub[3]} key={data.heroSub[3]._id} />
         <div className="flex flex-col items-center mt-80 md:mt-0">
           <EgenskapCoop content={data.egsCoop} />
