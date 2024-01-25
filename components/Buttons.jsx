@@ -39,12 +39,20 @@ export function ScrollToTopButton() {
 export function ContactBtn() {
   return (
     <Link href="/contact">
-      <button className="h-12 transition-all bg-white border-2 border-black border-solid rounded-3xl w-52 duration-600 hover:bg-jobloop-orange hover:border-none hover:text-white">
+      <button className="w-32 h-10 transition-all bg-transparent border-2 border-black border-solid rounded-3xl lg:w-52 lg:h-12 duration-600 hover:bg-jobloop-orange hover:border-none hover:text-white">
         Kontakt oss
       </button>
     </Link>
   );
 }
+
+export function SeMerBtn() {
+  return (
+    <button className="w-20 text-sm transition-all bg-transparent border-2 border-black border-solid rounded-3xl lg:w-32 h-7 lg:h-10 duration-600 hover:bg-alt-purple hover:border-none hover:text-white">
+      Se Mer
+    </button>
+  );
+} 
 
 export function LinkButton({ Path, Text }) {
   return (
@@ -54,13 +62,5 @@ export function LinkButton({ Path, Text }) {
     >
       {Text}
     </Link>
-  );
-}
-
-export function SeMerBtn() {
-  return (
-    <button className="w-32 h-10 transition-all bg-transparent border-2 border-black border-solid rounded-3xl duration-600 hover:bg-alt-purple hover:border-none hover:text-white">
-      Se Mer
-    </button>
   );
 }

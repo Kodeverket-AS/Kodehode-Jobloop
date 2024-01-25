@@ -38,6 +38,8 @@ const Navigation = () => {
     navbar = <Navbar />;
   } else if (pathname === virksomhet && !minWindowWidth) {
     navbar = <NavbarAlt subpage={"Virksomhet"} />
+  } else if (pathname === visjon) {
+    navbar = <NavbarAlt />;
   } else {
     navbar = <Navbar />;
   }
