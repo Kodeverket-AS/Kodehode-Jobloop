@@ -110,5 +110,6 @@ export async function getData() {
     "endorsement": *[_type == "endorsement"]{"image":image.asset->url, navn, firma, content, _id},
     "kontaktseksjon": *[_type == "kontaktseksjon"]{"ImageOne":ImageOne.asset->url, content, title, _id},
     "samarbeid":*[_type == "samarbeid"]{title, "image":image.asset->url, content, _id},
+    "internship":*[_type == "internship"]{title, subheader, expectations, schedule, guidance, jobOffer, help, _id},
   }`);
 }
