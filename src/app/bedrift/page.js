@@ -12,8 +12,8 @@ export default async function Bedrift() {
   return (
     <>
       <main className="flex flex-col items-center min-h-screen p-0">
-        <HeroSub content={data.heroSub[3]} key={data.heroSub[3]._id} />
-        <div className="flex flex-col items-center mt-80 md:mt-0">
+        <HeroSub content={data.heroSub[5]} key={data.heroSub[5]._id} />
+        <div className="flex flex-col items-center mt-80 md:mt-20">
           <EgenskapCoop content={data.egsCoop} />
           <KodehodeSummary content1={data.origin} content2={data.courseTypes} />
           <Competence
