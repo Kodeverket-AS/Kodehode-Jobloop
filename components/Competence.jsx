@@ -8,9 +8,9 @@ export default function Competence({ content1, content2 }) {
   return (
     <>
       <div className="w-1/2 py-10 text-center">
-        <h1 className="mx-auto md:pb-10 md:w-96">{content1[0].title}</h1>
+        <h1 className="mx-auto md:pb-10 md:w-96">{content1.title}</h1>
         <div className="hidden md:block">
-          <PortableText value={content1[0].content} />
+          <PortableText value={content1.content} />
         </div>
       </div>
       <div className="flex pt-0 pb-10 md:py-10">
