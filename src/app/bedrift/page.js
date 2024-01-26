@@ -17,10 +17,7 @@ export default async function Bedrift() {
         <div className="flex flex-col items-center mt-80 md:mt-20">
           <EgenskapCoop content={data.egsCoop} />
           <KodehodeInternship content1={data.origin} content2={data.internship} />
-          <Competence
-            content1={data.relevantCompetence}
-            content2={data.competenceIcons}
-          />
+          <Competence content1={data.relevantCompetence[1]} content2={data.competenceIcons} />
           <ContactComp 
             key={data.kontaktseksjon[0]._id} 
             imageOne={data.kontaktseksjon[0].ImageOne} 

@@ -28,7 +28,7 @@ export default async function Virksomhet() {
           <KodehodeSummary content1={data.origin} content2={data.courseTypes} />
           <StudyInParts content={data.CourseSections} />
           <FourIconRow content={data.mainTech} />
-          <Competence content1={data.relevantCompetence} content2={data.competenceIcons} />
+          <Competence content1={data.relevantCompetence[0]} content2={data.competenceIcons} />
           <Offices content={data.OurLocals} />
           <ImageGallery content={data.ImageGallery} />
           <LinkToFaq />
