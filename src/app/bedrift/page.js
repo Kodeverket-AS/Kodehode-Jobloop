@@ -6,10 +6,10 @@ import KodehodeInternship from "../../../components/KodehodeInternship";
 import Competence from "../../../components/Competence";
 import ContactComp from "../../../components/ContactComp";
 import LinkToFaq from "../../../components/LinkToFaq";
-import Link from "next/link";
 
 export default async function Bedrift() {
   const data = await getData();
+  console.log(data.relevantCompetence[0])
   return (
     <>
       <main className="flex flex-col items-center min-h-screen p-0">
@@ -17,7 +17,7 @@ export default async function Bedrift() {
         <div className="flex flex-col items-center mt-80 md:mt-20">
           <EgenskapCoop content={data.egsCoop} />
           <KodehodeInternship content1={data.origin} content2={data.internship} />
-          <Competence content1={data.relevantCompetence[1]} content2={data.competenceIcons} />
+          <Competence content1={data.relevantCompetence[1]} content2={data.competenceIconsBuissness} />
           <ContactComp 
             key={data.kontaktseksjon[0]._id} 
             imageOne={data.kontaktseksjon[0].ImageOne} 

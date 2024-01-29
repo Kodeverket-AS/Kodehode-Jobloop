@@ -5,6 +5,7 @@ import Image from "next/image";
 import { PortableText } from "@portabletext/react";
 
 export default function Competence({ content1, content2 }) {
+  console.log(content1);
   return (
     <>
       <div className="w-1/2 py-10 text-center">
