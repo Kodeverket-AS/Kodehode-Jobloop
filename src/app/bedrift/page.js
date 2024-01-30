@@ -7,6 +7,7 @@ import KodehodeInternship from "../../../components/KodehodeInternship";
 import Competence from "../../../components/Competence";
 import ContactComp from "../../../components/ContactComp";
 import LinkToFaq from "../../../components/LinkToFaq";
+import AdaptTech from "../../../components/AdaptTech";
 
 export default async function Bedrift() {
   const data = await getData();
@@ -23,6 +24,12 @@ export default async function Bedrift() {
     data.competenceIconsBuissness[0],
     data.competenceIconsBuissness[2],
   ];
+  const techArray = [
+    data.mainTech[0],
+    data.mainTech[1],
+    data.mainTech[3],
+    data.mainTech[2],
+  ];
   return (
     <>
       <main className="flex flex-col items-center min-h-screen p-0">
@@ -31,6 +38,7 @@ export default async function Bedrift() {
           <FourIconRow title={"Hva ser Kodehode etter hos samarbeidspartnere?"} content={newLogoArray} />
           <KodehodeInternship content1={data.origin} content2={data.internship} />
           <Competence content1={data.relevantCompetence[1]} content2={newIconArray} />
+          <AdaptTech content1={data.adaptTech} content2={techArray} />
           <ContactComp 
             key={data.kontaktseksjon[0]._id} 
             imageOne={data.kontaktseksjon[0].ImageOne} 

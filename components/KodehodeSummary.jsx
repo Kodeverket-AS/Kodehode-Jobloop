@@ -9,7 +9,6 @@ import CourseCard from "./CourseCard";
 export default function KodehodeSummary({ content1, content2 }) {
   const [active, setActive] = useState(content2[0]);
   //console.log(content1);
-  
   return (
     <div className="flex flex-col px-8 py-20 md:flex-row md:px-24">
       <div className="flex-col w-full md:w-1/2 md:flex">
@@ -31,7 +30,7 @@ export default function KodehodeSummary({ content1, content2 }) {
       </div>
       <div className="w-full px-0 md:px-10 md:w-1/2">
         <div className="flex flex-row justify-center">
-          {content2.map((item) => (
+          {content2.reverse().map((item) => (
             <button
               key={item._id}
               active={active === item}

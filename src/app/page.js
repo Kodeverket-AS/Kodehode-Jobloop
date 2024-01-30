@@ -112,5 +112,6 @@ export async function getData() {
     "samarbeid":*[_type == "samarbeid"]{title, "image":image.asset->url, content, _id},
     "internship":*[_type == "internship"]{title, subheader, expectations, schedule, guidance, jobOffer, help, _id},
     "competenceIconsBuissness":*[_type == "competenceIconsBuissness"]{title, "logo":logo.asset->url, content, _id},
+    "adaptTech":*[_type == "adaptTech"]{title, content, _id},
   }`);
 }
