@@ -64,3 +64,14 @@ export function LinkButton({ Path, Text }) {
     </Link>
   );
 }
+
+export function LinkButtonColour({ Path, Text, Colour }) {
+  return (
+    <Link
+      href={Path}
+      className={`px-8 py-2 text-white transition-all border-2 border-white solid border- bg-jobloop-primary-${Colour} rounded-3xl hover:bg-white hover:border-none hover:text-black`}
+    >
+      {Text}
+    </Link>
+  );
+}
