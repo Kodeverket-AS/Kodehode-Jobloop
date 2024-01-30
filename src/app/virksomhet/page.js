@@ -14,6 +14,12 @@ import LinkToFaq from "../../../components/LinkToFaq";
 export default async function Virksomhet() {
   const data = await getData();
   //console.log(data.courseTypes);
+  const newLogoArray = [
+    data.mainTech[0],
+    data.mainTech[1],
+    data.mainTech[3],
+    data.mainTech[2],
+  ];
   const newIconArray = [
     data.competenceIcons[0],
     data.competenceIcons[3],
@@ -33,7 +39,7 @@ export default async function Virksomhet() {
         <div className="flex flex-col items-center mt-80 md:mt-0">
           <KodehodeSummary content1={data.origin} content2={data.courseTypes} />
           <StudyInParts content={data.CourseSections} />
-          <FourIconRow title={"Noen av våre kodespråk"} content={data.mainTech} />
+          <FourIconRow title={"Noen av våre kodespråk"} content={newLogoArray} />
           <Competence content1={data.relevantCompetence[0]} content2={newIconArray} />
           <Offices content={data.OurLocals} />
           <ImageGallery content={data.ImageGallery} />

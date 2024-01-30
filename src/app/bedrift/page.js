@@ -11,6 +11,12 @@ import LinkToFaq from "../../../components/LinkToFaq";
 export default async function Bedrift() {
   const data = await getData();
   //console.log(data.relevantCompetence[0]);
+  const newLogoArray = [
+    data.egsCoop[3],
+    data.egsCoop[2],
+    data.egsCoop[1],
+    data.egsCoop[0],
+  ];
   const newIconArray = [
     data.competenceIconsBuissness[1],
     data.competenceIconsBuissness[3],
@@ -22,7 +28,7 @@ export default async function Bedrift() {
       <main className="flex flex-col items-center min-h-screen p-0">
         <HeroSub content={data.heroSub[5]} key={data.heroSub[5]._id} />
         <div className="flex flex-col items-center mt-80 md:mt-20">
-          <FourIconRow title={"Hva ser Kodehode etter hos samarbeidspartnere?"} content={data.egsCoop} />
+          <FourIconRow title={"Hva ser Kodehode etter hos samarbeidspartnere?"} content={newLogoArray} />
           <KodehodeInternship content1={data.origin} content2={data.internship} />
           <Competence content1={data.relevantCompetence[1]} content2={newIconArray} />
           <ContactComp 
