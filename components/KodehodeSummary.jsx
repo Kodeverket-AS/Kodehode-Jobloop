@@ -9,9 +9,9 @@ import CourseCard from "./CourseCard";
 export default function KodehodeSummary({ content1, content2 }) {
   const [active, setActive] = useState(content2[0]);
   //console.log(content1);
-  const reverseCards = content2.toReversed();
-  console.log(content2);
-  console.log(reverseCards);
+  //const reverseCards = content2.toReversed();
+  //console.log(content2);
+  //console.log(reverseCards);
   return (
     <div className="flex flex-col px-8 py-20 md:flex-row md:px-24">
       <div className="flex-col w-full md:w-1/2 md:flex">
