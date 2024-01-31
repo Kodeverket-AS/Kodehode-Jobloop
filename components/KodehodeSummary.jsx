@@ -7,7 +7,7 @@ import { useState } from "react";
 import CourseCard from "./CourseCard";
 
 export default function KodehodeSummary({ content1, content2 }) {
-  const [active, setActive] = useState(content2[0]);
+  const [active, setActive] = useState(content2[1]);
   //console.log(content1);
   //const reverseCards = content2.toReversed();
   //console.log(content2);
@@ -66,7 +66,7 @@ export default function KodehodeSummary({ content1, content2 }) {
           ))*/}
           <button
             key={content2[1]._id}
-            active={active === content2[1]}
+            //active={active === content2[1]}
             onClick={() => setActive(content2[1])}
             className="px-2 mx-3 mb-3 border-2 border-black rounded-full md:py-2 md:px-3 focus:bg-jobloop-primary-orange"
           >
