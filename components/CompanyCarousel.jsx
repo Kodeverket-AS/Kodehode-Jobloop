@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function CompanyCarousel({ content }) {
   return (
-    <div className="flex flex-col py-8 mb-40 bg-jobloop-secondary-green">
+    <div className="flex flex-col w-screen py-20">
       <h1 className="text-lg font-semibold text-center">
         Noen av våre praksisbedrifter
       </h1>
