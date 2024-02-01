@@ -8,6 +8,7 @@ import Competence from "../../../components/Competence";
 import ContactComp from "../../../components/ContactComp";
 import LinkToFaq from "../../../components/LinkToFaq";
 import AdaptTech from "../../../components/AdaptTech";
+import CompanyCarousel from "../../../components/CompanyCarousel";
 
 export default async function Bedrift() {
   const data = await getData();
@@ -39,6 +40,7 @@ export default async function Bedrift() {
           <KodehodeInternship content1={data.origin} content2={data.internship} />
           <Competence content1={data.relevantCompetence[1]} content2={newIconArray} />
           <AdaptTech content1={data.adaptTech} content2={techArray} />
+          <CompanyCarousel content={data.companyLogos} />
           <ContactComp 
             key={data.kontaktseksjon[0]._id} 
             imageOne={data.kontaktseksjon[0].ImageOne} 
