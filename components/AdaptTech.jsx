@@ -7,7 +7,7 @@ import { LinkButtonColour } from "./Buttons";
 
 export default function AdaptTech({ content1, content2 }) {
   return (
-    <div className="flex flex-row px-8 py-20 md:flex-row md:px-24 bg-jobloop-primary-orange">
+    <div className="flex flex-row px-8 py-20 md:flex-row md:px-24 bg-jobloop-secondary-orange">
       <div className="flex-col w-full md:w-1/2 md:flex">
         <h1 className="hidden text-white md:block">{content1[0].title}</h1>
         <div className="hidden md:block">
@@ -15,7 +15,7 @@ export default function AdaptTech({ content1, content2 }) {
             <PortableText value={content1[0].content} />
           </div>
           <div className="py-5">
-            <LinkButtonColour Path={"/techstack"} Text={"Se alle kodespråk"} Colour={"orange"} />
+            <LinkButtonColour Path={"/techstack"} Text={"Se alle kodespråk"} />
           </div>
         </div>
       </div>

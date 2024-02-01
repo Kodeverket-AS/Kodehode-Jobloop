@@ -113,5 +113,6 @@ export async function getData() {
     "internship":*[_type == "internship"]{title, subheader, expectations, schedule, guidance, jobOffer, help, _id},
     "competenceIconsBuissness":*[_type == "competenceIconsBuissness"]{title, "logo":logo.asset->url, content, _id},
     "adaptTech":*[_type == "adaptTech"]{title, content, _id},
+    "companyLogos":*[_type == "companyLogos"]{title, "logo":logo.asset->url, _id},
   }`);
 }
