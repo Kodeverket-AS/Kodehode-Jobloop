@@ -9,7 +9,7 @@ import ContactComp from "../../../components/ContactComp";
 import LinkToFaq from "../../../components/LinkToFaq";
 import AdaptTech from "../../../components/AdaptTech";
 import CompanyCarousel from "../../../components/CompanyCarousel";
-import Results from "../../../components/results";
+import Results from "../../../components/Results";
 
 export default async function Bedrift() {
   const data = await getData();
