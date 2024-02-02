@@ -69,7 +69,7 @@ export function LinkButtonColour({ Path, Text }) {
   return (
     <Link
       href={Path}
-      className={`px-8 py-2 text-white transition-all border-2 border-white rounded-3xl hover:bg-white hover:border-none hover:text-black`}
+      className={`md:px-8 py-2 text-white transition-all border-2 border-white rounded-3xl hover:bg-white hover:border-none hover:text-black px-6`}
     >
       {Text}
     </Link>

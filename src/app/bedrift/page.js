@@ -36,7 +36,7 @@ export default async function Bedrift() {
     <>
       <main className="flex flex-col items-center min-h-screen p-0">
         <HeroSub content={data.heroSub[5]} key={data.heroSub[5]._id} />
-        <div className="flex flex-col items-center mt-80 md:mt-20">
+        <div className="flex flex-col items-center mt-[370px] md:mt-20">
           <FourIconRow title={"Hva ser Kodehode etter hos samarbeidspartnere?"} content={newLogoArray} />
           <KodehodeInternship content1={data.origin} content2={data.internship} />
           <Competence content1={data.relevantCompetence[1]} content2={newIconArray} />
