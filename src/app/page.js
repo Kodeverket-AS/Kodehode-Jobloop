@@ -21,8 +21,8 @@ export async function getData() {
     "VisionSections": *[_type =="VisionSections"]{"ImageOne":ImageOne.asset->url, "ImageTwo":ImageTwo.asset->url, title, content,_id},
     "endorsement": *[_type == "endorsement"]{"image":image.asset->url, navn, firma, content, _id},
     "kontaktseksjon": *[_type == "kontaktseksjon"]{"ImageOne":ImageOne.asset->url, content, title, _id},
-    "samarbeid":*[_type == "samarbeid"]{title, "image":image.asset->url, content, _id}
-    
+    "samarbeid":*[_type == "samarbeid"]{title, "image":image.asset->url, content, _id},
+    "FAQ":*[_type == "FAQ"]{title, question, svar, _id}
     
   }`);
 }
