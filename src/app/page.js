@@ -114,5 +114,6 @@ export async function getData() {
     "competenceIconsBuissness":*[_type == "competenceIconsBuissness"]{title, "logo":logo.asset->url, content, _id},
     "adaptTech":*[_type == "adaptTech"]{title, content, _id},
     "companyLogos":*[_type == "companyLogos"]{title, "logo":logo.asset->url, _id},
+    "results":*[_type == "results"]{title, "image":image.asset->url, content, person, link, _id},
   }`);
 }

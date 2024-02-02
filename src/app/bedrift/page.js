@@ -9,6 +9,7 @@ import ContactComp from "../../../components/ContactComp";
 import LinkToFaq from "../../../components/LinkToFaq";
 import AdaptTech from "../../../components/AdaptTech";
 import CompanyCarousel from "../../../components/CompanyCarousel";
+import Results from "../../../components/results";
 
 export default async function Bedrift() {
   const data = await getData();
@@ -47,6 +48,7 @@ export default async function Bedrift() {
             title={data.kontaktseksjon[0].title}
             content={data.kontaktseksjon[0].content}
           />
+          <Results content={data.results[0]} />
           <LinkToFaq />
         </div>
       </main>
