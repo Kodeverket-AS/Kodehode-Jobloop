@@ -116,8 +116,8 @@ export function ToggleBtn({titleDel, titleBed, titleVirk, idOne, idTwo, idThree,
                 
 
               <button onClick={handleDelToggle} className={`p-7 flex flex-row gap-3 items-center rounded-3xl lg:w-44 w-20 h-7 lg:h-10 border-solid border-black border-2  transition-all duration-600 text-sm
-               ${isDelVisible ?'border-jobloop-orange border-solid  border-2 '  : ' border-none'}`}>  
-                <div className={`flex items-center justify-center w-7 h-7 rounded-full ${isDelVisible ?' bg-jobloop-orange ': ' bg-gray-200'}`} >
+               ${isDelVisible ?'border-jobloop-primary-orange border-solid  border-2 '  : ' border-none'}`}>  
+                <div className={`flex items-center justify-center w-7 h-7 rounded-full ${isDelVisible ?' bg-jobloop-primary-orange ': ' bg-gray-200'}`} >
                    <div className={`w-2 h-2 rounded-full ${isDelVisible ?' bg-white ': ' bg-transparent'}`} > </div>
                  </div>
               <p>{titleDel}</p>
@@ -126,8 +126,8 @@ export function ToggleBtn({titleDel, titleBed, titleVirk, idOne, idTwo, idThree,
 
             <div>
               <button onClick={handleBedToggle} className={`p-7 flex flex-row gap-3 items-center rounded-3xl lg:w-44 w-20 h-7 lg:h-10 border-solid border-black border-2  transition-all duration-600 text-sm
-               ${isBedVisible ?'border-jobloop-orange border-solid  border-2 '  : ' border-none'}`}>
-              <div className={` flex items-center justify-center w-7 h-7  rounded-full ${isBedVisible ?' bg-jobloop-orange ': ' bg-gray-200'}`} >
+               ${isBedVisible ?'border-jobloop-primary-orange border-solid  border-2 '  : ' border-none'}`}>
+              <div className={` flex items-center justify-center w-7 h-7  rounded-full ${isBedVisible ?' bg-jobloop-primary-orange ': ' bg-gray-200'}`} >
                   <div className={`w-2 h-2 rounded-full ${isBedVisible ?' bg-white ': ' bg-transparent'}`} > </div>
               </div>
               <p>{titleBed}</p>
@@ -136,8 +136,8 @@ export function ToggleBtn({titleDel, titleBed, titleVirk, idOne, idTwo, idThree,
 
             <div>
                   <button onClick={handleVirkToggle} className={`p-7 flex flex-row gap-3 items-center rounded-3xl lg:w-48 w-20 h-7 lg:h-10 border-solid border-black border-2  transition-all duration-600 text-sm 
-                  ${isVirkVisible ? 'border-jobloop-orange border-solid  border-2'  : ' border-none'}`}>
-                  <div className={ ` flex items-center justify-center w-7 h-7 rounded-full ${isVirkVisible ?' bg-jobloop-orange ': ' bg-gray-200'}`}>
+                  ${isVirkVisible ? 'border-jobloop-primary-orange border-solid  border-2'  : ' border-none'}`}>
+                  <div className={ ` flex items-center justify-center w-7 h-7 rounded-full ${isVirkVisible ?' bg-jobloop-primary-orange ': ' bg-gray-200'}`}>
                         <div className={`w-2 h-2 rounded-full ${isVirkVisible ?' bg-white ': ' bg-transparent'}`} > </div>
                   </div>
                   <p>{titleVirk}</p>
