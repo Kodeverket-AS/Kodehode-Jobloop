@@ -2,92 +2,100 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import jobloopHvit from "../public/jobloopHvit.png";
-import kodeverketHvit from "../public/kodeverketHvit.png";
+import logoJobloopHvit from "../public/logoJobloopHvit.svg";
+import logoKodeverketHvit from "../public/logoKodeverketHvit.svg";
+
+// Contact information for the footer
+const contactInformation = [
+  {
+    name: "Stefan",
+    email: "stefan@jobloop.no",
+    phoneDisplay: "+47 40 06 64 13",
+    phoneLink: "+4740066413",
+  },
+  {
+    name: "Sina",
+    email: "sina@jobloop.no",
+    phoneDisplay: "+47 41 08 68 27",
+    phoneLink: "+4741086827",
+  },
+  {
+    name: "Karl",
+    email: "karl@jobloop.no",
+    phoneDisplay: "+47 95 90 40 52",
+    phoneLink: "+4795904052",
+  },
+];
 
 export default function Footer() {
   return (
-    <footer className="gap-5 p-5 text-white md:p-10 bg-alt-purple">
-      <div className="flex flex-col px-20 md:hidden">
-        <h2 className="mx-auto">Linker</h2>
-        <div className="py-3 mx-auto">
-          <Image
-            src={jobloopHvit}
-            width={350}
-            height={250}
-            className="md:w-[150px] w-[100px]"
-          />
+    <footer className="text-white bg-jobloop-tertiary-purple pb-8">
+      <div className=" flex flex-row justify-between items-start flex-wrap gap-y-20 gap-x-8 pt-8 pb-24 px-12  md:px-12">
+        <div className="flex flex-col gap-8 ">
+          <h2 className="text-3xl">Kontakt</h2>
+          {contactInformation.map((person) => (
+            <div
+              className="flex flex-col border-b-2 border-white border-opacity-40 pb-4 "
+              key={person.name}>
+              <b className="text-lg">{person.name}</b>
+              <a
+                href={`mailto:${person.email}`}
+                className="cursor-pointer py-1 hover:underline active:underline"
+                target="_blank"
+                aria-label="Åpner email for å opprette epost til valgt person">
+                {person.email}
+              </a>
+              <a
+                href={`tel:${person.phoneLink}`}
+                className="md:hover:underline md:active:underline"
+                aria-label="Åpner telefon for å ringe valgt person">
+                {person.phoneDisplay}
+              </a>
+            </div>
+          ))}
         </div>
-        <div className="py-3 mx-auto">
-          <Image
-            src={kodeverketHvit}
-            width={350}
-            height={250}
-            className="md:w-[150px] w-[100px]"
-          />
-        </div>
-      </div>
-      <div className="flex flex-row justify-between">
-        <div className="px-5 md:px-20">
-          <h2>Kontakt</h2>
-          <div className="flex flex-col py-3">
-            <b>stefan@jobloop.no</b>
-            <b>+47 40 06 64 13</b>
-          </div>
-          <div className="flex flex-col py-3">
-            <b>sina@jobloop.no</b>
-            <b>+47 41 08 68 27</b>
-          </div>
-          <div className="flex flex-col py-3">
-            <b>karl@jobloop.no</b>
-            <b>+47 95 90 40 52</b>
-          </div>
-        </div>
-        <div className="hidden md:px-20 md:flex-col md:flex">
-          <h2 className="mx-auto">Linker</h2>
-          <div className="py-3 mx-auto">
+        <div className="flex flex-col items-center gap-8 ">
+          <h2 className="text-3xl text-center">Linker</h2>
+          <div className="w-32">
             <Image
-              src={jobloopHvit}
+              alt="Jobloop logo"
+              src={logoJobloopHvit}
               width={350}
               height={250}
-              className="w-[150px]"
             />
           </div>
-          <div className="py-3 mx-auto">
+          <div className="w-32">
             <Image
-              src={kodeverketHvit}
+              alt="Kodeverket logo"
+              src={logoKodeverketHvit}
               width={350}
               height={250}
-              className="w-[150px]"
             />
           </div>
         </div>
-        <div className="flex flex-col px-5 md:px-20">
-          <h2>Sider</h2>
+        <div className="flex flex-col gap-8 ">
+          <h2 className="text-3xl">Sider</h2>
           <Link
+            className="hover:underline"
             href="/bedrift"
-            aria-label="Gå til underside for bedrift"
-            className="py-3"
-          >
+            aria-label="Gå til underside for bedrift">
             Bedrift
           </Link>
           <Link
+            className="hover:underline"
             href="/deltaker"
-            aria-label="Gå til underside for deltaker"
-            className="py-3"
-          >
+            aria-label="Gå til underside for deltaker">
             Deltaker
           </Link>
           <Link
+            className="hover:underline"
             href="/virksomhet"
-            aria-label="Gå til underside for virksomhet"
-            className="py-3"
-          >
+            aria-label="Gå til underside for virksomhet">
             Virksomhet
           </Link>
         </div>
       </div>
-      <div className="flex justify-center">&#169; Jobloop 2023</div>
+      <p className="text-center">&copy; {new Date().getFullYear()} Kodehode</p>
     </footer>
   );
 }
