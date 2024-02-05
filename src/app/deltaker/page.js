@@ -26,6 +26,9 @@ export default async function Deltaker() {
             content1={data.relevantCompetence[0]}
             content2={newIconArray}
           />
+          <div className=" bg-jobloop-secondary-orange">
+            <Results content={data.results[0]} />
+          </div>
           <Results content={data.results[0]} />
           <ImageGallery content={data.ImageGallery} />
           <LinkToFaq />
