@@ -1,4 +1,5 @@
 "use client";
+
 import React from "react";
 import { usePathname } from "next/navigation";
 import Navbar, { NavbarAlt } from "./Navbar";
@@ -16,34 +17,60 @@ const faq = "/FAQ";
 const kontakt = "/contact";
 
 
-// Definerer en konstant som sjekker om vinduet er mindre eller lik 768px
-// 768px er bredde for tailwind md: .
-// const minWindowWidth = window.innerWidth < 768;
-
-const Navigation = () => {
+export default function Navigation() {
   const pathname = usePathname();
-
-  let minWindowWidth;
-  if (typeof window !== "undefined") {
-    minWindowWidth = window.innerWidth < 768;
-  }
-
-  // Sjekker om URL matcher med preDefinert URL og at minWindowWidth matcher gitt verdig over.
   let navbar;
-  if (pathname === techstack && minWindowWidth) {
+
+  if (pathname === techstack) {
     navbar = <NavbarAlt />;
-  } else if (pathname === about && minWindowWidth) {
+  } else if (pathname === about) {
     navbar = <NavbarAlt />;
-  //} else if (pathname === virksomhet && minWindowWidth) {
-  //  navbar = <Navbar />;
-  } else if (pathname === virksomhet && !minWindowWidth) {
-    navbar = <NavbarAlt subpage={"Virksomhet"} />;
-  } else if (pathname === bedrift && !minWindowWidth) {
-    navbar = <NavbarAlt subpage={"Bedrift"} />;
-  } else if (pathname === deltaker && !minWindowWidth) {
-    navbar = <NavbarAlt subpage={"Deltaker"} />;
+  } else if (pathname === virksomhet) {
+    navbar = (
+      <>
+        <div className="block md:hidden">
+          <Navbar />
+        </div>
+        <div className="hidden md:block">
+          <NavbarAlt subpage="Virksomhet" />
+        </div>
+      </>
+    );
+  } else if (pathname === bedrift) {
+    navbar = (
+      <>
+        <div className="block md:hidden">
+          <Navbar />
+        </div>
+        <div className="hidden md:block">
+          <NavbarAlt subpage="Bedrift" />
+        </div>
+      </>
+    );
+  } else if (pathname === deltaker) {
+    navbar = (
+      <>
+        <div className="block md:hidden">
+          <Navbar />
+        </div>
+        <div className="hidden md:block">
+          <NavbarAlt subpage="Deltaker" />
+        </div>
+      </>
+    );
   } else if (pathname === visjon) {
     navbar = <NavbarAlt />;
+  } else if (pathname === faq) {
+    navbar = (
+      <>
+        <div className="block md:hidden">
+          <Navbar />
+        </div>
+        <div className="hidden md:block">
+          <NavbarAlt />
+        </div>
+      </>
+    );
   } else {
     navbar = <Navbar />;
   }
@@ -60,11 +87,8 @@ const Navigation = () => {
       4. navbar er en variabel som vi bruker til å rendere den riktige navbar-komponenten.
         */}
       {navbar}
-
       {/* Les om dette komponentet i komponentfilen */}
       {/*<MyPathname />*/}
     </div>
   );
-};
-
-export default Navigation;
+}
