@@ -27,7 +27,6 @@ export default async function FAQ() {
 
    return (
     <>
-      <NavbarAlt />
       <main className="flex flex-col items-center min-h-screen p-24">
         <h2 className="font-bold text-center">Spørsmål og svar</h2>
         <div className="flex flex-row gap-10 ">
