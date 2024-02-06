@@ -1,8 +1,6 @@
 import Image from "next/image";
 import HeroSub from "../../../components/HeroSub";
-import EgenskapCoop from "../../../components/EgenskapCoop";
 import { getData } from "../page";
-import Navbar, { NavbarAlt } from "../../../components/navigation/Navbar";
 import KodehodeSummary from "../../../components/KodehodeSummary";
 import StudyInParts from "../../../components/StudyInParts";
 import FourIconRow from "../../../components/FourIconRow";
