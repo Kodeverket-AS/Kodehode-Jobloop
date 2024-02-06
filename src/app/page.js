@@ -10,12 +10,9 @@ import hatt from '../../public/hatt.png'
 import { SeMerBtn } from '../../components/SeMerBtn';
 import visjonlanding2 from '../../public/visjonlanding2.jpeg'
 
-
-
-
 export default function Home() {
   return (
-    <div> 
+    <div>
       <div>
       <LandingHero></LandingHero>
       </div>
@@ -24,9 +21,9 @@ export default function Home() {
             <div className='flex flex-row justify-center w-5/6 gap-x-10' >
               <div className='flex flex-col w-3/6 gap-20'>
                 <div>
-                  <p>Vi rekrutterer kandidater som av ulike grunner har havnet utenfor arbeidslivet og lærer dem opp til å bli frontend utviklere. 
+                  <p>Vi rekrutterer kandidater som av ulike grunner har havnet utenfor arbeidslivet og lærer dem opp til å bli frontend utviklere.
 
-                  Gjennom en kombinasjon av teoretisk opplæring og praksis vil kandidatene lære seg de viktigste teknologiene og bli klar for en karriere innen utvikling. 
+                  Gjennom en kombinasjon av teoretisk opplæring og praksis vil kandidatene lære seg de viktigste teknologiene og bli klar for en karriere innen utvikling.
 
                   Vi vil gjerne høre fra deg, enten du vil bli et kodehode, eller om du er en bedrift som vil samarbeide med oss og hjelpe våre kandidater, og om du er fra NAV eller andre tiltak og er nysgjerrig på vår virksomhet
                   </p>
@@ -36,9 +33,9 @@ export default function Home() {
                 </div>
               </div>
               <div className='h-2/6' >
-                <Image 
+                <Image
                 width={800}
-                alt="kodemiljø" 
+                alt="kodemiljø"
                 src={danialigdery}
                 style={{objectFit: "contain"}}
                 ></Image>
@@ -48,7 +45,7 @@ export default function Home() {
 
           <div className='flex flex-col gap-28' >
 
-              <div className='flex justify-center w-full'> 
+              <div className='flex justify-center w-full'>
                 <h1 className='text-5xl font-extrabold'>Hvordan kan vi hjelpe deg?</h1>
               </div>
 
@@ -97,10 +94,26 @@ export default function Home() {
 }
 
 export async function getData() {
-  return Client.fetch(`{
+  return Client.fetch(`
+  {
     "heroSub": *[_type == "heroSub"]{title, "image":image.asset->url, content, _id},
-    "egsCoop": *[_type == "egsCoop"]{header, content, _id},
-    "origin": *[_type == "origin"]{title, content, _id},
-    "courseTypes": *[_type == "courseTypes"]{title, subheader, expectations, schedule, educationStyle, jobMarket, place, _id},
+    "egsCoop": *[_type == "egsCoop"]{title, content, "logo":logo.asset->url, _id},
+    "origin": *[_type == "origin"]{title, mobileTitle, content1, content2, content3, _id},
+    "courseTypes": *[_type == "courseTypes"]{title, subheader, duration, expectations, schedule, educationStyle, jobMarket, place, _id},
+    "VisionSections": *[_type =="VisionSections"]{"ImageOne":ImageOne.asset->url, "ImageTwo":ImageTwo.asset->url, title, content,_id},
+    "CourseSections": *[_type == "CourseSections"]{title, "image":image.asset->url, content, _id},
+    "mainTech": *[_type == "mainTech"]{title, "logo":logo.asset->url, content, _id},
+    "relevantCompetence": *[_type == "relevantCompetence"]{title, content, _id},
+    "competenceIcons": *[_type == "competenceIcons"]{title, "logo":logo.asset->url, content, _id},
+    "OurLocals": *[_type == "OurLocals"]{title, "image":image.asset->url, adresse, postnr, _id},
+    "ImageGallery": *[_type == "imageGallery"]{"image1":image1.asset->url, "image2":image2.asset->url, "image3":image3.asset->url, _id},
+    "endorsement": *[_type == "endorsement"]{"image":image.asset->url, navn, firma, content, _id},
+    "kontaktseksjon": *[_type == "kontaktseksjon"]{"ImageOne":ImageOne.asset->url, content, title, _id},
+    "samarbeid":*[_type == "samarbeid"]{title, "image":image.asset->url, content, _id},
+    "internship":*[_type == "internship"]{title, subheader, expectations, schedule, guidance, jobOffer, help, _id},
+    "competenceIconsBuissness":*[_type == "competenceIconsBuissness"]{title, "logo":logo.asset->url, content, _id},
+    "adaptTech":*[_type == "adaptTech"]{title, content, _id},
+    "companyLogos":*[_type == "companyLogos"]{title, "logo":logo.asset->url, _id},
+    "results":*[_type == "results"]{title, "image":image.asset->url, content, person, link, _id},
   }`);
 }
