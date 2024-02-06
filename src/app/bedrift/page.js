@@ -1,8 +1,6 @@
 import HeroSub from "../../../components/HeroSub";
 import { getData } from "../page";
-import EgenskapCoop from "../../../components/EgenskapCoop";
 import FourIconRow from "../../../components/FourIconRow";
-import KodehodeSummary from "../../../components/KodehodeSummary";
 import KodehodeInternship from "../../../components/KodehodeInternship";
 import Competence from "../../../components/Competence";
 import ContactComp from "../../../components/ContactComp";
@@ -33,7 +31,6 @@ export default async function Bedrift() {
     data.mainTech[2],
   ];
   return (
-    <>
       <main className="flex flex-col items-center min-h-screen p-0">
         <HeroSub content={data.heroSub[5]} key={data.heroSub[5]._id} />
         <div className="flex flex-col items-center mt-[370px] md:mt-20">
@@ -52,6 +49,5 @@ export default async function Bedrift() {
           <LinkToFaq />
         </div>
       </main>
-    </>
   );
 }
