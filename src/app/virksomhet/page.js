@@ -27,25 +27,17 @@ export default async function Virksomhet() {
     data.competenceIcons[2],
   ];
   return (
-    <>
-      {/*<div className="block md:hidden">
-        <Navbar />
+    <main className="flex flex-col items-center min-h-screen p-0">
+      <HeroSub content={data.heroSub[3]} key={data.heroSub[3]._id} />
+      <div className="flex flex-col items-center mt-80 md:mt-0">
+        <KodehodeSummary content1={data.origin} content2={data.courseTypes} />
+        <StudyInParts content={data.CourseSections} />
+        <FourIconRow title={"Noen av våre kodespråk"} content={newLogoArray} />
+        <Competence content1={data.relevantCompetence[0]} content2={newIconArray} />
+        <Offices content={data.OurLocals} />
+        <ImageGallery content={data.ImageGallery} />
+        <LinkToFaq />
       </div>
-      <div className="hidden md:block">
-        <NavbarAlt subpage="Virksomhet" />
-      </div>*/}
-      <main className="flex flex-col items-center min-h-screen p-0">
-        <HeroSub content={data.heroSub[3]} key={data.heroSub[3]._id} />
-        <div className="flex flex-col items-center mt-80 md:mt-0">
-          <KodehodeSummary content1={data.origin} content2={data.courseTypes} />
-          <StudyInParts content={data.CourseSections} />
-          <FourIconRow title={"Noen av våre kodespråk"} content={newLogoArray} />
-          <Competence content1={data.relevantCompetence[0]} content2={newIconArray} />
-          <Offices content={data.OurLocals} />
-          <ImageGallery content={data.ImageGallery} />
-          <LinkToFaq />
-        </div>
-      </main>
-    </>
+    </main>
   );
 }
