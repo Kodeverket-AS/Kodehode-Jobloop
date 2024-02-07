@@ -6,6 +6,7 @@ import Competence from "../../../components/Competence";
 import Results from "../../../components/Results";
 import ImageGallery from "../../../components/ImageGallery";
 import LinkToFaq from "../../../components/LinkToFaq";
+import VideoComp1 from "../../../components/VideoComp1";
 
 export default async function Deltaker() {
   const data = await getData();
@@ -21,6 +22,7 @@ export default async function Deltaker() {
       <div className="flex flex-col items-center mt-[370px] md:mt-20">
         <KodehodeSummary content1={data.origin} content2={data.courseTypes} />
         <StudyInParts content={data.CourseSections} />
+        <VideoComp1 />
         <Competence
           content1={data.relevantCompetence[0]}
           content2={newIconArray}
