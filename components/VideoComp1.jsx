@@ -6,9 +6,23 @@ import video1thumbnail from "../public/video1thumbnail.jpg";
 
 export default function InternshipCard() {
   return (
-    <div className="px-5 py-3 bg-jobloop-primary-green shadow-md">
-        <Image src={video1thumbnail} width={1000} height={500} className="" />
-        <video width={1000} height={500} autoplay><source />Nettleseren din støtter ikke video</video>
+    <div className="w-full px-5 py-3 bg-jobloop-primary-green">
+      <Image
+        src={video1thumbnail}
+        width={1000}
+        height={500}
+        className="block shadow-md hover:hidden"
+      />
+      <iframe
+        width="1000"
+        height="500"
+        src="https://www.youtube.com/embed/LocPs6zdkrQ?si=afaKRzcMA80WvwtW&amp;controls=0"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen
+        className="invisible shadow-md hover:visible"
+      ></iframe>
     </div>
   );
 }
