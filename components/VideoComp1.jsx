@@ -6,7 +6,7 @@ import video1thumbnail from "../public/video1thumbnail.jpg";
 
 export default function VideoComp1({ url }) {
   return (
-    <div className="w-full px-5 py-3">
+    <div className="w-full py-20">
       {/*<Image
         src={video1thumbnail}
         width={1000}

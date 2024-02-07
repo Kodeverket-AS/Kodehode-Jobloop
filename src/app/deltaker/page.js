@@ -22,7 +22,7 @@ export default async function Deltaker() {
       <div className="flex flex-col items-center mt-[370px] md:mt-20">
         <KodehodeSummary content1={data.origin} content2={data.courseTypes} />
         <StudyInParts content={data.CourseSections} />
-        <div className="bg-jobloop-primary-green">
+        <div className="w-full bg-jobloop-primary-green">
           <VideoComp1 url="https://www.youtube.com/embed/LocPs6zdkrQ?si=afaKRzcMA80WvwtW&amp;" />
         </div>
         <Competence
