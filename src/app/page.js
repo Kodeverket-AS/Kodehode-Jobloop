@@ -116,7 +116,8 @@ export async function getData() {
     "companyLogos":*[_type == "companyLogos"]{title, "logo":logo.asset->url, _id},
     "results":*[_type == "results"]{title, "image":image.asset->url, content, person, link, _id},
     "samarbeid":*[_type == "samarbeid"]{title, "image":image.asset->url, content, _id},
-    "FAQ":*[_type == "FAQ"]{title, question, svar, _id}
+    "FAQ":*[_type == "FAQ"]{title, question, svar, _id},
+    "personDatabase":*[_type == "personDatabase"]{"image":image.asset->url, navn, lokasjon, tlf_nummer, stilling, henvendelser, mail, _id},
     
   }`);
 }
