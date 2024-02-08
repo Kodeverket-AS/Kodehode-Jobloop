@@ -115,5 +115,6 @@ export async function getData() {
     "adaptTech":*[_type == "adaptTech"]{title, content, _id},
     "companyLogos":*[_type == "companyLogos"]{title, "logo":logo.asset->url, _id},
     "results":*[_type == "results"]{title, "image":image.asset->url, content, person, link, _id},
+    "personDatabase":*[_type == "personDatabase"]{navn, stilling, lokasjon, mail, tlf_nummer, "image":image.asset->url, role, _id},
   }`);
 }
