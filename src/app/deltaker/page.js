@@ -36,6 +36,9 @@ export default async function Deltaker() {
           <Results content={data.results[0]} />
         </div>
         <ImageGallery content={data.ImageGallery} />
+        <div className="w-full bg-jobloop-primary-green">
+          <VideoComp1 url="https://www.youtube.com/embed/gIrgqXD27EI?si=bh2im5jdpu-apCIQ&amp;" />
+        </div>
         <LinkToFaq />
       </div>
     </main>
