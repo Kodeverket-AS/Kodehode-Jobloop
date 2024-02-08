@@ -7,6 +7,8 @@ import Results from "../../../components/Results";
 import ImageGallery from "../../../components/ImageGallery";
 import LinkToFaq from "../../../components/LinkToFaq";
 import VideoComp1 from "../../../components/VideoComp1";
+import Offices from "../../../components/Offices";
+import Teachers from "../../../components/Teachers";
 
 export default async function Deltaker() {
   const data = await getData();
@@ -15,6 +17,12 @@ export default async function Deltaker() {
     data.competenceIcons[3],
     data.competenceIcons[1],
     data.competenceIcons[2],
+  ];
+  const teachers = [
+    data.personDatabase[4],
+    data.personDatabase[2],
+    data.personDatabase[0],
+    data.personDatabase[5],
   ];
   return (
     <main className="flex flex-col items-center min-h-screen p-0">
@@ -32,6 +40,7 @@ export default async function Deltaker() {
         <div className="w-full">
           <VideoComp1 url="https://www.youtube.com/embed/6riX-2lnIyg?si=g3aOkgbSOaBsJE-B&amp;" />
         </div>
+        <Teachers content={teachers} />
         <div className=" bg-jobloop-secondary-orange">
           <Results content={data.results[0]} />
         </div>
