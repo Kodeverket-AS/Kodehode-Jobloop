@@ -29,6 +29,9 @@ export default async function Deltaker() {
           content1={data.relevantCompetence[0]}
           content2={newIconArray}
         />
+        <div className="w-full">
+          <VideoComp1 url="https://www.youtube.com/embed/6riX-2lnIyg?si=g3aOkgbSOaBsJE-B&amp;" />
+        </div>
         <div className=" bg-jobloop-secondary-orange">
           <Results content={data.results[0]} />
         </div>
