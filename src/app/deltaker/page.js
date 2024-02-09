@@ -9,6 +9,7 @@ import LinkToFaq from "../../../components/LinkToFaq";
 import VideoComp1 from "../../../components/VideoComp1";
 import Offices from "../../../components/Offices";
 import Teachers from "../../../components/Teachers";
+import Platforms from "../../../components/Platforms";
 
 export default async function Deltaker() {
   const data = await getData();
@@ -41,6 +42,7 @@ export default async function Deltaker() {
           <VideoComp1 url="https://www.youtube.com/embed/6riX-2lnIyg?si=g3aOkgbSOaBsJE-B&amp;" />
         </div>
         <Teachers content={teachers} />
+        <Platforms />
         <div className=" bg-jobloop-secondary-orange">
           <Results content={data.results[0]} />
         </div>
