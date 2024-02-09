@@ -7,7 +7,7 @@ import video1thumbnail from "../public/video1thumbnail.jpg";
 export default function VideoComp1({ url }) {
   return (
     <>
-      <div className="w-full py-8 block md:hidden">
+      <div className="block w-full py-8 md:hidden">
         {/*<Image
         src={video1thumbnail}
         width={1000}
@@ -25,7 +25,7 @@ export default function VideoComp1({ url }) {
           className="mx-auto shadow-md"
         ></iframe>
       </div>
-      <div className="w-full py-20 hidden md:block">
+      <div className="hidden w-full py-20 md:block">
         {/*<Image
         src={video1thumbnail}
         width={1000}

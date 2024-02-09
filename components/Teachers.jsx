@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export default function Teachers({ content }) {
   return (
-    <div className="flex flex-col items-center w-full py-10 bg-jobloop-secondary-orange">
+    <div className="flex flex-col items-center w-full py-20 bg-jobloop-secondary-orange">
       <h1 className="pb-10">Våre veiledere</h1>
       <div className="pt-0 pb-10 md:flex">
         <div className="flex flex-row justify-center pb-10 mx-auto md:flex-col w-80 md:mr-12 md:w-48 md:pb-0">
