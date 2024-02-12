@@ -5,7 +5,7 @@ import { IoCloseSharp } from "react-icons/io5";
 import { GiHamburgerMenu } from "react-icons/gi";
 import Link from "next/link";
 
-const HamburgerMenu = (hamFill) => {
+const HamburgerMenu = ({ hamFill }) => {
   const [isOpen, setIsOpen] = useState(false);
   const menuRef = useRef(null);
 
