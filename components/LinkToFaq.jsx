@@ -7,7 +7,7 @@ import Fargebaner2 from "../public/Fargebaner2.svg";
 
 export default function LinkToFaq() {
   return (
-    <div className="w-full pt-10">
+    <div className="w-full pt-20">
       <div className="flex flex-col items-center">
         <h1 className="mb-10 md:mb-20">Har du flere spørsmål?</h1>
         <div>
