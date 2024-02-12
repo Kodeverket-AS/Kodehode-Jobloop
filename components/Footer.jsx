@@ -77,9 +77,9 @@ export default function Footer() {
           <h2 className="text-3xl">Sider</h2>
           <Link
             className="hover:underline"
-            href="/bedrift"
-            aria-label="Gå til underside for bedrift">
-            Bedrift
+            href="/arbeidsgiver"
+            aria-label="Gå til underside for arbeidsgiver">
+            Arbeidsgiver
           </Link>
           <Link
             className="hover:underline"
