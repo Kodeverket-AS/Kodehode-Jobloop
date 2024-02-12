@@ -12,9 +12,7 @@ export default function Navbar() {
     <nav className="w-full">
       <div className="flex items-center justify-between">
         <div className="p-4">
-          <Link
-            href="/"
-            aria-label="Gå til landingssiden">
+          <Link href="/" aria-label="Gå til landingssiden">
             <Image
               className="w-60 md:w-80"
               src={logoDesktopHvit}
@@ -29,25 +27,29 @@ export default function Navbar() {
             <Link
               href="/visjon"
               aria-label="gå til denne undersiden for å lese om vår visjon"
-              className="text-white font-bold px-4 md:hover:underline">
+              className="px-4 font-bold text-white md:hover:underline"
+            >
               Vår Visjon
             </Link>
             <Link
               href="/FAQ"
               aria-label="gå til denne undersiden for å få svar på ofte stilte spørsmål"
-              className="text-white font-bold px-4 md:hover:underline">
+              className="px-4 font-bold text-white md:hover:underline"
+            >
               FAQ
             </Link>
             <Link
               href="/about"
               aria-label="gå til denne undersiden for å lese mer om oss"
-              className="text-white font-bold px-4 md:hover:underline">
+              className="px-4 font-bold text-white md:hover:underline"
+            >
               Om Oss
             </Link>
             <Link
               href="/techstack"
               aria-label="gå til denne undersiden for å lese mer om kodespråkene våre"
-              className="text-white font-bold px-4 md:hover:underline">
+              className="px-4 font-bold text-white md:hover:underline"
+            >
               Kodespråk
             </Link>
           </div>
@@ -64,10 +66,8 @@ export function NavbarAlt({ subpage }) {
   return (
     <nav className="w-full">
       <div className="flex items-center justify-between">
-        <div className="p-4 flex flex-row items-end">
-          <Link
-            href="/"
-            aria-label="Gå til landingssiden">
+        <div className="flex flex-row items-end p-4">
+          <Link href="/" aria-label="Gå til landingssiden">
             <Image
               className="w-60 md:w-80"
               src={logoDesktopFarge}
@@ -76,7 +76,7 @@ export function NavbarAlt({ subpage }) {
               alt="Logo"
             />
           </Link>
-          <b className="text-2xl text-jobloop-primary-orange mb-1">
+          <b className="mb-1 text-2xl text-jobloop-primary-orange">
             <em>{subpage}</em>
           </b>
         </div>
@@ -85,25 +85,29 @@ export function NavbarAlt({ subpage }) {
             <Link
               href="/visjon"
               aria-label="gå til denne undersiden for å lese om vår visjon"
-              className="text-jobloop-primary-green font-bold px-4 md:hover:underline">
+              className="px-4 font-bold text-jobloop-primary-green md:hover:underline"
+            >
               Vår Visjon
             </Link>
             <Link
               href="/FAQ"
               aria-label="gå til denne undersiden for å få svar på ofte stilte spørsmål"
-              className="text-jobloop-primary-green font-bold px-4 md:hover:underline">
+              className="px-4 font-bold text-jobloop-primary-green md:hover:underline"
+            >
               FAQ
             </Link>
             <Link
               href="/about"
               aria-label="gå til denne undersiden for å lese mer om oss"
-              className="text-jobloop-primary-green font-bold px-4 md:hover:underline">
+              className="px-4 font-bold text-jobloop-primary-green md:hover:underline"
+            >
               Om Oss
             </Link>
             <Link
               href="/techstack"
               aria-label="gå til denne undersiden for å lese mer om kodespråkene våre"
-              className="text-jobloop-primary-green font-bold px-4 md:hover:underline">
+              className="px-4 font-bold text-jobloop-primary-green md:hover:underline"
+            >
               Kodespråk
             </Link>
           </div>
