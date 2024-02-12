@@ -5,7 +5,7 @@ import Image from "next/image";
 import { PortableText } from "@portabletext/react";
 import { LinkButton } from "./Buttons";
 
-export default function HeroSub({content}) {
+export default function HeroSub({content, buttonText}) {
   return (
     <>
       <div className="absolute top-0 block w-full -z-10 md:hidden">
@@ -31,7 +31,7 @@ export default function HeroSub({content}) {
           <h1 className="text-jobloop-primary-green">{content.title}</h1>
           <PortableText value={content.content} />
           <div className="hidden mt-4 md:block">
-            <LinkButton Path="/contact" Text="Kontakt oss" />
+            <LinkButton Path="/contact" Text={buttonText} />
           </div>
         </div>
         <div className="w-1/2">
