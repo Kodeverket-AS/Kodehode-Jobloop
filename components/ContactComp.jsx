@@ -1,13 +1,14 @@
-import PortableText from "react-portable-text"
+//import PortableText from "react-portable-text"
+import { PortableText } from "@portabletext/react"
 import Image from "next/image"
 import { ContactBtn } from "./Buttons"
 
 export default function ContactComp({imageOne, title, content, _id}){
     return(
         
-        <div className='flex justify-center bg-jobloop-primary-green p-20'>
+        <div className='flex justify-center p-20 bg-jobloop-primary-green'>
          <div className="w-5/6">
-                <div className="flex flex-col md:flex-row w-full gap-10 md:gap-7 ">
+                <div className="flex flex-col w-full gap-10 md:flex-row md:gap-7 ">
                     <div className="flex flex-row w-full ">
                         <div className="w-full">
                             <Image 
@@ -21,10 +22,10 @@ export default function ContactComp({imageOne, title, content, _id}){
                       
                     </div>
 
-                    <div className="flex flex-col justify-center w-full md:w-4/6 gap-10">
+                    <div className="flex flex-col justify-center w-full gap-10 md:w-4/6">
                         <h2 className="font-extrabold">{title}</h2>
-                        <PortableText content={content}></PortableText>
-                        <ContactBtn></ContactBtn>
+                        <PortableText value={content} />
+                        <ContactBtn />
                     </div>
                </div>
             </div>
