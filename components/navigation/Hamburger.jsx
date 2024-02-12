@@ -27,8 +27,6 @@ const HamburgerMenu = ({ hamFill }) => {
     };
   }, []);
 
-  let fillColour = hamFill;
-
   return (
     <div className="block md:hidden">
       <button
@@ -38,7 +36,7 @@ const HamburgerMenu = ({ hamFill }) => {
       >
         <GiHamburgerMenu
           className={`w-20 h-20 ${
-            fillColour == "white" ? "fill-white" : "fill-jobloop-primary-green"
+            hamFill == "white" ? "fill-white" : "fill-jobloop-primary-green"
           }`}
         />
       </button>
