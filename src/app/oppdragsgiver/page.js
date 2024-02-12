@@ -9,7 +9,7 @@ import Offices from "../../../components/Offices";
 import ImageGallery from "../../../components/ImageGallery";
 import LinkToFaq from "../../../components/LinkToFaq";
 
-export default async function Virksomhet() {
+export default async function Oppdragsgiver() {
   const data = await getData();
   //console.log(data.courseTypes);
   const newLogoArray = [
