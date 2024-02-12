@@ -5,7 +5,7 @@ import { IoCloseSharp } from "react-icons/io5";
 import { GiHamburgerMenu } from "react-icons/gi";
 import Link from "next/link";
 
-const HamburgerMenu = () => {
+const HamburgerMenu = (hamFill) => {
   const [isOpen, setIsOpen] = useState(false);
   const menuRef = useRef(null);
 
@@ -27,6 +27,8 @@ const HamburgerMenu = () => {
     };
   }, []);
 
+  let fillColour = hamFill;
+
   return (
     <div className="block md:hidden">
       <button
@@ -34,7 +36,11 @@ const HamburgerMenu = () => {
         onClick={handleMenuToggle}
         aria-label="Åpne navigasjonsmeny"
       >
-        <GiHamburgerMenu className="w-20 h-20 fill-white" />
+        <GiHamburgerMenu
+          className={`w-20 h-20 ${
+            fillColour == "white" ? "fill-white" : "fill-jobloop-primary-green"
+          }`}
+        />
       </button>
 
       <div
