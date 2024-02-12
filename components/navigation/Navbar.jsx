@@ -54,7 +54,7 @@ export default function Navbar() {
             </Link>
           </div>
           <div className="px-4">
-            <HamburgerMenu />
+            <HamburgerMenu hamFill="white" />
           </div>
         </div>
       </div>
@@ -112,7 +112,7 @@ export function NavbarAlt({ subpage }) {
             </Link>
           </div>
           <div className="px-4">
-            <HamburgerMenu />
+            <HamburgerMenu hamFill="colour" />
           </div>
         </div>
       </div>
