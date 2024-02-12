@@ -8,7 +8,7 @@ export default function Competence({ content1, content2 }) {
   //console.log(content1);
   return (
     <>
-      <div className="w-1/2 py-10 text-center">
+      <div className="w-1/2 py-20 text-center">
         <h1 className="mx-auto md:pb-10 md:w-96">{content1.title}</h1>
         <div className="hidden md:block">
           <PortableText value={content1.content} />
