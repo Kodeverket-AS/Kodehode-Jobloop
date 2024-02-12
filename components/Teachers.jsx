@@ -14,7 +14,7 @@ export default function Teachers({ content }) {
               src={content[0].image}
               width={300}
               height={300}
-              className="object-cover w-full h-full rounded"
+              className="object-cover w-full h-full border border-white rounded"
             />
           </div>
           <div className="w-1/2 text-left md:w-full">
@@ -28,7 +28,7 @@ export default function Teachers({ content }) {
               src={content[1].image}
               width={300}
               height={300}
-              className="object-cover w-full h-full rounded"
+              className="object-cover w-full h-full border border-white rounded"
             />
           </div>
           <div className="w-1/2 text-left md:w-full">
@@ -42,7 +42,7 @@ export default function Teachers({ content }) {
               src={content[2].image}
               width={300}
               height={300}
-              className="object-cover w-full h-full rounded"
+              className="object-cover w-full h-full border border-white rounded"
             />
           </div>
           <div className="w-1/2 text-left md:w-full">
@@ -56,7 +56,7 @@ export default function Teachers({ content }) {
               src={content[3].image}
               width={300}
               height={300}
-              className="object-cover w-full h-full rounded"
+              className="object-cover w-full h-full border border-white rounded"
             />
           </div>
           <div className="w-1/2 text-left md:w-full">
