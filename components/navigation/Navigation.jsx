@@ -7,7 +7,7 @@ import MyPathname from "./MyPathname";
 
 // Definer URL endpoints.
 const landing = "/";
-const virksomhet = "/virksomhet";
+const oppdragsgiver = "/oppdragsgiver";
 const bedrift = "/bedrift";
 const deltaker = "/deltaker";
 const techstack = "/techstack";
@@ -25,14 +25,14 @@ export default function Navigation() {
     navbar = <NavbarAlt />;
   } else if (pathname === about) {
     navbar = <NavbarAlt />;
-  } else if (pathname === virksomhet) {
+  } else if (pathname === oppdragsgiver) {
     navbar = (
       <>
         <div className="block md:hidden">
           <Navbar />
         </div>
         <div className="hidden md:block">
-          <NavbarAlt subpage="Virksomhet" />
+          <NavbarAlt subpage="Oppdragsgiver" />
         </div>
       </>
     );
