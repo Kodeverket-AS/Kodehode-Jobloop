@@ -13,7 +13,7 @@ export default function Offices({ content }) {
             src={content[1].image}
             width={300}
             height={300}
-            className="w-1/2 pr-3 border border-white rounded md:mb-2 md:w-full"
+            className="w-1/2 mr-3 border border-white rounded md:mb-2 md:w-full"
           />
           <div className="w-1/2 text-left md:w-full">
             <h2>{content[1].title}</h2>
@@ -26,7 +26,7 @@ export default function Offices({ content }) {
             src={content[0].image}
             width={300}
             height={300}
-            className="w-1/2 pr-3 border border-white rounded md:mb-2 md:w-full"
+            className="w-1/2 mr-3 border border-white rounded md:mb-2 md:w-full"
           />
           <div className="w-1/2 text-left md:w-full">
             <h2>{content[0].title}</h2>
@@ -39,7 +39,7 @@ export default function Offices({ content }) {
             src={content[3].image}
             width={300}
             height={300}
-            className="w-1/2 pr-3 border border-white rounded md:mb-2 md:w-full"
+            className="w-1/2 mr-3 border border-white rounded md:mb-2 md:w-full"
           />
           <div className="w-1/2 text-left md:w-full">
             <h2>{content[3].title}</h2>
@@ -52,7 +52,7 @@ export default function Offices({ content }) {
             src={content[2].image}
             width={300}
             height={300}
-            className="w-1/2 pr-3 border border-white rounded md:mb-2 md:w-full"
+            className="w-1/2 mr-3 border border-white rounded md:mb-2 md:w-full"
           />
           <div className="w-1/2 text-left md:w-full">
             <h2>{content[2].title}</h2>
