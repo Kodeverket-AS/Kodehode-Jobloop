@@ -10,9 +10,9 @@ export default async function Techstack() {
 
   return (
     <>
-      <main className=" flex flex-col items-center min-h-screen pt-12 pb-8 px-4 md:p-24">
+      <main className="flex flex-col items-center min-h-screen px-4 pt-12 pb-8 md:p-24">
         <section className="flex flex-col gap-32 pb-16">
-          <div className="max-w-prose flex flex-col gap-6 md:gap-8 ">
+          <div className="flex flex-col gap-6 max-w-prose md:gap-8 ">
             <h1 className="text-4xl text-jobloop-primay-orange md:text-5xl">
               {data.heroSub[4].title}
             </h1>
