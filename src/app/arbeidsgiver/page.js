@@ -15,8 +15,8 @@ export default async function Bedrift() {
   const newLogoArray = [
     data.egsCoop[3],
     data.egsCoop[2],
-    data.egsCoop[1],
     data.egsCoop[0],
+    data.egsCoop[1],
   ];
   const newIconArray = [
     data.competenceIconsBuissness[1],
@@ -32,7 +32,7 @@ export default async function Bedrift() {
   ];
   return (
       <main className="flex flex-col items-center min-h-screen p-0">
-        <HeroSub content={data.heroSub[5]} key={data.heroSub[5]._id} />
+        <HeroSub content={data.heroSub[5]} buttonText={"Søk om kandidater"} key={data.heroSub[5]._id} />
         <div className="flex flex-col items-center mt-[370px] md:mt-20">
           <FourIconRow title={"Hva ser Kodehode etter hos samarbeidspartnere?"} content={newLogoArray} />
           <KodehodeInternship content1={data.origin} content2={data.internship} />

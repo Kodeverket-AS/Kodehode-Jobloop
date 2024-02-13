@@ -27,15 +27,15 @@ export default async function Deltaker() {
   ];
   return (
     <main className="flex flex-col items-center min-h-screen p-0">
-      <HeroSub content={data.heroSub[1]} key={data.heroSub[1]._id} />
+      <HeroSub content={data.heroSub[1]} buttonText={"Jeg er interessert!"} key={data.heroSub[1]._id} />
       <div className="flex flex-col items-center mt-[370px] md:mt-20">
-        <KodehodeSummary content1={data.origin} content2={data.courseTypes} />
+        <KodehodeSummary content1={data.origin[1]} content2={data.courseTypes} />
         <StudyInParts content={data.CourseSections} />
         <div className="w-full bg-jobloop-primary-green">
           <VideoComp1 url="https://www.youtube.com/embed/LocPs6zdkrQ?si=afaKRzcMA80WvwtW&amp;" />
         </div>
         <Competence
-          content1={data.relevantCompetence[0]}
+          content1={data.relevantCompetence[2]}
           content2={newIconArray}
         />
         <div className="w-full">
