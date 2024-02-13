@@ -11,17 +11,17 @@ export default function KodehodeSummary({ content1, content2 }) {
   return (
     <div className="flex flex-col px-8 py-20 md:flex-row md:px-24">
       <div className="flex-col w-full md:w-1/2 md:flex">
-        <h1 className="hidden md:block">{content1[0].title}</h1>
-        <h1 className="block pb-5 md:hidden">{content1[0].mobileTitle}</h1>
+        <h1 className="hidden md:block">{content1.title}</h1>
+        <h1 className="block pb-5 md:hidden">{content1.mobileTitle}</h1>
         <div className="hidden md:block">
           <div className="py-5">
-            <PortableText value={content1[0].content1} />
+            <PortableText value={content1.content1} />
           </div>
           <div className="py-5">
-            <PortableText value={content1[0].content2} />
+            <PortableText value={content1.content2} />
           </div>
           <div className="py-5">
-            <PortableText value={content1[0].content3} />
+            <PortableText value={content1.content3} />
           </div>
         </div>
       </div>
