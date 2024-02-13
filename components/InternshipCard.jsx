@@ -3,7 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 
-export default function CourseCard({content}) {
+export default function InternshipCard({ content }) {
   return (
     <div className="flex flex-col px-5 py-3 bg-white shadow-md">
       <h3 className="font-bold ">{content.title}</h3>
@@ -12,12 +12,12 @@ export default function CourseCard({content}) {
       <p>{content.expectations}</p>
       <h3 className="font-bold">Tidsplan</h3>
       <p>{content.schedule}</p>
-      <h3 className="font-bold">Undervisningsform</h3>
-      <p>{content.educationStyle}</p>
-      <h3 className="font-bold">Jobbmarked</h3>
-      <p>{content.jobMarket}</p>
-      <h3 className="font-bold">Sted</h3>
-      <p>{content.place}</p>
+      <h3 className="font-bold">Veiledning</h3>
+      <p>{content.guidance}</p>
+      <h3 className="font-bold">Tilbud om fast stilling?</h3>
+      <p>{content.jobOffer}</p>
+      <h3 className="font-bold">Hjelp til å bli godkjent lærlingbedrift</h3>
+      <p>{content.help}</p>
     </div>
   );
 }

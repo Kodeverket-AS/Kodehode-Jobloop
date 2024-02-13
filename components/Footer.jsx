@@ -29,18 +29,18 @@ const contactInformation = [
 
 export default function Footer() {
   return (
-    <footer className="text-white bg-jobloop-tertiary-purple pb-8">
-      <div className=" flex flex-row justify-between items-start flex-wrap gap-y-20 gap-x-8 pt-8 pb-24 px-12  md:px-12">
+    <footer className="pb-8 text-white bg-jobloop-tertiary-purple">
+      <div className="flex flex-row flex-wrap items-start justify-between px-12 pt-8 pb-24 gap-y-20 gap-x-8 md:px-12">
         <div className="flex flex-col gap-8 ">
           <h2 className="text-3xl">Kontakt</h2>
           {contactInformation.map((person) => (
             <div
-              className="flex flex-col border-b-2 border-white border-opacity-40 pb-4 "
+              className="flex flex-col pb-4 border-b-2 border-white border-opacity-40 "
               key={person.name}>
               <b className="text-lg">{person.name}</b>
               <a
                 href={`mailto:${person.email}`}
-                className="cursor-pointer py-1 hover:underline active:underline"
+                className="py-1 cursor-pointer hover:underline active:underline"
                 target="_blank"
                 aria-label="Åpner email for å opprette epost til valgt person">
                 {person.email}
@@ -77,9 +77,9 @@ export default function Footer() {
           <h2 className="text-3xl">Sider</h2>
           <Link
             className="hover:underline"
-            href="/bedrift"
-            aria-label="Gå til underside for bedrift">
-            Bedrift
+            href="/arbeidsgiver"
+            aria-label="Gå til underside for arbeidsgiver">
+            Arbeidsgiver
           </Link>
           <Link
             className="hover:underline"
@@ -89,9 +89,9 @@ export default function Footer() {
           </Link>
           <Link
             className="hover:underline"
-            href="/virksomhet"
-            aria-label="Gå til underside for virksomhet">
-            Virksomhet
+            href="/oppdragsgiver"
+            aria-label="Gå til underside for oppdragsgiver">
+            Oppdragsgiver
           </Link>
         </div>
       </div>
