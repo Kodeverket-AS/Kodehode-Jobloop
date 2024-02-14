@@ -14,7 +14,7 @@ const roboto = Roboto({
 export const metadata = {
   title: "Kodehode",
   description:
-    "Kodehode er et programmeringskurs med en praktisk tilnærming til IT-utviklerfaget. Med fokus på de viktigste og mest dagsaktuelle teknologiene for dagens og fremtidens marked, omdanner vi utenforskap til et viktig utenforskap og ettertraktet arbeidskraft.",
+    "Dyktige junior-utviklere til din bedrift? Kodehode er et programmeringskurs med en praktisk tilnærming til IT-utvikler faget. Vi fokuserer på de viktigste og mest dagsaktuelle teknologiene for dagens og fremtidens marked. Sammen omdanner vi utenforskap til viktig og ettertraktet arbeidskraft.",
 };
 
 export default function RootLayout({ children }) {
