@@ -42,7 +42,7 @@ export default async function Deltaker() {
           <VideoComp1 url="https://www.youtube.com/embed/6riX-2lnIyg?si=g3aOkgbSOaBsJE-B&amp;" />
         </div>
         <Teachers content={teachers} />
-        <Platforms />
+        {/*<Platforms />*/}
         <div className=" bg-jobloop-secondary-orange">
           <Results content={data.results[0]} />
         </div>
