@@ -7,7 +7,6 @@ import Results from "../../../components/Results";
 import ImageGallery from "../../../components/ImageGallery";
 import LinkToFaq from "../../../components/LinkToFaq";
 import VideoComp1 from "../../../components/VideoComp1";
-import Offices from "../../../components/Offices";
 import Teachers from "../../../components/Teachers";
 import Platforms from "../../../components/Platforms";
 
