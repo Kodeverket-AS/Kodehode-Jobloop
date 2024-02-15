@@ -26,7 +26,7 @@ export default async function Deltaker() {
   ];
   return (
     <main className="flex flex-col items-center min-h-screen p-0">
-      <HeroSub content={data.heroSub[0]} buttonText={"Jeg er interessert!"} key={data.heroSub[0]._id} />
+      <HeroSub content={data.heroSub[2]} buttonText={"Jeg er interessert!"} key={data.heroSub[2]._id} />
       <div className="flex flex-col items-center mt-[370px] md:mt-20">
         <KodehodeSummary content1={data.origin[1]} content2={data.courseTypes} />
         <StudyInParts content={data.CourseSections} />

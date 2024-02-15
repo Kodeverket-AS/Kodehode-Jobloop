@@ -26,7 +26,7 @@ export default async function Oppdragsgiver() {
   ];
   return (
     <main className="flex flex-col items-center min-h-screen p-0">
-      <HeroSub content={data.heroSub[2]} buttonText={"Kontakt oss"} key={data.heroSub[2]._id} />
+      <HeroSub content={data.heroSub[4]} buttonText={"Kontakt oss"} key={data.heroSub[4]._id} />
       <div className="flex flex-col items-center mt-80 md:mt-0">
         <KodehodeSummary content1={data.origin[0]} content2={data.courseTypes} />
         <StudyInParts content={data.CourseSections} />
