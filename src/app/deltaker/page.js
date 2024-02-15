@@ -19,10 +19,10 @@ export default async function Deltaker() {
     data.competenceIcons[2],
   ];
   const teachers = [
+    data.personDatabase[2],
     data.personDatabase[3],
     data.personDatabase[4],
     data.personDatabase[5],
-    data.personDatabase[6],
   ];
   return (
     <main className="flex flex-col items-center min-h-screen p-0">
