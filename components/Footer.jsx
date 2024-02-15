@@ -89,9 +89,9 @@ export default function Footer() {
           </Link>
           <Link
             className="hover:underline"
-            href="/oppdragsgiver"
-            aria-label="Gå til underside for oppdragsgiver">
-            Oppdragsgiver
+            href="/samarbeidspartner"
+            aria-label="Gå til underside for samarbeidspartner">
+            Samarbeidspartner
           </Link>
         </div>
       </div>
