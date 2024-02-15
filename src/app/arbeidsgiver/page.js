@@ -11,7 +11,7 @@ import Results from "../../../components/Results";
 
 export default async function Bedrift() {
   const data = await getData();
-  //console.log(data.relevantCompetence[0]);
+  //console.log(data.heroSub);
   const newLogoArray = [
     data.egsCoop[3],
     data.egsCoop[2],
