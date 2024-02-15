@@ -35,7 +35,7 @@ export default async function Deltaker() {
         </div>
         <Competence
           content1={data.relevantCompetence[2]}
-          content2={newIconArray}
+          content2={data.competenceIcons}
         />
         <div className="w-full">
           <VideoComp1 url="https://www.youtube.com/embed/6riX-2lnIyg?si=g3aOkgbSOaBsJE-B&amp;" />

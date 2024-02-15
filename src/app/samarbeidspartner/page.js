@@ -30,8 +30,8 @@ export default async function Oppdragsgiver() {
       <div className="flex flex-col items-center mt-80 md:mt-0">
         <KodehodeSummary content1={data.origin[0]} content2={data.courseTypes} />
         <StudyInParts content={data.CourseSections} />
-        <FourIconRow title={"Noen av våre kodespråk"} content={newLogoArray} />
-        <Competence content1={data.relevantCompetence[0]} content2={newIconArray} />
+        <FourIconRow title={"Noen av våre kodespråk"} content={data.mainTech} />
+        <Competence content1={data.relevantCompetence[0]} content2={data.competenceIcons} />
         <Offices content={data.OurLocals} />
         <ImageGallery content={data.ImageGallery} />
         <LinkToFaq />
