@@ -12,12 +12,6 @@ import Platforms from "../../../components/Platforms";
 
 export default async function Deltaker() {
   const data = await getData();
-  const newIconArray = [
-    data.competenceIcons[0],
-    data.competenceIcons[3],
-    data.competenceIcons[1],
-    data.competenceIcons[2],
-  ];
   const teachers = [
     data.personDatabase[2],
     data.personDatabase[3],

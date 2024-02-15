@@ -12,24 +12,6 @@ import Results from "../../../components/Results";
 export default async function Bedrift() {
   const data = await getData();
   //console.log(data.heroSub);
-  const newLogoArray = [
-    data.egsCoop[3],
-    data.egsCoop[2],
-    data.egsCoop[0],
-    data.egsCoop[1],
-  ];
-  const newIconArray = [
-    data.competenceIconsBuissness[1],
-    data.competenceIconsBuissness[3],
-    data.competenceIconsBuissness[0],
-    data.competenceIconsBuissness[2],
-  ];
-  const techArray = [
-    data.mainTech[0],
-    data.mainTech[1],
-    data.mainTech[3],
-    data.mainTech[2],
-  ];
   return (
       <main className="flex flex-col items-center min-h-screen p-0">
         <HeroSub content={data.heroSub[6]} buttonText={"Søk om kandidater"} key={data.heroSub[6]._id} />
