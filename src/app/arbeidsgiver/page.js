@@ -34,10 +34,10 @@ export default async function Bedrift() {
       <main className="flex flex-col items-center min-h-screen p-0">
         <HeroSub content={data.heroSub[6]} buttonText={"Søk om kandidater"} key={data.heroSub[6]._id} />
         <div className="flex flex-col items-center mt-[370px] md:mt-20">
-          <FourIconRow title={"Hva ser Kodehode etter hos samarbeidspartnere?"} content={newLogoArray} />
+          <FourIconRow title={"Hva ser Kodehode etter hos samarbeidspartnere?"} content={data.egsCoop} />
           <KodehodeInternship content1={data.origin} content2={data.internship} />
-          <Competence content1={data.relevantCompetence[1]} content2={newIconArray} />
-          <AdaptTech content1={data.adaptTech} content2={techArray} />
+          <Competence content1={data.relevantCompetence[1]} content2={data.competenceIconsBuissness} />
+          <AdaptTech content1={data.adaptTech} content2={data.mainTech} />
           <CompanyCarousel content={data.companyLogos} />
           <ContactComp 
             key={data.kontaktseksjon[0]._id} 
