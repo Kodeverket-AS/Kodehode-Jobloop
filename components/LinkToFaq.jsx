@@ -11,7 +11,7 @@ export default function LinkToFaq() {
     <div className="w-full pt-20">
       <div className="flex flex-col items-center">
         <h2 className="mb-10 md:mb-20">Har du flere spørsmål?</h2>
-        <div>
+        <div className="z-0">
           <LinkButton Path="/FAQ" Text="Gå til FAQ" />
         </div>
       </div>
