@@ -102,7 +102,7 @@ export async function getData() {
     "courseTypes": *[_type == "courseTypes"]{title, subheader, duration, expectations, schedule, educationStyle, jobMarket, place, _id},
     "VisionSections": *[_type =="VisionSections"]{"ImageOne":ImageOne.asset->url, "ImageTwo":ImageTwo.asset->url, title, content,_id},
     "CourseSections": *[_type == "CourseSections"]{title, "image":image.asset->url, content, _id},
-    "mainTech": *[_type == "mainTech"] | order(index) {title, "logo":logo.asset->url, content index, _id},
+    "mainTech": *[_type == "mainTech"] | order(index) {title, "logo":logo.asset->url, content, index, _id},
     "relevantCompetence": *[_type == "relevantCompetence"] | order(index) {title, content, index, _id},
     "competenceIcons": *[_type == "competenceIcons"] | order(index) {title, "logo":logo.asset->url, content, index, _id},
     "OurLocals": *[_type == "OurLocals"] | order(index) {title, "image":image.asset->url, adresse, postnr, index, _id},
