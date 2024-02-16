@@ -41,9 +41,9 @@ export function LocationCheck({content}){
   };
 
   return (
-  <div className='flex flex-row w-full md:w-4/6 justify-center gap-7 md:gap-20'>
+  <div className='flex flex-row w-full md:w-4/6 justify-center gap-16 md:gap-20'>
             
-            <div className="flex flex-col gap-3 w-1/6 ">
+            <div className="flex flex-col gap-2 w-1/6 ">
                 {filters.map((location, idx) => (
                 <div className="flex items-center gap-3" key={`filters-${idx}`}>
                     <Checkbox className='w-7 h-7 rounded-xl checked:bg-jobloop-primary-green' id={location} onClick={() => handleFilterButtonClick(location)} />
@@ -52,14 +52,14 @@ export function LocationCheck({content}){
                 ))}
             </div>
 
-            <div className="flex flex-col gap-3 md:gap-10 w-full md:w-4/6 md:ml-10">
+            <div className="flex flex-col gap-2 md:gap-10 w-full md:w-4/6 md:ml-10">
                 {filteredItems.map((item, idx) => (
         
-                <div key={`items-${idx}`} className="flex flex-col md:flex-row w-full gap-10 justify-center ">
+                <div key={`items-${idx}`} className="flex flex-col md:flex-row w-full md:gap-10 justify-center ">
                     <Image   
                     width={700}
                     height={700}
-                    className="w-full h-3/6 md:w-3/6 md:h-full"
+                    className="w-4/6 h-4/6 md:w-3/6 md:h-full"
                     alt='profilbilder'
                     src={item.image}></Image>
 
