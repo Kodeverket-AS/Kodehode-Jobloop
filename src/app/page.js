@@ -104,14 +104,7 @@ export default function Home() {
             <div className="flex flex-col gap-4">
               <h2>Inkludering lønner seg.</h2>
               <p>
-                Andelen unge i utenforskap med interesse for gaming og IT i
-                Norge øker, det samme gjør behovet for IT-talent og utvikler i
-                fremtiden. Vår visjon er å skape verdi for samfunn og næringsliv
-                ved å redusere utenforskap gjennom lønnsom opplæring,
-                rekruttering, matchmaking og onboarding innen IT-faget. Vi
-                kjemper for et mer inkluderende samfunn, og å skinne lys på at
-                inkludering ikke behøver å være en utgift, men en verdi for
-                bedrifter såvel som samfunnet som helhet.
+                Tekst om visjon kommer her.
               </p>
               <div>
                 <LinkButton Path={"/visjon"} Text={"Se mer"} />
