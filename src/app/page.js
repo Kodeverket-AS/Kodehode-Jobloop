@@ -118,5 +118,6 @@ export async function getData() {
     "samarbeid":*[_type == "samarbeid"]{title, "image":image.asset->url, content, _id},
     "FAQ":*[_type == "FAQ"]{title, question, svar, _id},
     "personDatabase":*[_type == "personDatabase"]{navn, stilling, lokasjon, mail, tlf_nummer, "image":image.asset->url, role, _id},
-  }`);
+    "about":*[_type == "about"]{title, content, "image":image.asset->url, _id},
+  }`, {cache:"no-cache"});
 }

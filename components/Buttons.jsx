@@ -68,6 +68,20 @@ export function LinkButton({ Path, Text }) {
   );
 }
 
+export function JobloopPodiumButton({ Path, ariaLabel, ButtonText }) {
+  return (
+    
+    <a
+              href={Path}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={ariaLabel}
+              className={`text-white bg-blue-500 hover:bg-blue-700 text-sm font-bold py-2 px-4 rounded`}>
+              {ButtonText}
+    </a>
+    );
+}
+
 export function LinkButtonColour({ Path, Text }) {
   return (
     <Link
@@ -110,7 +124,7 @@ export function ToggleBtn({titleDel, titleBed, titleVirk, idOne, idTwo, idThree,
   return (
   <div>
 
-        <div className=" w-full flex flex-row justify-center p-20 gap-7">
+        <div className="flex flex-row justify-center w-full p-20 gap-7">
         <div>
 
                 
