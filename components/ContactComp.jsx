@@ -1,7 +1,7 @@
 //import PortableText from "react-portable-text"
 import { PortableText } from "@portabletext/react"
 import Image from "next/image"
-import { ContactBtn } from "./Buttons"
+import { ContactBtn, LinkButtonColour } from "./Buttons"
 
 export default function ContactComp({imageOne, title, content, _id}){
     return(
@@ -25,7 +25,7 @@ export default function ContactComp({imageOne, title, content, _id}){
                     <div className="flex flex-col justify-center w-full gap-10 md:w-4/6">
                         <h2 className="font-extrabold">{title}</h2>
                         <PortableText value={content} />
-                        <ContactBtn />
+                        <LinkButtonColour Path={"/contact"} Text={"Kontakt oss"} /> 
                     </div>
                </div>
             </div>
