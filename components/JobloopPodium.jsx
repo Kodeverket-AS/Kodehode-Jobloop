@@ -18,11 +18,13 @@ export default function JobloopPodium({content}) {
                 />
                 <h2 className="mb-2 ">{content[0].title}</h2>
         <PortableText value={content[0].content} /> 
+        <div className="mt-3">
         <JobloopPodiumButton
           href="https://jobloop.no/"
           ariaLabel="Lenke til Jobloops nettside"
           ButtonText="Se mer"
           />
+        </div>
           
         
             </div>
@@ -35,12 +37,14 @@ export default function JobloopPodium({content}) {
                     className="mx-auto my-auto w-72"
                 />
                 <h2 className="mb-2 ">{content[1].title}</h2>
-        <PortableText value={content[1].content} /> 
+        <PortableText value={content[1].content} />
+        <div className="mt-3">
         <JobloopPodiumButton
           href="https://podium.no/"
           ariaLabel="Lenke til Podiums nettside"
           ButtonText="Se mer"
           />
+        </div> 
           
           
             </div>
