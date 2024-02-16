@@ -8,7 +8,7 @@ export default function Teachers({ content }) {
     <div className="flex flex-col items-center w-full py-20 bg-jobloop-secondary-orange">
       <h2 className="pb-10">Våre veiledere</h2>
       <div className="pt-0 pb-10 md:flex">
-        <div className="flex flex-row justify-center pb-10 mx-auto md:flex-col w-80 md:mr-12 md:w-48 md:pb-0">
+        <div className="flex flex-row pb-10 mx-auto md:flex-col w-80 md:mr-12 md:w-48 md:pb-0">
           <div className="w-1/2 pr-3 md:mb-2 md:h-[200px] md:w-full h-[170px]">
             <Image
               src={content[0].image}
@@ -22,7 +22,7 @@ export default function Teachers({ content }) {
             <p>{"Faglig veileder " + content[0].role}</p>
           </div>
         </div>
-        <div className="flex flex-row justify-center pb-10 mx-auto md:flex-col w-80 md:mr-12 md:w-48 md:pb-0">
+        <div className="flex flex-row pb-10 mx-auto md:flex-col w-80 md:mr-12 md:w-48 md:pb-0">
           <div className="w-1/2 pr-3 md:mb-2 md:h-[200px] md:w-full h-[170px]">
             <Image
               src={content[1].image}
@@ -36,7 +36,7 @@ export default function Teachers({ content }) {
             <p>{"Faglig veileder " + content[1].role}</p>
           </div>
         </div>
-        <div className="flex flex-row justify-center pb-10 mx-auto md:flex-col w-80 md:mr-12 md:w-48 md:pb-0">
+        <div className="flex flex-row pb-10 mx-auto md:flex-col w-80 md:mr-12 md:w-48 md:pb-0">
           <div className="w-1/2 pr-3 md:mb-2 md:h-[200px] md:w-full h-[170px]">
             <Image
               src={content[2].image}
@@ -50,7 +50,7 @@ export default function Teachers({ content }) {
             <p>{"Faglig veileder " + content[2].role}</p>
           </div>
         </div>
-        <div className="flex flex-row justify-center pb-10 mx-auto md:flex-col w-80 md:mr-12 md:w-48 md:pb-0">
+        <div className="flex flex-row pb-10 mx-auto md:flex-col w-80 md:mr-12 md:w-48 md:pb-0">
           <div className="w-1/2 pr-3 md:mb-2 md:h-[200px] md:w-full h-[170px]">
             <Image
               src={content[3].image}
