@@ -8,15 +8,15 @@ export default function CourseCard({content}) {
     <div className="flex flex-col px-5 py-3 bg-white shadow-md">
       <h3>{content.title}</h3>
       <p className="pb-3 border-b-4 border-black">{content.subheader}</p>
-      <h4>Forutsetninger</h4>
+      <h4 className="pt-2">Forutsetninger</h4>
       <p>{content.expectations}</p>
-      <h4>Tidsplan</h4>
+      <h4 className="pt-2">Tidsplan</h4>
       <p>{content.schedule}</p>
-      <h4>Undervisningsform</h4>
+      <h4 className="pt-2">Undervisningsform</h4>
       <p>{content.educationStyle}</p>
-      <h4>Jobbmarked</h4>
+      <h4 className="pt-2">Jobbmarked</h4>
       <p>{content.jobMarket}</p>
-      <h4>Sted</h4>
+      <h4 className="pt-2">Sted</h4>
       <p>{content.place}</p>
     </div>
   );
