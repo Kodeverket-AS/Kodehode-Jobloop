@@ -142,5 +142,6 @@ export async function getData() {
     "samarbeid":*[_type == "samarbeid"]{title, "image":image.asset->url, content, _id},
     "FAQ":*[_type == "FAQ"]{title, question, svar, _id},
     "personDatabase":*[_type == "personDatabase"] | order(index) {navn, stilling, lokasjon, henvendelse, mail, tlf_nummer, "image":image.asset->url, role, index, _id},
+    "about":*[_type == "about"]{title, content, "image":image.asset->url, _id},
   }`);
 }
