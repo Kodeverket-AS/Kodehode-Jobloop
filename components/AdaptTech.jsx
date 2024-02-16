@@ -9,7 +9,7 @@ export default function AdaptTech({ content1, content2 }) {
   return (
     <div className="flex flex-row w-full px-8 py-20 md:flex-row md:px-24 bg-jobloop-secondary-orange">
       <div className="flex-col w-full md:w-1/2 md:flex">
-        <h1 className="text-white ">{content1[0].title}</h1>
+        <h2 className="text-white ">{content1[0].title}</h2>
         <div className="">
           <div className="py-5">
             <PortableText value={content1[0].content} />
@@ -31,7 +31,7 @@ export default function AdaptTech({ content1, content2 }) {
               height={300}
               className="mb-2 md:w-20 w-14"
             />
-            <h1>{content2[0].title}</h1>
+            <h3>{content2[0].title}</h3>
           </div>
           <div className="flex flex-col mx-3 my-3 text-center w-14 md:w-20">
             <Image
@@ -40,7 +40,7 @@ export default function AdaptTech({ content1, content2 }) {
               height={300}
               className="mb-2 md:w-20 w-14"
             />
-            <h1>{content2[1].title}</h1>
+            <h3>{content2[1].title}</h3>
           </div>
         </div>
         <div className="flex flex-row justify-center">
@@ -51,7 +51,7 @@ export default function AdaptTech({ content1, content2 }) {
               height={300}
               className="mb-2 md:w-20 w-14"
             />
-            <h1>{content2[2].title}</h1>
+            <h3>{content2[2].title}</h3>
           </div>
           <div className="flex flex-col mx-3 my-3 text-center w-14 md:w-20">
             <Image
@@ -60,7 +60,7 @@ export default function AdaptTech({ content1, content2 }) {
               height={300}
               className="mb-2 md:w-20 w-14"
             />
-            <h1>{content2[3].title}</h1>
+            <h3>{content2[3].title}</h3>
           </div>
         </div>
       </div>

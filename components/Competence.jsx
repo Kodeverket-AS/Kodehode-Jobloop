@@ -8,8 +8,8 @@ export default function Competence({ content1, content2 }) {
   //console.log(content1);
   return (
     <>
-      <div className="w-1/2 py-10 text-center">
-        <h1 className="mx-auto md:pb-10 md:w-96">{content1.title}</h1>
+      <div className="w-1/2 py-20 text-center">
+        <h2 className="mx-auto md:pb-10 md:w-96">{content1.title}</h2>
         <div className="hidden md:block">
           <PortableText value={content1.content} />
         </div>
@@ -22,7 +22,7 @@ export default function Competence({ content1, content2 }) {
             height={300}
             className="w-auto h-24 mb-2"
           />
-          <h2 className="text-center">{content2[0].title}</h2>
+          <h3 className="text-center">{content2[0].title}</h3>
           <p className="hidden text-center md:block">{content2[0].content}</p>
         </div>
         <div className="flex flex-col items-center mx-4 w-14 md:mx-12 md:w-48">
@@ -32,7 +32,7 @@ export default function Competence({ content1, content2 }) {
             height={300}
             className="w-auto h-24 mb-2"
           />
-          <h2 className="text-center">{content2[1].title}</h2>
+          <h3 className="text-center">{content2[1].title}</h3>
           <p className="hidden text-center md:block">{content2[1].content}</p>
         </div>
         <div className="flex flex-col items-center mx-4 w-14 md:mx-12 md:w-48">
@@ -42,7 +42,7 @@ export default function Competence({ content1, content2 }) {
             height={300}
             className="w-auto h-24 mb-2"
           />
-          <h2 className="text-center">{content2[2].title}</h2>
+          <h3 className="text-center">{content2[2].title}</h3>
           <p className="hidden text-center md:block">{content2[2].content}</p>
         </div>
         <div className="flex flex-col items-center ml-4 w-14 md:ml-12 md:w-48">
@@ -52,7 +52,7 @@ export default function Competence({ content1, content2 }) {
             height={300}
             className="w-auto h-24 mb-2"
           />
-          <h2 className="text-center">{content2[3].title}</h2>
+          <h3 className="text-center">{content2[3].title}</h3>
           <p className="hidden text-center md:block">{content2[3].content}</p>
         </div>
       </div>
