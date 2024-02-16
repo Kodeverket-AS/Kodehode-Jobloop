@@ -9,7 +9,6 @@ export default async function Contact() {
 
   return (
     <div>
-      <NavbarAlt/>
       <main className="flex flex-col items-center min-h-screen p-20">
       <div className="p-32">
         <h1 className="text-jobloop-primary-green text-4xl">Kontakt oss</h1>
