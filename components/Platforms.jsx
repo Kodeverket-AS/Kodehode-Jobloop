@@ -12,7 +12,7 @@ export default function Platforms() {
   return (
     <>
       <div className="py-10 text-center md:pt-20">
-        <h1>Programmer vi bruker</h1>
+        <h2>Programmer vi bruker</h2>
       </div>
       <div className="flex pt-0 pb-10 md:py-20">
         <div className="flex flex-col items-center mr-4 w-14 md:mr-12 md:w-48">
@@ -22,7 +22,7 @@ export default function Platforms() {
             height={300}
             className="w-auto h-24 mb-2"
           />
-          <h2 className="text-center">Figma</h2>
+          <h3 className="text-center">Figma</h3>
           <p className="hidden text-center md:block">
             Designverktøy for å tegne opp websider
           </p>
@@ -34,7 +34,7 @@ export default function Platforms() {
             height={300}
             className="w-auto h-24 mb-2"
           />
-          <h2 className="text-center">Scrimba</h2>
+          <h3 className="text-center">Scrimba</h3>
           <p className="hidden text-center md:block">
             Online interaktiv plattform for å lære HTML, CSS og Javascript
           </p>
@@ -46,7 +46,7 @@ export default function Platforms() {
             height={300}
             className="w-auto h-24 mb-2"
           />
-          <h2 className="text-center">Discord</h2>
+          <h3 className="text-center">Discord</h3>
           <p className="hidden text-center md:block">
             Plattform for å kommunisere med andre deltagere og lærere
           </p>
@@ -58,7 +58,7 @@ export default function Platforms() {
             height={300}
             className="w-auto h-24 mb-2"
           />
-          <h2 className="text-center">VS Code</h2>
+          <h3 className="text-center">VS Code</h3>
           <p className="hidden text-center md:block">
             Verktøy hvor man skriver kode
           </p>
