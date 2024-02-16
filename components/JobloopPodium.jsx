@@ -7,8 +7,8 @@ import { JobloopPodiumButton } from "./Buttons";
 export default function JobloopPodium({content}) {
     return (
         <>
-        <div className="flex flex-col items-center justify-center w-full gap-5 py-24 md:flex-row md:px-24">
-            <div className="w-1/2">
+        <div className="flex flex-col items-center justify-center w-full py-24 md:flex-row md:px-24">
+            <div className="w-1/2 gap-5">
                 <Image
                     src={content[0].image}
                     width={193}
@@ -26,7 +26,7 @@ export default function JobloopPodium({content}) {
           
         
             </div>
-            <div className="w-1/2">
+            <div className="w-1/2 gap-5">
                 <Image
                     src={content[1].image}
                     width={269}
