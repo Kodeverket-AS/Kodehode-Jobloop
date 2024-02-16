@@ -5,7 +5,7 @@ import { IoCloseSharp } from "react-icons/io5";
 import { GiHamburgerMenu } from "react-icons/gi";
 import Link from "next/link";
 
-const HamburgerMenu = () => {
+const HamburgerMenu = ({ hamFill }) => {
   const [isOpen, setIsOpen] = useState(false);
   const menuRef = useRef(null);
 
@@ -34,7 +34,11 @@ const HamburgerMenu = () => {
         onClick={handleMenuToggle}
         aria-label="Åpne navigasjonsmeny"
       >
-        <GiHamburgerMenu className="w-20 h-20 fill-white" />
+        <GiHamburgerMenu
+          className={`w-20 h-20 ${
+            hamFill == "white" ? "fill-white" : "fill-jobloop-primary-green"
+          }`}
+        />
       </button>
 
       <div
@@ -61,58 +65,42 @@ const HamburgerMenu = () => {
             <Link
               href="/visjon"
               aria-label="gå til underside og les om vår visjon"
-              className="px-8 text-xl text-black transition-all group w-fit"
+              className="px-8 text-xl font-bold transition-all text-jobloop-primary-orange group w-fit"
               onClick={(event) => {
                 setIsOpen(false);
               }}
             >
-              <div className="relative">
-                <li>
-                  <b className="text-jobloop-orange">Vår Visjon</b>
-                </li>
-              </div>
+              Vår Visjon
             </Link>
             <Link
               href="/FAQ"
               aria-label="gå til underside og få svar på typiske spørsmål"
-              className="px-8 text-xl text-black transition-all group w-fit"
+              className="px-8 text-xl font-bold transition-all text-jobloop-primary-orange group w-fit"
               onClick={(event) => {
                 setIsOpen(false);
               }}
             >
-              <div className="relative">
-                <li>
-                  <b className="text-jobloop-orange">FAQ</b>
-                </li>
-              </div>
+              FAQ
             </Link>
             <Link
               href="/about"
               aria-label="gå til underside og les mer om oss"
-              className="px-8 text-xl text-black transition-all group w-fit"
+              className="px-8 text-xl font-bold transition-all text-jobloop-primary-orange group w-fit"
               onClick={(event) => {
                 setIsOpen(false);
               }}
             >
-              <div className="relative">
-                <li>
-                  <b className="text-jobloop-orange">Om Oss</b>
-                </li>
-              </div>
+              Om Oss
             </Link>
             <Link
               href="/techstack"
               aria-label="gå til underside og les mer om kodespråkene våre"
-              className="px-8 text-xl text-black transition-all group w-fit"
+              className="px-8 text-xl font-bold transition-all text-jobloop-primary-orange group w-fit"
               onClick={(event) => {
                 setIsOpen(false);
               }}
             >
-              <div className="relative">
-                <li>
-                  <b className="text-jobloop-orange">Kodespråk</b>
-                </li>
-              </div>
+              Kodespråk
             </Link>
           </ul>
         </nav>

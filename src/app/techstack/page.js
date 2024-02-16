@@ -1,7 +1,6 @@
 import Image from "next/image";
 import { getData } from "../page";
 import { PortableText } from "@portabletext/react";
-import { NavbarAlt } from "../../../components/navigation/Navbar";
 
 export default async function Techstack() {
   const data = await getData();
@@ -11,21 +10,20 @@ export default async function Techstack() {
 
   return (
     <>
-      <NavbarAlt />
-      <main className=" flex flex-col items-center min-h-screen pt-12 pb-8 px-4 md:p-24">
+      <main className="flex flex-col items-center min-h-screen px-4 pt-12 pb-8 md:p-24">
         <section className="flex flex-col gap-32 pb-16">
-          <div className="max-w-prose flex flex-col gap-6 md:gap-8 ">
+          <div className="flex flex-col gap-6 max-w-prose md:gap-8 ">
             <h1 className="text-4xl text-jobloop-primay-orange md:text-5xl">
-              {data.heroSub[4].title}
+              {data.heroSub[5].title}
             </h1>
             <div className="text-base md:text-xl">
-              <PortableText value={data.heroSub[4].content} />
+              <PortableText value={data.heroSub[5].content} />
             </div>
           </div>
           <div className="max-w-5xl">
             <Image
               alt="Wordcloud of languages"
-              src={data.heroSub[4].image}
+              src={data.heroSub[5].image}
               width={1000}
               height={500}
             />

@@ -11,7 +11,7 @@ module.exports = {
       colors: {
         jobloop: {
           /* Hovedfarge fra Figma */
-          primay: {
+          primary: {
             green: "#77C4B4",
             orange: "#F4A366",
           },
@@ -27,6 +27,20 @@ module.exports = {
             green: "#1E555C",
           },
         },
+      },
+      keyframes: {
+        scroll: {
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(-100%)" },
+        },
+        //fadeIn: {
+        //  "0%": { opacity: "0" },
+        //  "100%": { opacity: "100%" },
+        //},
+      },
+      animation: {
+        //fadeIn: "fadeIn 1s forwards",
+        scroll: "scroll 35s linear infinite",
       },
     },
   },

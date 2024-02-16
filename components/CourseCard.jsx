@@ -5,18 +5,18 @@ import Image from "next/image";
 
 export default function CourseCard({content}) {
   return (
-    <div className="flex flex-col px-5 py-3 bg-white border-2 border-black shadow-md">
-      <h3 className="font-bold ">{content.title}</h3>
+    <div className="flex flex-col px-5 py-3 bg-white shadow-md">
+      <h3>{content.title}</h3>
       <p className="pb-3 border-b-4 border-black">{content.subheader}</p>
-      <h3 className="font-bold">Forutsetninger</h3>
+      <h4 className="pt-2">Forutsetninger</h4>
       <p>{content.expectations}</p>
-      <h3 className="font-bold">Tidsplan</h3>
+      <h4 className="pt-2">Tidsplan</h4>
       <p>{content.schedule}</p>
-      <h3 className="font-bold">Undervisningsform</h3>
+      <h4 className="pt-2">Undervisningsform</h4>
       <p>{content.educationStyle}</p>
-      <h3 className="font-bold">Jobbmarked</h3>
+      <h4 className="pt-2">Jobbmarked</h4>
       <p>{content.jobMarket}</p>
-      <h3 className="font-bold">Sted</h3>
+      <h4 className="pt-2">Sted</h4>
       <p>{content.place}</p>
     </div>
   );
