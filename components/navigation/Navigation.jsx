@@ -7,8 +7,8 @@ import MyPathname from "./MyPathname";
 
 // Definer URL endpoints.
 const landing = "/";
-const virksomhet = "/virksomhet";
-const bedrift = "/bedrift";
+const samarbeidspartner = "/samarbeidspartner";
+const arbeidsgiver = "/arbeidsgiver";
 const deltaker = "/deltaker";
 const techstack = "/techstack";
 const about = "/about";
@@ -25,25 +25,27 @@ export default function Navigation() {
     navbar = <NavbarAlt />;
   } else if (pathname === about) {
     navbar = <NavbarAlt />;
-  } else if (pathname === virksomhet) {
+  } else if (pathname === kontakt) {
+    navbar = <NavbarAlt />;
+  } else if (pathname === samarbeidspartner) {
     navbar = (
       <>
         <div className="block md:hidden">
           <Navbar />
         </div>
         <div className="hidden md:block">
-          <NavbarAlt subpage="Virksomhet" />
+          <NavbarAlt subpage="Samarbeidspartner" />
         </div>
       </>
     );
-  } else if (pathname === bedrift) {
+  } else if (pathname === arbeidsgiver) {
     navbar = (
       <>
         <div className="block md:hidden">
           <Navbar />
         </div>
         <div className="hidden md:block">
-          <NavbarAlt subpage="Bedrift" />
+          <NavbarAlt subpage="Arbeidsgiver" />
         </div>
       </>
     );
@@ -61,16 +63,7 @@ export default function Navigation() {
   } else if (pathname === visjon) {
     navbar = <NavbarAlt />;
   } else if (pathname === faq) {
-    navbar = (
-      <>
-        <div className="block md:hidden">
-          <Navbar />
-        </div>
-        <div className="hidden md:block">
-          <NavbarAlt />
-        </div>
-      </>
-    );
+    navbar = <NavbarAlt />;
   } else {
     navbar = <Navbar />;
   }
