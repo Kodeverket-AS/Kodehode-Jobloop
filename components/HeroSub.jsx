@@ -10,7 +10,7 @@ export default function HeroSub({ content, buttonText }) {
     <>
       <div className="absolute top-0 block w-full -z-10 md:hidden">
         <div className="w-full">
-          <div className=" absolute bg-gradient-to-b from-[rgba(34,34,34,0.82)] to-[rgba(34,34,34,0.33)] z-50 h-full w-full bg-transparent"></div>
+          <div className=" absolute bg-gradient-to-b from-[rgba(34,34,34,0.82)] to-[rgba(34,34,34,0.33)] z-50 h-full w-full"></div>
           <Image src={content.image} width={500} height={500} className="w-full" />
         </div>
         <div className="absolute left-0 right-0 mx-auto w-72 top-24">
