@@ -108,59 +108,60 @@ export function ToggleBtn({titleDel, titleBed, titleVirk, idOne, idTwo, idThree,
   };
 
   return (
-  <div>
+    <div className=" w-full flex-col flex gap-7">
 
-        <div className=" w-full flex flex-row justify-center p-20 gap-7">
-        <div>
+      <div className="w-full flex justify-center">
 
-                
+        <div className=" md:w-full w-3/6 flex flex-col md:flex-row  items-start justify-center ml-24 md:p-20 gap-4 md:gap-7">
+                    <div>
+                        <button onClick={handleDelToggle} className={`md:p-7 flex flex-row gap-3 items-start md:items-center rounded-3xl lg:w-44 w-20 h-7 lg:h-10 border-solid border-black border-2  transition-all duration-600 text-sm
+                        ${isDelVisible ?'border-jobloop-primary-orange border-none md:border-solid  md:border-2 '  : ' border-none'}`}>  
+                          <div className={`flex items-center justify-center w-4 h-4 md:w-7 md:h-7  rounded-full ${isDelVisible ?' bg-jobloop-primary-orange ': ' bg-gray-200'}`} >
+                            <div className={`w-2 h-2 rounded-full ${isDelVisible ?' bg-white ': ' bg-transparent'}`} > </div>
+                          </div>
+                        <p>{titleDel}</p>
+                        </button>
+                    </div>
 
-              <button onClick={handleDelToggle} className={`p-7 flex flex-row gap-3 items-center rounded-3xl lg:w-44 w-20 h-7 lg:h-10 border-solid border-black border-2  transition-all duration-600 text-sm
-               ${isDelVisible ?'border-jobloop-primary-orange border-solid  border-2 '  : ' border-none'}`}>  
-                <div className={`flex items-center justify-center w-7 h-7 rounded-full ${isDelVisible ?' bg-jobloop-primary-orange ': ' bg-gray-200'}`} >
-                   <div className={`w-2 h-2 rounded-full ${isDelVisible ?' bg-white ': ' bg-transparent'}`} > </div>
-                 </div>
-              <p>{titleDel}</p>
-              </button>
-            </div>
+                    <div>
+                        <button onClick={handleBedToggle} className={`md:p-7 flex flex-row gap-3 items-start md:items-center rounded-3xl w-36 md:w-56  h-7 lg:h-10 border-solid border-black border-2  transition-all duration-600 text-sm
+                        ${isBedVisible ?'border-jobloop-primary-orange border-none md:border-solid  md:border-2 '  : ' border-none'}`}>
+                        <div className={` flex items-center justify-center w-4 h-4 md:w-7 md:h-7   rounded-full ${isBedVisible ?' bg-jobloop-primary-orange ': ' bg-gray-200'}`} >
+                            <div className={`w-2 h-2 rounded-full ${isBedVisible ?' bg-white ': ' bg-transparent'}`} > </div>
+                        </div>
+                        <p>{titleBed}</p>
+                        </button>
+                    </div>
 
-            <div>
-              <button onClick={handleBedToggle} className={`p-7 flex flex-row gap-3 items-center rounded-3xl lg:w-44 w-20 h-7 lg:h-10 border-solid border-black border-2  transition-all duration-600 text-sm
-               ${isBedVisible ?'border-jobloop-primary-orange border-solid  border-2 '  : ' border-none'}`}>
-              <div className={` flex items-center justify-center w-7 h-7  rounded-full ${isBedVisible ?' bg-jobloop-primary-orange ': ' bg-gray-200'}`} >
-                  <div className={`w-2 h-2 rounded-full ${isBedVisible ?' bg-white ': ' bg-transparent'}`} > </div>
-              </div>
-              <p>{titleBed}</p>
-              </button>
-            </div>
-
-            <div>
-                  <button onClick={handleVirkToggle} className={`p-7 flex flex-row gap-3 items-center rounded-3xl lg:w-48 w-20 h-7 lg:h-10 border-solid border-black border-2  transition-all duration-600 text-sm 
-                  ${isVirkVisible ? 'border-jobloop-primary-orange border-solid  border-2'  : ' border-none'}`}>
-                  <div className={ ` flex items-center justify-center w-7 h-7 rounded-full ${isVirkVisible ?' bg-jobloop-primary-orange ': ' bg-gray-200'}`}>
-                        <div className={`w-2 h-2 rounded-full ${isVirkVisible ?' bg-white ': ' bg-transparent'}`} > </div>
-                  </div>
-                  <p>{titleVirk}</p>
-                  </button>
-            </div>
+                    <div>
+                          <button onClick={handleVirkToggle} className={`md:p-7 flex flex-row gap-3 items-start md:items-center rounded-3xl lg:w-44 w-36 h-7 lg:h-10 border-solid border-black border-2  transition-all duration-600 text-sm 
+                          ${isVirkVisible ? 'border-jobloop-primary-orange border-none md:border-solid  md:border-2'  : ' border-none'}`}>
+                          <div className={ ` flex items-center justify-center w-4 h-4 md:w-7 md:h-7 rounded-full ${isVirkVisible ?' bg-jobloop-primary-orange ': ' bg-gray-200'}`}>
+                                <div className={`w-2 h-2 rounded-full ${isVirkVisible ?' bg-white ': ' bg-transparent'}`} > </div>
+                          </div>
+                          <p>{titleVirk}</p>
+                          </button>
+                    </div>
+          </div>
         </div>
-
     
-        <div>
-         {isDelVisible && <FaqDeltager id={idOne} contentQ={contentQuestOne}  contentS={contentSvarOne}/>}
-        </div>
+        <div className="w-full flex justify-center">
+            <div>
+            {isDelVisible && <FaqDeltager id={idOne} contentQ={contentQuestOne}  contentS={contentSvarOne}/>}
+            </div>
 
+            
+            <div>
+            {isBedVisible && <FaqBedrift id={idTwo} contentQ={contentQuestTwo}  contentS={contentSvarTwo} />}
+            </div>
+
+          
         
-        <div>
-         {isBedVisible && <FaqBedrift id={idTwo} contentQ={contentQuestTwo}  contentS={contentSvarTwo} />}
-        </div>
 
-       
-     
-
-        <div>
-         {isVirkVisible && <FaqVirk id={idThree} contentQ={contentQuestThree}  contentS={contentSvarThree} />}
-        </div>
+            <div>
+            {isVirkVisible && <FaqVirk id={idThree} contentQ={contentQuestThree}  contentS={contentSvarThree} />}
+            </div>
+      </div>
   </div>
 
       );
