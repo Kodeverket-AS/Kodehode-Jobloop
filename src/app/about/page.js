@@ -19,7 +19,7 @@ return (
        buttonText="Kontakt oss"
        key={heroSubData._id} />
 
-      <div className="flex flex-col items-center w-full">
+      <div className="flex flex-col items-center w-full mt-5">
         <div className="w-full">
         <Teachers
         content={selectedTeachersData} 
