@@ -20,15 +20,16 @@ return (
        key={heroSubData._id} />
 
       <div className="flex flex-col items-center ">
-        <h2>Vårt team</h2>
+        <div className="w-full">
         <Teachers
         content={selectedTeachersData} 
         />
+        </div>
          </div>
       <div className="flex flex-col items-center ">
         <JobloopPodium content={data.about}/>
         </div>
-      <div className="flex flex-col items-center ">
+      <div className="w-full">
         <Offices
         content={data.OurLocals} 
         />
