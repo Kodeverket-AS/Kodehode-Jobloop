@@ -24,12 +24,17 @@ export default function HeroSub({ content, buttonText }) {
         <div className="w-1/2">
           <h1 className="text-jobloop-primary-green">{content.title}</h1>
           <PortableText value={content.content} />
-          <div className="hidden mt-4 md:block">
+          <div className="hidden mt-10 md:block">
             <LinkButton Path="/contact" Text={buttonText} />
           </div>
         </div>
-        <div className="w-1/2">
-          <Image src={content.image} width={500} height={500} className="mx-auto my-auto w-72" />
+        <div className="w-1/2 pt-6">
+          <Image
+            src={content.image}
+            width={500}
+            height={500}
+            className="mx-auto my-auto rounded w-96"
+          />
         </div>
       </div>
     </>
