@@ -110,14 +110,14 @@ export function ToggleBtn({titleDel, titleBed, titleVirk, idOne, idTwo, idThree,
   return (
   <div>
 
-        <div className=" w-full flex flex-row justify-center p-20 gap-7">
+        <div className=" w-full flex flex-row justify-center p-20 gap-4 md:gap-7">
         <div>
 
                 
 
-              <button onClick={handleDelToggle} className={`p-7 flex flex-row gap-3 items-center rounded-3xl lg:w-44 w-20 h-7 lg:h-10 border-solid border-black border-2  transition-all duration-600 text-sm
-               ${isDelVisible ?'border-jobloop-primary-orange border-solid  border-2 '  : ' border-none'}`}>  
-                <div className={`flex items-center justify-center w-7 h-7 rounded-full ${isDelVisible ?' bg-jobloop-primary-orange ': ' bg-gray-200'}`} >
+              <button onClick={handleDelToggle} className={`p-7 flex flex-row gap-3 items-center rounded-3xl lg:w-44 w-25 h-7 lg:h-10 border-solid border-black border-2  transition-all duration-600 text-sm
+               ${isDelVisible ?'border-jobloop-primary-orange border-none md:border-solid  md:border-2 '  : ' border-none'}`}>  
+                <div className={`flex items-center justify-center w-4 h-4 md:w-7 md:h-7  rounded-full ${isDelVisible ?' bg-jobloop-primary-orange ': ' bg-gray-200'}`} >
                    <div className={`w-2 h-2 rounded-full ${isDelVisible ?' bg-white ': ' bg-transparent'}`} > </div>
                  </div>
               <p>{titleDel}</p>
@@ -125,9 +125,9 @@ export function ToggleBtn({titleDel, titleBed, titleVirk, idOne, idTwo, idThree,
             </div>
 
             <div>
-              <button onClick={handleBedToggle} className={`p-7 flex flex-row gap-3 items-center rounded-3xl lg:w-44 w-20 h-7 lg:h-10 border-solid border-black border-2  transition-all duration-600 text-sm
-               ${isBedVisible ?'border-jobloop-primary-orange border-solid  border-2 '  : ' border-none'}`}>
-              <div className={` flex items-center justify-center w-7 h-7  rounded-full ${isBedVisible ?' bg-jobloop-primary-orange ': ' bg-gray-200'}`} >
+              <button onClick={handleBedToggle} className={`p-7 flex flex-row gap-3 items-center rounded-3xl lg:w-44 w-25 h-7 lg:h-10 border-solid border-black border-2  transition-all duration-600 text-sm
+               ${isBedVisible ?'border-jobloop-primary-orange border-none md:border-solid  md:border-2 '  : ' border-none'}`}>
+              <div className={` flex items-center justify-center w-4 h-4 md:w-7 md:h-7   rounded-full ${isBedVisible ?' bg-jobloop-primary-orange ': ' bg-gray-200'}`} >
                   <div className={`w-2 h-2 rounded-full ${isBedVisible ?' bg-white ': ' bg-transparent'}`} > </div>
               </div>
               <p>{titleBed}</p>
@@ -135,9 +135,9 @@ export function ToggleBtn({titleDel, titleBed, titleVirk, idOne, idTwo, idThree,
             </div>
 
             <div>
-                  <button onClick={handleVirkToggle} className={`p-7 flex flex-row gap-3 items-center rounded-3xl lg:w-48 w-20 h-7 lg:h-10 border-solid border-black border-2  transition-all duration-600 text-sm 
-                  ${isVirkVisible ? 'border-jobloop-primary-orange border-solid  border-2'  : ' border-none'}`}>
-                  <div className={ ` flex items-center justify-center w-7 h-7 rounded-full ${isVirkVisible ?' bg-jobloop-primary-orange ': ' bg-gray-200'}`}>
+                  <button onClick={handleVirkToggle} className={`p-7 flex flex-row gap-3 items-center rounded-3xl lg:w-48 w-25 h-7 lg:h-10 border-solid border-black border-2  transition-all duration-600 text-sm 
+                  ${isVirkVisible ? 'border-jobloop-primary-orange border-none md:border-solid  md:border-2'  : ' border-none'}`}>
+                  <div className={ ` flex items-center justify-center w-4 h-4 md:w-7 md:h-7 rounded-full ${isVirkVisible ?' bg-jobloop-primary-orange ': ' bg-gray-200'}`}>
                         <div className={`w-2 h-2 rounded-full ${isVirkVisible ?' bg-white ': ' bg-transparent'}`} > </div>
                   </div>
                   <p>{titleVirk}</p>

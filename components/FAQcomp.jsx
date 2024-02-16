@@ -14,10 +14,12 @@ import { useState } from "react";
     ));
   
     return (
-      <div className="flex flex-col px-3 lg:px-9 mb-40 gap-7 lg:w-full lg:lg:max-w-[1100px] lg:mx-auto ">
-        <Accordion collapseAll >
-          {data}
-        </Accordion>
+      <div className="w-full flex justify-center"> 
+        <div className="flex flex-col px-3 lg:px-9 mb-40 gap-7 w-4/6  lg:w-full lg:lg:max-w-[1100px] lg:mx-auto ">
+          <Accordion collapseAll >
+            {data}
+          </Accordion>
+        </div>
       </div>
     );
   }
@@ -37,15 +39,17 @@ import { useState } from "react";
          </Accordion.Panel>
      ));
      return (
+      <div className="w-full flex justify-center"> 
        <div
          key={data._id}
-         className="flex flex-col px-3 lg:px-9 mb-40 gap-7 lg:w-full lg:lg:max-w-[1100px] lg:mx-auto"
+         className="flex flex-col px-3 lg:px-9 mb-40 gap-7 w-4/6 lg:w-full lg:lg:max-w-[1100px] lg:mx-auto"
        >
          
          <Accordion collapseAll className="faq-title" >
            {data}
          </Accordion>
        </div>
+    </div>
      );
      
      }
@@ -62,15 +66,17 @@ import { useState } from "react";
            </Accordion.Panel>
        ));
        return (
+        <div className="w-full flex justify-center"> 
          <div
            key={data._id}
-           className="flex flex-col px-3 lg:px-9 mb-40 gap-7 lg:w-full lg:lg:max-w-[1100px] lg:mx-auto"
+           className="flex flex-col px-3 lg:px-9 mb-40 gap-7 w-4/6 lg:w-full lg:lg:max-w-[1100px] lg:mx-auto"
          >
            
            <Accordion collapseAll className="faq-title" >
              {data}
            </Accordion>
          </div>
+        </div>
        );
        
        }
