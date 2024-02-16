@@ -20,9 +20,16 @@ export default async function Deltaker() {
   ];
   return (
     <main className="flex flex-col items-center min-h-screen p-0">
-      <HeroSub content={data.heroSub[2]} buttonText={"Jeg er interessert!"} key={data.heroSub[2]._id} />
+      <HeroSub
+        content={data.heroSub[2]}
+        buttonText={"Jeg er interessert!"}
+        key={data.heroSub[2]._id}
+      />
       <div className="flex flex-col items-center mt-[370px] md:mt-20">
-        <KodehodeSummary content1={data.origin[1]} content2={data.courseTypes} />
+        <KodehodeSummary
+          content1={data.origin[1]}
+          content2={data.courseTypes}
+        />
         <StudyInParts content={data.CourseSections} />
         <div className="w-full bg-jobloop-primary-green">
           <VideoComp1 url="https://www.youtube.com/embed/LocPs6zdkrQ?si=afaKRzcMA80WvwtW&amp;" />
@@ -36,9 +43,10 @@ export default async function Deltaker() {
         </div>
         <Teachers content={teachers} />
         {/*<Platforms />*/}
-        <div className=" bg-jobloop-secondary-orange">
+        {/*<div className=" bg-jobloop-secondary-orange">
           <Results content={data.results[0]} />
-        </div>
+        </div>*/}
+        <Results content={data.results[0]} />
         <ImageGallery content={data.ImageGallery} />
         <div className="w-full bg-jobloop-primary-green">
           <VideoComp1 url="https://www.youtube.com/embed/gIrgqXD27EI?si=bh2im5jdpu-apCIQ&amp;" />
