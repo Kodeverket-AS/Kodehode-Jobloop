@@ -36,19 +36,22 @@ export default function Footer() {
           {contactInformation.map((person) => (
             <div
               className="flex flex-col pb-4 border-b-2 border-white border-opacity-40 "
-              key={person.name}>
+              key={person.name}
+            >
               <b className="text-lg">{person.name}</b>
               <a
                 href={`mailto:${person.email}`}
                 className="py-1 cursor-pointer hover:underline active:underline"
                 target="_blank"
-                aria-label="Åpner email for å opprette epost til valgt person">
+                aria-label="Åpner email for å opprette epost til valgt person"
+              >
                 {person.email}
               </a>
               <a
                 href={`tel:${person.phoneLink}`}
                 className="md:hover:underline md:active:underline"
-                aria-label="Åpner telefon for å ringe valgt person">
+                aria-label="Åpner telefon for å ringe valgt person"
+              >
                 {person.phoneDisplay}
               </a>
             </div>
@@ -57,20 +60,29 @@ export default function Footer() {
         <div className="flex flex-col items-center gap-8 ">
           <h2 className="text-3xl text-center">Linker</h2>
           <div className="w-32">
-            <Image
-              alt="Jobloop logo"
-              src={logoJobloopHvit}
-              width={350}
-              height={250}
-            />
+            <a
+              href="https://jobloop.no/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Lenke til Jobloops nettside"
+            >
+              <Image
+                alt="Jobloop logo"
+                src={logoJobloopHvit}
+                width={350}
+                height={250}
+              />
+            </a>
           </div>
           <div className="w-32">
-            <Image
-              alt="Kodeverket logo"
-              src={logoKodeverketHvit}
-              width={350}
-              height={250}
-            />
+            <a href="https://www.kodeverketbergen.no/" target="_blank" rel="noopener noreferrer" aria-label="Lenke til Kodeverkets nettside">
+              <Image
+                alt="Kodeverket logo"
+                src={logoKodeverketHvit}
+                width={350}
+                height={250}
+              />
+            </a>
           </div>
         </div>
         <div className="flex flex-col gap-8 ">
@@ -78,19 +90,22 @@ export default function Footer() {
           <Link
             className="hover:underline"
             href="/arbeidsgiver"
-            aria-label="Gå til underside for arbeidsgiver">
+            aria-label="Gå til underside for arbeidsgiver"
+          >
             Arbeidsgiver
           </Link>
           <Link
             className="hover:underline"
             href="/deltaker"
-            aria-label="Gå til underside for deltaker">
+            aria-label="Gå til underside for deltaker"
+          >
             Deltaker
           </Link>
           <Link
             className="hover:underline"
             href="/samarbeidspartner"
-            aria-label="Gå til underside for samarbeidspartner">
+            aria-label="Gå til underside for samarbeidspartner"
+          >
             Samarbeidspartner
           </Link>
         </div>
