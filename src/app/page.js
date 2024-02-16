@@ -117,6 +117,6 @@ export async function getData() {
     "results":*[_type == "results"]{title, "image":image.asset->url, content, person, link, _id},
     "samarbeid":*[_type == "samarbeid"]{title, "image":image.asset->url, content, _id},
     "FAQ":*[_type == "FAQ"]{title, question, svar, _id},
-    "personDatabase":*[_type == "personDatabase"] | order(index) {navn, stilling, lokasjon, mail, tlf_nummer, "image":image.asset->url, role, index, _id},
+    "personDatabase":*[_type == "personDatabase"] | order(index) {navn, stilling, lokasjon, henvendelse, mail, tlf_nummer, "image":image.asset->url, role, index, _id},
   }`);
 }
