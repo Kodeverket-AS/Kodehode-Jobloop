@@ -10,11 +10,11 @@ export default function CompanyCarousel({ content }) {
         <div className="grid grid-flow-col animate-scroll">
           {content.map((item, index) => (
             <Image
-              height={80}
-              width={150}
+              height={160}
+              width={300}
               key={item._id + index}
               src={item.logo}
-              className="h-[80px] mx-[140px]"
+              className="w-[150px] h-auto mx-[140px] my-auto"
               alt=""
             />
           ))}
@@ -22,11 +22,11 @@ export default function CompanyCarousel({ content }) {
         <div className="grid grid-flow-col animate-scroll">
           {content.map((item, index) => (
             <Image
-              height={80}
-              width={150}
+              height={160}
+              width={300}
               key={item._id + index}
               src={item.logo}
-              className="h-[80px] mx-[140px]"
+              className="w-[150px] h-auto mx-[140px] my-auto"
               alt=""
             />
           ))}
