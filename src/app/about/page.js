@@ -13,7 +13,7 @@ export default async function About() {
   console.log(data.about);
 return (
     <>
-      <main className="flex flex-col items-center min-h-screen p-24">
+      <main className="flex flex-col items-center min-h-screen p-0">
       <HeroSub 
        content={heroSubData}
        buttonText="Kontakt oss"
