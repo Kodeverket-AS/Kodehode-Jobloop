@@ -1,7 +1,8 @@
 import Image from "next/image";
 import { NavbarAlt } from "../../../components/navigation/Navbar";
 import { getData } from "../page";
-import PortableText from "react-portable-text";
+//import PortableText from "react-portable-text";
+import { PortableText } from "@portabletext/react";
 import { SeMerBtn } from "../../../components/Buttons";
 import EndorsementComp from "../../../components/EndorsementComp";
 import ContactComp from "../../../components/ContactComp";
@@ -75,8 +76,8 @@ export default async function Vision() {
                       src={data.VisionSections[1].ImageOne}
                     ></Image>
                     <PortableText
-                      content={data.VisionSections[1].content}
-                    ></PortableText>
+                      value={data.VisionSections[1].content}
+                    />
                     <SeMerBtn></SeMerBtn>
                   </div>
                 </div>
@@ -94,9 +95,9 @@ export default async function Vision() {
                       src={data.VisionSections[0].ImageOne}
                     ></Image>
                     <PortableText
-                      content={data.VisionSections[0].content}
-                    ></PortableText>
-                    <SeMerBtn></SeMerBtn>
+                      value={data.VisionSections[0].content}
+                    />
+                    <SeMerBtn />
                   </div>
 
                   <div
@@ -108,7 +109,7 @@ export default async function Vision() {
                       height={500}
                       className="w-full"
                       src={data.VisionSections[0].ImageTwo}
-                    ></Image>
+                    />
                   </div>
                 </div>
               </div>
@@ -118,7 +119,7 @@ export default async function Vision() {
                           <ProjectScroll  content={data.VisionSections} ></ProjectScroll>
                         </div> */}
 
-            <div>
+            {/*<div>
               <h1 className="text-2xl font-extrabold text-center md:text-4xl ">
                 Hva partnere sier om oss
               </h1>
@@ -130,13 +131,13 @@ export default async function Vision() {
               navn={data.endorsement[0].navn}
               firma={data.endorsement[0].firma}
               content={data.endorsement[0].content}
-            ></EndorsementComp>
+            />*/}
             <ContactComp
               key={data.kontaktseksjon[0]._id}
               imageOne={data.kontaktseksjon[0].ImageOne}
               title={data.kontaktseksjon[0].title}
               content={data.kontaktseksjon[0].content}
-            ></ContactComp>
+            />
             <div className="flex flex-col items-center w-full pb-32">
               <div className="pb-20">
                 <h1 className="text-3xl font-extrabold text-center lg:pb-28 lg:text-4xl">
@@ -150,21 +151,19 @@ export default async function Vision() {
                     title={data.samarbeid[0].title}
                     image={data.samarbeid[0].image}
                     content={data.samarbeid[0].content}
-                  ></Partners>
-
+                  />
+                  {/*<Partners
+                    key={data.samarbeid[0]._id}
+                    title={data.samarbeid[0].title}
+                    image={data.samarbeid[0].image}
+                    content={data.samarbeid[0].content}
+                  />
                   <Partners
                     key={data.samarbeid[0]._id}
                     title={data.samarbeid[0].title}
                     image={data.samarbeid[0].image}
                     content={data.samarbeid[0].content}
-                  ></Partners>
-
-                  <Partners
-                    key={data.samarbeid[0]._id}
-                    title={data.samarbeid[0].title}
-                    image={data.samarbeid[0].image}
-                    content={data.samarbeid[0].content}
-                  ></Partners>
+                  />*/}
                 </div>
               </div>
               {/* <div className="block md:hidden">
