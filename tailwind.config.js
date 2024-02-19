@@ -7,6 +7,10 @@ module.exports = {
   ],
   theme: {
     extend: {
+      screens: {
+        "2xs": "375px",
+        xs: "425px",
+      },
       /* Farger fra Jobloop | Kodehode Figma Design Fil */
       colors: {
         jobloop: {
