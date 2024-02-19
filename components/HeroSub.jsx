@@ -18,16 +18,16 @@ export default function HeroSub({ content, buttonText }) {
             className="w-full"
           />
         </div>
-        <div className="absolute left-0 right-0 mx-auto w-72 top-24 2xs:top-28">
+        <div className="absolute left-0 right-0 mx-auto w-72 top-24 2xs:top-28 sm:w-[34rem]">
           <h1 className="absolute z-50 text-center text-white">
             {content.title}
           </h1>
         </div>
-        <div className="absolute z-50 p-8 bg-white top-52 rounded-t-3xl 2xs:top-60 xs:top-[16.5rem]">
+        <div className="absolute z-50 p-8 bg-white top-52 rounded-t-3xl 2xs:top-60 xs:top-[16.5rem] sm:top-[19.5rem]">
           <PortableText value={content.content} />
         </div>
       </div>
-      <div className="hidden md:flex-row md:flex md:px-24 md:pt-24">
+      <div className="hidden md:flex-row md:flex lg:px-24 lg:pt-24 md:px-10 md:pt-10">
         <div className="w-1/2">
           <h1 className="text-jobloop-primary-green">{content.title}</h1>
           <PortableText value={content.content} />
@@ -35,7 +35,7 @@ export default function HeroSub({ content, buttonText }) {
             <LinkButton Path="/contact" Text={buttonText} />
           </div>
         </div>
-        <div className="w-1/2 pt-6">
+        <div className="w-1/2 pt-6 md:pl-6">
           <Image
             src={content.image}
             width={500}
