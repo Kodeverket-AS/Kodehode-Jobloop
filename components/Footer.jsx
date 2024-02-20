@@ -29,7 +29,7 @@ const contactInformation = [
 
 export default function Footer() {
   return (
-    <footer className="pb-8 text-white bg-jobloop-tertiary-purple">
+    <footer className="pb-8 text-white bg-jobloop-primary-grey">
       <div className="flex flex-row flex-wrap items-start justify-between px-12 pt-8 pb-24 gap-y-20 gap-x-8 md:px-12">
         <div className="flex flex-col gap-8 ">
           <h2 className="text-3xl">Kontakt</h2>
@@ -66,22 +66,17 @@ export default function Footer() {
               rel="noopener noreferrer"
               aria-label="Lenke til Jobloops nettside"
             >
-              <Image
-                alt="Jobloop logo"
-                src={logoJobloopHvit}
-                width={350}
-                height={250}
-              />
+              <Image alt="Jobloop logo" src={logoJobloopHvit} width={350} height={250} />
             </a>
           </div>
           <div className="w-32">
-            <a href="https://www.kodeverketbergen.no/" target="_blank" rel="noopener noreferrer" aria-label="Lenke til Kodeverkets nettside">
-              <Image
-                alt="Kodeverket logo"
-                src={logoKodeverketHvit}
-                width={350}
-                height={250}
-              />
+            <a
+              href="https://www.kodeverketbergen.no/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Lenke til Kodeverkets nettside"
+            >
+              <Image alt="Kodeverket logo" src={logoKodeverketHvit} width={350} height={250} />
             </a>
           </div>
         </div>
