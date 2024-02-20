@@ -14,6 +14,7 @@ module.exports = {
           primary: {
             green: "#77C4B4",
             orange: "#F4A366",
+            grey: "#575756",
           },
           /* Nedtonet fra Figma */
           secondary: {
