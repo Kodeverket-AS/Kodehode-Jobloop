@@ -64,7 +64,7 @@ export default function Navbar() {
 
 export function NavbarAlt({ subpage, textWhite }) {
   return (
-    <nav className="w-full bg-none">
+    <nav className="w-full">
       <div className="flex items-center justify-between">
         <div className="flex flex-row items-end p-4">
           <Link href="/" aria-label="Gå til landingssiden">
