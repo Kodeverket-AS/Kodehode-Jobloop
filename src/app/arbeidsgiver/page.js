@@ -9,7 +9,6 @@ import AdaptTech from "../../../components/AdaptTech";
 import CompanyCarousel from "../../../components/CompanyCarousel";
 import Results from "../../../components/Results";
 
-//mt-[400px] md:mt-20
 
 export default async function Bedrift() {
   const data = await getData();
