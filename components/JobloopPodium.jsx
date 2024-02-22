@@ -20,14 +20,13 @@ export default function JobloopPodium({content}) {
         <PortableText value={content[0].content} /> 
         <div className="mt-3">
         <JobloopPodiumButton
-          href="https://jobloop.no/"
+          Path="https://jobloop.no/"
           ariaLabel="Lenke til Jobloops nettside"
           ButtonText="Se mer"
           />
         </div>
           
-        
-            </div>
+        </div>
             <div className="flex flex-col w-1/2 gap-5">
                 <Image
                     src={content[1].image}
@@ -40,14 +39,13 @@ export default function JobloopPodium({content}) {
         <PortableText value={content[1].content} />
         <div className="mt-3">
         <JobloopPodiumButton
-          href="https://podium.no/"
+          Path="https://podium.no/"
           ariaLabel="Lenke til Podiums nettside"
           ButtonText="Se mer"
           />
         </div> 
           
-          
-            </div>
+          </div>
         
         </div>
         </>
