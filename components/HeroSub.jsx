@@ -23,7 +23,7 @@ export default function HeroSub({ content, buttonText }) {
             {content.title}
           </h1>
         </div>
-        <div className="absolute z-50 p-8 bg-white top-52 rounded-t-3xl 2xs:top-60 xs:top-[16.5rem] sm:top-[19.5rem]">
+        <div className="absolute z-50 p-8 bg-white top-52 rounded-t-3xl 2xs:top-60 xs:top-[16.5rem] sm:top-[19rem] sm:p-10">
           <PortableText value={content.content} />
         </div>
       </div>
