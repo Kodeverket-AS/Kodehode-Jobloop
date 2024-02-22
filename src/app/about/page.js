@@ -1,8 +1,9 @@
-import HeroSub from "../../../components/HeroSub";
+//import HeroSub from "../../../components/HeroSub";
 import { getData } from "../page";
 import Offices from "../../../components/Offices";
 import Teachers from "../../../components/Teachers";
 import JobloopPodium from "../../../components/JobloopPodium";
+import OmOssTop from "../../../components/OmOssTop";
 
 
 export default async function About() {
@@ -14,10 +15,11 @@ export default async function About() {
 return (
     <>
       <main className="flex flex-col items-center min-h-screen p-0">
-      <HeroSub 
+      <OmOssTop 
        content={heroSubData}
        buttonText="Kontakt oss"
-       key={heroSubData._id} />
+       key={heroSubData._id}
+      />
 
       <div className="flex flex-col items-center w-full mt-5">
         <div className="w-full">
@@ -34,12 +36,7 @@ return (
         content={data.OurLocals} 
         />
       </div>
-
-         
-         
-
-      
-      </main>
+</main>
     </>
   );
 }
