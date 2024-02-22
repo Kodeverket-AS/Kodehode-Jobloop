@@ -6,11 +6,11 @@ import { ContactBtn, LinkButtonColour } from "./Buttons"
 export default function ContactComp({imageOne, title, content, _id}){
     return (
       <div className="flex justify-center px-8 py-20 bg-jobloop-primary-green sm:px-10 md:px-12 lg:px-24">
-        <div className="w-5/6">
+        <div className="w-full">
           <div className="flex flex-col w-full gap-10 md:flex-row md:gap-7 ">
             <div className="flex flex-row w-full ">
               <div className="w-full">
-                <Image width={400} height={400} src={imageOne} />
+                <Image width={400} height={400} src={imageOne} className="mx-auto"/>
               </div>
             </div>
             <div className="flex flex-col justify-center w-full gap-10 text-white md:w-4/6">
