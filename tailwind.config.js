@@ -10,6 +10,7 @@ module.exports = {
       screens: {
         "2xs": "375px",
         xs: "425px",
+        "3xl": "2600px",
       },
       /* Farger fra Jobloop | Kodehode Figma Design Fil */
       colors: {
