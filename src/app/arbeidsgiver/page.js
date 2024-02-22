@@ -14,10 +14,10 @@ export default async function Bedrift() {
   const data = await getData();
   //console.log(data.heroSub);
   const techIcons = [
-    data.mainTech[0],
-    data.mainTech[0],
-    data.mainTech[0],
-    data.mainTech[0],
+    data.mainTech[4],
+    data.mainTech[5],
+    data.mainTech[6],
+    data.mainTech[7],
   ];
   
   return (
