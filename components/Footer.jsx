@@ -106,8 +106,8 @@ export default function Footer() {
         </div>
       </div>
       {/* mobile footer: */}
-      <div className="flex flex-row flex-wrap items-start justify-around px-12 pt-8 pb-24 md:hidden md:flex-wrap gap-y-20 gap-x-8 md:px-12">
-        <div className="block gap-8">
+      <div className="flex flex-row flex-wrap items-start justify-around px-8 pt-8 pb-24 md:hidden md:flex-wrap gap-y-20 gap-x-8 md:px-12">
+        <div className="block w-full gap-8">
           <div className="flex flex-col items-center order-1 gap-8">
             <h2 className="text-3xl text-center">Linker</h2>
             <div className="w-32">
@@ -132,7 +132,7 @@ export default function Footer() {
             </div>
           </div>
         </div>
-        <div className="flex flex-row justify-between gap-16">
+        <div className="flex flex-row justify-between w-full gap-8">
           <div className="flex flex-col order-2 gap-8">
             <h2 className="text-3xl">Kontakt</h2>
             {contactInformation.map((person) => (
