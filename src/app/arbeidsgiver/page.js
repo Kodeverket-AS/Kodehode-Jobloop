@@ -9,11 +9,17 @@ import AdaptTech from "../../../components/AdaptTech";
 import CompanyCarousel from "../../../components/CompanyCarousel";
 import Results from "../../../components/Results";
 
-//mt-[400px] md:mt-20
 
 export default async function Bedrift() {
   const data = await getData();
   //console.log(data.heroSub);
+  const techIcons = [
+    data.mainTech[4],
+    data.mainTech[5],
+    data.mainTech[6],
+    data.mainTech[7],
+  ];
+  
   return (
     <main className="flex flex-col items-center min-h-screen p-0">
       <HeroSub
@@ -31,7 +37,7 @@ export default async function Bedrift() {
           content1={data.relevantCompetence[1]}
           content2={data.competenceIconsBuissness}
         />
-        <AdaptTech content1={data.adaptTech} content2={data.mainTech} />
+        <AdaptTech content1={data.adaptTech} content2={techIcons} />
         <CompanyCarousel content={data.companyLogos} />
         <ContactComp
           key={data.kontaktseksjon[0]._id}
