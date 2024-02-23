@@ -23,7 +23,9 @@ export default function LandingHero({ content }) {
         </div>
         <div className="absolute left-0 right-0 z-50 text-white top-24 2xs:top-28">
           <h1 className="text-3xl text-center">{content.title}</h1>
-          <h2 className="px-8 text-center">Kodekurs og rekruttering til IT-bransjen</h2>
+          <h2 className="px-8 text-center">
+            Kodekurs og rekruttering til IT-bransjen
+          </h2>
         </div>
         <div className="absolute z-50 p-8 bg-white top-60 rounded-t-3xl 2xs:top-60 xs:top-[16.5rem] sm:top-[19rem] sm:p-10">
           <p>
@@ -46,14 +48,14 @@ export default function LandingHero({ content }) {
             className="object-contain"
           />
         </div>
-        <div className="flex flex-col items-center min-h-screen p-24 text-center text-white ">
-          <h1 className="text-white text-9xl">{content.title}</h1>
-          <p className="text-5xl text-white">
+        <div className="flex flex-col items-center p-24 text-center text-white lg:min-h-screen">
+          <h1 className="text-6xl text-white lg:text-9xl">{content.title}</h1>
+          <p className="text-3xl text-white lg:text-5xl">
             Kodekurs og rekruttering til IT-bransjen
           </p>
         </div>
       </div>
-      <div className="flex-col hidden gap-32 md:flex">
+      <div className="flex-col hidden gap-32 py-20 md:flex">
         <div className="flex justify-center w-screen ">
           <div className="flex flex-row justify-center w-5/6 gap-x-10">
             <div className="flex flex-col w-3/6 gap-20">
