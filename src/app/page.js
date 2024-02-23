@@ -1,112 +1,19 @@
-import { Client } from '../../lib/sanity';
-import Image from 'next/image';
+import { Client } from "../../lib/sanity";
+import Image from "next/image";
 import "./globals.css";
-import LandingHero from '../../components/LandingHero';
-import { LinkButton } from '../../components/Buttons';
+import LandingHero from "../../components/LandingHero";
+import LandingLinks from "../../components/LandingLinks";
+import LandingVisjon from "../../components/LandingVisjon";
+import { LinkButton } from "../../components/Buttons";
 
-export default function Home() {
+export default async function Home() {
+  const data = await getData();
   return (
-    <>
-      <div>
-        <LandingHero></LandingHero>
-      </div>
-      <div className="flex flex-col gap-32">
-        <div className="flex justify-center w-screen ">
-          <div className="flex flex-row justify-center w-5/6 gap-x-10">
-            <div className="flex flex-col w-3/6 gap-20">
-              <div>
-                <p>
-                  Vi rekrutterer kandidater som av ulike grunner har havnet
-                  utenfor arbeidslivet og lærer dem opp til å bli frontend
-                  utviklere. Gjennom en kombinasjon av teoretisk opplæring og
-                  praksis vil kandidatene lære seg de viktigste teknologiene og
-                  bli klar for en karriere innen utvikling. Vi vil gjerne høre
-                  fra deg, enten du vil bli et kodehode, eller om du er en
-                  bedrift som vil samarbeide med oss og hjelpe våre kandidater,
-                  og om du er fra NAV eller andre tiltak og er nysgjerrig på vår
-                  virksomhet
-                </p>
-              </div>
-              <div>
-                <ContactBtn></ContactBtn>
-              </div>
-            </div>
-            <div className="h-2/6">
-              <Image
-                width={800}
-                alt="kodemiljø"
-                src={danialigdery}
-                style={{ objectFit: "contain" }}
-              ></Image>
-            </div>
-          </div>
-        </div>
-
-        <div className="flex flex-col gap-28">
-          <div className="flex justify-center w-full">
-            <h1 className="text-5xl font-extrabold">
-              Hvordan kan vi hjelpe deg?
-            </h1>
-          </div>
-
-          <div className="flex justify-center">
-            <div className="flex flex-row gap-4">
-              <div className="flex flex-col items-center gap-8">
-                <Image src={koffert2}></Image>
-                <h5 className="text-xl font-bold text-center">Arbeidsgiver</h5>
-                <p className="w-3/6 text-center">
-                  For bedrifter som er interessert i samarbeide
-                </p>
-                <div>
-                  <LinkButton Path={"/arbeidsgiver"} Text={"Se mer"} />
-                </div>
-              </div>
-
-              <div className="flex flex-col items-center gap-8">
-                <Image src={hatt}></Image>
-                <h5 className="text-xl font-bold text-center ">Deltager</h5>
-                <p className="w-3/6 text-center">
-                  For deg som vil delta i Kodehode kurset
-                </p>
-                <div>
-                  <LinkButton Path={"/deltaker"} Text={"Se mer"} />
-                </div>
-              </div>
-
-              <div className="flex flex-col items-center gap-8 mt-1">
-                <Image src={mappe}></Image>
-                <h5 className="text-xl font-bold text-center">
-                  Samarbeidspartner
-                </h5>
-                <p className="w-3/6 text-center">
-                  {" "}
-                  For offentlig etat, skole, eller fylkeskommune
-                </p>
-                <div>
-                  <LinkButton Path={"/samarbeidspartner"} Text={"Se mer"} />
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="flex justify-center w-5/6 gap-10 mb-20">
-            <div className="w-3/6">
-              <Image src={visjonlanding2}></Image>
-            </div>
-
-            <div className="flex flex-col gap-4">
-              <h2>Inkludering lønner seg.</h2>
-              <p>
-                Tekst om visjon kommer her.
-              </p>
-              <div>
-                <LinkButton Path={"/visjon"} Text={"Se mer"} />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </>
+    <main className="flex flex-col items-center min-h-screen p-0">
+      <LandingHero content={data.heroSub[1]} />
+      <LandingLinks />
+      <LandingVisjon />
+    </main>
   );
 }
 
