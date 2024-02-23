@@ -14,14 +14,22 @@ import { PortableText } from "@portabletext/react";
 export default function LandingVisjon() {
   return (
     <>
-      <div className="flex justify-center w-5/6 gap-10 mb-20">
-        <div className="w-3/6">
-          <Image src={visjonlanding2} width={500} height={300} />
+      <div className="flex flex-col justify-center gap-10 px-8 py-20 md:flex-row lg:px-24">
+        <div className="w-full md:w-1/2">
+          <Image src={visjonlanding2} width={500} height={300} className="rounded" />
         </div>
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col gap-4 md:w-1/2">
           <h2>Inkludering lønner seg.</h2>
-          <p>Tekst om visjon kommer her.</p>
-          <div>
+          <p>
+            Andelen unge i utenforskap med interesse for gaming og IT i Norge
+            øker, det samme gjør behovet for IT-talent og utvikler i fremtiden.
+            Vår visjon er å skape verdi for samfunn og næringsliv ved å redusere
+            utenforskap gjennom lønnsom opplæring, rekruttering, matchmaking og
+            onboarding innen IT-faget. Vi kjemper for et mer inkluderende
+            samfunn, og å skinne lys på at inkludering ikke behøver å være en
+            utgift, men en verdi for bedrifter såvel som samfunnet som helhet.
+          </p>
+          <div className="pt-5 mx-auto md:mx-0">
             <LinkButton Path={"/visjon"} Text={"Se mer"} />
           </div>
         </div>

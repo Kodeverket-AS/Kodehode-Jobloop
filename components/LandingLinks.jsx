@@ -13,13 +13,13 @@ import { PortableText } from "@portabletext/react";
 export default function LandingLinks() {
   return (
     <>
-      <div className="flex flex-col pt-20">
+      <div className="flex flex-col px-8 pt-20">
         <div className="flex justify-center w-full">
-          <h2>Hvordan kan vi hjelpe deg?</h2>
+          <h2 className="text-center">Hvordan kan vi hjelpe deg?</h2>
         </div>
         <div className="flex justify-center py-20">
-          <div className="flex flex-row gap-4">
-            <div className="flex flex-col items-center gap-8">
+          <div className="flex flex-col gap-12 md:flex-row md:gap-4">
+            <div className="flex flex-col items-center gap-8 md:w-60">
               <Image
                 src={koffert2}
                 width={500}
@@ -27,14 +27,14 @@ export default function LandingLinks() {
                 className="w-auto h-20"
               />
               <h5 className="text-xl font-bold text-center">Arbeidsgiver</h5>
-              <p className="w-3/6 text-center">
-                For bedrifter som er interessert i samarbeide
+              <p className="text-center">
+                For bedrifter som er interessert i utviklere
               </p>
               <div>
                 <LinkButton Path={"/arbeidsgiver"} Text={"Se mer"} />
               </div>
             </div>
-            <div className="flex flex-col items-center gap-8">
+            <div className="flex flex-col items-center gap-8 md:w-60">
               <Image
                 src={hatt}
                 width={500}
@@ -42,14 +42,12 @@ export default function LandingLinks() {
                 className="w-auto h-20"
               />
               <h5 className="text-xl font-bold text-center ">Deltager</h5>
-              <p className="w-3/6 text-center">
-                For deg som vil delta i Kodehode kurset
-              </p>
+              <p className="text-center">For deg som vil delta på Kodehode</p>
               <div>
                 <LinkButton Path={"/deltaker"} Text={"Se mer"} />
               </div>
             </div>
-            <div className="flex flex-col items-center gap-8 mt-1">
+            <div className="flex flex-col items-center gap-8 md:w-60">
               <Image
                 src={mappe}
                 width={500}
@@ -59,8 +57,9 @@ export default function LandingLinks() {
               <h5 className="text-xl font-bold text-center">
                 Samarbeidspartner
               </h5>
-              <p className="w-3/6 text-center">
-                For offentlig etat, skole, eller fylkeskommune
+              <p className="text-center">
+                For andre virksomheter som vil
+                samarbeide
               </p>
               <div>
                 <LinkButton Path={"/samarbeidspartner"} Text={"Se mer"} />

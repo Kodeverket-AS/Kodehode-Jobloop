@@ -11,8 +11,10 @@ export default async function Home() {
   return (
     <main className="flex flex-col items-center min-h-screen p-0">
       <LandingHero content={data.heroSub[1]} />
-      <LandingLinks />
-      <LandingVisjon />
+      <div className="flex flex-col items-center mt-[370px] md:mt-20">
+        <LandingLinks />
+        <LandingVisjon />
+      </div>
     </main>
   );
 }

@@ -11,7 +11,31 @@ import { PortableText } from "@portabletext/react";
 export default function LandingHero({ content }) {
   return (
     <>
-      <div>
+      <div className="absolute top-0 block w-full -z-10 md:hidden">
+        <div className="w-full h-[18rem]">
+          <div className=" absolute bg-gradient-to-b from-[rgba(34,34,34,0.82)] to-[rgba(34,34,34,0.33)] z-50 h-full w-full" />
+          <Image
+            src={content.image}
+            width={500}
+            height={500}
+            className="object-cover w-full h-full"
+          />
+        </div>
+        <div className="absolute left-0 right-0 z-50 text-white top-24 2xs:top-28">
+          <h1 className="text-3xl text-center">{content.title}</h1>
+          <h2 className="px-8 text-center">Kodekurs og rekruttering til IT-bransjen</h2>
+        </div>
+        <div className="absolute z-50 p-8 bg-white top-60 rounded-t-3xl 2xs:top-60 xs:top-[16.5rem] sm:top-[19rem] sm:p-10">
+          <p>
+            Vi rekrutterer kandidater som av ulike grunner har havnet utenfor
+            arbeidslivet og lærer dem opp til å bli frontend-utviklere. Gjennom
+            en kombinasjon av teoretisk opplæring og praksis vil kandidatene
+            lære seg de viktigste teknologiene og bli klar for en karriere innen
+            utvikling.
+          </p>
+        </div>
+      </div>
+      <div className="hidden md:block">
         <div className="absolute top-0 left-0 flex justify-center w-full -z-50">
           <div className=" absolute bg-gradient-to-b from-[rgba(34,34,34,0.82)] to-[rgba(34,34,34,0.33)] z-50 h-full w-full" />
           <Image
@@ -29,7 +53,7 @@ export default function LandingHero({ content }) {
           </p>
         </div>
       </div>
-      <div className="flex flex-col gap-32">
+      <div className="flex-col hidden gap-32 md:flex">
         <div className="flex justify-center w-screen ">
           <div className="flex flex-row justify-center w-5/6 gap-x-10">
             <div className="flex flex-col w-3/6 gap-20">
