@@ -8,14 +8,14 @@ import Fargefigur from "../public/Fargefigur.svg";
 
 export default function LinkToFaq() {
   return (
-    <div className="w-full pt-20">
+    <div className="w-full pt-10 md:pt-20">
       <div className="flex flex-col items-center">
         <h2 className="mb-10 md:mb-20">Har du flere spørsmål?</h2>
         <div className="z-0">
           <LinkButton Path="/FAQ" Text="Gå til FAQ" />
         </div>
       </div>
-      <div className="flex justify-end w-full md:mt-[-130px] mt-[-100px]">
+      <div className="flex justify-end w-full md:mt-[-130px] mt-[-70px] sm:mt-[-100px]">
         <Image
           src={Fargefigur}
           width={1000}
