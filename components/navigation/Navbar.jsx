@@ -14,7 +14,7 @@ export default function Navbar() {
         <div className="p-4">
           <Link href="/" aria-label="Gå til landingssiden">
             <Image
-              className="w-60 md:w-80"
+              className="w-60 lg:w-80"
               src={logoDesktopHvit}
               width={350}
               height={220}
@@ -69,7 +69,7 @@ export function NavbarAlt({ subpage, textWhite }) {
         <div className="flex flex-row items-end p-4">
           <Link href="/" aria-label="Gå til landingssiden">
             <Image
-              className="w-60 md:w-80"
+              className="w-60 lg:w-80"
               src={logoDesktopFarge}
               width={350}
               height={220}
