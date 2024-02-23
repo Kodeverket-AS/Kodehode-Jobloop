@@ -14,7 +14,7 @@ export default function Navbar() {
         <div className="p-4">
           <Link href="/" aria-label="Gå til landingssiden">
             <Image
-              className="w-60 md:w-80"
+              className="w-60 lg:w-80"
               src={logoDesktopHvit}
               width={350}
               height={220}
@@ -23,39 +23,35 @@ export default function Navbar() {
           </Link>
         </div>
         <div>
-          <div className="flex-wrap hidden h-auto p-4 md:flex">
-            <div>
-              <Link
-                href="/visjon"
-                aria-label="gå til denne undersiden for å lese om vår visjon"
-                className="px-4 font-bold text-white md:hover:underline"
-              >
-                Vår Visjon
-              </Link>
-              <Link
-                href="/FAQ"
-                aria-label="gå til denne undersiden for å få svar på ofte stilte spørsmål"
-                className="px-4 font-bold text-white md:hover:underline"
-              >
-                FAQ
-              </Link>
-            </div>
-            <div>
-              <Link
-                href="/about"
-                aria-label="gå til denne undersiden for å lese mer om oss"
-                className="px-4 font-bold text-white md:hover:underline"
-              >
-                Om Oss
-              </Link>
-              <Link
-                href="/techstack"
-                aria-label="gå til denne undersiden for å lese mer om kodespråkene våre"
-                className="px-4 font-bold text-white md:hover:underline"
-              >
-                Kodespråk
-              </Link>
-            </div>
+          <div className="hidden h-auto p-4 md:block">
+            <Link
+              href="/visjon"
+              aria-label="gå til denne undersiden for å lese om vår visjon"
+              className="px-4 font-bold text-white md:hover:underline"
+            >
+              Vår Visjon
+            </Link>
+            <Link
+              href="/FAQ"
+              aria-label="gå til denne undersiden for å få svar på ofte stilte spørsmål"
+              className="px-4 font-bold text-white md:hover:underline"
+            >
+              FAQ
+            </Link>
+            <Link
+              href="/about"
+              aria-label="gå til denne undersiden for å lese mer om oss"
+              className="px-4 font-bold text-white md:hover:underline"
+            >
+              Om Oss
+            </Link>
+            <Link
+              href="/techstack"
+              aria-label="gå til denne undersiden for å lese mer om kodespråkene våre"
+              className="px-4 font-bold text-white md:hover:underline"
+            >
+              Kodespråk
+            </Link>
           </div>
           <div className="px-4">
             <HamburgerMenu hamFill="white" />
@@ -73,7 +69,7 @@ export function NavbarAlt({ subpage, textWhite }) {
         <div className="flex flex-row items-end p-4">
           <Link href="/" aria-label="Gå til landingssiden">
             <Image
-              className="w-60 md:w-80"
+              className="w-60 lg:w-80"
               src={logoDesktopFarge}
               width={350}
               height={220}
@@ -85,47 +81,43 @@ export function NavbarAlt({ subpage, textWhite }) {
           </b>
         </div>
         <div>
-          <div className="flex-wrap hidden h-auto p-4 md:flex">
-            <div>
-              <Link
-                href="/visjon"
-                aria-label="gå til denne undersiden for å lese om vår visjon"
-                className={`px-4 font-bold ${
-                  !textWhite ? "text-jobloop-primary-green" : "text-white"
-                } md:hover:underline`}
-              >
-                Vår Visjon
-              </Link>
-              <Link
-                href="/FAQ"
-                aria-label="gå til denne undersiden for å få svar på ofte stilte spørsmål"
-                className={`px-4 font-bold ${
-                  !textWhite ? "text-jobloop-primary-green" : "text-white"
-                } md:hover:underline`}
-              >
-                FAQ
-              </Link>
-            </div>
-            <div>
-              <Link
-                href="/about"
-                aria-label="gå til denne undersiden for å lese mer om oss"
-                className={`px-4 font-bold ${
-                  !textWhite ? "text-jobloop-primary-green" : "text-white"
-                } md:hover:underline`}
-              >
-                Om Oss
-              </Link>
-              <Link
-                href="/techstack"
-                aria-label="gå til denne undersiden for å lese mer om kodespråkene våre"
-                className={`px-4 font-bold ${
-                  !textWhite ? "text-jobloop-primary-green" : "text-white"
-                } md:hover:underline`}
-              >
-                Kodespråk
-              </Link>
-            </div>
+          <div className="hidden h-auto p-4 md:block">
+            <Link
+              href="/visjon"
+              aria-label="gå til denne undersiden for å lese om vår visjon"
+              className={`px-4 font-bold ${
+                !textWhite ? "text-jobloop-primary-green" : "text-white"
+              } md:hover:underline`}
+            >
+              Vår Visjon
+            </Link>
+            <Link
+              href="/FAQ"
+              aria-label="gå til denne undersiden for å få svar på ofte stilte spørsmål"
+              className={`px-4 font-bold ${
+                !textWhite ? "text-jobloop-primary-green" : "text-white"
+              } md:hover:underline`}
+            >
+              FAQ
+            </Link>
+            <Link
+              href="/about"
+              aria-label="gå til denne undersiden for å lese mer om oss"
+              className={`px-4 font-bold ${
+                !textWhite ? "text-jobloop-primary-green" : "text-white"
+              } md:hover:underline`}
+            >
+              Om Oss
+            </Link>
+            <Link
+              href="/techstack"
+              aria-label="gå til denne undersiden for å lese mer om kodespråkene våre"
+              className={`px-4 font-bold ${
+                !textWhite ? "text-jobloop-primary-green" : "text-white"
+              } md:hover:underline`}
+            >
+              Kodespråk
+            </Link>
           </div>
           <div className="px-4">
             <HamburgerMenu hamFill="colour" />
