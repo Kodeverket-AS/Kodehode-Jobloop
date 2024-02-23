@@ -16,13 +16,12 @@ const visjon = "/visjon";
 const faq = "/FAQ";
 const kontakt = "/contact";
 
-
 export default function Navigation() {
   const pathname = usePathname();
   let navbar;
 
   if (pathname === techstack) {
-    navbar = <NavbarAlt />;
+    navbar = <NavbarAlt textWhite="yes" />;
   } else if (pathname === about) {
     navbar = <NavbarAlt />;
   } else if (pathname === kontakt) {
