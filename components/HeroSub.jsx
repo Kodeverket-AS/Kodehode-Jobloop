@@ -24,7 +24,7 @@ export default function HeroSub({ content, buttonText }) {
         <div className="w-1/2">
           <h1 className="text-jobloop-primary-green">{content.title}</h1>
           <PortableText value={content.content} />
-          <div className="hidden mt-10 md:block">
+          <div className={`hidden mt-10 md:${!buttonText ? "hidden" : "block"}`}>
             <LinkButton Path="/contact" Text={buttonText} />
           </div>
         </div>
