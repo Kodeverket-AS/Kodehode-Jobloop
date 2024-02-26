@@ -172,7 +172,7 @@ export default async function Vision() {
                 title={data.kontaktseksjon[0].title}
                 content={data.kontaktseksjon[0].content}
               />
-              <div className="flex flex-col items-center w-full pb-32">
+              <div className="flex flex-col items-center w-full pb-32 mt-20">
                 <div className="pb-20">
                   <h1 className="text-3xl font-extrabold text-center lg:pb-28 lg:text-4xl">
                     Andre samarbeidspartnere
