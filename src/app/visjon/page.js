@@ -185,7 +185,7 @@ export default async function Vision() {
                       title={data.samarbeid[0].title}
                       image={data.samarbeid[0].image}
                       content={data.samarbeid[0].content}
-                      webLink="bergen.works"
+                      webLink="https://bergen.works"
                     />
                     {/*<Partners
                     key={data.samarbeid[0]._id}
