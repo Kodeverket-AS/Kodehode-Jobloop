@@ -85,8 +85,8 @@ export default async function Vision() {
                 Samarbeidsprosjekter
               </h1>
               <div className="flex justify-center w-screen p-20 bg-jobloop-primary-orange ">
-                <div className="flex flex-col items-center w-5/6 gap-40 md:flex-row ">
-                  <div className="hidden w-5/6 mt-20 md:block" key={data.VisionSections[1]._id}>
+                <div className="flex flex-col items-center w-5/6 gap-40 lg:flex-row ">
+                  <div className="hidden w-5/6 mt-20 lg:block" key={data.VisionSections[1]._id}>
                     <Image
                       width={500}
                       height={500}
@@ -121,7 +121,7 @@ export default async function Vision() {
 
               <div className="flex flex-col items-center justify-center w-full ">
                 <div className="flex justify-center w-full ">
-                  <div className="flex flex-col items-center justify-center w-5/6 gap-40 p-10 md:p-20 md:flex-row">
+                  <div className="flex flex-col items-center justify-center w-5/6 gap-40 p-10 md:p-20 lg:flex-row">
                     <div className="flex flex-col w-5/6 gap-10 ">
                       <Image
                         width={100}
@@ -137,7 +137,7 @@ export default async function Vision() {
                       />
                     </div>
 
-                    <div className="hidden w-5/6 md:block " key={data.VisionSections[0]._id}>
+                    <div className="hidden w-5/6 lg:block " key={data.VisionSections[0]._id}>
                       <Image
                         width={500}
                         height={500}
