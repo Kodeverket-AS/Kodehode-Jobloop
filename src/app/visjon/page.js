@@ -84,7 +84,7 @@ export default async function Vision() {
               <h1 className="p-20 text-2xl font-extrabold text-center md:text-3xl">
                 Samarbeidsprosjekter
               </h1>
-              <div className="flex justify-center w-screen p-20 bg-jobloop-primary-orange ">
+              {/* <div className="flex justify-center w-screen p-20 bg-jobloop-primary-orange ">
                 <div className="flex flex-col items-center w-5/6 gap-40 lg:flex-row ">
                   <div className="hidden w-5/6 mt-20 lg:block" key={data.VisionSections[1]._id}>
                     <Image
@@ -110,16 +110,17 @@ export default async function Vision() {
                     />
                   </div>
                 </div>
-              </div>
-              {/* <Vision2Part
+              </div> */}
+              <Vision2Part
                 content={data.VisionSections[1]}
                 link="https://glode.no/"
                 linkText="Mer om Gløde"
                 linkAria="Les mer om Gløde på deres nettside"
                 btnBG="colour"
-              /> */}
+                imgSide="left"
+              />
 
-              <div className="flex flex-col items-center justify-center w-full ">
+              {/* <div className="flex flex-col items-center justify-center w-full ">
                 <div className="flex justify-center w-full ">
                   <div className="flex flex-col items-center justify-center w-5/6 gap-40 p-10 md:p-20 lg:flex-row">
                     <div className="flex flex-col w-5/6 gap-10 ">
@@ -147,7 +148,14 @@ export default async function Vision() {
                     </div>
                   </div>
                 </div>
-              </div>
+              </div> */}
+
+              <Vision2Part
+                content={data.VisionSections[0]}
+                link="https://www.fontenehusetbergen.no/"
+                linkText="Mer om Fontenehuset Bergen"
+                linkAria="Les mer om Fontenehuset Bergen på deres nettside"
+              />
 
               {/* <div className="block md:hidden"> 
                           <ProjectScroll  content={data.VisionSections} ></ProjectScroll>
