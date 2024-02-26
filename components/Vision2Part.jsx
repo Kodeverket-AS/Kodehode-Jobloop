@@ -11,7 +11,7 @@ export default function Vision2Part({ content, link, linkText, linkAria, btnBG, 
       } `}
     >
       <div
-        className={`flex ${
+        className={`flex max-w-[1600px] ${
           imgSide == "left" ? "flex-col" : "flex-col-reverse"
         } items-center w-5/6 gap-40 ${imgSide == "left" ? "lg:flex-row" : "lg:flex-row-reverse"} `}
       >
