@@ -174,9 +174,9 @@ export default async function Vision() {
               />
               <div className="flex flex-col items-center w-full pb-32 mt-20">
                 <div className="pb-20">
-                  <h1 className="text-3xl font-extrabold text-center lg:pb-28 lg:text-4xl">
+                  <h2 className="font-extrabold text-center xs:text-3xl 2xs:text-2xl lg:pb-28 lg:text-4xl">
                     Andre samarbeidspartnere
-                  </h1>
+                  </h2>
                 </div>
                 <div className="flex justify-center w-full">
                   <div className="flex flex-col justify-center w-4/6 gap-32 pl-20 md:flex-row">
