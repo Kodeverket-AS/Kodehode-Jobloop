@@ -75,9 +75,13 @@ export function ExternalLinkButton({ Path, Text, ariaLabel, background }) {
       rel="noopener noreferrer"
       aria-label={ariaLabel}
       className={`px-8 py-2 transition-all ${
-        background == "colour" ? "bg-jobloop-secondary-orange" : "bg-white"
+        background == "colour"
+          ? "bg-jobloop-secondary-orange"
+          : "bg-white" /*#e7e7ee for off-white? to match the paler secondary orange*/
       } text-black border-2 border-black border-solid max-w-fit rounded-3xl ${
-        background == "colour" ? "hover:bg-white" : "hover:bg-jobloop-secondary-orange"
+        background == "colour"
+          ? "hover:bg-white"
+          : "hover:bg-jobloop-secondary-orange" /*#e7e7ee for off-white? to match the paler secondary orange*/
       } `}
     >
       {Text}
