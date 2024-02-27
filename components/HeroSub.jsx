@@ -5,13 +5,13 @@ import Image from "next/image";
 import { PortableText } from "@portabletext/react";
 import { LinkButton } from "./Buttons";
 
-export default function HeroSub({ content, buttonText }) {
+export default function HeroSub({ content, buttonText, imgAlt }) {
   return (
     <>
       <div className="absolute top-0 block w-full -z-10 md:hidden">
         <div className="w-full">
           <div className=" absolute bg-gradient-to-b from-[rgba(34,34,34,0.82)] to-[rgba(34,34,34,0.33)] z-50 h-full w-full" />
-          <Image src={content.image} width={500} height={500} className="w-full" />
+          <Image src={content.image} width={500} height={500} alt={imgAlt} className="w-full" />
         </div>
         <div className="absolute left-0 right-0 mx-auto w-72 top-24 2xs:top-28 sm:w-[34rem]">
           <h1 className="absolute z-50 text-center text-white">{content.title}</h1>
