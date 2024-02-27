@@ -73,8 +73,8 @@ export function ExternalLinkButton({ Path, Text, ariaLabel, background }) {
     <button
       className={`px-8 py-2 transition-all ${
         background == "colour"
-          ? "bg-jobloop-secondary-orange text-white border-white hover:bg-white hover:text-black"
-          : "bg-white text-black border-black hover:bg-jobloop-secondary-orange" /*#e7e7ee for off-white? to match the paler secondary orange*/
+          ? "bg-jobloop-primary-orange text-white border-white hover:bg-white hover:text-black"
+          : "bg-white text-black border-black hover:bg-jobloop-primary-orange hover:border-white hover:text-white"
       }  border-2  border-solid max-w-fit rounded-3xl`}
     >
       <a href={Path} rel="noopener noreferrer" aria-label={ariaLabel}>
