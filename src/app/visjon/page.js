@@ -11,6 +11,7 @@ import { ProjectScroll } from "../../../components/ProjectScroll";
 import { CooptScroll } from "../../../components/ProjectScroll";
 import HeroSub from "../../../components/HeroSub";
 import Vision2Part from "../../../components/Vision2Part";
+import VisionSub from "../../../components/VisionSub";
 
 export default async function Vision() {
   const data = await getData();
@@ -78,14 +79,14 @@ export default async function Vision() {
               </div>
             </div> */}
 
-            <HeroSub
+            <VisionSub
               content={data.heroSub[3]}
               key={data.heroSub[3]._id}
               imgAlt="Noen av våre team medlemmer"
             />
 
             <div className="flex flex-col items-center justify-center mt-[500px] md:mt-20">
-              <div className="w-full bg-jobloop-primary-orange mt-14">
+              <div className="w-full bg-jobloop-primary-orange mt-14 md:mt-0">
                 <h2 className="p-20 text-2xl font-extrabold text-center text-white md:text-3xl">
                   Samarbeidsprosjekter
                 </h2>
@@ -121,7 +122,7 @@ export default async function Vision() {
                   link="https://glode.no/"
                   linkText="Mer om Gløde"
                   linkAria="Les mer om Gløde på deres nettside"
-                  btnBG="colour"
+                  background="colour"
                   imgSide="left"
                   title="Gløde"
                   imgAlt="Lagerarbeider på gaffeltruck"
@@ -189,7 +190,7 @@ export default async function Vision() {
                 title={data.kontaktseksjon[0].title}
                 content={data.kontaktseksjon[0].content}
               />
-              <div className="flex flex-col items-center w-full pb-32 mt-20">
+              {/* <div className="flex flex-col items-center w-full pb-32 mt-20">
                 <div className="pb-20">
                   <h2 className="font-extrabold text-center xs:text-3xl 2xs:text-2xl lg:pb-28 lg:text-4xl">
                     Andre samarbeidspartnere
@@ -203,8 +204,8 @@ export default async function Vision() {
                       image={data.samarbeid[0].image}
                       content={data.samarbeid[0].content}
                       webLink="https://bergen.works"
-                    />
-                    {/*<Partners
+                    /> 
+                    <Partners
                     key={data.samarbeid[0]._id}
                     title={data.samarbeid[0].title}
                     image={data.samarbeid[0].image}
@@ -215,13 +216,13 @@ export default async function Vision() {
                     title={data.samarbeid[0].title}
                     image={data.samarbeid[0].image}
                     content={data.samarbeid[0].content}
-                  />*/}
+                  />
                   </div>
                 </div>
-                {/* <div className="block md:hidden">
+                 <div className="block md:hidden">
                             <CooptScroll content={data.samarbeid}></CooptScroll>
-                          </div> */}
-              </div>
+                          </div> 
+              </div>*/}
             </div>
           </div>
         </div>
