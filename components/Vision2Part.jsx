@@ -15,9 +15,8 @@ export default function Vision2Part({
   return (
     <div
       key={content._id}
-      className={`flex justify-center w-screen py-14 lg:p-20 ${
-        btnBG == "colour" ? "bg-jobloop-primary-orange" : "bg-none"
-      } `}
+      className={`flex justify-center w-screen py-14 lg:p-20         
+       ${btnBG == "colour" ? "bg-jobloop-primary-orange text-white" : "bg-none text-black"} `}
     >
       <div
         className={`flex max-w-[1600px] ${
