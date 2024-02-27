@@ -2,12 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import headwaykuttet from "../public/headwaykuttet.jpeg";
-import Navbar from "./navigation/Navbar";
-import danialigdery from "../public/danialigdery.jpg";
 import visjonlanding2 from "../public/visjonlanding2.jpeg";
-import { ContactBtn } from "./ContactBtn";
-import { SeMerBtn } from "./SeMerBtn";
 import { LinkButton } from "./Buttons";
 import { PortableText } from "@portabletext/react";
 

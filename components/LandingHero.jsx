@@ -55,7 +55,7 @@ export default function LandingHero({ content }) {
           </p>
         </div>
       </div>
-      <div className="flex-col hidden gap-32 pt-32 pb-20 md:flex lg:pt-20">
+      <div className="flex-col hidden gap-32 pt-32 pb-0 md:flex lg:pt-28">
         <div className="flex justify-center w-screen ">
           <div className="flex flex-row justify-center w-5/6 gap-x-10">
             <div className="flex flex-col w-3/6 gap-20">
@@ -66,7 +66,7 @@ export default function LandingHero({ content }) {
                 <LinkButton Path={"/contact"} Text={"Kontakt oss"} />
               </div>
             </div>
-            <div className="h-2/6">
+            <div className="w-1/2">
               <Image
                 width={800}
                 alt="kodemiljø"

@@ -5,10 +5,7 @@ import Image from "next/image";
 import mappe from "../public/mappe.png";
 import koffert2 from "../public/koffert2.png";
 import hatt from "../public/hatt.png";
-import { ContactBtn } from "./ContactBtn";
-import { SeMerBtn } from "./SeMerBtn";
 import { LinkButton } from "./Buttons";
-import { PortableText } from "@portabletext/react";
 
 export default function LandingLinks() {
   return (
