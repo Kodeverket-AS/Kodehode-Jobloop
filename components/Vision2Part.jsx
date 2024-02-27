@@ -20,8 +20,8 @@ export default function Vision2Part({
     >
       <div
         className={`flex max-w-[1600px] ${
-          imgSide == "left" ? "flex-col" : "flex-col-reverse"
-        } items-center w-5/6 gap-40 ${imgSide == "left" ? "lg:flex-row" : "lg:flex-row-reverse"} `}
+          imgSide == "left" ? "flex-col lg:flex-row" : "flex-col-reverse lg:flex-row-reverse"
+        } items-center w-5/6 gap-40`}
       >
         <div className="hidden w-5/6 mt-20 lg:block">
           <Image
