@@ -33,7 +33,7 @@ export default function Vision2Part({
             alt={imgAlt}
           ></Image>
         </div>
-        <div className="flex flex-col w-5/6 gap-10">
+        <div className="flex flex-col w-full gap-10">
           <Image
             width={100}
             height={100}
