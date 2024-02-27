@@ -118,6 +118,8 @@ export default async function Vision() {
                 linkAria="Les mer om Gløde på deres nettside"
                 btnBG="colour"
                 imgSide="left"
+                title="Gløde"
+                imgAlt="Lagerarbeider på gaffeltruck"
               />
 
               {/* <div className="flex flex-col items-center justify-center w-full ">
@@ -155,6 +157,8 @@ export default async function Vision() {
                 link="https://www.fontenehusetbergen.no/"
                 linkText="Mer om Fontenehuset Bergen"
                 linkAria="Les mer om Fontenehuset Bergen på deres nettside"
+                title="Fontenehuset Bergen"
+                imgAlt="Rom med utstyr på pulter"
               />
 
               {/* <div className="block md:hidden"> 
