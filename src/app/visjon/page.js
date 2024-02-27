@@ -78,12 +78,16 @@ export default async function Vision() {
               </div>
             </div> */}
 
-            <HeroSub content={data.heroSub[3]} key={data.heroSub[3]._id} />
+            <HeroSub
+              content={data.heroSub[3]}
+              key={data.heroSub[3]._id}
+              imgAlt="Noen av våre team medlemmer"
+            />
 
             <div className="flex flex-col items-center justify-center mt-[500px] md:mt-20">
-              <h1 className="p-20 text-2xl font-extrabold text-center md:text-3xl">
+              <h2 className="p-20 text-2xl font-extrabold text-center md:text-3xl">
                 Samarbeidsprosjekter
-              </h1>
+              </h2>
               {/* <div className="flex justify-center w-screen p-20 bg-jobloop-primary-orange ">
                 <div className="flex flex-col items-center w-5/6 gap-40 lg:flex-row ">
                   <div className="hidden w-5/6 mt-20 lg:block" key={data.VisionSections[1]._id}>
