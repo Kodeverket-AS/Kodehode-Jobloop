@@ -34,6 +34,7 @@ export default function HeroSub({ content, buttonText, imgAlt }) {
             width={500}
             height={500}
             className="mx-auto my-auto rounded w-96"
+            alt={imgAlt}
           />
         </div>
       </div>
