@@ -21,7 +21,7 @@ export default function HeroSub({ content, buttonText, imgAlt }) {
         </div>
       </div>
       <div className="hidden md:flex-row md:flex lg:px-24 lg:pt-24 md:px-10 md:pt-10">
-        <div className="w-1/2">
+        <div className="w-1/2 max-w-[1600px]">
           <h1 className="text-jobloop-primary-green">{content.title}</h1>
           <PortableText value={content.content} />
           <div className={`hidden mt-10 md:${!buttonText ? "hidden" : "block"}`}>
