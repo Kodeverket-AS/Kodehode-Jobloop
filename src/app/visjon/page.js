@@ -125,7 +125,7 @@ export default async function Vision() {
                   background="colour"
                   imgSide="left"
                   title="Gløde"
-                  imgAlt="Lagerarbeider på gaffeltruck"
+                  imgAlt="Lagerarbeider som bruker gaffeltruck"
                 />
               </div>
               {/* <div className="flex flex-col items-center justify-center w-full ">
@@ -189,6 +189,7 @@ export default async function Vision() {
                 imageOne={data.kontaktseksjon[0].ImageOne}
                 title={data.kontaktseksjon[0].title}
                 content={data.kontaktseksjon[0].content}
+                imgAlt="Stefan, Karl-Håkon og Sina"
               />
               {/* <div className="flex flex-col items-center w-full pb-32 mt-20">
                 <div className="pb-20">
