@@ -85,10 +85,11 @@ export default async function Vision() {
             />
 
             <div className="flex flex-col items-center justify-center mt-[500px] md:mt-20">
-              <h2 className="p-20 text-2xl font-extrabold text-center md:text-3xl">
-                Samarbeidsprosjekter
-              </h2>
-              {/* <div className="flex justify-center w-screen p-20 bg-jobloop-primary-orange ">
+              <div className="w-full bg-jobloop-primary-orange mt-14">
+                <h2 className="p-20 text-2xl font-extrabold text-center text-white md:text-3xl">
+                  Samarbeidsprosjekter
+                </h2>
+                {/* <div className="flex justify-center w-screen p-20 bg-jobloop-primary-orange ">
                 <div className="flex flex-col items-center w-5/6 gap-40 lg:flex-row ">
                   <div className="hidden w-5/6 mt-20 lg:block" key={data.VisionSections[1]._id}>
                     <Image
@@ -115,17 +116,17 @@ export default async function Vision() {
                   </div>
                 </div>
               </div> */}
-              <Vision2Part
-                content={data.VisionSections[1]}
-                link="https://glode.no/"
-                linkText="Mer om Gløde"
-                linkAria="Les mer om Gløde på deres nettside"
-                btnBG="colour"
-                imgSide="left"
-                title="Gløde"
-                imgAlt="Lagerarbeider på gaffeltruck"
-              />
-
+                <Vision2Part
+                  content={data.VisionSections[1]}
+                  link="https://glode.no/"
+                  linkText="Mer om Gløde"
+                  linkAria="Les mer om Gløde på deres nettside"
+                  btnBG="colour"
+                  imgSide="left"
+                  title="Gløde"
+                  imgAlt="Lagerarbeider på gaffeltruck"
+                />
+              </div>
               {/* <div className="flex flex-col items-center justify-center w-full ">
                 <div className="flex justify-center w-full ">
                   <div className="flex flex-col items-center justify-center w-5/6 gap-40 p-10 md:p-20 lg:flex-row">
