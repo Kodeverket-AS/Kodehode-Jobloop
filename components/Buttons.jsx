@@ -70,17 +70,18 @@ export function LinkButton({ Path, Text }) {
 
 export function ExternalLinkButton({ Path, Text, ariaLabel, background }) {
   return (
-    <button
+    <a
+      href={Path}
+      rel="noopener noreferrer"
+      aria-label={ariaLabel}
       className={`px-8 py-2 transition-all ${
         background == "colour"
           ? "bg-jobloop-primary-orange text-white border-white hover:bg-white hover:text-black"
-          : "bg-white text-black border-black hover:bg-jobloop-primary-orange hover:border-white hover:text-white"
+          : "bg-white text-black border-black hover:bg-jobloop-primary-orange hover:border-jobloop-primary-orange"
       }  border-2  border-solid max-w-fit rounded-3xl`}
     >
-      <a href={Path} rel="noopener noreferrer" aria-label={ariaLabel}>
-        {Text}
-      </a>
-    </button>
+      {Text}
+    </a>
   );
 }
 
