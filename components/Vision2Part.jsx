@@ -7,7 +7,7 @@ export default function Vision2Part({
   link,
   linkText,
   linkAria,
-  btnBG,
+  background,
   imgSide,
   imgAlt,
   title,
@@ -16,7 +16,7 @@ export default function Vision2Part({
     <div
       key={content._id}
       className={`flex justify-center w-screen py-14 lg:p-20 ${
-        btnBG == "colour" ? "bg-jobloop-primary-orange text-white" : "bg-none text-black"
+        background == "colour" ? "bg-jobloop-primary-orange text-white" : "bg-none text-black"
       } `}
     >
       <div
@@ -46,7 +46,7 @@ export default function Vision2Part({
             Path={link}
             Text={linkText}
             ariaLabel={linkAria}
-            background={btnBG}
+            background={background}
           />
         </div>
       </div>
