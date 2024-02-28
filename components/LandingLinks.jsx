@@ -2,9 +2,6 @@
 
 import Link from "next/link";
 import Image from "next/image";
-//import mappe from "../public/mappe.png";
-//import koffert2 from "../public/koffert2.png";
-//import hatt from "../public/hatt.png";
 import dokument from "../public/dokument.svg";
 import koffert from "../public/koffert.svg";
 import hatt from "../public/hatt.svg";
@@ -16,7 +13,7 @@ export default function LandingLinks() {
       <div className="flex justify-center w-full">
         <h2 className="text-center">Hvordan kan vi hjelpe deg?</h2>
       </div>
-      <div className="flex flex-col w-full gap-20 pt-10 pb-20 justify-evenly md:flex-row md:gap-0">
+      <div className="flex flex-col w-full gap-20 pt-10 pb-20 justify-evenly md:flex-row md:gap-0 xl:max-w-[800px] xl:justify-between xl:mx-auto">
         <div className="flex flex-col items-center gap-4 px-0 md:w-52 md:items-start md:text-left md:pr-5 lg:pr-5">
           <Image
             src={koffert}
