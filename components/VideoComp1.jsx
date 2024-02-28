@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import video1thumbnail from "../public/video1thumbnail.jpg";
+//import video1thumbnail from "../public/video1thumbnail.jpg";
 
 export default function VideoComp1({ url }) {
   return (
