@@ -23,7 +23,7 @@ export default function VisionSub({ content, imgAlt }) {
           <h1 className="w-full text-center text-jobloop-primary-green">{content.title}</h1>
         </div>
         <div className="hidden md:flex-row md:flex justify-between mx-auto max-w-[1600px]">
-          <div className="w-1/2">
+          <div className="w-1/2 pr-4">
             <PortableText value={content.content} />
           </div>
           <div className="pt-6">
