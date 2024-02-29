@@ -60,7 +60,16 @@ export default function Navigation() {
       </>
     );
   } else if (pathname === visjon) {
-    navbar = <NavbarAlt />;
+    navbar = (
+      <>
+        <div className="block md:hidden">
+          <Navbar />
+        </div>
+        <div className="hidden md:block">
+          <NavbarAlt />
+        </div>
+      </>
+    );
   } else if (pathname === faq) {
     navbar = <NavbarAlt />;
   } else {
