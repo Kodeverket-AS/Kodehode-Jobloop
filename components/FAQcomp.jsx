@@ -16,19 +16,19 @@ const customTheme = {
 
 export function FaqDeltager({ contentQ, contentS }) {
   const data = contentQ.map((element, index) => (
-    <Accordion.Panel key={index}>
+    <Accordion.Panel key={index} className="w-2/3">
       <Accordion.Title className="gap-3 p-2 text-sm focus:bg-gray-100 hover:bg-gray-100">
         {element}
       </Accordion.Title>
-      <Accordion.Content className="w-full mt-5">{contentS[index]}</Accordion.Content>
+      <Accordion.Content className="w-full">{contentS[index]}</Accordion.Content>
     </Accordion.Panel>
   ));
 
   return (
-    <div className="flex justify-center w-full">
+    <div className="flex justify-center w-screen">
       <Accordion
         theme={customTheme}
-        className=" w-full  lg:w-full lg:max-w-[1600px] lg:mx-auto"
+        className=" w-2/3  lg:w-2/3 lg:max-w-[1600px] lg:mx-auto"
         collapseAll
       >
         {data}
@@ -39,7 +39,7 @@ export function FaqDeltager({ contentQ, contentS }) {
 
 export function FaqBedrift({ contentQ, contentS }) {
   const data = contentQ.map((element, index) => (
-    <Accordion.Panel key={index}>
+    <Accordion.Panel className="w-2/3" key={index}>
       <Accordion.Title className="gap-3 p-2 focus:border-none focus:bg-gray-100 hover:bg-gray-100">
         {element}
       </Accordion.Title>
@@ -47,38 +47,36 @@ export function FaqBedrift({ contentQ, contentS }) {
     </Accordion.Panel>
   ));
   return (
-    <div className="flex justify-center w-full">
-      <div
-        key={data._id}
-        className="flex flex-col px-3 lg:px-9 mb-40 gap-7 w-full lg:w-full lg:lg:max-w-[1100px] lg:mx-auto"
+    <div className="flex justify-center w-screen">
+      <Accordion
+        theme={customTheme}
+        className=" w-2/3  lg:w-2/3 lg:max-w-[1600px] lg:mx-auto"
+        collapseAll
       >
-        <Accordion collapseAll className="faq-title">
-          {data}
-        </Accordion>
-      </div>
+        {data}
+      </Accordion>
     </div>
   );
 }
 
 export function FaqVirk({ contentQ, contentS }) {
   const data = contentQ.map((element, index) => (
-    <Accordion.Panel key={index}>
-      <Accordion.Title className="gap-3 p-2 text-sm focus:border-none focus:bg-gray-100 hover:bg-gray-100">
+    <Accordion.Panel className="w-5/6" key={index}>
+      <Accordion.Title className="gap-3 p-2 focus:border-none focus:bg-gray-100 hover:bg-gray-100">
         {element}
       </Accordion.Title>
       <Accordion.Content className="w-full">{contentS[index]}</Accordion.Content>
     </Accordion.Panel>
   ));
   return (
-    <div className="flex justify-center w-full">
-      <div
-        key={data._id}
-        className="flex flex-col px-3 lg:px-9 mb-40 gap-7 w-full lg:w-full lg:lg:max-w-[1100px] lg:mx-auto"
+    <div className="flex justify-center w-screen">
+      <Accordion
+        theme={customTheme}
+        className=" w-2/3  lg:w-2/3 lg:max-w-[1600px] lg:mx-auto"
+        collapseAll
       >
-        <Accordion collapseAll className="faq-title">
-          {data}
-        </Accordion>
-      </div>
+        {data}
+      </Accordion>
     </div>
   );
 }
