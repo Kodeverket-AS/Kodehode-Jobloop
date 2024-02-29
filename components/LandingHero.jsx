@@ -38,27 +38,27 @@ export default function LandingHero({ content }) {
         </div>
       </div>
       <div className="hidden md:block">
-        <div className="absolute top-0 left-0 flex justify-center w-full -z-50">
-          <div className=" absolute bg-gradient-to-b from-[rgba(34,34,34,0.82)] to-[rgba(34,34,34,0.33)] z-50 h-full w-full" />
+        <div className="absolute top-0 left-0 flex justify-center w-full h-[26rem] -z-50 lg:h-[34rem]">
+          <div className="absolute bg-gradient-to-b from-[rgba(34,34,34,0.82)] to-[rgba(34,34,34,0.33)] z-50 h-full w-full" />
           <Image
             height={500}
             width={2000}
             alt="lærer som forklarer"
             src={content.image}
-            className="object-contain"
+            className="object-cover w-full h-full"
           />
         </div>
-        <div className="flex flex-col items-center p-24 text-center text-white lg:min-h-screen">
+        <div className="flex flex-col items-center px-24 py-24 text-center text-white">
           <h1 className="text-6xl text-white lg:text-9xl">{content.title}</h1>
           <p className="text-3xl text-white lg:text-5xl">
             Kodekurs og rekruttering til IT-bransjen
           </p>
         </div>
       </div>
-      <div className="flex-col hidden gap-32 py-20 md:flex">
-        <div className="flex justify-center w-screen ">
-          <div className="flex flex-row justify-center w-5/6 gap-x-10">
-            <div className="flex flex-col w-3/6 gap-20">
+      <div className="flex-col hidden w-screen gap-32 pt-32 pb-0 md:flex lg:pt-36">
+        <div className="flex justify-center w-screen px-12 lg:px-24">
+          <div className="flex flex-row justify-center w-full">
+            <div className="flex flex-col w-1/2 gap-10 mr-5">
               <div>
                 <PortableText value={content.content} />
               </div>
@@ -66,12 +66,12 @@ export default function LandingHero({ content }) {
                 <LinkButton Path={"/contact"} Text={"Kontakt oss"} />
               </div>
             </div>
-            <div className="h-2/6">
+            <div className="w-1/2 ml-5">
               <Image
                 width={800}
                 alt="kodemiljø"
                 src={danialigdery}
-                className="object-contain "
+                className="object-contain rounded"
               />
             </div>
           </div>
