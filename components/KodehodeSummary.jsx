@@ -9,7 +9,7 @@ import CourseCard from "./CourseCard";
 export default function KodehodeSummary({ content1, content2 }) {
   const [active, setActive] = useState(content2[1]);
   return (
-    <div className="flex flex-col px-8 py-20 md:flex-row md:px-24">
+    <div className="flex flex-col px-8 py-20 md:flex-row sm:px-10 md:px-12 lg:px-24 md:w-screen">
       <div className="flex-col w-full md:w-1/2 md:flex">
         <h2 className="hidden md:block">{content1.title}</h2>
         <h2 className="block pb-5 md:hidden">{content1.mobileTitle}</h2>
@@ -25,12 +25,12 @@ export default function KodehodeSummary({ content1, content2 }) {
           </div>
         </div>
       </div>
-      <div className="w-full px-0 md:px-10 md:w-1/2">
+      <div className="w-full px-0 md:pl-6 md:w-1/2">
         <div className="flex flex-row justify-center">
           <button
             key={content2[1]._id}
             onClick={() => setActive(content2[1])}
-            className="px-2 mx-3 mb-3 border-2 border-black rounded-full md:py-2 md:px-3 focus:bg-jobloop-primary-orange"
+            className="px-3 py-1 mx-3 mb-3 border-2 border-black rounded-full focus:bg-jobloop-primary-orange"
           >
             {content2[1].duration}
           </button>

@@ -20,7 +20,7 @@ export default function HeroSub({ content, buttonText }) {
           <PortableText value={content.content} />
         </div>
       </div>
-      <div className="hidden md:flex-row md:flex lg:px-24 lg:pt-24 md:px-10 md:pt-10">
+      <div className="hidden md:flex-row md:flex lg:px-24 lg:pt-24 md:px-12 md:pt-10">
         <div className="w-1/2">
           <h1 className="text-jobloop-primary-green">{content.title}</h1>
           <PortableText value={content.content} />
@@ -28,7 +28,7 @@ export default function HeroSub({ content, buttonText }) {
             <LinkButton Path="/contact" Text={buttonText} />
           </div>
         </div>
-        <div className="w-1/2 pt-6 md:pl-6">
+        <div className="w-1/2 pt-6 pl-0 md:pl-6">
           <Image
             src={content.image}
             width={500}
