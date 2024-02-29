@@ -1,9 +1,7 @@
 "use client";
 
-import Link from "next/link";
 import Image from "next/image";
 import { PortableText } from "@portabletext/react";
-import { LinkButton } from "./Buttons";
 
 export default function VisionSub({ content, imgAlt }) {
   return (
