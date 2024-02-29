@@ -31,8 +31,8 @@ export default function VisionSub({ content, imgAlt }) {
           <div className="pt-6">
             <Image
               src={content.image}
-              width={500}
-              height={500}
+              width={1080}
+              height={964}
               className="mx-auto my-auto rounded w-[30rem]"
               alt={imgAlt}
             />
