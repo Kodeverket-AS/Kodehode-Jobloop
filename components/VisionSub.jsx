@@ -22,11 +22,8 @@ export default function VisionSub({ content, imgAlt }) {
         <div className="justify-center hidden md:flex max-w-[1600px] mb-10">
           <h1 className="w-full text-center text-jobloop-primary-green">{content.title}</h1>
         </div>
-        <div className="hidden md:flex-row md:flex justify-between mx-auto max-w-[1600px]">
-          <div className="w-1/2 pr-4">
-            <PortableText value={content.content} />
-          </div>
-          <div className="pt-6">
+        <div className="hidden md:flex-row md:flex justify-around mx-auto max-w-[1600px]">
+          <div>
             <Image
               src={content.image}
               width={1080}
@@ -34,6 +31,9 @@ export default function VisionSub({ content, imgAlt }) {
               className="mx-auto my-auto rounded w-[30rem]"
               alt={imgAlt}
             />
+          </div>
+          <div className="w-1/2 pr-4">
+            <PortableText value={content.content} />
           </div>
         </div>
       </div>
