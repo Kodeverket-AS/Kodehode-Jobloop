@@ -20,7 +20,8 @@ export default async function Home() {
 }
 
 export async function getData() {
-  return Client.fetch(`
+  return Client.fetch(
+    `
   {
     "heroSub": *[_type == "heroSub"] | order(index) {title, "image":image.asset->url, content, index, _id},
     "egsCoop": *[_type == "egsCoop"] | order(index) {title, content, "logo":logo.asset->url, index, _id},
