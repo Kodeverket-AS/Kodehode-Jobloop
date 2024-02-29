@@ -12,9 +12,8 @@ export default function VideoComp1({ url }) {
           height="169"
           src={url + "controls=1"}
           title="YouTube video player"
-          frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen
+          allowFullScreen
           className="mx-auto shadow-md"
         />
       </div>
@@ -24,9 +23,8 @@ export default function VideoComp1({ url }) {
           height="562"
           src={url + "controls=0&autoplay=1&mute=1"}
           title="YouTube video player"
-          frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen
+          allowFullScreen
           className="mx-auto shadow-md w-[740px] h-[416px] lg:w-[1000px] lg:h-[562px]"
         />
       </div>
