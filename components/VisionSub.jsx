@@ -20,19 +20,23 @@ export default function VisionSub({ content, imgAlt }) {
           <PortableText value={content.content} />
         </div>
       </div>
-      <div className="hidden md:flex-row md:flex lg:px-24 lg:pt-24 md:px-10 md:pt-10 max-w-[1600px]">
-        <div className="w-1/2">
-          <h1 className="text-jobloop-primary-green">{content.title}</h1>
-          <PortableText value={content.content} />
+      <div className="hidden md:flex flex-col px-10 max-w-[1600px]">
+        <div className="justify-start hidden md:flex max-w-[1600px] mb-10">
+          <h1 className="w-full text-left text-jobloop-primary-green">{content.title}</h1>
         </div>
-        <div className="w-1/2 pt-6 md:pl-6">
-          <Image
-            src={content.image}
-            width={500}
-            height={500}
-            className="mx-auto my-auto rounded w-[30rem]"
-            alt={imgAlt}
-          />
+        <div className="hidden md:flex-row md:flex justify-between mx-auto max-w-[1600px]">
+          <div className="w-1/2">
+            <PortableText value={content.content} />
+          </div>
+          <div className="pt-6">
+            <Image
+              src={content.image}
+              width={500}
+              height={500}
+              className="mx-auto my-auto rounded w-[30rem]"
+              alt={imgAlt}
+            />
+          </div>
         </div>
       </div>
     </>
