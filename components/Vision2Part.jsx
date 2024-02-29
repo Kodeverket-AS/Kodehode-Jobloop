@@ -4,12 +4,12 @@ import { PortableText } from "@portabletext/react";
 
 export default function Vision2Part({
   content,
-  link,
-  linkText,
-  linkAria,
   background,
   imgSide,
   imgAlt,
+  link,
+  linkText,
+  linkAria,
   title,
 }) {
   return (
@@ -17,21 +17,15 @@ export default function Vision2Part({
       key={content._id}
       className={`flex justify-center w-screen py-14 lg:p-20 ${
         background == "colour" ? "bg-jobloop-primary-orange text-white" : "bg-none text-black"
-      } `}
+      }`}
     >
       <div
-        className={`flex max-w-[1600px] ${
+        className={`flex max-w-[1600px] items-center w-5/6 gap-40 ${
           imgSide == "left" ? "flex-col lg:flex-row" : "flex-col-reverse lg:flex-row-reverse"
-        } items-center w-5/6 gap-40`}
+        }`}
       >
         <div className="hidden w-5/6 mt-20 lg:block">
-          <Image
-            width={500}
-            height={500}
-            className="w-full"
-            src={content.ImageTwo}
-            alt={imgAlt}
-          ></Image>
+          <Image width={500} height={500} className="w-full" src={content.ImageTwo} alt={imgAlt} />
         </div>
         <div className="flex flex-col w-full gap-10">
           <Image
@@ -40,7 +34,7 @@ export default function Vision2Part({
             className="w-5/6 mx-auto md:w-3/6"
             src={content.ImageOne}
             alt={`${title} logo`}
-          ></Image>
+          />
           <PortableText value={content.content} />
           <ExternalLinkButton
             Path={link}
