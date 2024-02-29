@@ -12,7 +12,7 @@ export default function KodehodeSummary({ content1, content2 }) {
     <div className="flex flex-col px-8 py-20 md:flex-row sm:px-10 md:px-12 lg:px-24 md:w-screen">
       <div className="flex-col w-full md:w-1/2 md:flex">
         <h2 className="hidden md:block">{content1.title}</h2>
-        <h2 className="block pb-5 md:hidden">{content1.mobileTitle}</h2>
+        <h2 className="block pb-5 mx-auto md:hidden">{content1.mobileTitle}</h2>
         <div className="hidden md:block">
           <div className="py-5">
             <PortableText value={content1.content1} />
