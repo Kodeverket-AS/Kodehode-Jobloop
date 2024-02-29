@@ -19,7 +19,7 @@ export default function VisionSub({ content, imgAlt }) {
         </div>
       </div>
       <div className="hidden md:flex flex-col px-10 max-w-[1600px]">
-        <div className="justify-center hidden md:flex max-w-[1600px] mb-10">
+        <div className="justify-center hidden md:flex max-w-[1600px] mb-14">
           <h1 className="w-full text-center text-jobloop-primary-green">{content.title}</h1>
         </div>
         <div className="hidden md:flex-row md:flex justify-around mx-auto max-w-[1600px]">
