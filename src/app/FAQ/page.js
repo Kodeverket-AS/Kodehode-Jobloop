@@ -14,7 +14,7 @@ export default async function FAQ() {
 
   return (
     <>
-      <main className="flex flex-col items-center justify-center w-full min-h-screen gap-20 md:p-24">
+      <main className="flex flex-col items-center justify-center w-full min-h-screen gap-20 pt-7 md:p-24">
         {/* <HeroSub content={HeroData.heroSub[3]}></HeroSub> */}
         <h1 className="text-3xl font-bold text-center">Spørsmål og svar</h1>
         <div className="flex flex-row justify-center w-screen gap-7 md:gap-10 min-h-[640px]">
