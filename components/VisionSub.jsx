@@ -32,7 +32,7 @@ export default function VisionSub({ content, imgAlt }) {
               alt={imgAlt}
             />
           </div>
-          <div className="w-1/2 pr-4">
+          <div className="w-1/2 pl-4">
             <PortableText value={content.content} />
           </div>
         </div>
