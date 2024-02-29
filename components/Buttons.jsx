@@ -153,7 +153,7 @@ export function ToggleBtn({
           <div>
             <button
               onClick={handleDelToggle}
-              className={`md:p-7 w-fit flex flex-row gap-3 items-start md:items-center rounded-3xl lg:w-44  h-7 lg:h-10 border-solid border-black border-2  transition-all duration-600 text-sm
+              className={`md:p-7 w-fit flex flex-row gap-3 items-start md:items-center rounded-3xl h-7 lg:h-10 border-solid border-black border-2  transition-all duration-600 text-sm
                         ${
                           isDelVisible
                             ? "border-jobloop-primary-orange border-none md:border-solid  md:border-2 "
@@ -180,7 +180,7 @@ export function ToggleBtn({
           <div>
             <button
               onClick={handleBedToggle}
-              className={`md:p-7 flex flex-row gap-3 items-start md:items-center rounded-3xl w-fit  h-7 lg:h-10 border-solid border-black border-2  transition-all duration-600 text-sm
+              className={`md:p-7 flex flex-row gap-3 items-start md:items-center rounded-3xl w-fit h-7 lg:h-10 border-solid border-black border-2 transition-all duration-600 text-sm
                         ${
                           isBedVisible
                             ? "border-jobloop-primary-orange border-none md:border-solid  md:border-2 "
@@ -207,7 +207,7 @@ export function ToggleBtn({
           <div>
             <button
               onClick={handleVirkToggle}
-              className={`md:p-7 flex flex-row gap-3 items-start md:items-center rounded-3xl lg:w-44 w-fit h-7 lg:h-10 border-solid border-black border-2  transition-all duration-600 text-sm 
+              className={`md:p-7 flex flex-row gap-3 items-start md:items-center rounded-3xl lg:w-44 w-fit h-7 lg:h-10 border-solid border-black border-2 transition-all duration-600 text-sm 
                           ${
                             isVirkVisible
                               ? "border-jobloop-primary-orange border-none md:border-solid  md:border-2"
