@@ -21,7 +21,7 @@ export default async function Vision() {
       {/*<NavbarAlt />*/}
       <main className="flex flex-col items-center w-full min-h-screen">
         <div className="flex flex-col items-center sm:justify-center ">
-          <div className="flex flex-col items-center w-full gap-40 mt-32 ">
+          <div className="flex flex-col items-center w-full gap-20 mt-32 ">
             {/* <div className="flex flex-col w-5/6 gap-12 lg:4/6">
               <div>
                 <h1 className="mb-10 text-3xl font-extrabold text-center md:text-5xl text-jobloop-primary-green">
@@ -91,43 +91,44 @@ export default async function Vision() {
                   Samarbeidsprosjekter
                 </h2>
                 {/* <div className="flex justify-center w-screen p-20 bg-jobloop-primary-orange ">
-                <div className="flex flex-col items-center w-5/6 gap-40 lg:flex-row ">
-                  <div className="hidden w-5/6 mt-20 lg:block" key={data.VisionSections[1]._id}>
-                    <Image
-                      width={500}
-                      height={500}
-                      className="w-full"
-                      src={data.VisionSections[1].ImageTwo}
-                    ></Image>
-                  </div>
-                  <div className="flex flex-col w-5/6 gap-10 ">
-                    <Image
-                      width={100}
-                      height={100}
-                      className="w-5/6 md:w-3/6"
-                      src={data.VisionSections[1].ImageOne}
-                    ></Image>
-                    <PortableText value={data.VisionSections[1].content} />
-                    <ExternalLinkButton
-                      Path="https://glode.no/"
-                      Text="Mer om Gløde"
-                      ariaLabel="Les mer om Gløde på deres nettside"
-                      background="colour"
-                    />
-                  </div>
-                </div>
-              </div> */}
-                <Vision2Part
-                  content={data.VisionSections[1]}
-                  link="https://glode.no/"
-                  linkText="Mer om Gløde"
-                  linkAria="Les mer om Gløde på deres nettside"
-                  background="colour"
-                  imgSide="left"
-                  title="Gløde"
-                  imgAlt="Lagerarbeider som bruker gaffeltruck"
-                />
+                  <div className="flex flex-col items-center w-5/6 gap-40 lg:flex-row ">
+                    <div className="hidden w-5/6 mt-20 lg:block" key={data.VisionSections[1]._id}>
+                      <Image
+                        width={500}
+                        height={500}
+                        className="w-full"
+                        src={data.VisionSections[1].ImageTwo}
+                      ></Image>
+                    </div>
+                    <div className="flex flex-col w-5/6 gap-10 ">
+                      <Image
+                        width={100}
+                        height={100}
+                        className="w-5/6 md:w-3/6"
+                        src={data.VisionSections[1].ImageOne}
+                      ></Image>
+                      <PortableText value={data.VisionSections[1].content} />
+                      <ExternalLinkButton
+                        Path="https://glode.no/"
+                        Text="Mer om Gløde"
+                        ariaLabel="Les mer om Gløde på deres nettside"
+                        background="colour"
+                          />
+                        </div>
+                      </div>
+                    </div> */}
               </div>
+              <Vision2Part
+                content={data.VisionSections[1]}
+                link="https://glode.no/"
+                linkText="Mer om Gløde"
+                linkAria="Les mer om Gløde på deres nettside"
+                background="colour"
+                imgSide="left"
+                title="Gløde"
+                imgAlt="Lagerarbeider som bruker gaffeltruck"
+              />
+
               {/* <div className="flex flex-col items-center justify-center w-full ">
                 <div className="flex justify-center w-full ">
                   <div className="flex flex-col items-center justify-center w-5/6 gap-40 p-10 md:p-20 lg:flex-row">
