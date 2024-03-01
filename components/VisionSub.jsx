@@ -1,11 +1,9 @@
 "use client";
 
-import Link from "next/link";
 import Image from "next/image";
 import { PortableText } from "@portabletext/react";
-import { LinkButton } from "./Buttons";
 
-export default function HeroSub({ content, buttonText, imgAlt }) {
+export default function VisionSub({ content, imgAlt }) {
   return (
     <>
       <div className="absolute top-0 block w-full -z-10 md:hidden">
@@ -20,22 +18,23 @@ export default function HeroSub({ content, buttonText, imgAlt }) {
           <PortableText value={content.content} />
         </div>
       </div>
-      <div className="hidden md:flex-row md:flex lg:px-24 lg:pt-24 md:px-12 md:pt-10 max-w-[1600px]">
-        <div className="w-1/2">
-          <h1 className="text-jobloop-primary-green">{content.title}</h1>
-          <PortableText value={content.content} />
-          <div className={`mt-10`}>
-            <LinkButton Path="/contact" Text={buttonText} />
-          </div>
+      <div className="hidden md:flex flex-col px-10 max-w-[1600px]">
+        <div className="justify-center hidden md:flex max-w-[1600px] mb-14">
+          <h1 className="w-full text-center text-jobloop-primary-green">{content.title}</h1>
         </div>
-        <div className="w-1/2 pt-6 pl-0 md:pl-6">
-          <Image
-            src={content.image}
-            width={500}
-            height={500}
-            className="mx-auto my-auto rounded w-[30rem]"
-            alt={imgAlt}
-          />
+        <div className="hidden md:flex-row md:flex justify-around mx-auto max-w-[1600px]">
+          <div>
+            <Image
+              src={content.image}
+              width={1080}
+              height={964}
+              className="mx-auto my-auto rounded w-[30rem]"
+              alt={imgAlt}
+            />
+          </div>
+          <div className="w-1/2 pl-4">
+            <PortableText value={content.content} />
+          </div>
         </div>
       </div>
     </>
