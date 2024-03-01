@@ -3,7 +3,6 @@
 import Link from "next/link";
 import Image from "next/image";
 import { LinkButton } from "./Buttons";
-import Fargebaner2 from "../public/Fargebaner2.svg";
 import Fargefigur from "../public/Fargefigur.svg";
 
 export default function LinkToFaq() {

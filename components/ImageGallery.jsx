@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export default function ImageGallery({ content }) {
   return (
-    <div className="flex px-5 py-20 md:px-0">
+    <div className="flex px-8 py-20 sm:px-10 md:px-12 lg:px-24">
       <div className="flex flex-col justify-between w-2/3 pr-2 md:pr-5">
         <div className="md:pb-5 md:h-[275px] h-[125px] pb-2">
           <Image

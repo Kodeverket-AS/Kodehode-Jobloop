@@ -13,14 +13,15 @@ export default async function Home() {
       <LandingHero content={data.heroSub[1]} />
       <div className="flex flex-col items-center mt-[370px] md:mt-20">
         <LandingLinks />
-        <LandingVisjon />
+        <LandingVisjon content={data.visionLanding[0]}/>
       </div>
     </main>
   );
 }
 
 export async function getData() {
-  return Client.fetch(`
+  return Client.fetch(
+    `
   {
     "heroSub": *[_type == "heroSub"] | order(index) {title, "image":image.asset->url, content, index, _id},
     "egsCoop": *[_type == "egsCoop"] | order(index) {title, content, "logo":logo.asset->url, index, _id},
@@ -45,5 +46,8 @@ export async function getData() {
     "FAQ":*[_type == "FAQ"]{title, question, svar, _id},
     "personDatabase":*[_type == "personDatabase"] | order(index) {navn, stilling, lokasjon, henvendelse, mail, tlf_nummer, "image":image.asset->url, role, index, _id},
     "about":*[_type == "about"]{title, content, "image":image.asset->url, _id},
-  }`);
+    "visionLanding":*[_type == "visionLanding"]{title, content, "image":image.asset->url, _id},
+  }`,
+  //{ cache: "no-cache" }
+  );
 }
