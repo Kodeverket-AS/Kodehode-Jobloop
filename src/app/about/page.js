@@ -25,6 +25,7 @@ return (
         <div className="w-full">
         <Teachers
         content={selectedTeachersData} 
+        title="Vårt team"
         />
         </div>
          </div>
