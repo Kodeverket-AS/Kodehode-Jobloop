@@ -17,7 +17,7 @@ export default function StudyInParts({ content }) {
             src={content[0].image}
             width={500}
             height={500}
-            alt={content[0].alt}
+            alt={content[0].alt || ""}
             className="mx-auto my-auto rounded md:ml-auto md:w-80 lg:w-96 md:mr-0"
           />
         </div>
@@ -32,7 +32,7 @@ export default function StudyInParts({ content }) {
             src={content[1].image}
             width={500}
             height={500}
-            alt={content[1].alt}
+            alt={content[1].alt || ""}
             className="mx-auto my-auto rounded md:mr-0 md:w-80 lg:w-96 md:ml-0"
           />
         </div>

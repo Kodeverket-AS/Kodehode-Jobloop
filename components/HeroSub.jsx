@@ -15,7 +15,7 @@ export default function HeroSub({ content, buttonText }) {
             src={content.image}
             width={500}
             height={500}
-            alt={content.alt}
+            alt={content.alt || ""}
             className="w-full"
           />
         </div>
@@ -40,7 +40,7 @@ export default function HeroSub({ content, buttonText }) {
             width={500}
             height={500}
             className="mx-auto my-auto rounded w-[30rem]"
-            alt={content.alt}
+            alt={content.alt || ""}
           />
         </div>
       </div>

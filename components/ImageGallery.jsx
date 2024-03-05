@@ -13,7 +13,7 @@ export default function ImageGallery({ content }) {
             width={500}
             height={300}
             className="object-cover w-full h-full rounded"
-            alt={content[0].alt1}
+            alt={content[0].alt1 || ""}
           />
         </div>
         <div className="md:pt-5 md:h-[275px] h-[125px] pt-2">
@@ -22,7 +22,7 @@ export default function ImageGallery({ content }) {
             width={500}
             height={300}
             className="object-cover w-full h-full rounded"
-            alt={content[0].alt2}
+            alt={content[0].alt2 || ""}
           />
         </div>
       </div>
@@ -32,7 +32,7 @@ export default function ImageGallery({ content }) {
           width={300}
           height={500}
           className="object-cover w-full h-full rounded"
-          alt={content[0].alt3}
+          alt={content[0].alt3 || ""}
         />
       </div>
     </div>
