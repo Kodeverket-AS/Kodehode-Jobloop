@@ -65,7 +65,7 @@ export default async function Vision() {
                 imageOne={data.kontaktseksjon[0].ImageOne}
                 title={data.kontaktseksjon[0].title}
                 content={data.kontaktseksjon[0].content}
-                alt={data.kontaktseksjon[0].alt}
+                alt={data.kontaktseksjon[0].altOne}
               />
               {/* <div className="flex flex-col items-center w-full pb-32 mt-20">
                 <div className="pb-20">
