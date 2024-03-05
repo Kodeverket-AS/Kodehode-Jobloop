@@ -30,7 +30,7 @@ export default async function Techstack() {
           </div>
           <div className="max-w-5xl">
             <Image
-              alt="Wordcloud of languages"
+              alt={data.heroSub[5].alt || ""}
               src={data.heroSub[5].image}
               width={1000}
               height={500}
