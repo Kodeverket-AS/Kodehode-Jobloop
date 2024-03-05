@@ -62,7 +62,7 @@ export function LocationCheck({ content }) {
               width={700}
               height={700}
               className="w-4/6 h-4/6 md:w-3/6 md:h-full"
-              alt={`profilbilde ${item.navn}` || "profilbilder"}
+              alt={`Profilbilde ${item.navn}` || "profilbilder"}
               src={item.image || ""}
             ></Image>
 
