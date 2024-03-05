@@ -13,7 +13,7 @@ export default function CompanyCarousel({ content }) {
               key={item._id + index}
               src={item.logo}
               className="w-[150px] h-auto mx-[140px] my-auto"
-              alt={item.alt}
+              alt={item.alt || ""}
             />
           ))}
         </div>
@@ -25,7 +25,7 @@ export default function CompanyCarousel({ content }) {
               key={item._id + index}
               src={item.logo}
               className="w-[150px] h-auto mx-[140px] my-auto"
-              alt={item.alt}
+              alt={item.alt || ""}
             />
           ))}
         </div>

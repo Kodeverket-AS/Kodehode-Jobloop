@@ -15,7 +15,7 @@ export default function FourIconRow({ title, content }) {
               width={300}
               height={300}
               className="w-20 mb-2"
-              alt={content[0].alt}
+              alt={content[0].alt || ""}
             />
             <h3 className="text-center">{content[0].title}</h3>
             <p className="text-center">{content[0].content}</p>
@@ -26,7 +26,7 @@ export default function FourIconRow({ title, content }) {
               width={300}
               height={300}
               className="w-20 mb-2"
-              alt={content[1].alt}
+              alt={content[1].alt || ""}
             />
             <h3 className="text-center">{content[1].title}</h3>
             <p className="text-center">{content[1].content}</p>
@@ -39,7 +39,7 @@ export default function FourIconRow({ title, content }) {
               width={300}
               height={300}
               className="w-20 mb-2"
-              alt={content[2].alt}
+              alt={content[2].alt || ""}
             />
             <h3 className="text-center">{content[2].title}</h3>
             <p className="text-center">{content[2].content}</p>
@@ -50,7 +50,7 @@ export default function FourIconRow({ title, content }) {
               width={300}
               height={300}
               className="w-20 mb-2"
-              alt={content[3].alt}
+              alt={content[3].alt || ""}
             />
             <h3 className="text-center">{content[3].title}</h3>
             <p className="text-center">{content[3].content}</p>

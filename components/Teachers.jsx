@@ -15,7 +15,7 @@ export default function Teachers({ content, title }) {
               width={300}
               height={300}
               className="relative object-cover w-full h-full border border-white rounded"
-              alt={content[0].alt}
+              alt={content[0].alt || ""}
             />
           </div>
           <div className="w-1/2 text-left md:w-full">
@@ -30,7 +30,7 @@ export default function Teachers({ content, title }) {
               width={300}
               height={300}
               className="object-cover w-full h-full border border-white rounded"
-              alt={content[1].alt}
+              alt={content[1].alt || ""}
             />
           </div>
           <div className="w-1/2 text-left md:w-full">
@@ -45,7 +45,7 @@ export default function Teachers({ content, title }) {
               width={300}
               height={300}
               className="object-cover w-full h-full border border-white rounded"
-              alt={content[2].alt}
+              alt={content[2].alt || ""}
             />
           </div>
           <div className="w-1/2 text-left md:w-full">
@@ -60,7 +60,7 @@ export default function Teachers({ content, title }) {
               width={300}
               height={300}
               className="object-cover w-full h-full border border-white rounded"
-              alt={content[3].alt}
+              alt={content[3].alt || ""}
             />
           </div>
           <div className="w-1/2 text-left md:w-full">

@@ -2,16 +2,7 @@ import Image from "next/image";
 import { ExternalLinkButton } from "./Buttons";
 import { PortableText } from "@portabletext/react";
 
-export default function Vision2Part({
-  content,
-  background,
-  imgSide,
-  imgAlt,
-  link,
-  linkText,
-  linkAria,
-  title,
-}) {
+export default function Vision2Part({ content, background, imgSide, link, linkText, linkAria }) {
   return (
     <div
       key={content._id}
@@ -30,7 +21,7 @@ export default function Vision2Part({
             height={500}
             className="w-full"
             src={content.ImageTwo}
-            alt={content.AltTwo}
+            alt={content.AltTwo || ""}
           />
         </div>
         <div className="flex flex-col w-full gap-10">
@@ -39,7 +30,7 @@ export default function Vision2Part({
             height={100}
             className="w-5/6 mx-auto md:w-3/6"
             src={content.ImageOne}
-            alt={content.AltOne}
+            alt={content.AltOne || ""}
           />
           <PortableText value={content.content} />
           <ExternalLinkButton

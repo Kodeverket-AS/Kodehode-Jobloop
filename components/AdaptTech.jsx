@@ -27,7 +27,7 @@ export default function AdaptTech({ content1, content2 }) {
               width={300}
               height={300}
               className="w-20 mx-auto mb-2 2xs:w-28 sm:w-32"
-              alt={content2[0].alt}
+              alt={content2[0].alt || ""}
             />
             <h3 className="">{content2[0].title}</h3>
           </div>
@@ -37,7 +37,7 @@ export default function AdaptTech({ content1, content2 }) {
               width={300}
               height={300}
               className="w-20 mx-auto mb-2 2xs:w-28 sm:w-32"
-              alt={content2[1].alt}
+              alt={content2[1].alt || ""}
             />
             <h3 className="">{content2[1].title}</h3>
           </div>
@@ -49,7 +49,7 @@ export default function AdaptTech({ content1, content2 }) {
               width={300}
               height={300}
               className="w-20 mx-auto mb-2 2xs:w-28 sm:w-32"
-              alt={content2[2].alt}
+              alt={content2[2].alt || ""}
             />
             <h3 className="">{content2[2].title}</h3>
           </div>
@@ -59,7 +59,7 @@ export default function AdaptTech({ content1, content2 }) {
               width={300}
               height={300}
               className="w-20 mx-auto mb-2 2xs:w-28 sm:w-32"
-              alt={content2[3].alt}
+              alt={content2[3].alt || ""}
             />
             <h3 className="">{content2[3].title}</h3>
           </div>

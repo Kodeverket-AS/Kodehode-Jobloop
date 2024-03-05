@@ -47,7 +47,7 @@ export async function getData() {
     "personDatabase":*[_type == "personDatabase"] | order(index) {navn, stilling, lokasjon, henvendelse, mail, tlf_nummer, "image":image.asset->url, "alt":image.alt, role, index, _id},
     "about":*[_type == "about"]{title, content, "image":image.asset->url, "alt":image.alt, _id},
     "visionLanding":*[_type == "visionLanding"]{title, content, "image":image.asset->url, "alt":image.alt, _id},
-  }`
-    //{ cache: "no-cache" }
+  }`,
+    { cache: "no-cache" }
   );
 }

@@ -43,14 +43,14 @@ export default function Footer() {
                 href={`mailto:${person.email}`}
                 className="py-1 cursor-pointer hover:underline active:underline"
                 target="_blank"
-                aria-label="Åpner email for å opprette epost til valgt person"
+                aria-label={`Åpner email for å opprette epost til ${person.name}`}
               >
                 {person.email}
               </a>
               <a
                 href={`tel:${person.phoneLink}`}
                 className="md:hover:underline md:active:underline"
-                aria-label="Åpner telefon for å ringe valgt person"
+                aria-label={`Åpner telefon for å ringe ${person.name}`}
               >
                 {person.phoneDisplay}
               </a>
@@ -145,14 +145,14 @@ export default function Footer() {
                   href={`mailto:${person.email}`}
                   className="py-1 cursor-pointer hover:underline active:underline"
                   target="_blank"
-                  aria-label="Åpner email for å opprette epost til valgt person"
+                  aria-label={`Åpner email for å opprette epost til ${person.name}`}
                 >
                   {person.email}
                 </a>
                 <a
                   href={`tel:${person.phoneLink}`}
                   className="md:hover:underline md:active:underline"
-                  aria-label="Åpner telefon for å ringe valgt person"
+                  aria-label={`Åpner telefon for å ringe ${person.name}`}
                 >
                   {person.phoneDisplay}
                 </a>

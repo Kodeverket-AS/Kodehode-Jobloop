@@ -10,7 +10,7 @@ export default function ContactComp({ imageOne, title, content, _id, alt }) {
         <div className="flex flex-col w-full gap-10 md:flex-row md:gap-7 ">
           <div className="flex flex-row w-full ">
             <div className="w-full">
-              <Image width={400} height={400} src={imageOne} alt={alt} className="mx-auto" />
+              <Image width={400} height={400} src={imageOne} alt={alt || ""} className="mx-auto" />
             </div>
           </div>
           <div className="flex flex-col justify-center w-full gap-10 text-white md:w-4/6">
