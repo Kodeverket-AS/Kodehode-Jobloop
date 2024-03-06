@@ -176,11 +176,12 @@ export default function Footer() {
               Deltaker
             </Link>
             <Link
-              className="hover:underline"
+              className="w-32 hover:underline"
               href="/samarbeidspartner"
               aria-label="Gå til underside for samarbeidspartner"
             >
-              Samarbeidspartner
+              Samarbeids-
+              partner
             </Link>
           </div>
         </div>

@@ -30,7 +30,7 @@ export default async function Oppdragsgiver() {
           content1={data.relevantCompetence[0]}
           content2={data.competenceIcons}
         />
-        <div className="w-full  bg-jobloop-secondary-orange">
+        <div className="w-full bg-jobloop-secondary-orange">
           <Offices content={data.OurLocals} />
         </div>
         <ImageGallery content={data.ImageGallery} />
