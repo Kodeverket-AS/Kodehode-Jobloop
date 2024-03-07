@@ -12,12 +12,7 @@ export default function Teachers({ content, title }) {
         <div className="flex flex-row w-full pb-10 mx-auto md:flex-col md:w-28 md:pb-0 md:mx-0 lg:w-36">
           <div className="w-1/2 pr-3 md:mb-2 md:h-[150px] md:w-full h-[170px] md:pr-0">
             <Image
-              src={urlFor(content[0].image)
-                .fit("max")
-                .width(300)
-                .height(300)
-                .rect("left: 0", "top: 50", "width: 300", "height: 300")
-                .url()}
+              src={urlFor(content[0].image).fit("max").size(300).url()}
               width={300}
               height={300}
               className="relative object-cover w-full h-full border border-white rounded"
@@ -32,12 +27,7 @@ export default function Teachers({ content, title }) {
         <div className="flex flex-row w-full pb-10 mx-auto md:flex-col md:w-28 md:pb-0 md:mx-0 lg:w-36">
           <div className="w-1/2 pr-3 md:mb-2 md:h-[150px] md:w-full h-[170px] md:pr-0">
             <Image
-              src={urlFor(content[1].image)
-                .fit("max")
-                .width(300)
-                .height(300)
-                .rect("left: 0", "top: 50", "width: 300", "height: 300")
-                .url()}
+              src={urlFor(content[1].image).fit("max").size(300).url()}
               width={300}
               height={300}
               className="object-cover w-full h-full border border-white rounded"
