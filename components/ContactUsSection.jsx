@@ -64,9 +64,8 @@ export function LocationCheck({ content }) {
               height={700}
               className="w-4/6 h-4/6 md:w-3/6 md:h-full"
               alt={`Profilbilde ${item.navn}` || "profilbilder"}
-              src={urlFor(item.image).fit("max").url() || ""}
-            ></Image>
-
+              src={item.image || ""}
+            />
             <div className="flex flex-col w-full md:w-2/6">
               <h3 className="mb-5 text-xl">{item.navn}</h3>
               <p>Avdeling: {item.lokasjon}</p>
