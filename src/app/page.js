@@ -5,6 +5,7 @@ import LandingHero from "../../components/LandingHero";
 import LandingLinks from "../../components/LandingLinks";
 import LandingVisjon from "../../components/LandingVisjon";
 import { LinkButton } from "../../components/Buttons";
+import imageUrlBuilder from "@sanity/image-url";
 
 export default async function Home() {
   const data = await getData();
@@ -17,6 +18,12 @@ export default async function Home() {
       </div>
     </main>
   );
+}
+
+const builder = imageUrlBuilder(Client);
+
+export function urlFor(source) {
+  return builder.image(source);
 }
 
 export async function getData() {
