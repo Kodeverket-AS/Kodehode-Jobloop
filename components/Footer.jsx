@@ -159,7 +159,7 @@ export default function Footer() {
               </div>
             ))}
           </div>
-          <div className="flex flex-col order-3 gap-8">
+          <div className="flex flex-col order-3 w-32 gap-8">
             <h2 className="text-3xl">Sider</h2>
             <Link
               className="hover:underline"
@@ -180,7 +180,8 @@ export default function Footer() {
               href="/samarbeidspartner"
               aria-label="Gå til underside for samarbeidspartner"
             >
-              Samarbeidspartner
+              Samarbeids-
+              partner
             </Link>
           </div>
         </div>
