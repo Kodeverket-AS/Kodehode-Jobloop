@@ -27,7 +27,7 @@ export default async function Oppdragsgiver() {
         <StudyInParts content={data.CourseSections} />
         <FourIconRow title={"Noen av våre kodespråk"} content={data.mainTech} />
         <Competence
-          content1={data.relevantCompetence[0]}
+          content1={data.relevantCompetence[2]}
           content2={data.competenceIcons}
         />
         <div className="w-full bg-jobloop-secondary-orange">
