@@ -15,12 +15,7 @@ export default function LinkToFaq() {
         </div>
       </div>
       <div className="flex justify-end w-full md:mt-[-130px] mt-[-70px] sm:mt-[-100px]">
-        <Image
-          src={Fargefigur}
-          width={1000}
-          height={1000}
-          className="w-1/2 mr-0"
-        />
+        <Image src={Fargefigur} width={1000} height={1000} className="w-1/2 mr-0" alt="" />
       </div>
     </div>
   );
