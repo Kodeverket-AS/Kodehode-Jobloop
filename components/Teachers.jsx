@@ -2,10 +2,26 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { urlFor } from "@/app/page";
+import { Client } from "../lib/sanity";
+import imageUrlBuilder from "@sanity/image-url";
 
 export default function Teachers({ content, title }) {
-  console.log(urlFor(content[0].image).height(300).url());
+  const builder = imageUrlBuilder(Client);
+
+  function urlFor(source) {
+    return builder.image(source);
+  }
+
+  console.log(
+    urlFor(content[0].image)
+      .height(300)
+      .width(300)
+      .crop("focalpoint")
+      .focalPoint(content[0].hotspot.x, content[0].hotspot.y)
+      .url(),
+    content[0]
+  );
+
   return (
     <div className="flex flex-col items-center w-full px-8 py-20 bg-jobloop-secondary-orange sm:px-10 md:px-12 lg:px-24 md:w-screen">
       <h2 className="pb-10">{title}</h2>
@@ -13,7 +29,12 @@ export default function Teachers({ content, title }) {
         <div className="flex flex-row w-full pb-10 mx-auto md:flex-col md:w-28 md:pb-0 md:mx-0 lg:w-36">
           <div className="w-1/2 pr-3 md:mb-2 md:h-[150px] md:w-full h-[170px] md:pr-0">
             <Image
-              src={urlFor(content[0].image).height(300).url()}
+              src={urlFor(content[0].image)
+                .height(300)
+                .width(300)
+                .crop("focalpoint")
+                .focalPoint(content[0].hotspot.x, content[0].hotspot.y)
+                .url()}
               width={300}
               height={300}
               className="relative object-cover w-full h-full border border-white rounded"
@@ -88,6 +109,6 @@ export default function Teachers({ content, title }) {
  ** src={fpy1 ? urlFor(content[1].image).fit("crop").width(300).height(300).focalPoint(`${fpx1}`, `${fpy1}`).url() : urlFor(content[1].image).fit("max").width(300).height(300).url()}
  ** src={fpy2 ? urlFor(content[2].image).fit("crop").width(300).height(300).focalPoint(`${fpx2}`, `${fpy2}`).url() : urlFor(content[2].image).fit("max").width(300).height(300).url()}
  ** src={fpy3 ? urlFor(content[3].image).fit("crop").width(300).height(300).focalPoint(`${fpx3}`, `${fpy3}`).url() : urlFor(content[3].image).fit("max").width(300).height(300).url()}
- ***Emil focalPoint("0.4", "0.35") eg. fpx0="0.4" fpy0="0.35"
+ ***Emil focalPoint("0.4", "0.35") eg. fpx0="0.4" fpy0="0.35" in the teachers component when used...
  ***Lars Gunnar focalPoint("0.4", "0.4")
  */
