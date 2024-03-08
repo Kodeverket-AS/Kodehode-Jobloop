@@ -5,6 +5,7 @@ import Image from "next/image";
 import { urlFor } from "@/app/page";
 
 export default function Teachers({ content, title }) {
+  console.log(urlFor(content[0].image).height(300).url());
   return (
     <div className="flex flex-col items-center w-full px-8 py-20 bg-jobloop-secondary-orange sm:px-10 md:px-12 lg:px-24 md:w-screen">
       <h2 className="pb-10">{title}</h2>
