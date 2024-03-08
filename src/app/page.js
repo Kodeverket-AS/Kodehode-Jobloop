@@ -42,7 +42,7 @@ export async function getData() {
     "OurLocals": *[_type == "OurLocals"] | order(index) {title, "image":image.asset->url, "alt":image.alt, adresse, postnr, index, _id},
     "ImageGallery": *[_type == "imageGallery"]{"image1":image1.asset->url, "alt1":image1.alt, "image2":image2.asset->url, "alt2":image2.alt, "image3":image3.asset->url, "alt3":image3.alt, _id},
     "endorsement": *[_type == "endorsement"]{"image":image.asset->url, "alt":image.alt, navn, firma, content, _id},
-    "kontaktseksjon": *[_type == "kontaktseksjon"]{"ImageOne":ImageOne.asset->url, "altOne":image.alt, content, title, _id},
+    "kontaktseksjon": *[_type == "kontaktseksjon"]{"ImageOne":ImageOne.asset->url, "altOne":ImageOne.alt, content, title, _id},
     "samarbeid":*[_type == "samarbeid"]{title, "image":image.asset->url, "alt":image.alt, content, _id},
     "internship":*[_type == "internship"]{title, subheader, expectations, schedule, guidance, jobOffer, help, _id},
     "competenceIconsBuissness":*[_type == "competenceIconsBuissness"] | order(index) {title, "logo":logo.asset->url, "alt":logo.alt, content, index, _id},
