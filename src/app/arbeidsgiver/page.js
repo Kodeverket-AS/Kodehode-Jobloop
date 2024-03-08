@@ -25,6 +25,7 @@ export default async function Bedrift() {
         <FourIconRow
           title={"Hva ser Kodehode etter hos samarbeidspartnere?"}
           content={data.egsCoop}
+          alignment={"left"}
         />
         <KodehodeInternship content1={data.origin} content2={data.internship} />
         <Competence

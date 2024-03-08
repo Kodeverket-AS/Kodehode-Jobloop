@@ -25,7 +25,7 @@ export default async function Oppdragsgiver() {
           content2={data.courseTypes}
         />
         <StudyInParts content={data.CourseSections} />
-        <FourIconRow title={"Noen av våre kodespråk"} content={data.mainTech} />
+        <FourIconRow title={"Noen av våre kodespråk"} content={data.mainTech} alignment={"center"} />
         <Competence
           content1={data.relevantCompetence[2]}
           content2={data.competenceIcons}
