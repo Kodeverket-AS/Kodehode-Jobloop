@@ -33,6 +33,7 @@ export default function Teachers({ content, title }) {
               src={urlFor(content[0].image)
                 .height(300)
                 .width(300)
+                .fit("max")
                 .crop("focalpoint")
                 .focalPoint(content[0].hotspot.x, content[0].hotspot.y)
                 .url()}
