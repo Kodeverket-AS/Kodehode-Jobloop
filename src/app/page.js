@@ -5,6 +5,7 @@ import LandingHero from "../../components/LandingHero";
 import LandingLinks from "../../components/LandingLinks";
 import LandingVisjon from "../../components/LandingVisjon";
 import { LinkButton } from "../../components/Buttons";
+import imageUrlBuilder from "@sanity/image-url";
 
 export default async function Home() {
   const data = await getData();
@@ -17,6 +18,12 @@ export default async function Home() {
       </div>
     </main>
   );
+}
+
+const builder = imageUrlBuilder(Client);
+
+export function urlFor(source) {
+  return builder.image(source);
 }
 
 export async function getData() {
@@ -35,7 +42,7 @@ export async function getData() {
     "OurLocals": *[_type == "OurLocals"] | order(index) {title, "image":image.asset->url, "alt":image.alt, adresse, postnr, index, _id},
     "ImageGallery": *[_type == "imageGallery"]{"image1":image1.asset->url, "alt1":image1.alt, "image2":image2.asset->url, "alt2":image2.alt, "image3":image3.asset->url, "alt3":image3.alt, _id},
     "endorsement": *[_type == "endorsement"]{"image":image.asset->url, "alt":image.alt, navn, firma, content, _id},
-    "kontaktseksjon": *[_type == "kontaktseksjon"]{"ImageOne":ImageOne.asset->url, "altOne":image.alt, content, title, _id},
+    "kontaktseksjon": *[_type == "kontaktseksjon"]{"ImageOne":ImageOne.asset->url, "altOne":ImageOne.alt, content, title, _id},
     "samarbeid":*[_type == "samarbeid"]{title, "image":image.asset->url, "alt":image.alt, content, _id},
     "internship":*[_type == "internship"]{title, subheader, expectations, schedule, guidance, jobOffer, help, _id},
     "competenceIconsBuissness":*[_type == "competenceIconsBuissness"] | order(index) {title, "logo":logo.asset->url, "alt":logo.alt, content, index, _id},
@@ -44,7 +51,7 @@ export async function getData() {
     "results":*[_type == "results"]{title, "image":image.asset->url, "alt":image.alt, content, person, link, _id},
     "samarbeid":*[_type == "samarbeid"]{title, "image":image.asset->url, "alt":image.alt, content, _id},
     "FAQ":*[_type == "FAQ"]{title, question, svar, _id},
-    "personDatabase":*[_type == "personDatabase"] | order(index) {navn, stilling, lokasjon, henvendelse, mail, tlf_nummer, "image":image.asset->url, "alt":image.alt, role, index, _id},
+    "personDatabase":*[_type == "personDatabase"] | order(index) {navn, stilling, lokasjon, henvendelse, mail, tlf_nummer, "image":image.asset->url, "alt":image.alt, "crop":image.crop, "hotspot":image.hotspot, role, index, _id},
     "about":*[_type == "about"]{title, content, "image":image.asset->url, "alt":image.alt, _id},
     "visionLanding":*[_type == "visionLanding"]{title, content, "image":image.asset->url, "alt":image.alt, _id},
   }`,
