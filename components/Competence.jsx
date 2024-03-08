@@ -8,13 +8,13 @@ export default function Competence({ content1, content2 }) {
   //console.log(content1);
   return (
     <>
-      <div className="px-8 py-10 md:w-screen sm:px-10 md:px-12 lg:px-24">
-        <h2 className="mx-auto md:pb-10 md:w-[38rem]">{content1.title}</h2>
-        <div className="hidden mx-auto w-[38rem] lg:w-[45rem] md:block">
+      <div className="px-8 pt-20 pb-10 md:w-screen sm:px-10 md:px-12 lg:px-24">
+        <h2 className="mx-auto md:pb-10 md:w-[42rem] lg:w-[45rem] text-center lg:text-left">{content1.title}</h2>
+        <div className="hidden mx-auto md:w-[40rem] lg:w-[45rem] md:block">
           <PortableText value={content1.content} />
         </div>
       </div>
-      <div className="flex flex-col w-full px-8 pt-0 pb-10 md:flex-row md:py-10 md:w-screen sm:px-10 md:px-12 md:justify-between lg:px-24 xl:px-0 lg:gap-16 xl:gap-32 xl:max-w-[1088px]">
+      <div className="flex flex-col w-full px-8 pt-0 pb-20 md:flex-row md:pt-10 md:pb-20 md:w-screen sm:px-10 md:px-12 md:justify-between lg:px-24 xl:px-0 lg:gap-16 xl:gap-32 xl:max-w-[1088px]">
         <div className="flex flex-row justify-between mb-5 md:mb-0 md:justify-evenly md:w-1/2 lg:gap-16 xl:gap-32">
           <div className="flex flex-col items-center w-24 mr-2 md:items-start md:mr-0 md:w-36 2xs:w-28 xs:w-32 sm:w-56 lg:w-40 xl:w-44">
             <Image
