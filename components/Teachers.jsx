@@ -112,6 +112,7 @@ export default function Teachers({ content, title }) {
 }
 
 /*
+ *That one time i was trying to figure out hotspots not working...
  *Trying to get hotspot and crop to work for frontend:
  *Either use manual focalPoints for each indiviual image with properties, or separate normal and cropped versions of each image in persondatabase in sanity?
  *Currently unable to make frontend actually use crop and/or hotspot settings, setting focalpoints manually in the url builder will override hotspot and crop, but at least does what we want for now,
