@@ -2,27 +2,10 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { Client } from "../lib/sanity";
-import imageUrlBuilder from "@sanity/image-url";
+import { urlFor } from "@/app/page";
 
 export default function Teachers({ content, title }) {
-  const builder = imageUrlBuilder(Client);
-
-  function urlFor(source) {
-    return builder.image(source);
-  }
-
-  console.log(
-    urlFor(content[0].image)
-      .height(300)
-      .width(300)
-      .fit("crop")
-      .crop("focalpoint")
-      .focalPoint(content[0].hotspot.x, content[0].hotspot.y)
-      .url(),
-    content[0]
-  );
-
+  //console.log(content[0]);
   return (
     <div className="flex flex-col items-center w-full px-8 py-20 bg-jobloop-secondary-orange sm:px-10 md:px-12 lg:px-24 md:w-screen">
       <h2 className="pb-10">{title}</h2>
