@@ -51,7 +51,7 @@ export async function getData() {
     "results":*[_type == "results"]{title, "image":image.asset->url, "alt":image.alt, content, person, link, _id},
     "samarbeid":*[_type == "samarbeid"]{title, "image":image.asset->url, "alt":image.alt, content, _id},
     "FAQ":*[_type == "FAQ"]{title, question, svar, _id},
-    "personDatabase":*[_type == "personDatabase"] | order(index) {navn, stilling, lokasjon, henvendelse, mail, tlf_nummer, "image":image.asset->url, "alt":image.alt, role, index, _id},
+    "personDatabase":*[_type == "personDatabase"] | order(index) {navn, stilling, lokasjon, henvendelse, mail, tlf_nummer, "image":image.asset->url, "alt":image.alt, "crop":image.crop, "hotspot":image.hotspot, role, index, _id},
     "about":*[_type == "about"]{title, content, "image":image.asset->url, "alt":image.alt, _id},
     "visionLanding":*[_type == "visionLanding"]{title, content, "image":image.asset->url, "alt":image.alt, _id},
   }`,
