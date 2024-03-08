@@ -19,21 +19,19 @@ export default function LandingHero({ content }) {
             width={500}
             height={500}
             className="object-cover w-full h-full"
+            alt={content.alt}
           />
         </div>
         <div className="absolute left-0 right-0 z-50 text-white top-24 2xs:top-28">
           <h1 className="text-3xl text-center">{content.title}</h1>
-          <h2 className="px-8 text-center">
-            Kodekurs og rekruttering til IT-bransjen
-          </h2>
+          <h2 className="px-8 text-center">Kodekurs og rekruttering til IT-bransjen</h2>
         </div>
         <div className="absolute z-50 p-8 bg-white top-60 rounded-t-3xl 2xs:top-60 xs:top-[16.5rem] sm:top-[19rem] sm:p-10">
           <p>
-            Vi rekrutterer kandidater som av ulike grunner har havnet utenfor
-            arbeidslivet og lærer dem opp til å bli frontend-utviklere. Gjennom
-            en kombinasjon av teoretisk opplæring og praksis vil kandidatene
-            lære seg de viktigste teknologiene og bli klar for en karriere innen
-            utvikling.
+            Vi rekrutterer kandidater som av ulike grunner har havnet utenfor arbeidslivet og lærer
+            dem opp til å bli frontend-utviklere. Gjennom en kombinasjon av teoretisk opplæring og
+            praksis vil kandidatene lære seg de viktigste teknologiene og bli klar for en karriere
+            innen utvikling.
           </p>
         </div>
       </div>
@@ -43,7 +41,7 @@ export default function LandingHero({ content }) {
           <Image
             height={500}
             width={2000}
-            alt="lærer som forklarer"
+            alt={content.alt || "lærer som forklarer"}
             src={content.image}
             className="object-cover w-full h-full"
           />
