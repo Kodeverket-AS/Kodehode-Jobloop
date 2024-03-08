@@ -13,12 +13,16 @@ export default function Teachers({ content, title }) {
         <div className="flex flex-row w-full pb-10 mx-auto md:flex-col md:w-28 md:pb-0 md:mx-0 lg:w-36">
           <div className="w-1/2 pr-3 md:mb-2 md:h-[150px] md:w-full h-[170px] md:pr-0">
             <Image
-              src={urlFor(content[0].image)
-                .size(300, 300)
-                .fit("crop")
-                .crop("focalpoint")
-                .focalPoint(content[0].hotspot.x, content[0].hotspot.y)
-                .url()}
+              src={
+                content[0].hotspot
+                  ? urlFor(content[0].image)
+                      .size(300, 300)
+                      .fit("crop")
+                      .crop("focalpoint")
+                      .focalPoint(content[0].hotspot.x, content[0].hotspot.y)
+                      .url()
+                  : urlFor(content[0].image).fit("max").width(300).height(300).url()
+              }
               width={300}
               height={300}
               className="relative object-cover w-full h-full border border-white rounded"
@@ -33,12 +37,16 @@ export default function Teachers({ content, title }) {
         <div className="flex flex-row w-full pb-10 mx-auto md:flex-col md:w-28 md:pb-0 md:mx-0 lg:w-36">
           <div className="w-1/2 pr-3 md:mb-2 md:h-[150px] md:w-full h-[170px] md:pr-0">
             <Image
-              src={urlFor(content[1].image)
-                .size(300, 300)
-                .fit("crop")
-                .crop("focalpoint")
-                .focalPoint(content[1].hotspot.x, content[1].hotspot.y)
-                .url()}
+              src={
+                content[1].hotspot
+                  ? urlFor(content[1].image)
+                      .size(300, 300)
+                      .fit("crop")
+                      .crop("focalpoint")
+                      .focalPoint(content[1].hotspot.x, content[1].hotspot.y)
+                      .url()
+                  : urlFor(content[1].image).fit("max").width(300).height(300).url()
+              }
               width={300}
               height={300}
               className="object-cover w-full h-full border border-white rounded"
@@ -53,12 +61,16 @@ export default function Teachers({ content, title }) {
         <div className="flex flex-row w-full pb-10 mx-auto md:flex-col md:w-28 md:pb-0 md:mx-0 lg:w-36">
           <div className="w-1/2 pr-3 md:mb-2 md:h-[150px] md:w-full h-[170px] md:pr-0">
             <Image
-              src={urlFor(content[2].image)
-                .size(300, 300)
-                .fit("crop")
-                .crop("focalpoint")
-                .focalPoint(content[2].hotspot.x, content[2].hotspot.y)
-                .url()}
+              src={
+                content[2].hotspot
+                  ? urlFor(content[2].image)
+                      .size(300, 300)
+                      .fit("crop")
+                      .crop("focalpoint")
+                      .focalPoint(content[2].hotspot.x, content[2].hotspot.y)
+                      .url()
+                  : urlFor(content[2].image).fit("max").width(300).height(300).url()
+              }
               width={300}
               height={300}
               className="object-cover w-full h-full border border-white rounded"
@@ -73,12 +85,16 @@ export default function Teachers({ content, title }) {
         <div className="flex flex-row w-full pb-10 mx-auto md:flex-col md:w-28 md:pb-0 md:mx-0 lg:w-36">
           <div className="w-1/2 pr-3 md:mb-2 md:h-[150px] md:w-full h-[170px] md:pr-0">
             <Image
-              src={urlFor(content[3].image)
-                .size(300, 300)
-                .fit("crop")
-                .crop("focalpoint")
-                .focalPoint(content[3].hotspot.x, content[3].hotspot.y)
-                .url()}
+              src={
+                content[3].hotspot
+                  ? urlFor(content[3].image)
+                      .size(300, 300)
+                      .fit("crop")
+                      .crop("focalpoint")
+                      .focalPoint(content[3].hotspot.x, content[3].hotspot.y)
+                      .url()
+                  : urlFor(content[3].image).fit("max").width(300).height(300).url()
+              }
               width={300}
               height={300}
               className="object-cover w-full h-full border border-white rounded"
