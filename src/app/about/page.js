@@ -11,6 +11,7 @@ export default async function About() {
   const data = await getData();
   const heroSubData = data.heroSub[7];
   const selectedTeachersData = [data.personDatabase[0], data.personDatabase[1], data.personDatabase[6], data.personDatabase[7]];
+  
   console.log(data.about);
 return (
     <>
@@ -34,7 +35,8 @@ return (
         </div>
       <div className="w-full">
         <Offices
-        content={data.OurLocals} 
+        content={data.OurLocals}
+        className="md:bg-jobloop-primary-green" 
         />
       </div>
 </main>
