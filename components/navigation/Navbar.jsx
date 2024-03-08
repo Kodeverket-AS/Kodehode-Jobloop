@@ -18,7 +18,7 @@ export default function Navbar() {
               src={logoDesktopHvit}
               width={350}
               height={220}
-              alt="Logo"
+              alt="Kodehode Logo"
             />
           </Link>
         </div>
@@ -73,7 +73,7 @@ export function NavbarAlt({ subpage, textWhite }) {
               src={logoDesktopFarge}
               width={350}
               height={220}
-              alt="Logo"
+              alt="Kodehode Logo"
             />
           </Link>
           <b className="mb-1 text-2xl text-jobloop-primary-orange">

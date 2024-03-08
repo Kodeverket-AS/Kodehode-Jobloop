@@ -22,6 +22,7 @@ export default function Competence({ content1, content2 }) {
               width={300}
               height={300}
               className="w-auto h-24 mb-2 lg:h-28 xl:h-32"
+              alt={content2[0].alt || ""}
             />
             <h3 className="">{content2[0].title}</h3>
             <p className="hidden sm:block">{content2[0].content}</p>
@@ -32,6 +33,7 @@ export default function Competence({ content1, content2 }) {
               width={300}
               height={300}
               className="w-auto h-24 mb-2 lg:h-28 xl:h-32"
+              alt={content2[1].alt || ""}
             />
             <h3 className="">{content2[1].title}</h3>
             <p className="hidden sm:block">{content2[1].content}</p>
@@ -44,6 +46,7 @@ export default function Competence({ content1, content2 }) {
               width={300}
               height={300}
               className="w-auto h-24 mb-2 lg:h-28 xl:h-32"
+              alt={content2[2].alt || ""}
             />
             <h3 className="">{content2[2].title}</h3>
             <p className="hidden sm:block">{content2[2].content}</p>
@@ -54,6 +57,7 @@ export default function Competence({ content1, content2 }) {
               width={300}
               height={300}
               className="w-auto h-24 mb-2 lg:h-28 xl:h-32"
+              alt={content2[3].alt || ""}
             />
             <h3 className="">{content2[3].title}</h3>
             <p className="hidden sm:block">{content2[3].content}</p>
