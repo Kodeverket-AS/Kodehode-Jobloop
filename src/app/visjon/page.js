@@ -23,7 +23,7 @@ export default async function Vision() {
           <div className="flex flex-col items-center w-full gap-20 mt-32 ">
             <VisionSub content={data.heroSub[3]} key={data.heroSub[3]._id} />
             <div className="flex flex-col items-center justify-center mt-[500px] md:mt-0">
-              <div className="w-full bg-jobloop-primary-orange mt-14 md:mt-0">
+              <div className="w-full bg-jobloop-secondary-orange mt-14 md:mt-0">
                 <h2 className="p-20 text-2xl font-extrabold text-center text-white pb-7 md:text-3xl">
                   Samarbeidsprosjekter
                 </h2>
@@ -33,7 +33,7 @@ export default async function Vision() {
                 link="https://glode.no/"
                 linkText="Mer om Gløde"
                 linkAria="Les mer om Gløde på deres nettside"
-                background="colour"
+                background="jobloop-secondary-orange"
                 imgSide="left"
               />
               <Vision2Part

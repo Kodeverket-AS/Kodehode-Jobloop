@@ -72,16 +72,33 @@ export function ExternalLinkButton({ Path, Text, ariaLabel, background }) {
   return (
     <a
       href={Path}
+      target="_blank"
       rel="noopener noreferrer"
       aria-label={ariaLabel}
       className={`px-8 py-2 transition-all ${
-        background == "colour"
-          ? "bg-jobloop-primary-orange text-white border-white hover:bg-white hover:text-black"
-          : "bg-white text-black border-black hover:bg-jobloop-primary-orange hover:border-jobloop-primary-orange"
+        background
+          ? `bg-${background} text-white border-white hover:bg-white hover:text-black`
+          : "bg-white text-black border-black hover:bg-jobloop-secondary-orange hover:border-jobloop-secondary-orange"
       }  border-2  border-solid max-w-fit rounded-3xl`}
     >
       {Text}
     </a>
+  );
+}
+
+export function InternalLinkButton({ Path, Text, ariaLabel, background }) {
+  return (
+    <Link
+      href={Path}
+      aria-label={ariaLabel}
+      className={`px-8 py-2 transition-all ${
+        background
+          ? `bg-${background} text-white border-white hover:bg-white hover:text-black`
+          : "bg-white text-black border-black hover:bg-jobloop-secondary-orange hover:border-jobloop-secondary-orange"
+      }  border-2  border-solid max-w-fit rounded-3xl`}
+    >
+      {Text}
+    </Link>
   );
 }
 
