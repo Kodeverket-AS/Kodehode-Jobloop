@@ -29,13 +29,13 @@ const contactInformation = [
 
 export default function Footer() {
   return (
-    <footer className="pb-8 text-white bg-jobloop-primary-grey">
+    <footer className="pb-8 text-kv-white bg-jobloop-primary-grey">
       <div className="flex-row flex-wrap items-start justify-around hidden px-12 pt-8 pb-24 md:flex gap-y-20 gap-x-8 md:px-12">
         <div className="flex flex-col order-2 gap-8 md:order-1">
           <h2 className="text-3xl">Kontakt</h2>
           {contactInformation.map((person) => (
             <div
-              className="flex flex-col pb-4 border-b-2 border-white border-opacity-40"
+              className="flex flex-col pb-4 border-b-2 border-kv-white border-opacity-40"
               key={person.name}
             >
               <b className="text-lg">{person.name}</b>
@@ -137,7 +137,7 @@ export default function Footer() {
             <h2 className="text-3xl">Kontakt</h2>
             {contactInformation.map((person) => (
               <div
-                className="flex flex-col pb-4 border-b-2 border-white border-opacity-40"
+                className="flex flex-col pb-4 border-b-2 border-kv-white border-opacity-40"
                 key={person.name}
               >
                 <b className="text-lg">{person.name}</b>

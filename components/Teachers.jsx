@@ -14,7 +14,7 @@ export default function Teachers({ content, title }) {
               src={content[0].image}
               width={300}
               height={300}
-              className="relative object-cover w-full h-full border border-white rounded"
+              className="relative object-cover w-full h-full border border-kv-white rounded"
               alt={content[0].alt || ""}
             />
           </div>
@@ -29,7 +29,7 @@ export default function Teachers({ content, title }) {
               src={content[1].image}
               width={300}
               height={300}
-              className="object-cover w-full h-full border border-white rounded"
+              className="object-cover w-full h-full border border-kv-white rounded"
               alt={content[1].alt || ""}
             />
           </div>
@@ -44,7 +44,7 @@ export default function Teachers({ content, title }) {
               src={content[2].image}
               width={300}
               height={300}
-              className="object-cover w-full h-full border border-white rounded"
+              className="object-cover w-full h-full border border-kv-white rounded"
               alt={content[2].alt || ""}
             />
           </div>
@@ -59,7 +59,7 @@ export default function Teachers({ content, title }) {
               src={content[3].image}
               width={300}
               height={300}
-              className="object-cover w-full h-full border border-white rounded"
+              className="object-cover w-full h-full border border-kv-white rounded"
               alt={content[3].alt || ""}
             />
           </div>

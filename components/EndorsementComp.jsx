@@ -5,7 +5,7 @@ export default function EndorsementComp({ image, _id, navn, firma, content }) {
   return (
     <>
       <div
-        className="flex items-center justify-center w-5/6 mb-20 bg-white shadow-lg lg:w-7/12 p-7 lg:p-20"
+        className="flex items-center justify-center w-5/6 mb-20 bg-kv-white shadow-lg lg:w-7/12 p-7 lg:p-20"
         key={_id}
       >
         <div className="flex flex-col items-center justify-center w-6/12 lg:flex-row gap-7 lg:w-full">
