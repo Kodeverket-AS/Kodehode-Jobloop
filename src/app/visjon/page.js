@@ -24,7 +24,7 @@ export default async function Vision() {
             <VisionSub content={data.heroSub[3]} key={data.heroSub[3]._id} />
             <div className="flex flex-col items-center justify-center mt-[500px] md:mt-0">
               <div className="w-full bg-jobloop-secondary-orange mt-14 md:mt-0">
-                <h2 className="p-20 text-2xl font-extrabold text-center text-white pb-7 md:text-3xl">
+                <h2 className="p-20 text-2xl font-extrabold text-center text-kv-white pb-7 md:text-3xl">
                   Samarbeidsprosjekter
                 </h2>
               </div>
