@@ -4,7 +4,7 @@ import { LocationCheck } from "../../../components/ContactUsSection";
 import { getData } from "../page";
 
 export const metadata = {
-  title: "Kontakt oss: Vi sitter her med kaffen og venter på deg :) | Kodehode",
+  title: "Kontakt oss | Kodehode",
 };
 
 export default async function Contact() {
