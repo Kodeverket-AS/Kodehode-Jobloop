@@ -22,11 +22,11 @@ export default function LandingHero({ content }) {
             alt={content.alt}
           />
         </div>
-        <div className="absolute left-0 right-0 z-50 text-white top-24 2xs:top-28">
+        <div className="absolute left-0 right-0 z-50 text-kv-white top-24 2xs:top-28">
           <h1 className="text-3xl text-center">{content.title}</h1>
           <h2 className="px-8 text-center">Kodekurs og rekruttering til IT-bransjen</h2>
         </div>
-        <div className="absolute z-50 p-8 bg-white top-60 rounded-t-3xl 2xs:top-60 xs:top-[16.5rem] sm:top-[19rem] sm:p-10">
+        <div className="absolute z-50 p-8 bg-kv-white top-60 rounded-t-3xl 2xs:top-60 xs:top-[16.5rem] sm:top-[19rem] sm:p-10">
           <p>
             Vi rekrutterer kandidater som av ulike grunner har havnet utenfor arbeidslivet og lærer
             dem opp til å bli frontend-utviklere. Gjennom en kombinasjon av teoretisk opplæring og
@@ -46,9 +46,9 @@ export default function LandingHero({ content }) {
             className="object-cover w-full h-full"
           />
         </div>
-        <div className="flex flex-col items-center px-24 py-24 text-center text-white">
-          <h1 className="text-6xl text-white lg:text-9xl">{content.title}</h1>
-          <p className="text-3xl text-white lg:text-5xl">
+        <div className="flex flex-col items-center px-24 py-24 text-center text-kv-white">
+          <h1 className="text-6xl text-kv-white lg:text-9xl">{content.title}</h1>
+          <p className="text-3xl text-kv-white lg:text-5xl">
             Kodekurs og rekruttering til IT-bransjen
           </p>
         </div>

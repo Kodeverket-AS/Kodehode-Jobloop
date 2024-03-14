@@ -12,8 +12,12 @@ module.exports = {
         xs: "425px",
         "3xl": "2600px",
       },
-      /* Farger fra Jobloop | Kodehode Figma Design Fil */
       colors: {
+        kv: {
+          black: "#0B1215",
+          white: "#FFFAFA",
+        },
+        /* Farger fra Jobloop | Kodehode Figma Design Fil */
         jobloop: {
           /* Hovedfarge fra Figma */
           primary: {

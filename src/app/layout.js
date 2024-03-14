@@ -19,8 +19,8 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={roboto.className}>
-      <body className="bg-[#fafafa]">
+    <html lang="no-nb" className={roboto.className}>
+      <body className="">
         <Navigation />
         <div className="flex-1 overflow-x-hidden">{children}</div>
         <ScrollToTopButton />

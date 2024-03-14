@@ -42,7 +42,7 @@ const HamburgerMenu = ({ hamFill }) => {
       </button>
 
       <div
-        className={`fixed top-0 z-40 right-0 w-64 bg-white h-screen transition-transform duration-300 transform ${
+        className={`fixed top-0 z-40 right-0 w-64 bg-kv-white h-screen transition-transform duration-300 transform ${
           isOpen ? "translate-x-0" : "translate-x-full"
         }`}
         ref={menuRef}
@@ -57,7 +57,7 @@ const HamburgerMenu = ({ hamFill }) => {
             <IoCloseSharp
               className={` ${
                 isOpen ? "block" : "hidden"
-              } text-black rounded-full transition duration-500 z-50 w-12 h-12`}
+              } text-kv-black rounded-full transition duration-500 z-50 w-12 h-12`}
             />
           </button>
 
