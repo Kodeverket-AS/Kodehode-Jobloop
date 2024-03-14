@@ -36,13 +36,13 @@ const HamburgerMenu = ({ hamFill }) => {
       >
         <GiHamburgerMenu
           className={`w-20 h-20 ${
-            hamFill == "white" ? "fill-white" : "fill-jobloop-primary-green"
+            hamFill == "white" ? "fill-kv-white" : "fill-jobloop-primary-green"
           }`}
         />
       </button>
 
       <div
-        className={`fixed top-0 z-40 right-0 w-64 bg-kv-white h-screen transition-transform duration-300 transform ${
+        className={`fixed top-0 z-40 right-0 w-full bg-kv-white h-screen transition-transform duration-300 transform ${
           isOpen ? "translate-x-0" : "translate-x-full"
         }`}
         ref={menuRef}
