@@ -1,72 +1,57 @@
-"use client"
-import AliceCarousel from "react-alice-carousel"
-import 'react-alice-carousel/lib/alice-carousel.css';
-import Image from "next/image"
+"use client";
+import AliceCarousel from "react-alice-carousel";
+import "react-alice-carousel/lib/alice-carousel.css";
+import Image from "next/image";
 import PortableText from "react-portable-text";
 import { SeMerBtn } from "./Buttons";
 
-
 // export function ScrollElement(content, Image){
 //   return(
-    
-//     <div  className="flex flex-col w-full p-10" > 
 
-//         <div> 
-//           <Image 
+//     <div  className="flex flex-col w-full p-10" >
+
+//         <div>
+//           <Image
 //           width={800}
 //           height={800}
-//           className="w-full"  
+//           className="w-full"
 //           src={Image}/>
 //         </div>
 
-//         <div> 
+//         <div>
 //           <PortableText content={content}></PortableText>
 //         </div>
-        
+
 //      </div>
 
 //   )
 // }
 
-
-
-
 // export function ProjectScroll({ImageGlod, ImageFont, keyOne, keyTwo, contentOne, contentTwo}){
 // console.log(keyTwo)
-// let ImageAarray =[ 
+// let ImageAarray =[
 
 //   <ScrollElement  content={contentTwo} Image={ImageGlod} ></ScrollElement>
-//   , 
-  
+//   ,
+
 //   <ScrollElement  content={contentOne} Image={ImageFont} ></ScrollElement>
-  
 
-
-
- 
- 
-      
-//     ]  
-
- 
-
+//     ]
 
 // // const data = content?.map((item) => {
 
 // //   console.log(item.content[0])
 
 // //   return(
-   
-// //         <div key={item._id} className=" flex flex-col w-full"> 
+
+// //         <div key={item._id} className="flex flex-col w-full ">
 // //                <div>
 // //                   <p>{item.content}</p>
 // //                 </div>
-// //          </div> 
-    
+// //          </div>
+
 // //   )
 
-  
-    
 // // })
 
 // const responsiveSettings = {
@@ -75,9 +60,8 @@ import { SeMerBtn } from "./Buttons";
 //   1280: { items: 3 },
 // };
 
-
 // return(
-//   <div className="w-full flex "> 
+//   <div className="flex w-full ">
 //     <AliceCarousel
 //     className="flex flex-row items-center justify-center w-full overflow-hidden "
 //     items={ImageAarray}
@@ -87,26 +71,25 @@ import { SeMerBtn } from "./Buttons";
 //  </div>
 // )
 
-
-
-
-
 // }
-
 
 export function ProjectScroll(content) {
   console.log(content.content);
 
   const data = content.content.map((item, index) => {
     return (
-      <div className="flex flex-col items-left justify-center w-full h-full p-10 gap-7" id={index} key={item._id}>
+      <div
+        className="flex flex-col justify-center w-full h-full p-10 items-left gap-7"
+        id={index}
+        key={item._id}
+      >
         <div>
           <Image
             width={800}
             height={800}
             className="w-full m-auto"
             src={item.ImageOne}
-            alt="image"
+            alt={item.ImageOne.alt || "image"}
           />
         </div>
         <div>
@@ -115,17 +98,13 @@ export function ProjectScroll(content) {
             height={800}
             className="w-full m-auto"
             src={item.ImageTwo}
-            alt="image"
+            alt={item.ImageTwo.alt || "image"}
           />
         </div>
-        <div className="flex items-left justify-left w-full">
-          {/* <p className="text-sm text-black">{item.description}</p> */}
+        <div className="flex w-full items-left justify-left">
+          {/* <p className="text-sm text-kv-black">{item.description}</p> */}
           {item.content.map((block, blockIndex) => (
-            <PortableText
-              className="scale-[1] text-black"
-              key={blockIndex}
-              content={block}
-            />
+            <PortableText className="scale-[1] text-kv-black" key={blockIndex} content={block} />
           ))}
         </div>
         <SeMerBtn></SeMerBtn>
@@ -156,27 +135,30 @@ export function ProjectScroll(content) {
   );
 }
 
-
 export function CooptScroll(content) {
   console.log(content.content);
 
   const data = content.content.map((item, index) => {
     return (
-      <div className="flex flex-col items-center justify-center w-full h-full p-10 gap-10" id={index} key={item._id}>
+      <div
+        className="flex flex-col items-center justify-center w-full h-full gap-10 p-10"
+        id={index}
+        key={item._id}
+      >
         <div>
           <Image
             width={800}
             height={800}
             className="w-full m-auto"
             src={item.image}
-            alt="image"
+            alt={item.image.alt || "image"}
           />
         </div>
         <div className="flex items-center justify-center w-full">
-          {/* <p className="text-sm text-black">{item.description}</p> */}
+          {/* <p className="text-sm text-kv-black">{item.description}</p> */}
           {item.content.map((block, blockIndex) => (
             <PortableText
-              className="scale-[1] w-4/6 text-black"
+              className="scale-[1] w-4/6 text-kv-black"
               key={blockIndex}
               content={block}
             />

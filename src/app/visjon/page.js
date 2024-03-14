@@ -13,6 +13,10 @@ import HeroSub from "../../../components/HeroSub";
 import Vision2Part from "../../../components/Vision2Part";
 import VisionSub from "../../../components/VisionSub";
 
+export const metadata = {
+  title: "Vår Visjon: Det finnes et mangfold av potensial | Kodehode",
+};
+
 export default async function Vision() {
   const data = await getData();
 
@@ -21,14 +25,10 @@ export default async function Vision() {
       <main className="flex flex-col items-center w-full min-h-screen">
         <div className="flex flex-col items-center sm:justify-center ">
           <div className="flex flex-col items-center w-full gap-20 mt-32 ">
-            <VisionSub
-              content={data.heroSub[3]}
-              key={data.heroSub[3]._id}
-              imgAlt="Noen av våre team medlemmer"
-            />
+            <VisionSub content={data.heroSub[3]} key={data.heroSub[3]._id} />
             <div className="flex flex-col items-center justify-center mt-[500px] md:mt-0">
-              <div className="w-full bg-jobloop-primary-orange mt-14 md:mt-0">
-                <h2 className="p-20 text-2xl font-extrabold text-center text-white pb-7 md:text-3xl">
+              <div className="w-full bg-jobloop-secondary-orange mt-14 md:mt-0">
+                <h2 className="p-20 text-2xl font-extrabold text-center text-kv-white pb-7 md:text-3xl">
                   Samarbeidsprosjekter
                 </h2>
               </div>
@@ -37,18 +37,14 @@ export default async function Vision() {
                 link="https://glode.no/"
                 linkText="Mer om Gløde"
                 linkAria="Les mer om Gløde på deres nettside"
-                background="colour"
+                background="jobloop-secondary-orange"
                 imgSide="left"
-                title="Gløde"
-                imgAlt="Lagerarbeider som bruker gaffeltruck"
               />
               <Vision2Part
                 content={data.VisionSections[0]}
                 link="https://www.fontenehusetbergen.no/"
                 linkText="Mer om Fontenehuset Bergen"
                 linkAria="Les mer om Fontenehuset Bergen på deres nettside"
-                title="Fontenehuset Bergen"
-                imgAlt="Rom med utstyr på pulter"
               />
 
               {/* <div className="block md:hidden"> 
@@ -73,7 +69,7 @@ export default async function Vision() {
                 imageOne={data.kontaktseksjon[0].ImageOne}
                 title={data.kontaktseksjon[0].title}
                 content={data.kontaktseksjon[0].content}
-                imgAlt="Stefan, Karl-Håkon og Sina"
+                alt={data.kontaktseksjon[0].altOne}
               />
               {/* <div className="flex flex-col items-center w-full pb-32 mt-20">
                 <div className="pb-20">
