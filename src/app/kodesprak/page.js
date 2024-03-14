@@ -4,7 +4,7 @@ import { PortableText } from "@portabletext/react";
 import Fargefigur180 from "../../../public/Fargefigur180.svg";
 
 export const metadata = {
-  title: "Techstack: Våre kodespråk | Kodehode",
+  title: "Kodespråk: Teknologier vi bruker | Kodehode",
 };
 
 export default async function Techstack() {

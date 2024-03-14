@@ -83,7 +83,7 @@ const HamburgerMenu = ({ hamFill }) => {
               FAQ
             </Link>
             <Link
-              href="/about"
+              href="/om-oss"
               aria-label="gå til underside og les mer om oss"
               className="px-8 text-xl font-bold transition-all text-jobloop-primary-orange group w-fit"
               onClick={(event) => {
@@ -93,7 +93,7 @@ const HamburgerMenu = ({ hamFill }) => {
               Om Oss
             </Link>
             <Link
-              href="/techstack"
+              href="/kodesprak"
               aria-label="gå til underside og les mer om kodespråkene våre"
               className="px-8 text-xl font-bold transition-all text-jobloop-primary-orange group w-fit"
               onClick={(event) => {
