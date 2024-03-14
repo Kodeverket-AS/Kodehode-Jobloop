@@ -6,6 +6,7 @@
 import { Checkbox, Label } from "flowbite-react";
 import { useState, useEffect } from "react";
 import Image from "next/image";
+import { urlFor } from "@/app/page";
 
 export function LocationCheck({ content }) {
   const [selectedFilters, setSelectedFilters] = useState([]);
@@ -64,8 +65,7 @@ export function LocationCheck({ content }) {
               className="w-4/6 h-4/6 md:w-3/6 md:h-full"
               alt={`Profilbilde ${item.navn}` || "profilbilder"}
               src={item.image || ""}
-            ></Image>
-
+            />
             <div className="flex flex-col w-full md:w-2/6">
               <h3 className="mb-5 text-xl">{item.navn}</h3>
               <p>Avdeling: {item.lokasjon}</p>
