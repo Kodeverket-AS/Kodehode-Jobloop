@@ -13,6 +13,10 @@ import HeroSub from "../../../components/HeroSub";
 import Vision2Part from "../../../components/Vision2Part";
 import VisionSub from "../../../components/VisionSub";
 
+export const metadata = {
+  title: "Vår Visjon: Det finnes et mangfold av potensial | Kodehode",
+};
+
 export default async function Vision() {
   const data = await getData();
 
