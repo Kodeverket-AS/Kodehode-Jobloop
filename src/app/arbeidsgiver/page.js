@@ -9,6 +9,10 @@ import AdaptTech from "../../../components/AdaptTech";
 import CompanyCarousel from "../../../components/CompanyCarousel";
 import Results from "../../../components/Results";
 
+export const metadata = {
+  title: "Arbeidsgiver: Dyktige junior-utviklere til din bedrift? | Kodehode",
+};
+
 export default async function Bedrift() {
   const data = await getData();
   //console.log(data.heroSub);
