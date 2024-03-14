@@ -9,9 +9,9 @@ export default function Teachers({ content, title }) {
   return (
     <div className="flex flex-col items-center w-full px-8 py-20 bg-jobloop-secondary-orange sm:px-10 md:px-12 lg:px-24 md:w-screen">
       <h2 className="pb-10">{title}</h2>
-      <div className="pt-0 pb-10 md:justify-between md:w-full md:flex lg:max-w-[832px]">
-        <div className="flex flex-row w-full pb-10 mx-auto md:flex-col md:w-28 md:pb-0 md:mx-0 lg:w-36">
-          <div className="w-1/2 pr-3 md:mb-2 md:h-[150px] md:w-full h-[170px] md:pr-0">
+      <div className="pt-0 pb-10 md:justify-between md:w-full md:flex xl:max-w-[1088px]">
+        <div className="flex flex-row w-full pb-10 mx-auto md:flex-col md:w-40 md:pb-0 md:mx-0 lg:w-48">
+          <div className="w-1/2 pr-3 md:mb-2 md:w-full h-[170px] md:pr-0 lg:h-[190px] sm:h-[250px]">
             <Image
               src={
                 content[0].hotspot
@@ -21,11 +21,15 @@ export default function Teachers({ content, title }) {
                       .crop("focalpoint")
                       .focalPoint(content[0].hotspot.x, content[0].hotspot.y)
                       .url()
-                  : urlFor(content[0].image).fit("max").width(300).height(300).url()
+                  : urlFor(content[0].image)
+                      .fit("max")
+                      .width(300)
+                      .height(300)
+                      .url()
               }
               width={300}
               height={300}
-              className="relative object-cover w-full h-full border border-kv-white rounded"
+              className="relative object-cover w-full h-full border rounded border-kv-white"
               alt={content[0].alt || ""}
             />
           </div>
@@ -34,8 +38,8 @@ export default function Teachers({ content, title }) {
             <p>{content[0].role}</p>
           </div>
         </div>
-        <div className="flex flex-row w-full pb-10 mx-auto md:flex-col md:w-28 md:pb-0 md:mx-0 lg:w-36">
-          <div className="w-1/2 pr-3 md:mb-2 md:h-[150px] md:w-full h-[170px] md:pr-0">
+        <div className="flex flex-row w-full pb-10 mx-auto md:flex-col md:w-40 md:pb-0 md:mx-0 lg:w-48">
+          <div className="w-1/2 pr-3 md:mb-2 md:w-full h-[170px] md:pr-0 lg:h-[190px] sm:h-[250px]">
             <Image
               src={
                 content[1].hotspot
@@ -45,11 +49,15 @@ export default function Teachers({ content, title }) {
                       .crop("focalpoint")
                       .focalPoint(content[1].hotspot.x, content[1].hotspot.y)
                       .url()
-                  : urlFor(content[1].image).fit("max").width(300).height(300).url()
+                  : urlFor(content[1].image)
+                      .fit("max")
+                      .width(300)
+                      .height(300)
+                      .url()
               }
               width={300}
               height={300}
-              className="object-cover w-full h-full border border-kv-white rounded"
+              className="object-cover w-full h-full border rounded border-kv-white"
               alt={content[1].alt || ""}
             />
           </div>
@@ -58,8 +66,8 @@ export default function Teachers({ content, title }) {
             <p>{content[1].role}</p>
           </div>
         </div>
-        <div className="flex flex-row w-full pb-10 mx-auto md:flex-col md:w-28 md:pb-0 md:mx-0 lg:w-36">
-          <div className="w-1/2 pr-3 md:mb-2 md:h-[150px] md:w-full h-[170px] md:pr-0">
+        <div className="flex flex-row w-full pb-10 mx-auto md:flex-col md:w-40 md:pb-0 md:mx-0 lg:w-48">
+          <div className="w-1/2 pr-3 md:mb-2 md:w-full h-[170px] md:pr-0 lg:h-[190px] sm:h-[250px]">
             <Image
               src={
                 content[2].hotspot
@@ -69,11 +77,15 @@ export default function Teachers({ content, title }) {
                       .crop("focalpoint")
                       .focalPoint(content[2].hotspot.x, content[2].hotspot.y)
                       .url()
-                  : urlFor(content[2].image).fit("max").width(300).height(300).url()
+                  : urlFor(content[2].image)
+                      .fit("max")
+                      .width(300)
+                      .height(300)
+                      .url()
               }
               width={300}
               height={300}
-              className="object-cover w-full h-full border border-kv-white rounded"
+              className="object-cover w-full h-full border rounded border-kv-white"
               alt={content[2].alt || ""}
             />
           </div>
@@ -82,8 +94,8 @@ export default function Teachers({ content, title }) {
             <p>{content[2].role}</p>
           </div>
         </div>
-        <div className="flex flex-row w-full pb-10 mx-auto md:flex-col md:w-28 md:pb-0 md:mx-0 lg:w-36">
-          <div className="w-1/2 pr-3 md:mb-2 md:h-[150px] md:w-full h-[170px] md:pr-0">
+        <div className="flex flex-row w-full pb-10 mx-auto md:flex-col md:w-40 md:pb-0 md:mx-0 lg:w-48">
+          <div className="w-1/2 pr-3 md:mb-2 md:w-full h-[170px] md:pr-0 lg:h-[190px] sm:h-[250px]">
             <Image
               src={
                 content[3].hotspot
@@ -93,11 +105,15 @@ export default function Teachers({ content, title }) {
                       .crop("focalpoint")
                       .focalPoint(content[3].hotspot.x, content[3].hotspot.y)
                       .url()
-                  : urlFor(content[3].image).fit("max").width(300).height(300).url()
+                  : urlFor(content[3].image)
+                      .fit("max")
+                      .width(300)
+                      .height(300)
+                      .url()
               }
               width={300}
               height={300}
-              className="object-cover w-full h-full border border-kv-white rounded"
+              className="object-cover w-full h-full border rounded border-kv-white"
               alt={content[3].alt || ""}
             />
           </div>
