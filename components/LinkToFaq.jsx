@@ -14,7 +14,7 @@ export default function LinkToFaq() {
           <LinkButton Path="/FAQ" Text="Gå til FAQ" />
         </div>
       </div>
-      <div className="flex justify-end w-full md:mt-[-130px] mt-[-70px] sm:mt-[-100px]">
+      <div className="flex justify-end w-full md:mt-[-130px] mt-[-70px] sm:mt-[-100px] 2xl:mt-[-300px]">
         <Image src={Fargefigur} width={1000} height={1000} className="w-1/2 mr-0" alt="" />
       </div>
     </div>
