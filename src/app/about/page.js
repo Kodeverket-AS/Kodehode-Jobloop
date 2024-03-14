@@ -5,8 +5,7 @@ import Teachers from "../../../components/Teachers";
 import JobloopPodium from "../../../components/JobloopPodium";
 
 export const metadata = {
-  title:
-    "Om oss: en alternativ plattform for kvalifisering og rekruttering av junior utviklere og innholdsprodusenter | Kodehode",
+  title: "Om oss | Kodehode",
 };
 
 export default async function About() {
