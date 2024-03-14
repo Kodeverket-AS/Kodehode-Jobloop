@@ -29,13 +29,13 @@ const contactInformation = [
 
 export default function Footer() {
   return (
-    <footer className="pb-8 text-white bg-jobloop-primary-grey">
-      <div className="flex-row flex-wrap items-start justify-around hidden px-12 pt-8 pb-24 md:flex gap-y-20 gap-x-8 md:px-12">
+    <footer className="pb-8 text-kv-white bg-jobloop-primary-grey">
+      <div className="flex-row flex-wrap items-start justify-around hidden px-12 pt-8 pb-24 md:flex gap-y-20 gap-x-8 md:px-12 2xl:max-w-[1600px] 2xl:mx-auto">
         <div className="flex flex-col order-2 gap-8 md:order-1">
           <h2 className="text-3xl">Kontakt</h2>
           {contactInformation.map((person) => (
             <div
-              className="flex flex-col pb-4 border-b-2 border-white border-opacity-40"
+              className="flex flex-col pb-4 border-b-2 border-kv-white border-opacity-40"
               key={person.name}
             >
               <b className="text-lg">{person.name}</b>
@@ -43,14 +43,14 @@ export default function Footer() {
                 href={`mailto:${person.email}`}
                 className="py-1 cursor-pointer hover:underline active:underline"
                 target="_blank"
-                aria-label="Åpner email for å opprette epost til valgt person"
+                aria-label={`Åpner email for å opprette epost til ${person.name}`}
               >
                 {person.email}
               </a>
               <a
                 href={`tel:${person.phoneLink}`}
                 className="md:hover:underline md:active:underline"
-                aria-label="Åpner telefon for å ringe valgt person"
+                aria-label={`Åpner telefon for å ringe ${person.name}`}
               >
                 {person.phoneDisplay}
               </a>
@@ -132,12 +132,12 @@ export default function Footer() {
             </div>
           </div>
         </div>
-        <div className="flex flex-row justify-between w-full gap-8">
+        <div className="flex flex-row justify-around w-full gap-8">
           <div className="flex flex-col order-2 gap-8">
             <h2 className="text-3xl">Kontakt</h2>
             {contactInformation.map((person) => (
               <div
-                className="flex flex-col pb-4 border-b-2 border-white border-opacity-40"
+                className="flex flex-col pb-4 border-b-2 border-kv-white border-opacity-40"
                 key={person.name}
               >
                 <b className="text-lg">{person.name}</b>
@@ -145,21 +145,21 @@ export default function Footer() {
                   href={`mailto:${person.email}`}
                   className="py-1 cursor-pointer hover:underline active:underline"
                   target="_blank"
-                  aria-label="Åpner email for å opprette epost til valgt person"
+                  aria-label={`Åpner email for å opprette epost til ${person.name}`}
                 >
                   {person.email}
                 </a>
                 <a
                   href={`tel:${person.phoneLink}`}
                   className="md:hover:underline md:active:underline"
-                  aria-label="Åpner telefon for å ringe valgt person"
+                  aria-label={`Åpner telefon for å ringe ${person.name}`}
                 >
                   {person.phoneDisplay}
                 </a>
               </div>
             ))}
           </div>
-          <div className="flex flex-col order-3 gap-8">
+          <div className="flex flex-col order-3 w-32 gap-8">
             <h2 className="text-3xl">Sider</h2>
             <Link
               className="hover:underline"
@@ -180,7 +180,8 @@ export default function Footer() {
               href="/samarbeidspartner"
               aria-label="Gå til underside for samarbeidspartner"
             >
-              Samarbeidspartner
+              Samarbeids-
+              partner
             </Link>
           </div>
         </div>
