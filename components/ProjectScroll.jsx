@@ -102,9 +102,9 @@ export function ProjectScroll(content) {
           />
         </div>
         <div className="flex w-full items-left justify-left">
-          {/* <p className="text-sm text-black">{item.description}</p> */}
+          {/* <p className="text-sm text-kv-black">{item.description}</p> */}
           {item.content.map((block, blockIndex) => (
-            <PortableText className="scale-[1] text-black" key={blockIndex} content={block} />
+            <PortableText className="scale-[1] text-kv-black" key={blockIndex} content={block} />
           ))}
         </div>
         <SeMerBtn></SeMerBtn>
@@ -155,10 +155,10 @@ export function CooptScroll(content) {
           />
         </div>
         <div className="flex items-center justify-center w-full">
-          {/* <p className="text-sm text-black">{item.description}</p> */}
+          {/* <p className="text-sm text-kv-black">{item.description}</p> */}
           {item.content.map((block, blockIndex) => (
             <PortableText
-              className="scale-[1] w-4/6 text-black"
+              className="scale-[1] w-4/6 text-kv-black"
               key={blockIndex}
               content={block}
             />

@@ -7,7 +7,7 @@ export default function Vision2Part({ content, background, imgSide, link, linkTe
     <div
       key={content._id}
       className={`flex justify-center w-screen py-14 lg:p-20 ${
-        background == "colour" ? "bg-jobloop-primary-orange text-white" : "bg-none text-black"
+        background ? `bg-${background} text-kv-white` : `bg-none text-kv-black`
       }`}
     >
       <div
