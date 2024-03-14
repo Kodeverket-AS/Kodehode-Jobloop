@@ -33,10 +33,10 @@ return (
       <div className="flex flex-col items-center ">
         <JobloopPodium content={data.about}/>
         </div>
-      <div className="w-full">
+      <div className="w-full bg-jobloop-primary-green">
         <Offices
         content={data.OurLocals}
-        className="md:bg-jobloop-primary-green" 
+         
         />
       </div>
 </main>

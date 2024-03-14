@@ -16,40 +16,46 @@ export default function JobloopPodium({ content }) {
 
   return (
     <>
-      <div className="flex flex-col items-center justify-center w-full my-32 border border-gray-400 md:flex-row md:w-3/4 md:px-10 md:gap-24 lg:w-3/4 lg:px-12 lg:gap-32">
+      <div className="flex flex-col items-start justify-center w-full gap-16 px-8 my-20 sm:w-full md:flex-row md:w-screen md:px-12 md:gap-24 lg:px-24 lg:gap-32 2xl:max-w-[1600px]">
+      {/*flex flex-col items-center justify-start w-full px-8 py-20 sm:px-10 md:px-12 lg:px-24 md:flex-row md:items-start md:justify-between md:w-screen/*}
         {/* JobLoop seksjon */}
-        <div className="flex flex-col items-start w-1/2 gap-12 border border-black-400 md:items-start md:">
+        <div className="flex flex-col items-start gap-8 sm:w-full md:w-full md:items-start">
+        <div className="w-full">
           <Image
             src={content[0].image}
             width={193}
             height={97}
             alt="Jobloop Logo"
-            className="w-auto h-28"
+            className="w-full h-auto xs:w-80 md:w-auto md:h-28"
           />
+          </div>
           <h2>{content[0].title}</h2>
           <PortableText value={jobloopFilteredContent} />
           <JobloopPodiumButton
             Path="https://jobloop.no/"
-            ariaLabel="Link to Jobloop's website"
-            ButtonText="See more"
+            ariaLabel="Lenke til Jobloop sin nettside"
+            ButtonText="Se mer"
+            className="w-auto h-28"
           />
         </div>
 
         {/* Podium seksjon */}
-        <div className="flex flex-col items-start gap-12 border border-red-400 md:w-1/2 md:items-start">
+        <div className="flex flex-col items-start gap-8 sm:w-full md:w-full md:items-start">
+        <div className="w-full">
           <Image
             src={content[1].image}
-            width={269}
+            width={193}
             height={97}
             alt="Podium Logo"
-            className="w-auto h-28"
+            className="w-full h-auto xs:w-80 md:w-auto md:h-28"
           />
+          </div>
           <h2>{content[1].title}</h2>
           <PortableText value={podiumFilteredContent} />
           <JobloopPodiumButton
             Path="https://podium.no/"
-            ariaLabel="Link to Podium's website"
-            ButtonText="See more"
+            ariaLabel="Lenke til Podium sin nettside"
+            ButtonText="Se mer"
           />
         </div>
       </div>
