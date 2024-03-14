@@ -23,8 +23,8 @@ export default function JobloopPodium({ content }) {
         <div className="w-full">
           <Image
             src={content[0].image}
-            width={193}
-            height={97}
+            width={500}
+            height={250}
             alt="Jobloop Logo"
             className="w-full h-auto xs:w-80 md:w-auto md:h-28"
           />
@@ -44,8 +44,8 @@ export default function JobloopPodium({ content }) {
         <div className="w-full">
           <Image
             src={content[1].image}
-            width={193}
-            height={97}
+            width={500}
+            height={250}
             alt="Podium Logo"
             className="w-full h-auto xs:w-80 md:w-auto md:h-28"
           />
