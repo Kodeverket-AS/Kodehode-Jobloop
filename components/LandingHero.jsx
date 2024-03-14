@@ -61,7 +61,7 @@ export default function LandingHero({ content }) {
                 <PortableText value={content.content} />
               </div>
               <div>
-                <LinkButton Path={"/contact"} Text={"Kontakt oss"} />
+                <LinkButton Path={"/kontakt"} Text={"Kontakt oss"} />
               </div>
             </div>
             <div className="w-1/2 ml-5">
