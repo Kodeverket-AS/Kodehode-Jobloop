@@ -6,7 +6,6 @@
 import { Checkbox, Label } from "flowbite-react";
 import { useState, useEffect } from "react";
 import Image from "next/image";
-import { urlFor } from "@/app/page";
 
 export function LocationCheck({ content }) {
   const [selectedFilters, setSelectedFilters] = useState([]);
@@ -39,7 +38,7 @@ export function LocationCheck({ content }) {
   };
 
   return (
-    <div className="flex flex-row justify-center w-full gap-16 md:w-4/6 md:gap-20">
+    <div className="flex flex-row justify-center w-full gap-16 md:w-4/6 md:gap-20 max-w-[1600px]">
       <div className="flex flex-col w-1/6 gap-2 ">
         {filters.map((location, idx) => (
           <div className="flex items-center gap-3" key={`filters-${idx}`}>
@@ -57,7 +56,7 @@ export function LocationCheck({ content }) {
         {filteredItems.map((item, idx) => (
           <div
             key={`items-${idx}`}
-            className="flex flex-col justify-center w-full md:flex-row md:gap-10 "
+            className="flex flex-col justify-center w-full max-w-3xl md:flex-row md:gap-10"
           >
             <Image
               width={700}

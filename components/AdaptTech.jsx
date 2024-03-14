@@ -15,7 +15,7 @@ export default function AdaptTech({ content1, content2 }) {
             <PortableText value={content1[0].content} />
           </div>
           <div className="hidden py-5 md:block">
-            <LinkButtonColour Path={"/techstack"} Text={"Se alle kodespråk"} />
+            <LinkButtonColour Path={"/kodesprak"} Text={"Se alle kodespråk"} />
           </div>
         </div>
       </div>
@@ -66,7 +66,7 @@ export default function AdaptTech({ content1, content2 }) {
         </div>
       </div>
       <div className="block py-5 mx-auto md:hidden">
-        <LinkButtonColour Path={"/techstack"} Text={"Se kodespråk"} />
+        <LinkButtonColour Path={"/kodesprak"} Text={"Se kodespråk"} />
       </div>
     </div>
   );
