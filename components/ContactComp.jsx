@@ -13,7 +13,7 @@ export default function ContactComp({ imageOne, title, content, _id, alt }) {
               <Image width={400} height={400} src={imageOne} alt={alt || ""} className="mx-auto" />
             </div>
           </div>
-          <div className="flex flex-col justify-center w-full gap-10 text-white md:w-4/6">
+          <div className="flex flex-col justify-center w-full gap-10 text-kv-white md:w-4/6">
             <h2 className="">{title}</h2>
             <PortableText value={content} />
             <div className="">

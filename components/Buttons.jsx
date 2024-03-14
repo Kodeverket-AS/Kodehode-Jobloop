@@ -30,7 +30,7 @@ export function ScrollToTopButton() {
     <button
       onClick={scrollToTop}
       aria-label="Scroll til toppen"
-      className={` z-50 p-4 fixed md:bottom-8 bottom-4 md:right-8 right-4 transition-all duration-200  bg-jobloop-primary-green text-white rounded-full hover:scale-[0.90] border shadow ${
+      className={` z-50 p-4 fixed md:bottom-8 bottom-4 md:right-8 right-4 transition-all duration-200  bg-jobloop-primary-green text-kv-white rounded-full hover:scale-[0.90] border shadow ${
         isVisible ? "opacity-100 " : "opacity-0 cursor-default"
       }`}
     >
@@ -42,7 +42,7 @@ export function ScrollToTopButton() {
 export function ContactBtn() {
   return (
     <Link href="/contact">
-      <button className="w-32 h-10 transition-all bg-transparent border-2 border-black border-solid rounded-3xl lg:w-52 lg:h-12 duration-600 hover:bg-jobloop-orange hover:border-none hover:text-white">
+      <button className="w-32 h-10 transition-all bg-transparent border-2 border-solid border-kv-black rounded-3xl lg:w-52 lg:h-12 duration-600 hover:bg-jobloop-orange hover:border-none hover:text-kv-white">
         Kontakt oss
       </button>
     </Link>
@@ -51,7 +51,7 @@ export function ContactBtn() {
 
 export function SeMerBtn() {
   return (
-    <button className="w-20 text-sm transition-all bg-transparent border-2 border-black border-solid rounded-3xl lg:w-32 h-7 lg:h-10 duration-600 hover:bg-alt-purple hover:border-none hover:text-white">
+    <button className="w-20 text-sm transition-all bg-transparent border-2 border-solid border-kv-black rounded-3xl lg:w-32 h-7 lg:h-10 duration-600 hover:bg-alt-purple hover:border-none hover:text-kv-white">
       Se Mer
     </button>
   );
@@ -61,7 +61,7 @@ export function LinkButton({ Path, Text }) {
   return (
     <Link
       href={Path}
-      className="px-8 py-2 transition-all bg-white border-2 border-black border-solid rounded-3xl hover:bg-jobloop-primary-orange hover:border-none hover:text-white"
+      className="px-8 py-2 transition-all border-2 border-solid bg-kv-white border-kv-black rounded-3xl hover:bg-jobloop-primary-orange hover:border-none hover:text-kv-white"
     >
       {Text}
     </Link>
@@ -72,16 +72,33 @@ export function ExternalLinkButton({ Path, Text, ariaLabel, background }) {
   return (
     <a
       href={Path}
+      target="_blank"
       rel="noopener noreferrer"
       aria-label={ariaLabel}
       className={`px-8 py-2 transition-all ${
-        background == "colour"
-          ? "bg-jobloop-primary-orange text-white border-white hover:bg-white hover:text-black"
-          : "bg-white text-black border-black hover:bg-jobloop-primary-orange hover:border-jobloop-primary-orange"
+        background
+          ? `bg-${background} text-kv-white border-kv-white hover:bg-kv-white hover:text-kv-black focus:bg-kv-white focus:text-kv-black`
+          : "bg-kv-white text-kv-black border-kv-black hover:bg-jobloop-secondary-orange hover:border-jobloop-secondary-orange focus:bg-jobloop-secondary-orange focus:border-jobloop-secondary-orange"
       }  border-2  border-solid max-w-fit rounded-3xl`}
     >
       {Text}
     </a>
+  );
+}
+
+export function InternalLinkButton({ Path, Text, ariaLabel, background }) {
+  return (
+    <Link
+      href={Path}
+      aria-label={ariaLabel}
+      className={`px-8 py-2 transition-all ${
+        background
+          ? `bg-${background} text-kv-white border-kv-white hover:bg-kv-white hover:text-kv-black focus:bg-kv-white focus:text-kv-black`
+          : "bg-kv-white text-kv-black border-kv-black hover:bg-jobloop-secondary-orange hover:border-jobloop-secondary-orange focus:bg-jobloop-secondary-orange focus:border-jobloop-secondary-orange"
+      }  border-2  border-solid max-w-fit rounded-3xl`}
+    >
+      {Text}
+    </Link>
   );
 }
 
@@ -92,7 +109,7 @@ export function JobloopPodiumButton({ Path, ariaLabel, ButtonText }) {
       target="_blank"
       rel="noopener noreferrer"
       aria-label={ariaLabel}
-      className="px-8 py-2 transition-all bg-white border-2 border-black border-solid rounded-3xl hover:bg-jobloop-primary-orange hover:border-none hover:text-white"
+      className="px-8 py-2 transition-all border-2 border-solid bg-kv-white border-kv-black rounded-3xl hover:bg-jobloop-primary-orange hover:border-none hover:text-kv-white"
     >
       {ButtonText}
     </a>
@@ -103,7 +120,7 @@ export function LinkButtonColour({ Path, Text }) {
   return (
     <Link
       href={Path}
-      className={`md:px-8 py-2 text-white transition-all border-2 border-white rounded-3xl hover:bg-white hover:border-none hover:text-black px-6`}
+      className={`md:px-8 py-2 text-kv-white transition-all border-2 border-kv-white rounded-3xl hover:bg-kv-white hover:border-none hover:text-kv-black px-6`}
     >
       {Text}
     </Link>
@@ -167,7 +184,7 @@ export function ToggleBtn({
               >
                 <div
                   className={`w-2 h-2 rounded-full ${
-                    isDelVisible ? " bg-white " : " bg-transparent"
+                    isDelVisible ? " bg-kv-white " : " bg-transparent"
                   }`}
                 >
                   {" "}
@@ -194,7 +211,7 @@ export function ToggleBtn({
               >
                 <div
                   className={`w-2 h-2 rounded-full ${
-                    isBedVisible ? " bg-white " : " bg-transparent"
+                    isBedVisible ? " bg-kv-white " : " bg-transparent"
                   }`}
                 >
                   {" "}
@@ -221,7 +238,7 @@ export function ToggleBtn({
               >
                 <div
                   className={`w-2 h-2 rounded-full ${
-                    isVirkVisible ? " bg-white " : " bg-transparent"
+                    isVirkVisible ? " bg-kv-white " : " bg-transparent"
                   }`}
                 >
                   {" "}

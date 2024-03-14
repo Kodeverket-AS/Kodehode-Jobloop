@@ -30,14 +30,14 @@ export default function KodehodeSummary({ content1, content2 }) {
           <button
             key={content2[1]._id}
             onClick={() => setActive(content2[1])}
-            className="px-3 py-1 mx-3 mb-3 border-2 border-black rounded-full focus:bg-jobloop-primary-orange"
+            className="px-3 py-1 mx-3 mb-3 border-2 border-kv-black rounded-full focus:bg-jobloop-primary-orange"
           >
             {content2[1].duration}
           </button>
           <button
             key={content2[0]._id}
             onClick={() => setActive(content2[0])}
-            className="px-2 mx-3 mb-3 border-2 border-black rounded-full md:py-2 md:px-3 focus:bg-jobloop-primary-orange"
+            className="px-2 mx-3 mb-3 border-2 border-kv-black rounded-full md:py-2 md:px-3 focus:bg-jobloop-primary-orange"
           >
             {content2[0].duration}
           </button>
