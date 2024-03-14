@@ -10,11 +10,11 @@ const landing = "/";
 const samarbeidspartner = "/samarbeidspartner";
 const arbeidsgiver = "/arbeidsgiver";
 const deltaker = "/deltaker";
-const techstack = "/techstack";
-const about = "/about";
+const techstack = "/kodesprak";
+const about = "/om-oss";
 const visjon = "/visjon";
 const faq = "/FAQ";
-const kontakt = "/contact";
+const kontakt = "/kontakt";
 
 export default function Navigation() {
   const pathname = usePathname();

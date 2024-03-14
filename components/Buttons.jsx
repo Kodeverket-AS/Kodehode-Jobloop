@@ -41,7 +41,7 @@ export function ScrollToTopButton() {
 
 export function ContactBtn() {
   return (
-    <Link href="/contact">
+    <Link href="/kontakt">
       <button className="w-32 h-10 transition-all bg-transparent border-2 border-solid border-kv-black rounded-3xl lg:w-52 lg:h-12 duration-600 hover:bg-jobloop-orange hover:border-none hover:text-kv-white">
         Kontakt oss
       </button>
