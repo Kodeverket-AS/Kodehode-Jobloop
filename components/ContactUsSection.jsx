@@ -56,7 +56,7 @@ export function LocationCheck({ content }) {
         {filteredItems.map((item, idx) => (
           <div
             key={`items-${idx}`}
-            className="flex flex-col justify-center w-full md:flex-row md:gap-10 "
+            className="flex flex-col justify-center w-full max-w-3xl md:flex-row md:gap-10"
           >
             <Image
               width={700}
