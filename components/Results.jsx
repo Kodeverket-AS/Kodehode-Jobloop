@@ -7,7 +7,7 @@ import { PortableText } from "@portabletext/react";
 export default function Results({ content }) {
   //console.log(content);
   return (
-    <div className="flex flex-col w-full px-8 py-20 sm:px-10 md:px-12 lg:px-24 sm:flex-row">
+    <div className="flex flex-col w-full px-8 py-20 sm:px-10 md:px-12 lg:px-24 sm:flex-row 2xl:max-w-[1600px]">
       <div className="w-full sm:w-1/2">
         <Image
           src={content.image}
