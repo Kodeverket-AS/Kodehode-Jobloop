@@ -8,7 +8,7 @@ import { LinkButton } from "./Buttons";
 export default function HeroSub({ content, buttonText }) {
   return (
     <>
-      <div className="absolute top-0 block w-full -z-10 md:hidden">
+      <div className="absolute top-0 block w-full -z-10 md:hidden min-h-fit min-w-fit">
         <div className="w-full">
           <div className=" absolute bg-gradient-to-b from-[rgba(34,34,34,0.82)] to-[rgba(34,34,34,0.33)] z-50 h-full w-full" />
           <Image

@@ -11,14 +11,14 @@ import { PortableText } from "@portabletext/react";
 export default function LandingHero({ content }) {
   return (
     <>
-      <div className="absolute top-0 block w-full -z-10 md:hidden">
-        <div className="w-full h-[18rem]">
-          <div className=" absolute bg-gradient-to-b from-[rgba(34,34,34,0.82)] to-[rgba(34,34,34,0.33)] z-50 h-full w-full" />
+      <div className="absolute top-0 block w-full -z-10 md:hidden min-h-fit min-w-fit">
+        <div className="w-full h-[18rem] min-w-fit">
+          <div className="absolute bg-gradient-to-b from-[rgba(34,34,34,0.82)] to-[rgba(34,34,34,0.33)] z-50 h-full w-full min-w-fit" />
           <Image
             src={content.image}
             width={500}
             height={500}
-            className="object-cover w-full h-full"
+            className="object-cover w-full h-full min-w-fit"
             alt={content.alt}
           />
         </div>

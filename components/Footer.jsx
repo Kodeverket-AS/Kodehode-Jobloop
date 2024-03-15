@@ -29,7 +29,7 @@ const contactInformation = [
 
 export default function Footer() {
   return (
-    <footer className="pb-8 text-kv-white bg-jobloop-primary-grey">
+    <footer className="pb-8 text-kv-white bg-jobloop-primary-grey min-w-fit">
       <div className="flex-row flex-wrap items-start justify-around hidden px-12 pt-8 pb-24 md:flex gap-y-20 gap-x-8 md:px-12">
         <div className="flex flex-col order-2 gap-8 md:order-1">
           <h2 className="text-3xl">Kontakt</h2>
@@ -180,8 +180,7 @@ export default function Footer() {
               href="/samarbeidspartner"
               aria-label="Gå til underside for samarbeidspartner"
             >
-              Samarbeids-
-              partner
+              Samarbeids- partner
             </Link>
           </div>
         </div>
