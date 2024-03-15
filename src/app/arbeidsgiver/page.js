@@ -19,7 +19,7 @@ export default async function Bedrift() {
   const techIcons = [data.mainTech[4], data.mainTech[5], data.mainTech[6], data.mainTech[7]];
 
   return (
-    <main className="flex flex-col items-center min-h-screen p-0">
+    <main className="flex flex-col items-center p-0 min-h-fit">
       <HeroSub
         content={data.heroSub[6]}
         buttonText={"Søk etter kandidater"}
