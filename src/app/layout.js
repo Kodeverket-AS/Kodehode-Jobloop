@@ -20,7 +20,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="no-nb" className={roboto.className}>
-      <body className="max-w-screen min-w-fit">
+      <body className="max-w-full min-w-fit">
         <Navigation />
         <div className="flex-1 overflow-x-hidden">{children}</div>
         <ScrollToTopButton />
