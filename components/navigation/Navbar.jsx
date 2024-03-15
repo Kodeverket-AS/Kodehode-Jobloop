@@ -86,7 +86,7 @@ export function NavbarAlt({ subpage, textWhite }) {
               href="/visjon"
               aria-label="gå til denne undersiden for å lese om vår visjon"
               className={`px-4 font-bold ${
-                !textWhite ? "text-jobloop-primary-green" : "text-kv-white"
+                !textWhite ? "text-jobloop-primary-green" : "text-kv-white drop-shadow-link"
               } md:hover:underline`}
             >
               Vår Visjon
@@ -95,7 +95,7 @@ export function NavbarAlt({ subpage, textWhite }) {
               href="/FAQ"
               aria-label="gå til denne undersiden for å få svar på ofte stilte spørsmål"
               className={`px-4 font-bold ${
-                !textWhite ? "text-jobloop-primary-green" : "text-kv-white"
+                !textWhite ? "text-jobloop-primary-green" : "text-kv-white drop-shadow-link"
               } md:hover:underline`}
             >
               FAQ
@@ -104,7 +104,7 @@ export function NavbarAlt({ subpage, textWhite }) {
               href="/om-oss"
               aria-label="gå til denne undersiden for å lese mer om oss"
               className={`px-4 font-bold ${
-                !textWhite ? "text-jobloop-primary-green" : "text-kv-white"
+                !textWhite ? "text-jobloop-primary-green" : "text-kv-white drop-shadow-link"
               } md:hover:underline`}
             >
               Om Oss
@@ -113,7 +113,7 @@ export function NavbarAlt({ subpage, textWhite }) {
               href="/kodesprak"
               aria-label="gå til denne undersiden for å lese mer om kodespråkene våre"
               className={`px-4 font-bold ${
-                !textWhite ? "text-jobloop-primary-green" : "text-kv-white"
+                !textWhite ? "text-jobloop-primary-green" : "text-kv-white drop-shadow-link"
               } md:hover:underline`}
             >
               Kodespråk

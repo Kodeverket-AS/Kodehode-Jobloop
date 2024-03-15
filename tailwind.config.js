@@ -52,6 +52,9 @@ module.exports = {
         //fadeIn: "fadeIn 1s forwards",
         scroll: "scroll 35s linear infinite",
       },
+      dropShadow: {
+        link: ["0 5px 5px rgba(0, 0, 0, 0.3)"],
+      },
     },
   },
 
