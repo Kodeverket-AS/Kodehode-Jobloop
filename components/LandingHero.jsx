@@ -3,8 +3,6 @@
 import Link from "next/link";
 import Image from "next/image";
 import danialigdery from "../public/danialigdery.jpg";
-import { ContactBtn } from "./ContactBtn";
-import { SeMerBtn } from "./SeMerBtn";
 import { LinkButton } from "./Buttons";
 import { PortableText } from "@portabletext/react";
 
