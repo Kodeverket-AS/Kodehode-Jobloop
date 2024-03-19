@@ -39,14 +39,14 @@ export default function Navbar() {
               FAQ
             </Link>
             <Link
-              href="/about"
+              href="/om-oss"
               aria-label="gå til denne undersiden for å lese mer om oss"
               className="px-4 font-bold text-kv-white md:hover:underline"
             >
               Om Oss
             </Link>
             <Link
-              href="/techstack"
+              href="/kodesprak"
               aria-label="gå til denne undersiden for å lese mer om kodespråkene våre"
               className="px-4 font-bold text-kv-white md:hover:underline"
             >
@@ -101,7 +101,7 @@ export function NavbarAlt({ subpage, textWhite }) {
               FAQ
             </Link>
             <Link
-              href="/about"
+              href="/om-oss"
               aria-label="gå til denne undersiden for å lese mer om oss"
               className={`px-4 font-bold ${
                 !textWhite ? "text-jobloop-primary-green" : "text-kv-white"
@@ -110,7 +110,7 @@ export function NavbarAlt({ subpage, textWhite }) {
               Om Oss
             </Link>
             <Link
-              href="/techstack"
+              href="/kodesprak"
               aria-label="gå til denne undersiden for å lese mer om kodespråkene våre"
               className={`px-4 font-bold ${
                 !textWhite ? "text-jobloop-primary-green" : "text-kv-white"

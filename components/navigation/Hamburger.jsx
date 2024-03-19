@@ -36,12 +36,12 @@ const HamburgerMenu = ({ hamFill }) => {
       >
         <GiHamburgerMenu
           className={`w-20 h-20 ${
-            hamFill == "white" ? "fill-white" : "fill-jobloop-primary-green"
+            hamFill == "white" ? "fill-kv-white" : "fill-jobloop-primary-green"
           }`}
         />
       </button>
       <div
-        className={`fixed top-0 z-40 right-0 w-64 bg-kv-white h-screen transition-transform duration-300 transform ${
+        className={`fixed top-0 z-40 right-0 w-full bg-kv-white h-screen transition-transform duration-300 transform ${
           isOpen ? "translate-x-0" : "translate-x-full"
         }`}
         ref={menuRef}
@@ -82,7 +82,7 @@ const HamburgerMenu = ({ hamFill }) => {
               FAQ
             </Link>
             <Link
-              href="/about"
+              href="/om-oss"
               aria-label="gå til underside og les mer om oss"
               className="px-8 text-xl font-bold transition-all text-jobloop-primary-orange group w-fit"
               onClick={(event) => {
@@ -92,7 +92,7 @@ const HamburgerMenu = ({ hamFill }) => {
               Om Oss
             </Link>
             <Link
-              href="/techstack"
+              href="/kodesprak"
               aria-label="gå til underside og les mer om kodespråkene våre"
               className="px-8 text-xl font-bold transition-all text-jobloop-primary-orange group w-fit"
               onClick={(event) => {
