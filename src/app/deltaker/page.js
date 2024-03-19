@@ -10,6 +10,10 @@ import VideoComp1 from "../../../components/VideoComp1";
 import Teachers from "../../../components/Teachers";
 import Platforms from "../../../components/Platforms";
 
+export const metadata = {
+  title: "Deltaker: Er du vårt neste Kodehode? | Kodehode",
+};
+
 export default async function Deltaker() {
   const data = await getData();
   const teachers = [
@@ -26,18 +30,12 @@ export default async function Deltaker() {
         key={data.heroSub[2]._id}
       />
       <div className="flex flex-col items-center mt-[370px] md:mt-20">
-        <KodehodeSummary
-          content1={data.origin[1]}
-          content2={data.courseTypes}
-        />
+        <KodehodeSummary content1={data.origin[1]} content2={data.courseTypes} />
         <StudyInParts content={data.CourseSections} />
         <div className="w-full bg-jobloop-primary-green">
           <VideoComp1 url="https://www.youtube.com/embed/LocPs6zdkrQ?si=afaKRzcMA80WvwtW&amp;" />
         </div>
-        <Competence
-          content1={data.relevantCompetence[0]}
-          content2={data.competenceIcons}
-        />
+        <Competence content1={data.relevantCompetence[0]} content2={data.competenceIcons} />
         <div className="w-full">
           <VideoComp1 url="https://www.youtube.com/embed/6riX-2lnIyg?si=g3aOkgbSOaBsJE-B&amp;" />
         </div>

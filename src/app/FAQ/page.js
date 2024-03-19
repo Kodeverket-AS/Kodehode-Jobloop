@@ -7,6 +7,10 @@ import { getData } from "../page";
 import { ToggleBtn } from "../../../components/Buttons";
 import HeroSub from "../../../components/HeroSub";
 
+export const metadata = {
+  title: "FAQ: Ofte stitle spørsmål | Kodehode",
+};
+
 export default async function FAQ() {
   const faqData = await getData("FAQ");
 
