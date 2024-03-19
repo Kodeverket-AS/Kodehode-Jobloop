@@ -61,7 +61,7 @@ export function LinkButton({ Path, Text }) {
   return (
     <Link
       href={Path}
-      className="px-8 py-2 transition-all border-2 border-solid bg-kv-white border-kv-black rounded-3xl hover:bg-jobloop-primary-orange hover:border-none hover:text-kv-white"
+      className="px-8 py-2 transition-all border-2 border-solid bg-kv-white border-kv-black rounded-3xl hover:bg-jobloop-primary-orange hover:border-none hover:text-kv-white focus:bg-jobloop-primary-orange focus:text-kv-white"
     >
       {Text}
     </Link>
@@ -109,7 +109,7 @@ export function JobloopPodiumButton({ Path, ariaLabel, ButtonText }) {
       target="_blank"
       rel="noopener noreferrer"
       aria-label={ariaLabel}
-      className="px-8 py-2 transition-all border-2 border-solid bg-kv-white border-kv-black rounded-3xl hover:bg-jobloop-primary-orange hover:border-none hover:text-kv-white"
+      className="px-8 py-2 transition-all border-2 border-solid bg-kv-white border-kv-black rounded-3xl hover:bg-jobloop-primary-orange hover:border-none hover:text-kv-white focus:bg-jobloop-primary-orange focus:text-kv-white"
     >
       {ButtonText}
     </a>
@@ -120,7 +120,7 @@ export function LinkButtonColour({ Path, Text }) {
   return (
     <Link
       href={Path}
-      className={`md:px-8 py-2 text-kv-white transition-all border-2 border-kv-white rounded-3xl hover:bg-kv-white hover:border-none hover:text-kv-black px-6`}
+      className="px-6 py-2 transition-all border-2 md:px-8 text-kv-white border-kv-white rounded-3xl hover:bg-kv-white hover:border-none hover:text-kv-black focus:bg-kv-white focus:text-kv-black"
     >
       {Text}
     </Link>
