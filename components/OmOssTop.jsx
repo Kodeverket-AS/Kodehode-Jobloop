@@ -27,7 +27,7 @@ export default function OmOssTop({ content, buttonText }) {
         <PortableText 
         value={content.content} />
         <div className="flex justify-start mt-10">
-          <LinkButton Path="/contact" Text={buttonText} />
+          <LinkButton Path="/kontakt" Text={buttonText} />
         </div>
       </div>
     </div>
