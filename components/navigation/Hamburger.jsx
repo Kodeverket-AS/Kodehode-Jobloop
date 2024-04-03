@@ -40,7 +40,6 @@ const HamburgerMenu = ({ hamFill }) => {
           }`}
         />
       </button>
-
       <div
         className={`fixed top-0 z-40 right-0 w-full bg-kv-white h-screen transition-transform duration-300 transform ${
           isOpen ? "translate-x-0" : "translate-x-full"
