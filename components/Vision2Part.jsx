@@ -12,7 +12,9 @@ export default function Vision2Part({ content, background, imgSide, link, linkTe
     >
       <div
         className={`flex max-w-[1600px] items-center w-5/6 gap-40 ${
-          imgSide == "left" ? "flex-col lg:flex-row" : "flex-col-reverse lg:flex-row-reverse"
+          imgSide == "left"
+            ? "flex-col lg:flex-row"
+            : "flex-col-reverse lg:flex-row-reverse"
         }`}
       >
         <div className="hidden w-5/6 mt-20 lg:block">
@@ -33,12 +35,14 @@ export default function Vision2Part({ content, background, imgSide, link, linkTe
             alt={content.AltOne || ""}
           />
           <PortableText value={content.content} />
-          <ExternalLinkButton
-            Path={link}
-            Text={linkText}
-            ariaLabel={linkAria}
-            background={background}
-          />
+          <div>
+            <ExternalLinkButton
+              Path={link}
+              Text={linkText}
+              ariaLabel={linkAria}
+              background={background}
+            />
+          </div>
         </div>
       </div>
     </div>

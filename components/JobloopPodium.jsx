@@ -34,7 +34,7 @@ export default function JobloopPodium({ content }) {
           <ExternalLinkButton
             Path="https://jobloop.no/"
             ariaLabel="Lenke til Jobloop sin nettside"
-            Text="Les mer"
+            Text="Mer om Jobloop"
           />
         </div>
 
@@ -54,7 +54,7 @@ export default function JobloopPodium({ content }) {
           <ExternalLinkButton
             Path="https://podium.no/"
             ariaLabel="Lenke til Podium sin nettside"
-            Text="Les mer"
+            Text="Mer om Podium"
           />
         </div>
       </div>
