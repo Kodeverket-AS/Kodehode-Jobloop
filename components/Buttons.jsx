@@ -62,7 +62,7 @@ export function ExternalLinkButton({ Path, Text, ariaLabel, background }) {
       className={`px-8 py-2 transition-all ${
         background
           ? `bg-${background} text-kv-white border-kv-white hover:bg-kv-white hover:text-kv-black focus:bg-kv-white focus:text-kv-black`
-          : "bg-kv-white text-kv-black border-kv-black hover:bg-jobloop-secondary-orange hover:border-jobloop-secondary-orange focus:bg-jobloop-secondary-orange focus:border-jobloop-secondary-orange"
+          : "bg-kv-white text-kv-black border-kv-black hover:bg-jobloop-secondary-orange focus:bg-jobloop-secondary-orange hover:border-none"
       }  border-2  border-solid max-w-fit rounded-3xl`}
     >
       {Text}
