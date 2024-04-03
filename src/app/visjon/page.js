@@ -12,6 +12,7 @@ import { CooptScroll } from "../../../components/ProjectScroll";
 import HeroSub from "../../../components/HeroSub";
 import Vision2Part from "../../../components/Vision2Part";
 import VisionSub from "../../../components/VisionSub";
+import VisionTop from "../../../components/VisionSub";
 
 export const metadata = {
   title: "Vår Visjon: Det finnes et mangfold av potensial | Kodehode",
@@ -24,9 +25,11 @@ export default async function Vision() {
     <>
       <main className="flex flex-col items-center w-full min-h-screen">
         <div className="flex flex-col items-center sm:justify-center ">
-          <div className="flex flex-col items-center w-full gap-20 mt-32 ">
-            <VisionSub content={data.heroSub[3]} key={data.heroSub[3]._id} />
-            <div className="flex flex-col items-center justify-center mt-[500px] md:mt-0">
+          <div className="flex flex-col items-center w-full gap-20">
+            {/*with old herosub style: mt-32*/}
+            <VisionTop content={data.heroSub[3]} key={data.heroSub[3]._id} />
+            <div className="flex flex-col items-center justify-center md:mt-0">
+              {/*with old herosub style: mt-[500px]*/}
               <div className="w-full bg-jobloop-secondary-orange mt-14 md:mt-0">
                 <h2 className="p-20 text-2xl font-extrabold text-center text-kv-white pb-7 md:text-3xl">
                   Samarbeidsprosjekter
