@@ -25,7 +25,6 @@ export default async function Oppdragsgiver() {
         <FourIconRow
           title={"Noen av våre kodespråk"}
           content={data.mainTech}
-          alignment={"center"}
         />
         <Competence content1={data.relevantCompetence[2]} content2={data.competenceIcons} />
         <div className="w-full bg-jobloop-secondary-orange">
