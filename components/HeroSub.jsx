@@ -20,17 +20,22 @@ export default function HeroSub({ content, buttonText }) {
           />
         </div>
         <div className="absolute left-0 right-0 mx-auto w-72 top-24 2xs:top-28 sm:w-[34rem]">
-          <h1 className="absolute z-50 text-center text-kv-white">{content.title}</h1>
+          <h1 className="absolute z-50 text-center text-kv-white">
+            {content.title}
+          </h1>
         </div>
         <div className="absolute z-50 p-8 bg-kv-white top-52 rounded-t-3xl 2xs:top-60 xs:top-[16.5rem] sm:top-[19rem] sm:p-10 bottom-0">
           <PortableText value={content.content} />
+          <div className="mt-10">
+            <LinkButton Path="/kontakt" Text={buttonText} />
+          </div>
         </div>
       </div>
       <div className="hidden md:flex-row md:flex lg:px-24 lg:pt-24 md:px-12 md:pt-10 max-w-[1600px]">
         <div className="w-1/2">
           <h1 className="text-jobloop-primary-green">{content.title}</h1>
           <PortableText value={content.content} />
-          <div className={`mt-10`}>
+          <div className="mt-10">
             <LinkButton Path="/kontakt" Text={buttonText} />
           </div>
         </div>

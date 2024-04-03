@@ -19,7 +19,7 @@ export default async function Oppdragsgiver() {
   return (
     <main className="flex flex-col items-center min-h-screen p-0">
       <HeroSub content={data.heroSub[4]} buttonText={"Kontakt oss"} key={data.heroSub[4]._id} />
-      <div className="flex flex-col items-center mt-[26rem] md:mt-0">
+      <div className="flex flex-col items-center mt-[29rem] md:mt-0">
         <KodehodeSummary content1={data.origin[0]} content2={data.courseTypes} />
         <StudyInParts content={data.CourseSections} />
         <FourIconRow
