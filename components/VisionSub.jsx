@@ -56,7 +56,7 @@ export default function VisionTop({ content }) {
           alt={content.alt || ""}
           width={1000}
           height={1000}
-          className="object-cover w-full h-full"
+          className="object-contain w-full h-full "
         />
       </div>
 
