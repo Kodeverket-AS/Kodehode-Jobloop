@@ -1,7 +1,7 @@
 //import PortableText from "react-portable-text"
 import { PortableText } from "@portabletext/react";
 import Image from "next/image";
-import { ContactBtn, LinkButtonColour } from "./Buttons";
+import { LinkButtonColour } from "./Buttons";
 
 export default function ContactComp({ imageOne, title, content, _id, alt }) {
   return (

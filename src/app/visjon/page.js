@@ -1,15 +1,12 @@
 import Image from "next/image";
-import { NavbarAlt } from "../../../components/navigation/Navbar";
 import { getData } from "../page";
-//import PortableText from "react-portable-text";
 import { PortableText } from "@portabletext/react";
-import { ExternalLinkButton, LinkButton, SeMerBtn } from "../../../components/Buttons";
+import { ExternalLinkButton, LinkButton } from "../../../components/Buttons";
 import EndorsementComp from "../../../components/EndorsementComp";
 import ContactComp from "../../../components/ContactComp";
 import Partners from "../../../components/PartnersComp";
 import { ProjectScroll } from "../../../components/ProjectScroll";
 import { CooptScroll } from "../../../components/ProjectScroll";
-import HeroSub from "../../../components/HeroSub";
 import Vision2Part from "../../../components/Vision2Part";
 import VisionSub from "../../../components/VisionSub";
 
@@ -48,7 +45,7 @@ export default async function Vision() {
               />
 
               {/* <div className="block md:hidden"> 
-                          <ProjectScroll  content={data.VisionSections} ></ProjectScroll>
+                          <ProjectScroll  content={data.VisionSections} />
                         </div> */}
 
               {/*<div>
@@ -101,7 +98,7 @@ export default async function Vision() {
                   </div>
                 </div>
                  <div className="block md:hidden">
-                            <CooptScroll content={data.samarbeid}></CooptScroll>
+                            <CooptScroll content={data.samarbeid} />
                           </div> 
               </div>*/}
             </div>

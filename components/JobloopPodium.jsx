@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { PortableText } from "@portabletext/react";
-import { JobloopPodiumButton } from "./Buttons";
+import { ExternalLinkButton } from "./Buttons";
 
 const filterEmptyContentBlocks = (contentBlocks) => {
   return contentBlocks.filter(block => 
@@ -31,11 +31,10 @@ export default function JobloopPodium({ content }) {
           </div>
           <h2>{content[0].title}</h2>
           <PortableText value={jobloopFilteredContent} />
-          <JobloopPodiumButton
+          <ExternalLinkButton
             Path="https://jobloop.no/"
             ariaLabel="Lenke til Jobloop sin nettside"
-            ButtonText="Se mer"
-            className="w-auto h-28"
+            Text="Les mer"
           />
         </div>
 
@@ -52,10 +51,10 @@ export default function JobloopPodium({ content }) {
           </div>
           <h2>{content[1].title}</h2>
           <PortableText value={podiumFilteredContent} />
-          <JobloopPodiumButton
+          <ExternalLinkButton
             Path="https://podium.no/"
             ariaLabel="Lenke til Podium sin nettside"
-            ButtonText="Se mer"
+            Text="Les mer"
           />
         </div>
       </div>
