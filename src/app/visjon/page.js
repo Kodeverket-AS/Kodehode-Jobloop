@@ -25,7 +25,7 @@ export default async function Vision() {
     <>
       <main className="flex flex-col items-center w-full min-h-screen">
         <div className="flex flex-col items-center sm:justify-center ">
-          <div className="flex flex-col items-center w-full md:gap-20">
+          <div className="flex flex-col items-center w-full">
             {/*with old herosub style: mt-32*/}
             <VisionTop content={data.heroSub[3]} key={data.heroSub[3]._id} />
             <div className="flex flex-col items-center justify-center md:mt-0">
