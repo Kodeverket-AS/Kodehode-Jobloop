@@ -27,9 +27,7 @@ export function urlFor(source) {
 }
 
 export async function getData() {
-  return Client.fetch(
-    `
-  {
+  return Client.fetch(`{
     "heroSub": *[_type == "heroSub"] | order(index) {title, "image":image.asset->url, "alt":image.alt, content, index, _id},
     "egsCoop": *[_type == "egsCoop"] | order(index) {title, content, "logo":logo.asset->url, "alt":logo.alt, index, _id},
     "origin": *[_type == "origin"]{title, mobileTitle, content1, content2, content3, _id},

@@ -19,7 +19,7 @@ export default function LandingLinks() {
           <h5 className="text-xl font-bold text-center md:text-left">Arbeidsgiver</h5>
           <p className="text-center md:text-left">For bedrifter som er interessert i utviklere</p>
           <div>
-            <LinkButton Path={"/arbeidsgiver"} Text={"Se mer"} />
+            <LinkButton Path={"/arbeidsgiver"} Text={"Les mer"} />
           </div>
         </div>
         <div className="flex flex-col items-center gap-4 px-0 md:w-52 md:items-start md:text-left md:px-5 lg:px-5">
@@ -27,7 +27,7 @@ export default function LandingLinks() {
           <h5 className="text-xl font-bold text-center md:text-left ">Deltager</h5>
           <p className="text-center md:text-left">For deg som vil delta på Kodehode</p>
           <div>
-            <LinkButton Path={"/deltaker"} Text={"Se mer"} />
+            <LinkButton Path={"/deltaker"} Text={"Les mer"} />
           </div>
         </div>
         <div className="flex flex-col items-center gap-4 px-0 md:w-52 md:items-start md:text-left md:pl-5 lg:pl-5">
@@ -35,7 +35,7 @@ export default function LandingLinks() {
           <h5 className="text-xl font-bold text-center md:text-left">Samarbeidspartner</h5>
           <p className="text-center md:text-left">For andre virksomheter som vil samarbeide</p>
           <div>
-            <LinkButton Path={"/samarbeidspartner"} Text={"Se mer"} />
+            <LinkButton Path={"/samarbeidspartner"} Text={"Les mer"} />
           </div>
         </div>
       </div>
