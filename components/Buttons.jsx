@@ -52,34 +52,24 @@ export function LinkButton({ Path, Text }) {
   );
 }
 
-export function ExternalLinkButton({ Path, Text, ariaLabel }) {
+export function ExternalLinkButton({ Path, Text, ariaLabel, background }) {
   return (
     <a
       href={Path}
       target="_blank"
       rel="noopener noreferrer"
       aria-label={ariaLabel}
-      className="px-8 py-2 transition-all border-2 border-solid bg-kv-white border-kv-black rounded-3xl hover:bg-jobloop-primary-orange hover:border-none hover:text-kv-white focus:bg-jobloop-primary-orange focus:text-kv-white"
+      className={`px-8 py-2 transition-all ${
+        background
+          ? `bg-${background} text-kv-white border-kv-white hover:bg-kv-white hover:text-kv-black focus:bg-kv-white focus:text-kv-black`
+          : "bg-kv-white text-kv-black border-kv-black hover:bg-jobloop-secondary-orange hover:border-jobloop-secondary-orange focus:bg-jobloop-secondary-orange focus:border-jobloop-secondary-orange"
+      }  border-2  border-solid max-w-fit rounded-3xl`}
     >
       {Text}
     </a>
   );
 }
 
-
-export function JobloopPodiumButton({ Path, ariaLabel, ButtonText }) {
-  return (
-    <a
-      href={Path}
-      target="_blank"
-      rel="noopener noreferrer"
-      aria-label={ariaLabel}
-      className="px-8 py-2 transition-all border-2 border-solid bg-kv-white border-kv-black rounded-3xl hover:bg-jobloop-primary-orange hover:border-none hover:text-kv-white focus:bg-jobloop-primary-orange focus:text-kv-white"
-    >
-      {ButtonText}
-    </a>
-  );
-}
 
 export function LinkButtonColour({ Path, Text }) {
   return (
