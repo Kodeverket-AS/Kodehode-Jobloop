@@ -24,37 +24,40 @@ export default async function Vision() {
   return (
     <>
       <main className="flex flex-col items-center w-full min-h-screen">
-        <div className="flex flex-col items-center sm:justify-center ">
-          <div className="flex flex-col items-center w-full">
-            {/*with old herosub style: mt-32*/}
-            <VisionTop content={data.heroSub[3]} key={data.heroSub[3]._id} />
-            <div className="flex flex-col items-center justify-center md:mt-0">
-              {/*with old herosub style: mt-[500px]*/}
-              <div className="w-full bg-jobloop-secondary-orange">
-                <h2 className="p-20 text-2xl font-extrabold text-center text-kv-white pb-7 md:text-3xl">
-                  Samarbeidsprosjekter
-                </h2>
-              </div>
-              <Vision2Part
-                content={data.VisionSections[1]}
-                link="https://glode.no/"
-                linkText="Mer om Gløde"
-                linkAria="Les mer om Gløde på deres nettside"
-                background="jobloop-secondary-orange"
-                imgSide="left"
-              />
-              <Vision2Part
-                content={data.VisionSections[0]}
-                link="https://www.fontenehusetbergen.no/"
-                linkText="Mer om Fontenehuset Bergen"
-                linkAria="Les mer om Fontenehuset Bergen på deres nettside"
-              />
+        <div className="portrait:hidden landscape:block">
+          {/*with old mobile herosub style: mt-32*/}
+          <VisionSub content={data.heroSub[3]} key={data.heroSub[3]._id} />
+        </div>
+        <div className="w-full portrait:block landscape:hidden">
+          <VisionTop content={data.heroSub[3]} key={data.heroSub[3]._id} />
+        </div>
+        <div className="flex flex-col items-center justify-center md:mt-0">
+          {/*with old mobile herosub style: mt-[500px]*/}
+          <div className="w-full bg-jobloop-secondary-orange">
+            <h2 className="p-20 text-2xl font-extrabold text-center text-kv-white pb-7 md:text-3xl">
+              Samarbeidsprosjekter
+            </h2>
+          </div>
+          <Vision2Part
+            content={data.VisionSections[1]}
+            link="https://glode.no/"
+            linkText="Mer om Gløde"
+            linkAria="Les mer om Gløde på deres nettside"
+            background="jobloop-secondary-orange"
+            imgSide="left"
+          />
+          <Vision2Part
+            content={data.VisionSections[0]}
+            link="https://www.fontenehusetbergen.no/"
+            linkText="Mer om Fontenehuset Bergen"
+            linkAria="Les mer om Fontenehuset Bergen på deres nettside"
+          />
 
-              {/* <div className="block md:hidden"> 
+          {/* <div className="block md:hidden"> 
                           <ProjectScroll  content={data.VisionSections} ></ProjectScroll>
                         </div> */}
 
-              {/*<div>
+          {/*<div>
               <h1 className="text-2xl font-extrabold text-center md:text-4xl ">
                 Hva partnere sier om oss
               </h1>
@@ -67,14 +70,14 @@ export default async function Vision() {
               firma={data.endorsement[0].firma}
               content={data.endorsement[0].content}
             />*/}
-              <ContactComp
-                key={data.kontaktseksjon[0]._id}
-                imageOne={data.kontaktseksjon[0].ImageOne}
-                title={data.kontaktseksjon[0].title}
-                content={data.kontaktseksjon[0].content}
-                alt={data.kontaktseksjon[0].altOne}
-              />
-              {/* <div className="flex flex-col items-center w-full pb-32 mt-20">
+          <ContactComp
+            key={data.kontaktseksjon[0]._id}
+            imageOne={data.kontaktseksjon[0].ImageOne}
+            title={data.kontaktseksjon[0].title}
+            content={data.kontaktseksjon[0].content}
+            alt={data.kontaktseksjon[0].altOne}
+          />
+          {/* <div className="flex flex-col items-center w-full pb-32 mt-20">
                 <div className="pb-20">
                   <h2 className="font-extrabold text-center xs:text-3xl 2xs:text-2xl lg:pb-28 lg:text-4xl">
                     Andre samarbeidspartnere
@@ -107,8 +110,6 @@ export default async function Vision() {
                             <CooptScroll content={data.samarbeid}></CooptScroll>
                           </div> 
               </div>*/}
-            </div>
-          </div>
         </div>
       </main>
     </>
