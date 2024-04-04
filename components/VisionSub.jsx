@@ -59,7 +59,6 @@ export default function VisionTop({ content }) {
           className="object-contain w-full h-full "
         />
       </div>
-
       {/* Text container */}
       <div className="flex flex-col w-full px-8 sm:px-10 sm:my-10 md:w-1/2 md:my-0 md:px-0">
         <h1 className="py-10 text-start text-jobloop-primary-green md:pb-10 md:pt-0">
