@@ -1,5 +1,4 @@
 import { getData } from "../page";
-import { ExternalLinkButton, LinkButton } from "../../../components/Buttons";
 import EndorsementComp from "../../../components/EndorsementComp";
 import ContactComp from "../../../components/ContactComp";
 import Partners from "../../../components/PartnersComp";
