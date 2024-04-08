@@ -6,7 +6,7 @@ import { PortableText } from "@portabletext/react";
 export default function VisionTop({ content }) {
   return (
     <>
-      <div className="portrait:hidden landscape:block">
+      <div className="hidden md:block">
         <div className="md:flex flex-col px-10 max-w-[1600px] mt-32 mb-20">
           <div className="justify-center md:flex max-w-[1600px] mb-14">
             <h1 className="w-full text-center text-jobloop-primary-green">{content.title}</h1>
@@ -27,7 +27,7 @@ export default function VisionTop({ content }) {
           </div>
         </div>
       </div>
-      <div className="portrait:block landscape:hidden">
+      <div className="block md:hidden">
         <div className="flex flex-col items-center justify-start w-full py-20 md:px-12 lg:px-24 md:flex-row md:items-start md:justify-between md:w-screen 2xl:max-w-[1600px]">
           <div className="flex w-screen h-auto p-0 mx-auto md:pr-5 md:mx-0 md:w-[20rem] md:h-[37rem] lg:w-[24rem] 2xl:w-[32rem]">
             <Image
