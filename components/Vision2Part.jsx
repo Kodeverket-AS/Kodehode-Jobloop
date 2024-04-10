@@ -19,8 +19,8 @@ export default function Vision2Part({ content, background, imgSide, link, linkTe
       >
         <div className="hidden w-5/6 mt-20 lg:block">
           <Image
-            width={500}
-            height={500}
+            width={1000}
+            height={1000}
             className="w-full"
             src={content.ImageTwo}
             alt={content.AltTwo || ""}
@@ -28,8 +28,8 @@ export default function Vision2Part({ content, background, imgSide, link, linkTe
         </div>
         <div className="flex flex-col w-full gap-10">
           <Image
-            width={100}
-            height={100}
+            width={1000}
+            height={1000}
             className="w-5/6 mx-auto md:w-3/6"
             src={content.ImageOne}
             alt={content.AltOne || ""}
