@@ -2,76 +2,9 @@
 import AliceCarousel from "react-alice-carousel";
 import "react-alice-carousel/lib/alice-carousel.css";
 import Image from "next/image";
-import PortableText from "react-portable-text";
-import { SeMerBtn } from "./Buttons";
+import { PortableText } from "@portabletext/react";
+import { LinkButton } from "./Buttons";
 
-// export function ScrollElement(content, Image){
-//   return(
-
-//     <div  className="flex flex-col w-full p-10" >
-
-//         <div>
-//           <Image
-//           width={800}
-//           height={800}
-//           className="w-full"
-//           src={Image}/>
-//         </div>
-
-//         <div>
-//           <PortableText content={content}></PortableText>
-//         </div>
-
-//      </div>
-
-//   )
-// }
-
-// export function ProjectScroll({ImageGlod, ImageFont, keyOne, keyTwo, contentOne, contentTwo}){
-// console.log(keyTwo)
-// let ImageAarray =[
-
-//   <ScrollElement  content={contentTwo} Image={ImageGlod} ></ScrollElement>
-//   ,
-
-//   <ScrollElement  content={contentOne} Image={ImageFont} ></ScrollElement>
-
-//     ]
-
-// // const data = content?.map((item) => {
-
-// //   console.log(item.content[0])
-
-// //   return(
-
-// //         <div key={item._id} className="flex flex-col w-full ">
-// //                <div>
-// //                   <p>{item.content}</p>
-// //                 </div>
-// //          </div>
-
-// //   )
-
-// // })
-
-// const responsiveSettings = {
-//   0: { items: 1 },
-//   1024: { items: 3 },
-//   1280: { items: 3 },
-// };
-
-// return(
-//   <div className="flex w-full ">
-//     <AliceCarousel
-//     className="flex flex-row items-center justify-center w-full overflow-hidden "
-//     items={ImageAarray}
-//     itemfit="cover"
-//     responsive={responsiveSettings}
-//     />
-//  </div>
-// )
-
-// }
 
 export function ProjectScroll(content) {
   console.log(content.content);
@@ -104,10 +37,9 @@ export function ProjectScroll(content) {
         <div className="flex w-full items-left justify-left">
           {/* <p className="text-sm text-kv-black">{item.description}</p> */}
           {item.content.map((block, blockIndex) => (
-            <PortableText className="scale-[1] text-kv-black" key={blockIndex} content={block} />
+            <PortableText className="scale-[1] text-kv-black" key={blockIndex} value={block} />
           ))}
         </div>
-        <SeMerBtn></SeMerBtn>
       </div>
     );
   });
@@ -160,7 +92,7 @@ export function CooptScroll(content) {
             <PortableText
               className="scale-[1] w-4/6 text-kv-black"
               key={blockIndex}
-              content={block}
+              value={block}
             />
           ))}
         </div>

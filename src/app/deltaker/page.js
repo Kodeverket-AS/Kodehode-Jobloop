@@ -29,15 +29,15 @@ export default async function Deltaker() {
         buttonText={"Jeg er interessert!"}
         key={data.heroSub[2]._id}
       />
-      <div className="flex flex-col items-center mt-[370px] md:mt-20">
+      <div className="flex flex-col items-center mt-[26rem] md:mt-20">
         <KodehodeSummary content1={data.origin[1]} content2={data.courseTypes} />
         <StudyInParts content={data.CourseSections} />
         <div className="w-full bg-jobloop-primary-green">
-          <VideoComp1 url="https://www.youtube.com/embed/LocPs6zdkrQ?si=afaKRzcMA80WvwtW&amp;" />
+          <VideoComp1 url="https://www.youtube.com/embed/LocPs6zdkrQ?si=afaKRzcMA80WvwtW&amp;" alt={"Timelapse video av noen som koder en portfolio i HTML og CSS"} />
         </div>
         <Competence content1={data.relevantCompetence[0]} content2={data.competenceIcons} />
         <div className="w-full">
-          <VideoComp1 url="https://www.youtube.com/embed/6riX-2lnIyg?si=g3aOkgbSOaBsJE-B&amp;" />
+          <VideoComp1 url="https://www.youtube.com/embed/6riX-2lnIyg?si=g3aOkgbSOaBsJE-B&amp;" alt={"Timelapse video av noen som designer en nettside i Figma"} />
         </div>
         <Teachers content={teachers} title={"Våre veiledere"} />
         {/*<Platforms />*/}
@@ -47,7 +47,7 @@ export default async function Deltaker() {
         <Results content={data.results[0]} />
         <ImageGallery content={data.ImageGallery} />
         <div className="w-full bg-jobloop-primary-green">
-          <VideoComp1 url="https://www.youtube.com/embed/gIrgqXD27EI?si=bh2im5jdpu-apCIQ&amp;" />
+          <VideoComp1 url="https://www.youtube.com/embed/gIrgqXD27EI?si=bh2im5jdpu-apCIQ&amp;" alt={"Timelapse av noen som koder en app i React Native"} />
         </div>
         <LinkToFaq />
       </div>

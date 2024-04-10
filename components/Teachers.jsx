@@ -11,7 +11,7 @@ export default function Teachers({ content, title }) {
       <h2 className="pb-10">{title}</h2>
       <div className="pt-0 pb-10 md:justify-between md:w-full md:flex xl:max-w-[1088px]">
         <div className="flex flex-row w-full pb-10 mx-auto md:flex-col md:w-40 md:pb-0 md:mx-0 lg:w-48">
-          <div className="w-1/2 pr-3 md:mb-2 md:w-full h-[170px] md:pr-0 lg:h-[190px] sm:h-[250px]">
+          <div className="w-1/2 pr-3 md:mb-2 md:w-full h-[170px] md:pr-0 md:h-[190px] sm:h-[250px]">
             <Image
               src={
                 content[0].hotspot
@@ -39,7 +39,7 @@ export default function Teachers({ content, title }) {
           </div>
         </div>
         <div className="flex flex-row w-full pb-10 mx-auto md:flex-col md:w-40 md:pb-0 md:mx-0 lg:w-48">
-          <div className="w-1/2 pr-3 md:mb-2 md:w-full h-[170px] md:pr-0 lg:h-[190px] sm:h-[250px]">
+          <div className="w-1/2 pr-3 md:mb-2 md:w-full h-[170px] md:pr-0 md:h-[190px]  sm:h-[250px]">
             <Image
               src={
                 content[1].hotspot
@@ -67,7 +67,7 @@ export default function Teachers({ content, title }) {
           </div>
         </div>
         <div className="flex flex-row w-full pb-10 mx-auto md:flex-col md:w-40 md:pb-0 md:mx-0 lg:w-48">
-          <div className="w-1/2 pr-3 md:mb-2 md:w-full h-[170px] md:pr-0 lg:h-[190px] sm:h-[250px]">
+          <div className="w-1/2 pr-3 md:mb-2 md:w-full h-[170px] md:pr-0 md:h-[190px] sm:h-[250px]">
             <Image
               src={
                 content[2].hotspot
@@ -95,7 +95,7 @@ export default function Teachers({ content, title }) {
           </div>
         </div>
         <div className="flex flex-row w-full pb-10 mx-auto md:flex-col md:w-40 md:pb-0 md:mx-0 lg:w-48">
-          <div className="w-1/2 pr-3 md:mb-2 md:w-full h-[170px] md:pr-0 lg:h-[190px] sm:h-[250px]">
+          <div className="w-1/2 pr-3 md:mb-2 md:w-full h-[170px] md:pr-0 md:h-[190px] sm:h-[250px]">
             <Image
               src={
                 content[3].hotspot

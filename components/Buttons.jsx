@@ -39,28 +39,12 @@ export function ScrollToTopButton() {
   );
 }
 
-export function ContactBtn() {
-  return (
-    <Link href="/kontakt">
-      <button className="w-32 h-10 transition-all bg-transparent border-2 border-solid border-kv-black rounded-3xl lg:w-52 lg:h-12 duration-600 hover:bg-jobloop-orange hover:border-none hover:text-kv-white">
-        Kontakt oss
-      </button>
-    </Link>
-  );
-}
-
-export function SeMerBtn() {
-  return (
-    <button className="w-20 text-sm transition-all bg-transparent border-2 border-solid border-kv-black rounded-3xl lg:w-32 h-7 lg:h-10 duration-600 hover:bg-alt-purple hover:border-none hover:text-kv-white">
-      Se Mer
-    </button>
-  );
-}
 
 export function LinkButton({ Path, Text }) {
   return (
     <Link
       href={Path}
+      aria-label={`Lenke til underside ${Path}`}
       className="px-8 py-2 transition-all border-2 border-solid bg-kv-white border-kv-black rounded-3xl hover:bg-jobloop-primary-orange hover:border-none hover:text-kv-white focus:bg-jobloop-primary-orange focus:text-kv-white"
     >
       {Text}
@@ -78,43 +62,14 @@ export function ExternalLinkButton({ Path, Text, ariaLabel, background }) {
       className={`px-8 py-2 transition-all ${
         background
           ? `bg-${background} text-kv-white border-kv-white hover:bg-kv-white hover:text-kv-black focus:bg-kv-white focus:text-kv-black`
-          : "bg-kv-white text-kv-black border-kv-black hover:bg-jobloop-secondary-orange hover:border-jobloop-secondary-orange focus:bg-jobloop-secondary-orange focus:border-jobloop-secondary-orange"
-      }  border-2  border-solid max-w-fit rounded-3xl`}
+          : "bg-kv-white text-kv-black border-kv-black hover:bg-jobloop-primary-orange hover:text-kv-white focus:text-kv-white focus:bg-jobloop-primary-orange"
+      }  border-2  border-solid max-w-fit rounded-3xl hover:border-none`}
     >
       {Text}
     </a>
   );
 }
 
-export function InternalLinkButton({ Path, Text, ariaLabel, background }) {
-  return (
-    <Link
-      href={Path}
-      aria-label={ariaLabel}
-      className={`px-8 py-2 transition-all ${
-        background
-          ? `bg-${background} text-kv-white border-kv-white hover:bg-kv-white hover:text-kv-black focus:bg-kv-white focus:text-kv-black`
-          : "bg-kv-white text-kv-black border-kv-black hover:bg-jobloop-secondary-orange hover:border-jobloop-secondary-orange focus:bg-jobloop-secondary-orange focus:border-jobloop-secondary-orange"
-      }  border-2  border-solid max-w-fit rounded-3xl`}
-    >
-      {Text}
-    </Link>
-  );
-}
-
-export function JobloopPodiumButton({ Path, ariaLabel, ButtonText }) {
-  return (
-    <a
-      href={Path}
-      target="_blank"
-      rel="noopener noreferrer"
-      aria-label={ariaLabel}
-      className="px-8 py-2 transition-all border-2 border-solid bg-kv-white border-kv-black rounded-3xl hover:bg-jobloop-primary-orange hover:border-none hover:text-kv-white focus:bg-jobloop-primary-orange focus:text-kv-white"
-    >
-      {ButtonText}
-    </a>
-  );
-}
 
 export function LinkButtonColour({ Path, Text }) {
   return (

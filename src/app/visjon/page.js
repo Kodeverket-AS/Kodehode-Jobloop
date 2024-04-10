@@ -35,7 +35,7 @@ export default async function Vision() {
           <Vision2Part
             content={data.VisionSections[0]}
             link="https://www.fontenehusetbergen.no/"
-            linkText="Mer om Fontenehuset Bergen"
+            linkText="Mer om Fontenehuset"
             linkAria="Les mer om Fontenehuset Bergen på deres nettside"
           />
           {/* <div className="block md:hidden">
