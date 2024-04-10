@@ -28,9 +28,9 @@ export default function KodehodeInternship({ content1, content2 }) {
       <div className="w-full px-0 md:pl-7 md:w-1/2">
         <InternshipCard key={content2[0]._id} content={content2[0]} />
       </div>
-      {/*<div className="block mx-auto mt-10 md:hidden">
+      <div className="block mx-auto mt-10 md:hidden">
         <LinkButton Path={"/kontakt"} Text={"Søk etter kandidater"} />
-      </div>*/}
+      </div>
     </div>
   );
 }
