@@ -29,7 +29,7 @@ export default async function Deltaker() {
         buttonText={"Jeg er interessert!"}
         key={data.heroSub[2]._id}
       />
-      <div className="flex flex-col items-center mt-[28rem] md:mt-20">
+      <div className="flex flex-col items-center mt-[26rem] md:mt-20">
         <KodehodeSummary content1={data.origin[1]} content2={data.courseTypes} />
         <StudyInParts content={data.CourseSections} />
         <div className="w-full bg-jobloop-primary-green">
