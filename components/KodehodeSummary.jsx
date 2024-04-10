@@ -43,7 +43,7 @@ export default function KodehodeSummary({ content1, content2 }) {
           </button>
         </div>
         <CourseCard key={active._id} content={active} />
-        <div className="block mx-auto mt-10 md:hidden">
+        <div className="flex justify-center mt-10 md:hidden">
           <LinkButton Path={"/kontakt"} Text={"Kontakt oss"} />
         </div>
       </div>

@@ -20,7 +20,7 @@ export default function LandingVisjon({ content }) {
       <div className="flex flex-col gap-4 md:w-1/2">
         <h2>{content.title}</h2>
         <PortableText value={content.content} />
-        <div className="pt-5 mx-auto md:mx-0">
+        <div className="pt-5">
           <LinkButton Path={"/visjon"} Text={"Se mer"} />
         </div>
       </div>
