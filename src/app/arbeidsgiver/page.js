@@ -25,7 +25,7 @@ export default async function Bedrift() {
         buttonText={"Søk etter kandidater"}
         key={data.heroSub[6]._id}
       />
-      <div className="flex flex-col items-center mt-[30rem] md:mt-20">
+      <div className="flex flex-col items-center mt-[28rem] md:mt-20">
         <FourIconRow
           title={"Hva ser Kodehode etter hos samarbeidspartnere?"}
           content={data.egsCoop}
