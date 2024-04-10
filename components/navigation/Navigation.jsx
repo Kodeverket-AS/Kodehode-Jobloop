@@ -62,10 +62,10 @@ export default function Navigation() {
   } else if (pathname === visjon) {
     navbar = (
       <>
-        <div className="block md:hidden">
+        {/* <div className="block md:hidden">
           <Navbar />
-        </div>
-        <div className="hidden md:block">
+        </div> */}
+        <div>
           <NavbarAlt />
         </div>
       </>
