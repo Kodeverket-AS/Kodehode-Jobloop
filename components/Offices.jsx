@@ -1,12 +1,11 @@
 "use client";
 
-import Link from "next/link";
 import Image from "next/image";
 
 export default function Offices({ content }) {
   return (
     <div className="flex flex-col items-center w-full px-8 py-10 md:w-full sm:px-10 md:px-12 lg:px-24">
-      <h2 className="pb-10 z200:text-jobloop-primary-green">Våre lokaler</h2>
+      <h2 className="pb-10">Våre lokaler</h2>
       <div className="w-full pt-0 gap-8 pb-10 md:flex-wrap md:flex md:justify-center xl:max-w-[1600px]">
         {content.map((offices, index) => (
           <div
