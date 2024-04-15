@@ -25,7 +25,7 @@ export default function KodehodeInternship({ content1, content2 }) {
           </div>
         </div>
       </div>
-      <div className="w-full px-0 md:pl-7 md:w-1/2">
+      <div className="w-full px-0 pt-5 md:pl-7 md:w-1/2 md:pt-0">
         <InternshipCard key={content2[0]._id} content={content2[0]} />
       </div>
       <div className="block mx-auto mt-10 md:hidden">
