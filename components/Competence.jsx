@@ -3,6 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { PortableText } from "@portabletext/react";
+import DynamicCompetence from "./DynamicCompetence";
 
 export default function Competence({ content1, content2 }) {
   //console.log(content1);
@@ -17,7 +18,8 @@ export default function Competence({ content1, content2 }) {
         </div>
       </div>
       <div className="flex flex-col w-full px-8 pt-0 pb-20 md:flex-row md:pt-10 md:pb-20 md:w-screen sm:px-10 md:px-12 md:justify-between lg:px-24 xl:px-0 lg:gap-16 xl:gap-32 xl:max-w-[1088px]">
-        <div className="flex flex-row justify-between mb-5 md:mb-0 md:justify-evenly md:w-1/2 lg:gap-16 xl:gap-32">
+        <DynamicCompetence content={content2} />
+        {/* <div className="flex flex-row justify-between mb-5 md:mb-0 md:justify-evenly md:w-1/2 lg:gap-16 xl:gap-32">
           <div className="flex flex-col items-start w-24 md:mr-0 md:w-36 2xs:w-28 xs:w-32 sm:w-56 lg:w-40 xl:w-44">
             <Image
               src={content2[0].logo}
@@ -64,7 +66,7 @@ export default function Competence({ content1, content2 }) {
             <h3 className="text-left">{content2[3].title}</h3>
             <p className="text-left">{content2[3].content}</p>
           </div>
-        </div>
+        </div> */}
       </div>
     </>
   );
