@@ -4,10 +4,10 @@ import { getData } from "../page";
 import KodehodeSummary from "../../../components/KodehodeSummary";
 import StudyInParts from "../../../components/StudyInParts";
 import FourIconRow from "../../../components/FourIconRow";
-import Competence from "../../../components/Competence";
 import Offices from "../../../components/Offices";
 import ImageGallery from "../../../components/ImageGallery";
 import LinkToFaq from "../../../components/LinkToFaq";
+import MultiCompetence from "../../../components/MultiCompetence";
 
 export const metadata = {
   title: "Samarbeidspartner: Har du en deltaker med IT-interesse? | Kodehode",
@@ -22,11 +22,8 @@ export default async function Oppdragsgiver() {
       <div className="flex flex-col items-center mt-[29rem] md:mt-0">
         <KodehodeSummary content1={data.origin[0]} content2={data.courseTypes} />
         <StudyInParts content={data.CourseSections} />
-        <FourIconRow
-          title={"Noen av våre kodespråk"}
-          content={data.mainTech}
-        />
-        <Competence content1={data.relevantCompetence[2]} content2={data.competenceIcons} />
+        <FourIconRow title={"Noen av våre kodespråk"} content={data.mainTech} />
+        <MultiCompetence content1={data.relevantCompetence[2]} content2={data.competenceIcons} />
         <div className="w-full bg-jobloop-secondary-orange">
           <Offices content={data.OurLocals} />
         </div>

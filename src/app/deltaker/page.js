@@ -2,13 +2,13 @@ import HeroSub from "../../../components/HeroSub";
 import { getData } from "../page";
 import KodehodeSummary from "../../../components/KodehodeSummary";
 import StudyInParts from "../../../components/StudyInParts";
-import Competence from "../../../components/Competence";
 import Results from "../../../components/Results";
 import ImageGallery from "../../../components/ImageGallery";
 import LinkToFaq from "../../../components/LinkToFaq";
 import VideoComp1 from "../../../components/VideoComp1";
 import Teachers from "../../../components/Teachers";
 import Platforms from "../../../components/Platforms";
+import MultiCompetence from "../../../components/MultiCompetence";
 
 export const metadata = {
   title: "Deltaker: Er du vårt neste Kodehode? | Kodehode",
@@ -33,11 +33,17 @@ export default async function Deltaker() {
         <KodehodeSummary content1={data.origin[1]} content2={data.courseTypes} />
         <StudyInParts content={data.CourseSections} />
         <div className="w-full bg-jobloop-primary-green">
-          <VideoComp1 url="https://www.youtube.com/embed/LocPs6zdkrQ?si=afaKRzcMA80WvwtW&amp;" alt={"Timelapse video av noen som koder en portfolio i HTML og CSS"} />
+          <VideoComp1
+            url="https://www.youtube.com/embed/LocPs6zdkrQ?si=afaKRzcMA80WvwtW&amp;"
+            alt={"Timelapse video av noen som koder en portfolio i HTML og CSS"}
+          />
         </div>
-        <Competence content1={data.relevantCompetence[0]} content2={data.competenceIcons} />
+        <MultiCompetence content1={data.relevantCompetence[0]} content2={data.competenceIcons} />
         <div className="w-full">
-          <VideoComp1 url="https://www.youtube.com/embed/6riX-2lnIyg?si=g3aOkgbSOaBsJE-B&amp;" alt={"Timelapse video av noen som designer en nettside i Figma"} />
+          <VideoComp1
+            url="https://www.youtube.com/embed/6riX-2lnIyg?si=g3aOkgbSOaBsJE-B&amp;"
+            alt={"Timelapse video av noen som designer en nettside i Figma"}
+          />
         </div>
         <Teachers content={teachers} title={"Våre veiledere"} />
         {/*<Platforms />*/}
@@ -47,7 +53,10 @@ export default async function Deltaker() {
         <Results content={data.results[0]} />
         <ImageGallery content={data.ImageGallery} />
         <div className="w-full bg-jobloop-primary-green">
-          <VideoComp1 url="https://www.youtube.com/embed/gIrgqXD27EI?si=bh2im5jdpu-apCIQ&amp;" alt={"Timelapse av noen som koder en app i React Native"} />
+          <VideoComp1
+            url="https://www.youtube.com/embed/gIrgqXD27EI?si=bh2im5jdpu-apCIQ&amp;"
+            alt={"Timelapse av noen som koder en app i React Native"}
+          />
         </div>
         <LinkToFaq />
       </div>
