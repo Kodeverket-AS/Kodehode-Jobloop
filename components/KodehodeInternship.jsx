@@ -11,9 +11,9 @@ export default function KodehodeInternship({ content1, content2 }) {
   return (
     <div className="flex flex-col px-8 pt-20 pb-0 md:pb-20 md:flex-row md:px-12 md:w-screen lg:px-24 2xl:max-w-[1600px]">
       <div className="flex-col w-full md:w-1/2 md:flex">
-        <h2 className="hidden md:block">{content1[0].title}</h2>
+        <h2 className="hidden md:block md:leading-10">{content1[0].title}</h2>
         <h2 className="block pb-5 md:hidden">{content1[0].mobileTitle}</h2>
-        <div className="hidden md:block">
+        <div className="hidden md:block md:w-5/6 lg:pr-20">
           <div className="py-5">
             <PortableText value={content1[0].content1} />
           </div>
