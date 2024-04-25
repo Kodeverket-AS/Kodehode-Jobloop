@@ -33,10 +33,12 @@ export default function HeroSub({ content, buttonText }) {
       </div>
       <div className="hidden md:flex-row md:flex lg:px-24 lg:pt-24 md:px-12 md:pt-10 max-w-[1600px]">
         <div className="w-1/2">
-          <h1 className="text-jobloop-primary-green">{content.title}</h1>
+          <h1 className="text-jobloop-primary-green md:mb-5">{content.title}</h1>
+          <div className="lg:pr-20">
           <PortableText value={content.content} />
           <div className="mt-10">
             <LinkButton Path="/kontakt" Text={buttonText} />
+            </div>
           </div>
         </div>
         <div className="w-1/2 pt-6 pl-0 md:pl-6">
@@ -44,11 +46,12 @@ export default function HeroSub({ content, buttonText }) {
             src={content.image}
             width={500}
             height={500}
-            className="mx-auto my-auto rounded w-[30rem]"
+            className="mx-auto my-auto rounded w-[32rem]"
             alt={content.alt || ""}
           />
         </div>
       </div>
+      
     </>
   );
 }
