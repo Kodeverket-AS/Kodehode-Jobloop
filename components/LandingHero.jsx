@@ -3,8 +3,6 @@
 import Link from "next/link";
 import Image from "next/image";
 import danialigdery from "../public/danialigdery.jpg";
-import { ContactBtn } from "./ContactBtn";
-import { SeMerBtn } from "./SeMerBtn";
 import { LinkButton } from "./Buttons";
 import { PortableText } from "@portabletext/react";
 
@@ -25,7 +23,7 @@ export default function LandingHero({ content }) {
         <div className="absolute left-0 right-0 z-50 text-kv-white top-24 2xs:top-28">
           <h1 className="text-3xl text-center">{content.title}</h1>
           <h2 className="px-8 text-center">
-            Kodekurs og rekruttering til IT-bransjen
+            Tilpasset opplæring og rekruttering til IT-bransjen
           </h2>
         </div>
         <div className="absolute z-50 p-8 bg-kv-white top-60 rounded-t-3xl 2xs:top-60 xs:top-[16.5rem] sm:top-[19rem] sm:p-10">
@@ -54,7 +52,7 @@ export default function LandingHero({ content }) {
             {content.title}
           </h1>
           <p className="text-3xl text-kv-white lg:text-5xl">
-            Kodekurs og rekruttering til IT-bransjen
+            Tilpasset opplæring og rekruttering til IT-bransjen
           </p>
         </div>
       </div>

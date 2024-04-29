@@ -5,22 +5,22 @@ import Image from "next/image";
 import { PortableText } from "@portabletext/react";
 import { useState } from "react";
 import CourseCard from "./CourseCard";
+import { LinkButton } from "./Buttons";
 
 export default function KodehodeSummary({ content1, content2 }) {
   const [active, setActive] = useState(content2[1]);
   return (
     <div className="flex flex-col px-8 py-20 md:flex-row sm:px-10 md:px-12 lg:px-24 md:w-screen 2xl:max-w-[1600px]">
       <div className="flex-col w-full md:w-1/2 md:flex">
-        <h2 className="hidden md:block">{content1.title}</h2>
-        <h2 className="block pb-5 mx-auto md:hidden">{content1.mobileTitle}</h2>
-        <div className="hidden md:block">
-          <div className="py-5">
+        <h2 className="mx-auto md:ml-0 md:leading-10 lg:pb-5">{content1.title}</h2>
+        <div className="pt-5 pb-10 md:pb-0 lg:pr-20">
+          <div className="pb-3 md:pb-5 md:w-5/6">
             <PortableText value={content1.content1} />
           </div>
-          <div className="py-5">
+          <div className="py-3 md:py-5 md:w-5/6">
             <PortableText value={content1.content2} />
           </div>
-          <div className="py-5">
+          <div className="pt-3 md:pt-5 md:w-5/6">
             <PortableText value={content1.content3} />
           </div>
         </div>
@@ -30,7 +30,7 @@ export default function KodehodeSummary({ content1, content2 }) {
           <button
             key={content2[1]._id}
             onClick={() => setActive(content2[1])}
-            className="px-3 py-1 mx-3 mb-3 border-2 rounded-full border-kv-black focus:bg-jobloop-primary-orange"
+            className="px-5 py-1 mx-3 mb-3 border-2 rounded-full md:py-2 md:px-6 border-kv-black focus:bg-jobloop-primary-orange"
           >
             {content2[1].duration}
           </button>
@@ -43,6 +43,9 @@ export default function KodehodeSummary({ content1, content2 }) {
           </button>
         </div>
         <CourseCard key={active._id} content={active} />
+        <div className="flex justify-center mt-10 md:hidden">
+          <LinkButton Path={"/kontakt"} Text={"Kontakt oss"} />
+        </div>
       </div>
     </div>
   );

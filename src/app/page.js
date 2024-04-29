@@ -27,9 +27,7 @@ export function urlFor(source) {
 }
 
 export async function getData() {
-  return Client.fetch(
-    `
-  {
+  return Client.fetch(`{
     "heroSub": *[_type == "heroSub"] | order(index) {title, "image":image.asset->url, "alt":image.alt, content, index, _id},
     "egsCoop": *[_type == "egsCoop"] | order(index) {title, content, "logo":logo.asset->url, "alt":logo.alt, index, _id},
     "origin": *[_type == "origin"]{title, mobileTitle, content1, content2, content3, _id},
@@ -54,7 +52,6 @@ export async function getData() {
     "personDatabase":*[_type == "personDatabase"] | order(index) {navn, stilling, lokasjon, henvendelse, mail, tlf_nummer, "image":image.asset->url, "alt":image.alt, "crop":image.crop, "hotspot":image.hotspot, role, index, _id},
     "about":*[_type == "about"]{title, content, "image":image.asset->url, "alt":image.alt, _id},
     "visionLanding":*[_type == "visionLanding"]{title, content, "image":image.asset->url, "alt":image.alt, _id},
-  }`,
-    { cache: "no-cache" }
-  );
+  }`);
+  //{ cache: "no-cache" }
 }
