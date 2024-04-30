@@ -13,6 +13,7 @@ export const metadata = {
 
 export default async function Vision() {
   const data = await getData();
+  console.log(data);
 
   return (
     <>
@@ -41,18 +42,18 @@ export default async function Vision() {
           {/* <div className="block md:hidden">
             <ProjectScroll content={data.VisionSections}></ProjectScroll>
           </div> */}
-          {/* <div>
+          <div>
             <h1 className="text-2xl font-extrabold text-center md:text-4xl ">
               Hva partnere sier om oss
             </h1>
           </div>
           <EndorsementComp
-            key={data.endorsement[0]._id}
+            _id={data.endorsement[0]._id}
             image={data.endorsement[0].image}
             navn={data.endorsement[0].navn}
             firma={data.endorsement[0].firma}
             content={data.endorsement[0].content}
-          /> */}
+          />
           <ContactComp
             key={data.kontaktseksjon[0]._id}
             imageOne={data.kontaktseksjon[0].ImageOne}
