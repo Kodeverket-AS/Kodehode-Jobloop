@@ -1,31 +1,109 @@
+"use client";
+
 import Image from "next/image";
 import PortableText from "react-portable-text";
+import AliceCarousel from "react-alice-carousel";
+import "react-alice-carousel/lib/alice-carousel.css";
 
-export default function EndorsementComp({ image, _id, navn, firma, content }) {
-  return (
-    <>
+export default function EndorsementComp({ data }) {
+  const stuff = data.map((item, index) => {
+    return (
       <div
-        className="flex items-center justify-center w-5/6 mb-20 bg-kv-white shadow-lg lg:w-7/12 p-7 lg:p-20"
-        key={_id}
+        className="flex items-center justify-center w-5/6 mb-20 shadow-lg bg-kv-white lg:w-7/12 p-7 lg:p-20"
+        key={item._id + index}
       >
         <div className="flex flex-col items-center justify-center w-6/12 lg:flex-row gap-7 lg:w-full">
           <div className="w-full lg:w-5/6">
             <Image
               width={900}
               height={900}
-              className="object-cover w-full rounded-full lg:w-4/6"
-              src={image}
+              className="object-cover w-full lg:w-4/6"
+              src={item.image}
               alt=""
             />
           </div>
-
           <div className="flex flex-col w-full lg:w-5/6 gap-7">
-            <h2>{navn}</h2>
-            <h5 className="font-extrabold">{firma}</h5>
-            <PortableText className="italic" content={content}></PortableText>
+            <h2>{item.navn}</h2>
+            <h5 className="font-extrabold">{item.firma}</h5>
+            <PortableText className="italic" content={item.content} />
           </div>
         </div>
       </div>
-    </>
+    );
+  });
+
+  const responsiveSettings = {
+    1: { items: 1 },
+    768: { items: 1 },
+    1024: { items: 1 },
+    1280: { items: 1 },
+  };
+
+  return (
+    <div className="flex flex-col items-center justify-center py-16">
+      <div className="grid gap-7">
+        <div className="flex justify-center max-w-[1600px]">
+          <AliceCarousel
+            className="flex flex-col items-center justify-center h-fit"
+            items={stuff}
+            itemfit="contain"
+            responsive={responsiveSettings}
+          />
+        </div>
+      </div>
+    </div>
   );
 }
+
+// }
+// }
+// const data = data.content.map((item, index) => {
+//   return (
+//     <>
+//       {data.map((item, index) => (
+//         <div
+//           className="flex items-center justify-center w-5/6 mb-20 shadow-lg bg-kv-white lg:w-7/12 p-7 lg:p-20"
+//           key={item._id + index}
+//         >
+//           <div className="flex flex-col items-center justify-center w-6/12 lg:flex-row gap-7 lg:w-full">
+//             <div className="w-full lg:w-5/6">
+//               <Image
+//                 width={900}
+//                 height={900}
+//                 className="object-cover w-full lg:w-4/6"
+//                 src={item.image}
+//                 alt=""
+//               />
+//             </div>
+//             <div className="flex flex-col w-full lg:w-5/6 gap-7">
+//               <h2>{item.navn}</h2>
+//               <h5 className="font-extrabold">{item.firma}</h5>
+//               <PortableText className="italic" content={item.content}></PortableText>
+//             </div>
+//           </div>
+//         </div>
+//       ))}
+//     </>
+//   )}
+
+//       const responsiveSettings = {
+//     1: { items: 1 },
+//     768: { items: 1 },
+//     1024: { items: 1 },
+//     1280: { items: 1 },
+//   };
+
+//   return (
+//     <div className="flex flex-col items-center justify-center py-16">
+//       <div className="grid gap-7">
+//         <div className="flex justify-center w-[320px] xl:lg:max-w-[1100px] lg:w-[1024px] md:w-[768px]">
+//           <AliceCarousel
+//             className="flex flex-col items-center justify-center h-fit"
+//             items={data}
+//             itemfit="contain"
+//             responsive={responsiveSettings}
+//           />
+//         </div>
+//       </div>
+//     </div>
+//   );
