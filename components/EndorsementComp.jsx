@@ -1,70 +1,98 @@
 "use client";
 
 import Image from "next/image";
-import PortableText from "react-portable-text";
+import { PortableText } from "@portabletext/react";
 import AliceCarousel from "react-alice-carousel";
 import "react-alice-carousel/lib/alice-carousel.css";
 import { FiArrowLeft, FiArrowRight } from "react-icons/fi";
 
 export default function EndorsementComp({ data }) {
-  const cards = data.map((item, index) => {
-    return (
-      <div
-        className="flex flex-col items-center justify-around w-1/2 py-5 shadow-md lg:flex-row lg:w-full"
-        key={item._id + index}
-      >
-        <div className="w-full lg:w-1/2 h-2/3">
-          <Image
-            width={900}
-            height={900}
-            className=" object-contain w-full lg:w-4/6 lg:h-1/2 max-h-[250px] max-w-fit"
-            src={item.image}
-            alt={item.alt || ""}
-          />
-        </div>
-        <div className="flex flex-col w-full lg:w-5/6 gap-7">
-          <h2>{item.navn}</h2>
-          <h5 className="font-extrabold">{item.firma}</h5>
-          <PortableText className="max-w-full italic" content={item.content} />
-        </div>
-      </div>
-    );
-  });
-
-  const responsiveSettings = {
-    1: { items: 1 },
-    768: { items: 1 },
-    1024: { items: 1 },
-    1280: { items: 1 },
-  };
-
   return (
-    <div className="flex justify-center max-w-[1600px] gap-8 py-16">
-      <AliceCarousel
-        className="flex flex-col items-center justify-center" //flex flex-col items-center justify-center h-fit w-fit
-        items={cards}
-        itemfit="contain"
-        responsive={responsiveSettings}
-        disableDotsControls={false}
-        infinite
-        renderPrevButton={() => {
-          return (
-            <button className="hidden md:flex relative md:absolute xl:top-[36%] top-[85%] left-[27%] xl:left-[-7%] ">
-              <FiArrowLeft className="w-12 h-12 rounded-full border-2 border-kv-black hover:border-none active:border-none hover:bg-kv-black active:bg-kv-black  hover:text-kv-white p-1 active:scale-[0.95] transition hover:scale-[0.99]  active:opacity-70" />
-            </button>
-          );
-        }}
-        renderNextButton={() => {
-          return (
-            <button className="hidden md:flex relative md:absolute xl:top-[36%] top-[85%] right-[27%] xl:right-[-7%]">
-              <FiArrowRight className="w-12 h-12 rounded-full border-2 border-kv-black hover:border-none active:border-none hover:bg-kv-black active:bg-kv-black  hover:text-kv-white p-1 active:scale-[0.95] transition hover:scale-[0.99]  active:opacity-70" />
-            </button>
-          );
-        }}
-      />
+    <div className="grid grid-cols-1 gap-2 py-20 md:grid-cols-2">
+      {data.map((item, index) => (
+        <div
+          className="flex flex-col items-center justify-around w-1/2 p-8 shadow-md md:flex-row lg:flex-row lg:w-full"
+          key={item._id + index}
+        >
+          <div className="w-full lg:w-1/2 h-2/3">
+            <Image
+              width={900}
+              height={900}
+              className=" object-contain w-full pr-8 max-h-[250px] max-w-fit mx-0"
+              src={item.image}
+              alt={item.alt || ""}
+            />
+          </div>
+          <div className="flex flex-col w-full gap-2 lg:w-5/6">
+            <h2>{item.navn}</h2>
+            <h5 className="font-extrabold">{item.firma}</h5>
+            <PortableText className="max-w-full italic" value={item.content} />
+          </div>
+        </div>
+      ))}
     </div>
   );
 }
+
+// const cards = data.map((item, index) => {
+//     return (
+//       <div
+//         className="flex flex-col items-center justify-around w-screen p-8 shadow-md md:flex-row lg:flex-row lg:w-full"
+//         key={item._id + index}
+//       >
+//         <div className="w-full lg:w-1/2 h-2/3">
+//           <Image
+//             width={900}
+//             height={900}
+//             className=" object-contain w-full lg:w-4/6 lg:h-1/2 max-h-[250px] max-w-fit mx-0"
+//             src={item.image}
+//             alt={item.alt || ""}
+//           />
+//         </div>
+//         <div className="flex flex-col w-full gap-2 lg:w-5/6">
+//           <h2>{item.navn}</h2>
+//           <h5 className="font-extrabold">{item.firma}</h5>
+//           <PortableText className="max-w-full italic" value={item.content} />
+//         </div>
+//       </div>
+//     );
+//   });
+
+//   const responsiveSettings = {
+//     1: { items: 1 },
+//     768: { items: 1 },
+//     1024: { items: 1 },
+//     1280: { items: 1 },
+//   };
+
+//   return (
+//     <div className="flex justify-center w-full gap-1 py-16 md:gap-8">
+//       <AliceCarousel
+//         className="flex flex-col items-center justify-center" //flex flex-col items-center justify-center h-fit w-fit
+//         items={cards}
+//         itemsfit="fill"
+//         responsive={responsiveSettings}
+//         disableDotsControls={false}
+//         infinite
+//         autoPlay
+//         autoPlayInterval={1500}
+//         renderPrevButton={() => {
+//           return (
+//             <button className="hidden md:flex relative md:absolute xl:top-[36%] top-[85%] left-[27%] xl:left-[-7%] ">
+//               <FiArrowLeft className="w-12 h-12 rounded-full border-2 border-kv-black hover:border-none active:border-none hover:bg-kv-black active:bg-kv-black  hover:text-kv-white p-1 active:scale-[0.95] transition hover:scale-[0.99]  active:opacity-70" />
+//             </button>
+//           );
+//         }}
+//         renderNextButton={() => {
+//           return (
+//             <button className="hidden md:flex relative md:absolute xl:top-[36%] top-[85%] right-[27%] xl:right-[-7%]">
+//               <FiArrowRight className="w-12 h-12 rounded-full border-2 border-kv-black hover:border-none active:border-none hover:bg-kv-black active:bg-kv-black  hover:text-kv-white p-1 active:scale-[0.95] transition hover:scale-[0.99]  active:opacity-70" />
+//             </button>
+//           );
+//         }}
+//       />
+//     </div>
+//   );
 
 // }
 // }
