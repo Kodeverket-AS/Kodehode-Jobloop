@@ -46,7 +46,7 @@ export default async function Vision() {
               Hva partnere sier om oss
             </h1>
           </div>
-          <div className="flex justify-center">
+          <div className="flex justify-center h-fit">
             <EndorsementComp data={data.endorsement} />
           </div>
           <ContactComp
