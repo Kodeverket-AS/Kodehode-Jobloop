@@ -69,11 +69,6 @@ h6 {
   }
 }
 
-.alice-carousel__prev-btn-item,
-.alice-carousel__next-btn-item {
-  color: var(--jobloop-primary-grey);
-}
-
 .alice-carousel__wrapper {
   max-width: 75%;
   margin: auto;
