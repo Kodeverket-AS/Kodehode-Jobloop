@@ -23,7 +23,7 @@ export default function EndorsementComp({ data }) {
               alt={item.alt || ""}
             />
           </div>
-          <div className="flex flex-col w-full gap-2 lg:w-5/6">
+          <div className="flex flex-col w-full gap-2 portrait:pr-8 lg:w-5/6">
             <h2>{item.navn}</h2>
             <h5 className="font-extrabold">{item.firma}</h5>
             <PortableText className="max-w-full italic" value={item.content} />
