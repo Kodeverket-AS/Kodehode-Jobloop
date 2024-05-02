@@ -8,17 +8,17 @@ import { FiArrowLeft, FiArrowRight } from "react-icons/fi";
 
 export default function EndorsementComp({ data }) {
   return (
-    <div className="grid grid-cols-1 gap-2 px-8 py-20 md:grid-cols-2">
+    <div className="grid grid-cols-1 gap-2 px-8 py-20 portrait:grid-cols-1 md:grid-cols-2">
       {data.map((item, index) => (
         <div
-          className="flex flex-col items-center justify-around p-8 shadow-md max-w-screen md:w-1/2 md:flex-row lg:flex-row lg:w-full"
+          className="flex flex-col items-center justify-around w-screen p-8 shadow-md portrait:w-screen md:w-1/2 md:flex-row lg:flex-row lg:w-full"
           key={item._id + index}
         >
           <div className="w-full lg:w-1/2 h-2/3">
             <Image
               width={900}
               height={900}
-              className=" object-contain w-full pr-8 max-h-[250px] max-w-fit mx-0"
+              className=" object-contain w-full pr-8 h-[250px] max-w-fit mx-0"
               src={item.image}
               alt={item.alt || ""}
             />
