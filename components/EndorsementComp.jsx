@@ -2,9 +2,9 @@
 
 import Image from "next/image";
 import { PortableText } from "@portabletext/react";
-import AliceCarousel from "react-alice-carousel";
-import "react-alice-carousel/lib/alice-carousel.css";
-import { FiArrowLeft, FiArrowRight } from "react-icons/fi";
+// import AliceCarousel from "react-alice-carousel";
+// import "react-alice-carousel/lib/alice-carousel.css";
+// import { FiArrowLeft, FiArrowRight } from "react-icons/fi";
 
 export default function EndorsementComp({ data }) {
   return (
