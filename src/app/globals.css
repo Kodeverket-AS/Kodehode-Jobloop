@@ -1,3 +1,5 @@
+@import "node_modules/react-alice-carousel/lib/alice-carousel.css";
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -65,4 +67,9 @@ h6 {
   h3 {
     font-size: 1.1rem;
   }
+}
+
+.alice-carousel__wrapper {
+  max-width: 75%;
+  margin: auto;
 }
