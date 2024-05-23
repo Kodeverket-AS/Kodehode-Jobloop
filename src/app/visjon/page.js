@@ -41,12 +41,12 @@ export default async function Vision() {
           {/* <div className="block md:hidden">
             <ProjectScroll content={data.VisionSections}></ProjectScroll>
           </div> */}
-          <div>
+          <div className="mt-8 md:mt-16">
             <h1 className="text-2xl font-extrabold text-center md:text-4xl ">
               Hva partnere sier om oss
             </h1>
           </div>
-          <div className="flex justify-center h-fit max-w-[1600px] min-h-fit">
+          <div className="flex justify-center h-fit max-w-[1600px] min-h-fit mb-8 md:mb-16">
             <EndorsementComp data={data.endorsement} />
           </div>
           <ContactComp
