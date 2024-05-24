@@ -60,7 +60,7 @@ export function ExternalLinkButton({ Path, Text, ariaLabel, color }) {
       aria-label={ariaLabel}
       className={`px-8 py-2 transition-all ${
         color
-          ? `bg-kv-white text-jobloop-darker-green border-jobloop-darker-green hover:bg-jobloop-darker-green hover:text-kv-white focus:bg-jobloop-darker-green focus:text-kv-white`
+          ? `bg-kv-white text-${color} border-${color} hover:bg-${color} hover:text-kv-white focus:bg-${color} focus:text-kv-white`
           : "bg-kv-white text-kv-black border-kv-black hover:bg-jobloop-primary-orange hover:text-kv-white focus:text-kv-white focus:bg-jobloop-primary-orange"
       }  border-2  border-solid max-w-fit rounded-3xl hover:border-none`}
     >
