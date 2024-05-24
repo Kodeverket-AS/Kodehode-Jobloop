@@ -19,17 +19,18 @@ export default async function Vision() {
       <main className="flex flex-col items-center w-full min-h-screen">
         <VisionTop content={data.heroSub[3]} key={data.heroSub[3]._id} />
         <div className="flex flex-col items-center justify-center md:mt-0">
-          <div className="w-full bg-jobloop-secondary-orange">
-            <h2 className="p-20 text-2xl font-extrabold text-center text-kv-white pb-7 md:text-3xl">
+          <div className="w-full">
+            <h2 className="p-20 text-2xl font-extrabold text-center text-kv-black pb-7 md:text-3xl">
               Samarbeidsprosjekter
             </h2>
+            <hr className="w-1/3 h-2 bg-jobloop-secondary-orange ml-[33%] mt-2" />
           </div>
           <Vision2Part
             content={data.VisionSections[1]}
             link="https://glode.no/"
             linkText="Mer om Gløde"
             linkAria="Les mer om Gløde på deres nettside"
-            background="jobloop-secondary-orange"
+            color="jobloop-secondary-orange"
             imgSide="left"
           />
           <Vision2Part
@@ -37,6 +38,7 @@ export default async function Vision() {
             link="https://www.fontenehusetbergen.no/"
             linkText="Mer om Fontenehuset"
             linkAria="Les mer om Fontenehuset Bergen på deres nettside"
+            color="jobloop-secondary-orange"
           />
           {/* <div className="block md:hidden">
             <ProjectScroll content={data.VisionSections}></ProjectScroll>
@@ -45,6 +47,7 @@ export default async function Vision() {
             <h1 className="text-2xl font-extrabold text-center md:text-4xl ">
               Hva partnere sier om oss
             </h1>
+            <hr className="w-1/3 h-2 bg-jobloop-secondary-orange ml-[33%] mt-2" />
           </div>
           <div className="flex justify-center h-fit max-w-[1600px] min-h-fit">
             <EndorsementComp data={data.endorsement} />
