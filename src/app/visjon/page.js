@@ -32,6 +32,7 @@ export default async function Vision() {
             linkAria="Les mer om Gløde på deres nettside"
             color="jobloop-secondary-orange"
             imgSide="left"
+            btnColor="jobloop-darker-green"
           />
           <Vision2Part
             content={data.VisionSections[0]}
@@ -39,6 +40,7 @@ export default async function Vision() {
             linkText="Mer om Fontenehuset"
             linkAria="Les mer om Fontenehuset Bergen på deres nettside"
             color="jobloop-secondary-orange"
+            btnColor="jobloop-darker-green"
           />
           {/* <div className="block md:hidden">
             <ProjectScroll content={data.VisionSections}></ProjectScroll>

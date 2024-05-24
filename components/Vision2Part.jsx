@@ -2,7 +2,15 @@ import Image from "next/image";
 import { ExternalLinkButton } from "./Buttons";
 import { PortableText } from "@portabletext/react";
 
-export default function Vision2Part({ content, color, imgSide, link, linkText, linkAria }) {
+export default function Vision2Part({
+  content,
+  color,
+  imgSide,
+  link,
+  linkText,
+  linkAria,
+  btnColor,
+}) {
   return (
     <div key={content._id} className={`flex justify-center w-screen py-14 lg:p-20 text-kv-black`}>
       <div
@@ -32,7 +40,12 @@ export default function Vision2Part({ content, color, imgSide, link, linkText, l
           <hr className={`w-1/3 h-2 bg-${color} ml-[35%]`} />
           <PortableText value={content.content} />
           <div>
-            <ExternalLinkButton Path={link} Text={linkText} ariaLabel={linkAria} color={color} />
+            <ExternalLinkButton
+              Path={link}
+              Text={linkText}
+              ariaLabel={linkAria}
+              color={btnColor}
+            />
           </div>
         </div>
       </div>
