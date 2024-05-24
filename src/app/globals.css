@@ -21,6 +21,9 @@
   /* Tertiærfarger */
   --jobloop-tertiary-purple: #412f39;
   --jobloop-tertiary-green: #1e555c;
+  /* Mørkere versjoner */
+  --jobloop-darker-orange: #af4831;
+  --jobloop-darker-green: #01624e;
 }
 
 body {
