@@ -36,6 +36,11 @@ module.exports = {
             purple: "#412F39",
             green: "#1E555C",
           },
+          /* Mørkere farger fra Figma uu redesign */
+          darker: {
+            orange: "#AF4831",
+            green: "#01624E",
+          },
         },
       },
       keyframes: {
