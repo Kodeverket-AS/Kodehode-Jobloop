@@ -8,8 +8,9 @@ export default function VisionTop({ content }) {
     <>
       <div className="hidden md:block">
         <div className="md:flex flex-col px-10 max-w-[1600px] mt-32 mb-20">
-          <div className="justify-center md:flex max-w-[1600px] mb-14">
-            <h1 className="w-full text-center text-jobloop-primary-green">{content.title}</h1>
+          <div className="justify-center md:flex max-w-[1600px] mb-14 flex-col">
+            <h1 className="w-full text-center text-kv-black">{content.title}</h1>
+            <hr className="w-1/3 h-2 bg-jobloop-primary-green ml-[33%] mt-2" />
           </div>
           <div className="md:flex-row md:flex justify-around mx-auto max-w-[1600px]">
             <div>
