@@ -48,14 +48,14 @@ export default async function Vision() {
             <ProjectScroll content={data.VisionSections}></ProjectScroll>
           </div> */}
           <div className="w-full">
-            <div className="w-fit m-auto">
+            <div className="w-fit m-auto mt-8 md:mt-16">
               <h1 className="text-2xl font-extrabold text-center md:text-4xl ">
                 Hva partnere sier om oss
               </h1>
               <hr className="w-full h-2 mt-2 bg-jobloop-secondary-orange" />
             </div>
           </div>
-          <div className="flex justify-center h-fit max-w-[1600px] min-h-fit">
+          <div className="flex justify-center h-fit max-w-[1600px] min-h-fit mb-8 md:mb-16">
             <EndorsementComp data={data.endorsement} />
           </div>
           <ContactComp
