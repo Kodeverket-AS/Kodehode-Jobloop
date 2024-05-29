@@ -14,7 +14,7 @@ export default function EndorsementComp({ data }) {
           className="flex flex-col items-center justify-around w-screen p-8 shadow-cards  portrait:w-screen md:w-1/2 md:flex-row lg:flex-row lg:w-full"
           key={item._id + index}
         >
-          <div className="w-full lg:w-1/2 md:h-2/3 h-1/3">
+          <div className="w-full lg:w-1/2 md:h-2/3 h-fit mb-2">
             <Image
               width={900}
               height={900}
