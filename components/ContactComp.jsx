@@ -14,9 +14,9 @@ export default function ContactComp({ imageOne, title, content, _id, alt }) {
             </div>
           </div>
           <div className="flex flex-col justify-center w-full gap-10 text-kv-black md:w-4/6">
-            <div>
+            <div className="w-fit m-auto">
               <h2 className="">{title}</h2>
-              <hr className="w-2/3 h-2 bg-jobloop-secondary-orange ml-[5%] mt-2" />
+              <hr className="w-full h-2 bg-jobloop-secondary-orange mt-2" />
             </div>
             <PortableText value={content} />
             <div className="">
