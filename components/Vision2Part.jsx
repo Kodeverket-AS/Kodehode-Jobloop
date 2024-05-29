@@ -31,14 +31,16 @@ export default function Vision2Part({
         </div>
         <div className="flex flex-col w-full gap-10 ">
           <div className="w-full">
-            <Image
-              width={1000}
-              height={1000}
-              className="w-5/6 mx-auto md:w-3/6"
-              src={content.ImageOne}
-              alt={content.AltOne || ""}
-            />
-            <hr className={`w-1/3 h-2 bg-${color} ml-[33%]`} />
+            <div className="w-fit m-auto">
+              <Image
+                width={1000}
+                height={1000}
+                className="w-full mx-auto"
+                src={content.ImageOne}
+                alt={content.AltOne || ""}
+              />
+              <hr className={`w-full mt-2 h-2 bg-${color}`} />
+            </div>
           </div>
           <PortableText value={content.content} />
           <div>

@@ -19,11 +19,13 @@ export default async function Vision() {
       <main className="flex flex-col items-center w-full min-h-screen">
         <VisionTop content={data.heroSub[3]} key={data.heroSub[3]._id} />
         <div className="flex flex-col items-center justify-center md:mt-0">
-          <div className="w-fit">
-            <h2 className="p-20 text-2xl font-extrabold text-center text-kv-black pb-7 md:text-3xl">
-              Samarbeidsprosjekter
-            </h2>
-            <hr className="w-[62%] ml-[19%] h-2 bg-jobloop-secondary-orange" />
+          <div className="w-full">
+            <div className="w-fit m-auto">
+              <h2 className="text-2xl font-extrabold text-center text-kv-black md:text-3xl">
+                Samarbeidsprosjekter
+              </h2>
+              <hr className="w-full h-2 bg-jobloop-secondary-orange mt-2" />
+            </div>
           </div>
           <Vision2Part
             content={data.VisionSections[1]}
@@ -45,11 +47,13 @@ export default async function Vision() {
           {/* <div className="block md:hidden">
             <ProjectScroll content={data.VisionSections}></ProjectScroll>
           </div> */}
-          <div className="w-fit">
-            <h1 className="text-2xl font-extrabold text-center md:text-4xl ">
-              Hva partnere sier om oss
-            </h1>
-            <hr className="w-full h-2 mt-4 bg-jobloop-secondary-orange" />
+          <div className="w-full">
+            <div className="w-fit m-auto">
+              <h1 className="text-2xl font-extrabold text-center md:text-4xl ">
+                Hva partnere sier om oss
+              </h1>
+              <hr className="w-full h-2 mt-2 bg-jobloop-secondary-orange" />
+            </div>
           </div>
           <div className="flex justify-center h-fit max-w-[1600px] min-h-fit">
             <EndorsementComp data={data.endorsement} />
