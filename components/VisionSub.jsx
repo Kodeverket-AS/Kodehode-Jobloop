@@ -41,9 +41,10 @@ export default function VisionTop({ content }) {
           </div>
           {/* Text container */}
           <div className="flex flex-col w-full px-8 sm:px-10 sm:my-10 md:w-1/2 md:my-0 md:px-0">
-            <h1 className="py-10 text-start text-jobloop-primary-green md:pb-10 md:pt-0">
-              {content.title}
-            </h1>
+            <div className="justify-center md:flex max-w-[1600px] mb-14 flex-col">
+              <h1 className="py-10 text-start md:pb-10 md:pt-0">{content.title}</h1>
+              <hr className="w-4/5 h-2 bg-jobloop-primary-green ml-[5%] mt-2" />
+            </div>
             <PortableText value={content.content} />
           </div>
         </div>
