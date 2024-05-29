@@ -18,7 +18,6 @@ export default function ContactComp({ imageOne, title, content, _id, alt }) {
               <h2 className="">{title}</h2>
               <hr className="w-2/3 h-2 bg-jobloop-secondary-orange ml-[5%] mt-2" />
             </div>
-
             <PortableText value={content} />
             <div className="">
               <LinkButtonColour Path={"/kontakt"} Text={"Kontakt oss"} />
