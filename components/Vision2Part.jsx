@@ -19,7 +19,7 @@ export default function Vision2Part({
         }`}
       >
         <div className="hidden w-5/6 mt-20 lg:block">
-          <div className="w-fit">
+          <div>
             <Image
               width={1000}
               height={1000}
@@ -29,15 +29,17 @@ export default function Vision2Part({
             />
           </div>
         </div>
-        <div className="flex flex-col w-full gap-10">
-          <Image
-            width={1000}
-            height={1000}
-            className="w-5/6 mx-auto md:w-3/6"
-            src={content.ImageOne}
-            alt={content.AltOne || ""}
-          />
-          <hr className={`w-1/3 h-2 bg-${color} ml-[35%]`} />
+        <div className="flex flex-col w-full gap-10 ">
+          <div className="w-full">
+            <Image
+              width={1000}
+              height={1000}
+              className="w-5/6 mx-auto md:w-3/6"
+              src={content.ImageOne}
+              alt={content.AltOne || ""}
+            />
+            <hr className={`w-1/3 h-2 bg-${color} ml-[33%]`} />
+          </div>
           <PortableText value={content.content} />
           <div>
             <ExternalLinkButton
