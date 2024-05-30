@@ -26,7 +26,7 @@ export default function Results({ content }) {
           target="blank"
           rel="noopener noreferrer"
           aria-label="lenke til artikkelen"
-          className="underline text-jobloop-primary-green"
+          className="underline text-jobloop-primary-green max-w-fit"
         >
           Les mer på Kode24
         </a>
