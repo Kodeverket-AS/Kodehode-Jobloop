@@ -52,6 +52,9 @@ module.exports = {
         //fadeIn: "fadeIn 1s forwards",
         scroll: "scroll 35s linear infinite",
       },
+      boxShadow: {
+        cards: "0 -5px 10px 2px rgb(0 0 0 / 0.1), 0 5px 10px 2px rgb(0 0 0 / 0.1)",
+      },
     },
   },
 
