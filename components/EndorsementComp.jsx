@@ -8,13 +8,13 @@ import { PortableText } from "@portabletext/react";
 
 export default function EndorsementComp({ data }) {
   return (
-    <div className="grid grid-cols-1 gap-2 px-8 py-8 md:py-20 portrait:grid-cols-1 md:grid-cols-2">
+    <div className="grid flex-wrap grid-cols-1 gap-2 px-8 py-8 md:py-20 portrait:grid-cols-1 md:grid-cols-2 landscape:grid-cols-2">
       {data.map((item, index) => (
         <div
-          className="flex flex-col items-center justify-around w-screen p-8 shadow-cards  portrait:w-screen md:w-1/2 md:flex-row lg:flex-row lg:w-full"
+          className="flex flex-col items-start justify-start w-full p-8 shadow-cards md:flex-row lg:flex-row lg:w-full"
           key={item._id + index}
         >
-          <div className="w-full lg:w-1/2 md:h-2/3 h-1/3">
+          <div className="w-full mb-2 lg:w-1/2 h-fit">
             <Image
               width={900}
               height={900}
@@ -26,7 +26,9 @@ export default function EndorsementComp({ data }) {
           <div className="flex flex-col w-full gap-2 portrait:pr-8 lg:w-5/6">
             <h2>{item.navn}</h2>
             <h5 className="font-extrabold">{item.firma}</h5>
-            <PortableText className="max-w-full italic" value={item.content} />
+            <div className="italic">
+              <PortableText value={item.content} />
+            </div>
           </div>
         </div>
       ))}
