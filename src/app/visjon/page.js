@@ -19,32 +19,41 @@ export default async function Vision() {
       <main className="flex flex-col items-center w-full min-h-screen">
         <VisionTop content={data.heroSub[3]} key={data.heroSub[3]._id} />
         <div className="flex flex-col items-center justify-center md:mt-0">
-          <div className="w-full bg-jobloop-secondary-orange">
-            <h2 className="p-20 text-2xl font-extrabold text-center text-kv-white pb-7 md:text-3xl">
-              Samarbeidsprosjekter
-            </h2>
+          <div className="w-full">
+            <div className="w-fit m-auto">
+              <h2 className="text-2xl font-extrabold text-center text-kv-black md:text-3xl">
+                Samarbeidsprosjekter
+              </h2>
+              <hr className="w-full h-2 bg-jobloop-secondary-orange mt-2" />
+            </div>
           </div>
           <Vision2Part
             content={data.VisionSections[1]}
             link="https://glode.no/"
             linkText="Mer om Gløde"
             linkAria="Les mer om Gløde på deres nettside"
-            background="jobloop-secondary-orange"
+            color="jobloop-secondary-orange"
             imgSide="left"
+            btnColor="jobloop-darker-green"
           />
           <Vision2Part
             content={data.VisionSections[0]}
             link="https://www.fontenehusetbergen.no/"
             linkText="Mer om Fontenehuset"
             linkAria="Les mer om Fontenehuset Bergen på deres nettside"
+            color="jobloop-secondary-orange"
+            btnColor="jobloop-darker-green"
           />
           {/* <div className="block md:hidden">
             <ProjectScroll content={data.VisionSections}></ProjectScroll>
           </div> */}
-          <div className="mt-8 md:mt-16">
-            <h1 className="text-2xl font-extrabold text-center md:text-4xl ">
-              Hva partnere sier om oss
-            </h1>
+          <div className="w-full">
+            <div className="w-fit m-auto mt-8 md:mt-16">
+              <h1 className="text-2xl font-extrabold text-center md:text-4xl ">
+                Hva partnere sier om oss
+              </h1>
+              <hr className="w-full h-2 mt-2 bg-jobloop-secondary-orange" />
+            </div>
           </div>
           <div className="flex justify-center h-fit max-w-[1600px] min-h-fit mb-8 md:mb-16">
             <EndorsementComp data={data.endorsement} />
