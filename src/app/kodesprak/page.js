@@ -25,9 +25,11 @@ export default async function Techstack() {
       <main className="relative flex flex-col items-center min-h-screen px-4 pt-12 pb-8 md:p-24">
         <section className="flex flex-col gap-32 pb-16">
           <div className="flex flex-col gap-6 max-w-prose md:gap-8 ">
-            <h1 className="text-4xl text-jobloop-primay-orange md:text-5xl">
-              {data.heroSub[5].title}
-            </h1>
+            <div className="border-b-2 border-jobloop-primary-green max-w-[260px] md:max-w-[350px] ">
+              <h1 className="text-4xl text-black md:text-5xl">
+                {data.heroSub[5].title}
+              </h1>
+            </div>
             <div className="text-base md:text-xl">
               <PortableText value={data.heroSub[5].content} />
             </div>
