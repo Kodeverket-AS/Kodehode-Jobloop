@@ -8,26 +8,26 @@ import { LinkButton } from "../../components/Buttons";
 import imageUrlBuilder from "@sanity/image-url";
 
 export default async function Home() {
-  const data = await getData();
-  return (
-    <main className="flex flex-col items-center min-h-screen p-0">
-      <LandingHero content={data.heroSub[1]} />
-      <div className="flex flex-col items-center mt-[370px] md:mt-20">
-        <LandingLinks />
-        <LandingVisjon content={data.visionLanding[0]} />
-      </div>
-    </main>
-  );
+    const data = await getData();
+    return (
+        <main className='flex flex-col items-center min-h-screen p-0 '>
+            <LandingHero content={data.heroSub[1]} />
+            <div className='flex flex-col items-center mt-[370px] md:mt-20 '>
+                <LandingLinks />
+                <LandingVisjon content={data.visionLanding[0]} />
+            </div>
+        </main>
+    );
 }
 
 const builder = imageUrlBuilder(Client);
 
 export function urlFor(source) {
-  return builder.image(source);
+    return builder.image(source);
 }
 
 export async function getData() {
-  return Client.fetch(`{
+    return Client.fetch(`{
     "heroSub": *[_type == "heroSub"] | order(index) {title, "image":image.asset->url, "alt":image.alt, content, index, _id},
     "egsCoop": *[_type == "egsCoop"] | order(index) {title, content, "logo":logo.asset->url, "alt":logo.alt, index, _id},
     "origin": *[_type == "origin"]{title, mobileTitle, content1, content2, content3, _id},
@@ -53,5 +53,5 @@ export async function getData() {
     "about":*[_type == "about"]{title, content, "image":image.asset->url, "alt":image.alt, _id},
     "visionLanding":*[_type == "visionLanding"]{title, content, "image":image.asset->url, "alt":image.alt, _id},
   }`);
-  //{ cache: "no-cache" }
+    //{ cache: "no-cache" }
 }
