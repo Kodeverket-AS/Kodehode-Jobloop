@@ -32,9 +32,11 @@ export function ScrollToTopButton() {
       aria-label="Scroll til toppen"
       className={` z-50 p-4 fixed md:bottom-8 bottom-4 md:right-8 right-4 transition-all duration-200  bg-jobloop-primary-green text-kv-white rounded-full hover:scale-[0.90] border shadow ${
         isVisible ? "opacity-100 " : "opacity-0 cursor-default"
-      }`}
-    >
-      <FaArrowUp className="w-6 h-6 " strokeWidth={1.5} />
+      }`}>
+      <FaArrowUp
+        className="w-6 h-6 "
+        strokeWidth={1.5}
+      />
     </button>
   );
 }
@@ -44,8 +46,7 @@ export function LinkButton({ Path, Text }) {
     <Link
       href={Path}
       aria-label={`Lenke til underside ${Path}`}
-      className="px-8 py-2 transition-all border-2 border-solid bg-kv-white border-kv-black rounded-3xl hover:bg-jobloop-primary-orange hover:border-none hover:text-kv-white focus:bg-jobloop-primary-orange focus:text-kv-white"
-    >
+      className="px-8 py-2 text-lg transition-all text-jobloop-darker-green border-2 bg-kv-white border-jobloop-darker-green rounded-3xl hover:bg-jobloop-primary-orange hover:border-2 hover:border-jobloop-primary-orange hover:text-kv-black  focus:bg-jobloop-primary-orange focus:border-jobloop-primary-orange focus:text-kv-black">
       {Text}
     </Link>
   );
@@ -62,8 +63,7 @@ export function ExternalLinkButton({ Path, Text, ariaLabel, color }) {
         color
           ? `bg-kv-white text-${color} border-${color} hover:bg-${color} hover:text-kv-white focus:bg-${color} focus:text-kv-white`
           : "bg-kv-white text-kv-black border-kv-black hover:bg-jobloop-primary-orange hover:text-kv-white focus:text-kv-white focus:bg-jobloop-primary-orange"
-      }  border-2  border-solid max-w-fit rounded-3xl hover:border-none`}
-    >
+      }  border-2  border-solid max-w-fit rounded-3xl hover:border-none`}>
       {Text}
     </a>
   );
@@ -73,8 +73,7 @@ export function LinkButtonColour({ Path, Text }) {
   return (
     <Link
       href={Path}
-      className="px-6 py-2 transition-all border-2 md:px-8 text-jobloop-darker-orange border-jobloop-darker-orange rounded-3xl hover:bg-jobloop-darker-orange hover:border-none hover:text-kv-white focus:bg-jobloop-darker-orange focus:text-kv-white"
-    >
+      className="px-6 py-2 transition-all border-2 md:px-8 text-jobloop-darker-orange border-jobloop-darker-orange rounded-3xl hover:bg-jobloop-darker-orange hover:border-none hover:text-kv-white focus:bg-jobloop-darker-orange focus:text-kv-white">
       {Text}
     </Link>
   );
@@ -128,18 +127,15 @@ export function ToggleBtn({
                           isDelVisible
                             ? "md:border-jobloop-primary-orange border-[#fafafa]"
                             : " border-[#fafafa]"
-                        }`}
-            >
+                        }`}>
               <div
                 className={`flex items-center justify-center w-4 h-4 md:w-7 md:h-7  rounded-full ${
                   isDelVisible ? " bg-jobloop-primary-orange " : " bg-gray-200"
-                }`}
-              >
+                }`}>
                 <div
                   className={`w-2 h-2 rounded-full ${
                     isDelVisible ? " bg-kv-white " : " bg-transparent"
-                  }`}
-                >
+                  }`}>
                   {" "}
                 </div>
               </div>
@@ -155,18 +151,15 @@ export function ToggleBtn({
                           isBedVisible
                             ? "md:border-jobloop-primary-orange border-[#fafafa]"
                             : " border-[#fafafa]"
-                        }`}
-            >
+                        }`}>
               <div
                 className={` flex items-center justify-center w-4 h-4 md:w-7 md:h-7   rounded-full ${
                   isBedVisible ? " bg-jobloop-primary-orange " : " bg-gray-200"
-                }`}
-              >
+                }`}>
                 <div
                   className={`w-2 h-2 rounded-full ${
                     isBedVisible ? " bg-kv-white " : " bg-transparent"
-                  }`}
-                >
+                  }`}>
                   {" "}
                 </div>
               </div>
@@ -182,18 +175,15 @@ export function ToggleBtn({
                             isVirkVisible
                               ? "md:border-jobloop-primary-orange border-[#fafafa]"
                               : " border-[#fafafa]"
-                          }`}
-            >
+                          }`}>
               <div
                 className={` flex items-center justify-center w-4 h-4 md:w-7 md:h-7 rounded-full ${
                   isVirkVisible ? " bg-jobloop-primary-orange " : " bg-gray-200"
-                }`}
-              >
+                }`}>
                 <div
                   className={`w-2 h-2 rounded-full ${
                     isVirkVisible ? " bg-kv-white " : " bg-transparent"
-                  }`}
-                >
+                  }`}>
                   {" "}
                 </div>
               </div>
@@ -206,19 +196,31 @@ export function ToggleBtn({
       <div className="flex justify-center w-full">
         <div>
           {isDelVisible && (
-            <FaqDeltager id={idOne} contentQ={contentQuestOne} contentS={contentSvarOne} />
+            <FaqDeltager
+              id={idOne}
+              contentQ={contentQuestOne}
+              contentS={contentSvarOne}
+            />
           )}
         </div>
 
         <div>
           {isBedVisible && (
-            <FaqBedrift id={idTwo} contentQ={contentQuestTwo} contentS={contentSvarTwo} />
+            <FaqBedrift
+              id={idTwo}
+              contentQ={contentQuestTwo}
+              contentS={contentSvarTwo}
+            />
           )}
         </div>
 
         <div>
           {isVirkVisible && (
-            <FaqVirk id={idThree} contentQ={contentQuestThree} contentS={contentSvarThree} />
+            <FaqVirk
+              id={idThree}
+              contentQ={contentQuestThree}
+              contentS={contentSvarThree}
+            />
           )}
         </div>
       </div>

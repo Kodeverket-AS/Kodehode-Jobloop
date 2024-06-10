@@ -29,7 +29,7 @@ export default function HeroSub({ content, buttonText }) {
             {content.title}
           </h1>
         </div>
-        <div className="absolute z-50 p-8 bg-kv-white top-52 rounded-t-3xl 2xs:top-60 xs:top-[16.5rem] sm:top-[19rem] sm:p-10 bottom-0">
+        <div className="absolute z-50 p-8 text-jobloop-darker-green text-lg bg-kv-white top-52 rounded-t-3xl 2xs:top-60 xs:top-[16.5rem] sm:top-[19rem] sm:p-10 bottom-0">
           <PortableText value={content.content} />
         </div>
       </div>
@@ -42,10 +42,12 @@ export default function HeroSub({ content, buttonText }) {
       <div className="hidden md:flex-row md:flex lg:px-24 lg:pt-24 md:px-12 md:pt-10 max-w-[1600px]">
         <div className="w-1/2 flex flex-col gap-4">
           <div className="border-b-8 pb-2 border-jobloop-primary-green">
-            <h1 className="text-black">{content.title}</h1>
+            <h1 className="text-black tracking-tight">{content.title}</h1>
           </div>
           <div className="lg:pr-20">
-            <PortableText value={content.content} />
+            <div className="text-lg lg:text-xl text-jobloop-darker-green">
+              <PortableText value={content.content} />
+            </div>
 
             <div className="mt-10">
               <LinkButton

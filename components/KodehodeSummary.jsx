@@ -12,39 +12,53 @@ export default function KodehodeSummary({ content1, content2 }) {
   return (
     <div className="flex flex-col px-8 py-20 md:flex-row sm:px-10 md:px-12 lg:px-24 md:w-screen 2xl:max-w-[1600px]">
       <div className="flex-col w-full md:w-1/2 md:flex">
-        <h2 className="mx-auto md:ml-0 md:leading-10 lg:pb-5">{content1.title}</h2>
+        <div className="border-b-4 pb-2 border-jobloop-primary-green">
+          <h2 className="mx-auto tracking-tight md:ml-0 md:leading-10">
+            {content1.title}
+          </h2>
+        </div>
         <div className="pt-5 pb-10 md:pb-0 lg:pr-20">
-          <div className="pb-3 md:pb-5 md:w-5/6">
+          <div className="md:text-lg md:w-5/6">
             <PortableText value={content1.content1} />
-          </div>
-          <div className="py-3 md:py-5 md:w-5/6">
+            <br />
             <PortableText value={content1.content2} />
-          </div>
-          <div className="pt-3 md:pt-5 md:w-5/6">
+            <br />
             <PortableText value={content1.content3} />
           </div>
         </div>
       </div>
       <div className="w-full px-0 md:pl-6 md:w-1/2">
-        <div className="flex flex-row justify-center">
+        <div className="flex flex-row justify-start gap-2 pb-2">
           <button
             key={content2[1]._id}
             onClick={() => setActive(content2[1])}
-            className="px-5 py-1 mx-3 mb-3 border-2 rounded-full md:py-2 md:px-6 border-kv-black focus:bg-jobloop-primary-orange"
-          >
+            className={`${
+              active === content2[1] && active !== content2[0]
+                ? "px-4 py-1 bg-jobloop-primary-orange  rounded-full md:py-2 md:px-6 border-2 border-jobloop-primary-orange hover:border-2  focus:bg-jobloop-primary-orange focus:border-jobloop-primary-orange"
+                : "px-4 py-1 rounded-full md:py-2 md:px-6 border-2 hover:border-2 hover:border-jobloop-primary-orange  focus:bg-jobloop-primary-orange focus:border-white"
+            }`}>
             {content2[1].duration}
           </button>
           <button
             key={content2[0]._id}
             onClick={() => setActive(content2[0])}
-            className="px-2 mx-3 mb-3 border-2 rounded-full border-kv-black md:py-2 md:px-3 focus:bg-jobloop-primary-orange"
-          >
+            className={`${
+              active === content2[0]
+                ? "px-4 py-1 bg-jobloop-primary-orange  rounded-full md:py-2 md:px-6 border-2 border-jobloop-primary-orange hover:border-2  focus:bg-jobloop-primary-orange focus:border-jobloop-primary-orange"
+                : "px-4 py-1 rounded-full md:py-2 md:px-6 border-2 hover:border-2 hover:border-jobloop-primary-orange  focus:bg-jobloop-primary-orange focus:border-white"
+            }`}>
             {content2[0].duration}
           </button>
         </div>
-        <CourseCard key={active._id} content={active} />
+        <CourseCard
+          key={active._id}
+          content={active}
+        />
         <div className="flex justify-center mt-10 md:hidden">
-          <LinkButton Path={"/kontakt"} Text={"Kontakt oss"} />
+          <LinkButton
+            Path={"/kontakt"}
+            Text={"Kontakt oss"}
+          />
         </div>
       </div>
     </div>

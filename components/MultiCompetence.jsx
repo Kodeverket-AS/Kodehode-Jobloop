@@ -6,14 +6,14 @@ export default function MultiCompetence({ content1, content2 }) {
   return (
     <>
       <div className="px-8 pt-20 pb-10 md:w-screen sm:px-10 md:px-12 lg:px-24">
-        <h2 className="mx-auto pb-5 md:pb-10 md:w-[40rem] lg:w-[45rem] text-left">
-          {content1.title}
-        </h2>
-        <div className="mx-auto md:w-[40rem] lg:w-[45rem]">
+        <div className="border-b-4 border-jobloop-primary-orange mb-4 pb-2">
+          <h2 className="tracking-tight ">{content1.title}</h2>
+        </div>
+        <div className="text-base md:text-lg">
           <PortableText value={content1.content} />
         </div>
       </div>
-      <div className="flex flex-col w-full px-8 pt-0 pb-20 md:flex-row md:pt-10 md:pb-20 md:w-screen sm:px-10 md:px-12 md:justify-between lg:px-24 xl:px-0 lg:gap-16 xl:gap-32 xl:max-w-[1088px]">
+      <div className="">
         <DynamicCompetence content={content2} />
       </div>
     </>
