@@ -5,31 +5,31 @@ import Image from "next/image";
 
 export default function ImageGallery({ content }) {
   return (
-    <div className="flex px-8 py-20 sm:px-10 md:px-12 lg:px-24">
-      <div className="flex flex-col justify-between w-2/3 pr-2 md:pr-5">
-        <div className="md:pb-5 md:h-[275px] h-[125px] pb-2">
+    <div className="flex px-8 py-20 gap-2 md:px-12 lg:px-24 w-full">
+      <div className="flex flex-col gap-2 justify-between w-2/3 ">
+        <div className="h-1/2">
           <Image
             src={content[0].image1}
             width={500}
-            height={300}
+            height={500}
             className="object-cover w-full h-full rounded"
             alt={content[0].alt1 || ""}
           />
         </div>
-        <div className="md:pt-5 md:h-[275px] h-[125px] pt-2">
+        <div className="h-1/2">
           <Image
             src={content[0].image2}
             width={500}
-            height={300}
+            height={500}
             className="object-cover w-full h-full rounded"
             alt={content[0].alt2 || ""}
           />
         </div>
       </div>
-      <div className="md:pl-5 md:h-[550px] h-[250px] w-1/3 pl-2">
+      <div className="h-full w-1/3">
         <Image
           src={content[0].image3}
-          width={300}
+          width={500}
           height={500}
           className="object-cover w-full h-full rounded"
           alt={content[0].alt3 || ""}
