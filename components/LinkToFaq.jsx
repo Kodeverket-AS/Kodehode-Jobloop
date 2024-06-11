@@ -25,7 +25,7 @@ export default function LinkToFaq() {
           width={1000}
           height={1000}
           className="w-1/2 mr-0"
-          alt=""
+          alt="abstrakt illustrasjon"
         />
       </div>
     </div>
