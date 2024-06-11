@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function Offices({ content }) {
   return (
-    <div className="px-8 pt-20 pb-10 text-center md:w-screen md:px-12 lg:px-24">
+    <div className="px-8 pt-10 pb-10 text-center md:w-screen md:px-12 lg:px-24">
       <div className="border-b-4 border-jobloop-primary-green pb-2 mb-6">
         <h2 className="tracking-tight">Våre lokaler</h2>
       </div>
