@@ -41,7 +41,7 @@ export function LocationCheck({ content }) {
     <div className="flex flex-col justify-center gap-4 max-w-[1600px]">
       <div className="flex flex-col gap-2 pb-2">
         <div className="border-b-2 pb-1">
-          <b>Velg by :</b>
+          <b>Velg sted :</b>
         </div>
         {filterItems ? (
           <FormControl className="flex flex-row gap-8 ">
