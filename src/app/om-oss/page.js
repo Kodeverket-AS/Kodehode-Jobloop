@@ -28,23 +28,9 @@ export default async function About() {
           key={heroSubData._id}
         />
 
-        {/* <div className="flex flex-col items-center w-full mt-5">
-          <div className="w-full">
-            <Teachers
-              content={selectedTeachersData}
-              title="Vårt team"
-            />
-          </div>
-        </div> */}
         <div className="flex flex-col items-center ">
           <JobloopPodium content={data.about} />
         </div>
-        {/* <div className="w-full bg-jobloop-primary-green">
-        <Offices
-        content={data.OurLocals}
-         
-        />
-      </div> */}
       </main>
     </>
   );
