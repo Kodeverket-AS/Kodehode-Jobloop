@@ -59,11 +59,7 @@ export function ExternalLinkButton({ Path, Text, ariaLabel, color }) {
       target="_blank"
       rel="noopener noreferrer"
       aria-label={ariaLabel}
-      className={`px-8 py-2 transition-all ${
-        color
-          ? `bg-kv-white text-${color} border-${color} hover:bg-${color} hover:text-kv-white focus:bg-${color} focus:text-kv-white`
-          : "bg-kv-white text-kv-black border-kv-black hover:bg-jobloop-primary-orange hover:text-kv-white focus:text-kv-white focus:bg-jobloop-primary-orange"
-      }  border-2  border-solid max-w-fit rounded-3xl hover:border-none`}>
+      className="px-8 py-2 text-lg transition-all text-jobloop-darker-green border-2 bg-kv-white border-jobloop-darker-green rounded-3xl hover:bg-jobloop-primary-orange hover:border-2 hover:border-jobloop-primary-orange hover:text-kv-black  focus:bg-jobloop-primary-orange focus:border-jobloop-primary-orange focus:text-kv-black">
       {Text}
     </a>
   );
