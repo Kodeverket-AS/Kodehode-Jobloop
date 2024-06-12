@@ -51,8 +51,18 @@ export function LinkButton({ Path, Text }) {
     </Link>
   );
 }
+export function LinkButtonContained({ Path, Text }) {
+  return (
+    <Link
+      href={Path}
+      aria-label={`Lenke til underside ${Path}`}
+      className="px-8 py-2 text-lg transition-all text-kv-black  border-2 rounded-3xl bg-jobloop-primary-orange border-jobloop-primary-orange hover:bg-kv-white hover:border-jobloop-darker-green focus:bg-kv-white focus:border-jobloop-darker-green focus:text-jobloop-darker-green">
+      {Text}
+    </Link>
+  );
+}
 
-export function ExternalLinkButton({ Path, Text, ariaLabel, color }) {
+export function ExternalLinkButton({ Path, Text, ariaLabel }) {
   return (
     <a
       href={Path}

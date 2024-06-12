@@ -2,37 +2,45 @@
 
 import Image from "next/image";
 import { PortableText } from "@portabletext/react";
+import { LinkButton } from "./Buttons";
 
 export default function VisionTop({ content }) {
   return (
     <>
+      {/* Desktop */}
       <div className="hidden md:block">
-        <div className="md:flex flex-col px-10 max-w-[1600px] mt-32 mb-20">
-          <div className="justify-center md:flex wfull mb-14 flex-col">
-            <div className="w-fit m-auto">
-              <h1 className="w-full text-center text-kv-black">{content.title}</h1>
-              <hr className="w-full mt-2 h-2 bg-jobloop-primary-green" />
-            </div>
+        <div className="flex justify-between gap-12 px-12 max-w-[1600px] mt-32 mb-20">
+          <div>
+            <Image
+              src={content.image}
+              width={1080}
+              height={964}
+              className="mx-auto w-full my-auto rounded"
+              alt={content.alt || ""}
+            />
           </div>
-          <div className="md:flex-row md:flex justify-around mx-auto max-w-[1600px]">
-            <div>
-              <Image
-                src={content.image}
-                width={1080}
-                height={964}
-                className="mx-auto my-auto rounded w-[30rem]"
-                alt={content.alt || ""}
-              />
+          <div className="w-full">
+            <div className="w-full m-auto border-b-8 pb-4 mb-4 border-jobloop-primary-green">
+              <h1 className="text-kv-black">{content.title}</h1>
             </div>
-            <div className="w-1/2 pl-4">
-              <PortableText value={content.content} />
+            <div className="md:text-xl leading-relaxed tracking-wide">
+              <div className="text-jobloop-darker-green">
+                <PortableText value={content.content} />
+              </div>
+              <div className="flex justify-start mt-10">
+                <LinkButton
+                  Path="/kontakt"
+                  Text="Kontakt oss"
+                />
+              </div>
             </div>
           </div>
         </div>
       </div>
+      {/* Mobile */}
       <div className="block md:hidden">
-        <div className="flex flex-col items-center justify-start w-full py-20 md:px-12 lg:px-24 md:flex-row md:items-start md:justify-between md:w-screen 2xl:max-w-[1600px]">
-          <div className="flex w-screen h-auto p-0 mx-auto md:pr-5 md:mx-0 md:w-[20rem] md:h-[37rem] lg:w-[24rem] 2xl:w-[32rem]">
+        <div className="flex flex-col items-center justify-start w-full md:px-12 lg:px-24 md:flex-row md:items-start md:justify-between md:w-screen 2xl:max-w-[1600px]">
+          <div className="flex w-screen h-auto">
             <Image
               src={content.image}
               alt={content.alt || ""}
@@ -42,12 +50,19 @@ export default function VisionTop({ content }) {
             />
           </div>
           {/* Text container */}
-          <div className="flex flex-col w-full px-8 sm:px-10 sm:my-10 md:w-1/2 md:my-0 md:px-0">
-            <div className="w-fit m-auto my-4">
-              <h1 className="w-full text-center text-kv-black">{content.title}</h1>
-              <hr className="w-full h-2 bg-jobloop-primary-green mt-2" />
+          <div className="flex flex-col w-full px-8 py-8 mb-8 ">
+            <div className="w-full m-auto border-b-8 pb-4 mb-4 border-jobloop-primary-green">
+              <h1 className=" leading-tight text-kv-black">{content.title}</h1>
             </div>
-            <PortableText value={content.content} />
+            <div className="text-jobloop-darker-green">
+              <PortableText value={content.content} />
+            </div>
+            <div className="mt-10">
+              <LinkButton
+                Path="/kontakt"
+                Text="Kontakt oss"
+              />
+            </div>
           </div>
         </div>
       </div>
