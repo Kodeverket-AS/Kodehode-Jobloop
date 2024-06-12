@@ -9,6 +9,7 @@ import { PortableText } from "@portabletext/react";
 export default function LandingHero({ content }) {
   return (
     <>
+      {/* Mobile view */}
       <div className="absolute top-0 block w-full -z-10 md:hidden">
         <div className="w-full h-[18rem]">
           <div className=" absolute bg-gradient-to-b from-[rgba(34,34,34,0.82)] to-[rgba(34,34,34,0.33)] z-50 h-full w-full" />
@@ -26,7 +27,7 @@ export default function LandingHero({ content }) {
             Tilpasset opplæring og rekruttering til IT-bransjen
           </h2>
         </div>
-        <div className="absolute z-50 p-8 bg-kv-white top-60 rounded-t-3xl 2xs:top-60 xs:top-[16.5rem] sm:top-[19rem] sm:p-10">
+        <div className="absolute z-50 p-8 bg-kv-white top-60 rounded-t-3xl 2xs:top-60 xs:top-[16.5rem] sm:top-[19rem]">
           <p>
             Vi rekrutterer kandidater som av ulike grunner har havnet utenfor
             arbeidslivet og lærer dem opp til å bli frontend-utviklere. Gjennom
@@ -56,15 +57,20 @@ export default function LandingHero({ content }) {
           </p>
         </div>
       </div>
+
+      {/* Desktop view */}
       <div className="flex-col hidden w-screen gap-32 pt-32 pb-0 md:flex lg:pt-36 2xl:pt-72">
         <div className="flex justify-center w-screen px-12 lg:px-24 2xl:max-w-[1600px] 2xl:mx-auto">
           <div className="flex flex-row justify-center w-full">
             <div className="flex flex-col w-1/2 gap-10 mr-5">
-              <div>
+              <div className="text-lg text-jobloop-darker-green tracking-wide leading-relaxed border-t-4 border-jobloop-primary-green pt-4">
                 <PortableText value={content.content} />
               </div>
               <div>
-                <LinkButton Path={"/kontakt"} Text={"Kontakt oss"} />
+                <LinkButton
+                  Path={"/kontakt"}
+                  Text={"Kontakt oss"}
+                />
               </div>
             </div>
             <div className="w-1/2 ml-5">
