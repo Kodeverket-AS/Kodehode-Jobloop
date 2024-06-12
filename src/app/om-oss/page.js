@@ -22,30 +22,30 @@ export default async function About() {
   return (
     <>
       <main className="flex flex-col items-center min-h-screen p-0">
-      <OmOssTop 
-       content={heroSubData}
-       buttonText="Kontakt oss"
-       key={heroSubData._id}
-      />
-
-      <div className="flex flex-col items-center w-full mt-5">
-        <div className="w-full">
-        <Teachers
-        content={selectedTeachersData} 
-        title="Vårt team"
+        <OmOssTop
+          content={heroSubData}
+          buttonText="Kontakt oss"
+          key={heroSubData._id}
         />
+
+        {/* <div className="flex flex-col items-center w-full mt-5">
+          <div className="w-full">
+            <Teachers
+              content={selectedTeachersData}
+              title="Vårt team"
+            />
+          </div>
+        </div> */}
+        <div className="flex flex-col items-center ">
+          <JobloopPodium content={data.about} />
         </div>
-         </div>
-      <div className="flex flex-col items-center ">
-        <JobloopPodium content={data.about}/>
-        </div>
-      <div className="w-full bg-jobloop-primary-green">
+        {/* <div className="w-full bg-jobloop-primary-green">
         <Offices
         content={data.OurLocals}
          
         />
-      </div>
-</main>
+      </div> */}
+      </main>
     </>
   );
 }
