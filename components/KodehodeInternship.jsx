@@ -9,27 +9,46 @@ import { LinkButton } from "./Buttons";
 
 export default function KodehodeInternship({ content1, content2 }) {
   return (
-    <div className="flex flex-col px-8 pt-20 pb-0 md:pb-20 md:flex-row md:px-12 md:w-screen lg:px-24 2xl:max-w-[1600px]">
-      <div className="flex-col w-full md:w-1/2 md:flex">
-        <h2 className=" md:leading-10">{content1[0].title}</h2>
-        {/*<h2 className="block pb-5 md:hidden">{content1[0].mobileTitle}</h2>*/}
-        <div className=" md:w-5/6 lg:pr-20">
-          <div className="py-5">
+    <div className="w-full bg-neutral-100 ">
+      <div className="flex flex-col gap-8 mx-auto px-8 py-20 md:flex-row md:px-12 sm:px-10 lg:px-24 2xl:justify-center 2xl:max-w-[1600px]">
+        <div className="flex flex-col gap-4">
+          <h2>{content1[0].title}</h2>
+          <div className="text-lg ">
             <PortableText value={content1[0].content1} />
-          </div>
-          <div className="py-5">
+            <br />
             <PortableText value={content1[0].content2} />
-          </div>
-          <div className="py-5">
+            <br />
             <PortableText value={content1[0].content3} />
           </div>
+          <div>
+            <div className="hidden py-8 md:block">
+              <LinkButton
+                Path={"/kontakt"}
+                Text={"Kontakt oss"}
+              />
+            </div>
+            <em className="text-sm">
+              Mulighet til å søke etter kandidater kommer!
+            </em>
+          </div>
         </div>
-      </div>
-      <div className="w-full px-0 pt-5 md:pl-7 md:w-1/2 md:pt-0">
-        <InternshipCard key={content2[0]._id} content={content2[0]} />
-      </div>
-      <div className="block mx-auto mt-10 md:hidden">
-        <LinkButton Path={"/kontakt"} Text={"Søk etter kandidater"} />
+        <div className="w-full px-0 pt-5 md:pt-0">
+          <InternshipCard
+            key={content2[0]._id}
+            content={content2[0]}
+          />
+        </div>
+        <div className="block mx-auto pt-8 md:hidden">
+          <LinkButton
+            Path={"/kontakt"}
+            Text={"Kontakt oss"}
+          />
+        </div>
+        <div className="block py-2 mx-auto md:hidden">
+          <em className="text-sm text-center">
+            Mulighet til å søke etter kandidater kommer!
+          </em>
+        </div>
       </div>
     </div>
   );

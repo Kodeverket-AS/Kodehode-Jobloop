@@ -6,8 +6,8 @@ import Results from "../../../components/Results";
 import ImageGallery from "../../../components/ImageGallery";
 import LinkToFaq from "../../../components/LinkToFaq";
 import VideoComp1 from "../../../components/VideoComp1";
-import Teachers from "../../../components/Teachers";
-import Platforms from "../../../components/Platforms";
+// import Teachers from "../../../components/Teachers";
+// import Platforms from "../../../components/Platforms";
 import MultiCompetence from "../../../components/MultiCompetence";
 
 export const metadata = {
