@@ -30,7 +30,7 @@ export function ScrollToTopButton() {
     <button
       onClick={scrollToTop}
       aria-label="Scroll til toppen"
-      className={` z-50 p-4 fixed md:bottom-8 bottom-4 md:right-8 right-4 transition-all duration-200  bg-jobloop-primary-green text-kv-white rounded-full hover:scale-[0.90] border shadow ${
+      className={` z-50 p-4 fixed md:bottom-8 bottom-4 md:right-8 right-4 transition-all duration-200  bg-green-900 text-kv-white rounded-full hover:scale-[0.90] border border-kv-white shadow ${
         isVisible ? "opacity-100 " : "opacity-0 cursor-default"
       }`}>
       <FaArrowUp
@@ -45,8 +45,9 @@ export function LinkButton({ Path, Text }) {
   return (
     <Link
       href={Path}
+      title={`Gå til ${Path}`}
       aria-label={`Lenke til underside ${Path}`}
-      className="px-8 py-2 text-lg transition-all text-jobloop-darker-green border-2 bg-kv-white border-jobloop-darker-green rounded-3xl hover:bg-jobloop-primary-orange hover:border-2 hover:border-jobloop-primary-orange hover:text-kv-black  focus:bg-jobloop-primary-orange focus:border-jobloop-primary-orange focus:text-kv-black">
+      className="px-8 py-2 text-lg transition-all text-green-900 border-2 bg-kv-white border-green-900 rounded-3xl hover:bg-green-900 hover:border-2 hover:border-green-900 hover:text-kv-white focus:bg-green-900 focus:border-green-900 focus:text-kv-white">
       {Text}
     </Link>
   );
@@ -55,8 +56,9 @@ export function LinkButtonContained({ Path, Text }) {
   return (
     <Link
       href={Path}
+      title={`Gå til ${Path}`}
       aria-label={`Lenke til underside ${Path}`}
-      className="px-8 py-2 text-lg transition-all text-kv-black  border-2 rounded-3xl bg-jobloop-primary-orange border-jobloop-primary-orange hover:bg-kv-white hover:border-jobloop-darker-green focus:bg-kv-white focus:border-jobloop-darker-green focus:text-jobloop-darker-green">
+      className="px-8 py-2 text-lg transition-all text-kv-white  border-2 rounded-3xl bg-green-900 border-green-900 hover:bg-kv-white hover:border-green-900 focus:bg-kv-white focus:border-green-900 focus:text-green-900">
       {Text}
     </Link>
   );
@@ -66,10 +68,11 @@ export function ExternalLinkButton({ Path, Text, ariaLabel }) {
   return (
     <a
       href={Path}
+      title={`Gå til ${Path}`}
       target="_blank"
       rel="noopener noreferrer"
       aria-label={ariaLabel}
-      className="px-8 py-2 text-lg transition-all text-jobloop-darker-green border-2 bg-kv-white border-jobloop-darker-green rounded-3xl hover:bg-jobloop-primary-orange hover:border-2 hover:border-jobloop-primary-orange hover:text-kv-black  focus:bg-jobloop-primary-orange focus:border-jobloop-primary-orange focus:text-kv-black">
+      className="px-8 py-2 text-lg transition-all text-green-900 border-2 bg-kv-white border-green-900 rounded-3xl hover:bg-green-900 hover:border-2 hover:border-green-900 hover:text-kv-white focus:bg-green-900 focus:border-green-900 focus:text-kv-white">
       {Text}
     </a>
   );
@@ -79,7 +82,8 @@ export function LinkButtonColour({ Path, Text }) {
   return (
     <Link
       href={Path}
-      className="px-6 py-2 transition-all border-2 md:px-8 text-jobloop-darker-orange border-jobloop-darker-orange rounded-3xl hover:bg-jobloop-darker-orange hover:border-none hover:text-kv-white focus:bg-jobloop-darker-orange focus:text-kv-white">
+      title={`Gå til ${Path}`}
+      className="px-6 py-2 transition-all border-2 md:px-8 text-green-900 border-green-900 rounded-3xl hover:bg-green-900 hover:border-none hover:text-kv-white focus:bg-green-900 focus:text-kv-white">
       {Text}
     </Link>
   );

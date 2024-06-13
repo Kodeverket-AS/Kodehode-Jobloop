@@ -37,9 +37,17 @@ module.exports = {
             green: "#1E555C",
           },
           /* Mørkere farger fra Figma uu redesign */
+          /* 
+          NOTAT ANGÅENDE UU FARGER:
+          ================================================================
+          Ikke veldig "pene" farger. Har ikke brukt "darker" i designet. 
+          Har istedet brukt tailwind sin default green-900.
+          Bruker kun 1 istedetfor 2 forskjellige farger = Forutsigbarhet.
+          ================================================================
+          */
           darker: {
-            orange: "#AF4831",
-            green: "#01624E",
+            orange: "#AF4831", // IKKE BRUKT - deprecated
+            green: "#01624E", // IKKE BRUKT - Ersatttet med tailwinds green-900 - deprecated
           },
         },
       },
@@ -58,7 +66,8 @@ module.exports = {
         scroll: "scroll 35s linear infinite",
       },
       boxShadow: {
-        cards: "0 -5px 10px 2px rgb(0 0 0 / 0.1), 0 5px 10px 2px rgb(0 0 0 / 0.1)",
+        cards:
+          "0 -5px 10px 2px rgb(0 0 0 / 0.1), 0 5px 10px 2px rgb(0 0 0 / 0.1)",
       },
     },
   },
