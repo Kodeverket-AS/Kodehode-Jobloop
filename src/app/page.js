@@ -10,10 +10,13 @@ import imageUrlBuilder from "@sanity/image-url";
 export default async function Home() {
   const data = await getData();
   return (
-    <main className="flex flex-col items-center min-h-screen p-0">
+    <main className="flex flex-col items-center min-h-screen">
       <LandingHero content={data.heroSub[1]} />
       <div className="flex flex-col items-center mt-[370px] md:mt-20">
         <LandingLinks />
+        {/* <h1 className="text-4xl font-bold bg-slate-300 w-full">
+          Hvordan kan vi hjelpe deg?
+        </h1> */}
 
         <LandingVisjon content={data.visionLanding[0]} />
       </div>

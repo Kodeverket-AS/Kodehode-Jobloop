@@ -59,11 +59,11 @@ export default function LandingHero({ content }) {
       </div>
 
       {/* Desktop view */}
-      <div className="flex-col hidden w-screen gap-32 pt-32 pb-0 md:flex lg:pt-36 2xl:pt-72">
-        <div className="flex justify-center w-screen px-12 lg:px-24 2xl:max-w-[1600px] 2xl:mx-auto">
-          <div className="flex flex-row justify-center w-full">
-            <div className="flex flex-col w-1/2 gap-10 mr-5">
-              <div className="text-lg text-jobloop-darker-green tracking-wide leading-relaxed border-t-4 border-jobloop-primary-green pt-4">
+      <div className="flex-col hidden w-full gap-32 pt-32 pb-0 md:flex lg:pt-36 2xl:pt-72">
+        <div className="flex justify-center px-12">
+          <div className="flex flex-col-reverse lg:flex-row justify-center gap-4 lg:gap-12 w-full">
+            <div className="flex flex-col w-full lg:w-1/2 gap-10 mr-5">
+              <div className="text-lg lg:text-xl text-kv-black tracking-wide leading-relaxed pt-4">
                 <PortableText value={content.content} />
               </div>
               <div>
@@ -73,7 +73,7 @@ export default function LandingHero({ content }) {
                 />
               </div>
             </div>
-            <div className="w-1/2 ml-5">
+            <div className="w-full lg:w-1/2">
               <Image
                 width={800}
                 alt="kodemiljø"
