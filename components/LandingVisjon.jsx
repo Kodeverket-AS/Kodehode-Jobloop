@@ -7,7 +7,7 @@ import { PortableText } from "@portabletext/react";
 
 export default function LandingVisjon({ content }) {
   return (
-    <div className="flex flex-col justify-between gap-10 px-8 py-20 md:flex-row sm:px-10 md:px-12 lg:px-24 2xl:max-w-[1600px]">
+    <div className="flex flex-col justify-between gap-10 px-8 py-20 md:flex-row sm:px-10 md:px-12 ">
       <div className="w-full">
         <Image
           src={content.image}
@@ -19,7 +19,9 @@ export default function LandingVisjon({ content }) {
       </div>
       <div className="flex flex-col gap-4 w-full">
         <h2>{content.title}</h2>
-        <PortableText value={content.content} />
+        <div className="lg:text-xl">
+          <PortableText value={content.content} />
+        </div>
         <div className="pt-5">
           <LinkButton
             Path={"/visjon"}

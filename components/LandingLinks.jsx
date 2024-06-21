@@ -1,27 +1,27 @@
 "use client";
 
-import Link from "next/link";
+// import Link from "next/link";
 import Image from "next/image";
 import dokument from "../public/dokument.svg";
 import koffert from "../public/koffert.svg";
 import hatt from "../public/hatt.svg";
-import { LinkButton } from "./Buttons";
+// import { LinkButton } from "./Buttons";
 
 export default function LandingLinks() {
   return (
-    <div className="flex flex-col gap-8 w-full px-8 pb-12 pt-8">
+    <div className="flex flex-col justify-center gap-8 w-full px-8 pb-12 pt-8">
       <div className="flex justify-center w-full">
         <h2 className="text-center">Hvordan kan vi hjelpe deg?</h2>
       </div>
       <div className="flex flex-col md:flex-row gap-8">
         <a
           href="/arbeidsgiver"
-          className="flex p-6 shadow-md rounded-lg gap-8">
+          className="flex flex-row md:flex-col md:align-start lg:flex-row p-6 shadow-md rounded-lg gap-8">
           <Image
             src={koffert}
             width={500}
             height={500}
-            className="h-20 w-auto"
+            className="h-20 w-16"
             alt=""
           />
 
@@ -41,12 +41,12 @@ export default function LandingLinks() {
         </a>
         <a
           href="/deltaker"
-          className="flex p-6 shadow-md rounded-lg gap-8">
+          className="flex flex-row md:flex-col lg:flex-row p-6 shadow-md rounded-lg gap-8">
           <Image
             src={hatt}
             width={500}
             height={500}
-            className="h-20 w-auto"
+            className="h-20 w-16"
             alt=""
           />
           <div>
@@ -64,12 +64,12 @@ export default function LandingLinks() {
 
         <a
           href="/samarbeidspartner"
-          className="flex p-6 shadow-md rounded-lg gap-8">
+          className="flex flex-row md:flex-col lg:flex-row p-6 shadow-md rounded-lg gap-8">
           <Image
             src={dokument}
             width={500}
             height={500}
-            className="h-20 w-auto"
+            className="h-20 w-16"
             alt=""
           />
           <div>
