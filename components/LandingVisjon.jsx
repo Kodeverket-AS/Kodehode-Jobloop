@@ -18,7 +18,9 @@ export default function LandingVisjon({ content }) {
         />
       </div>
       <div className="flex flex-col gap-4 w-full">
-        <h2>{content.title}</h2>
+        <h2 className="underline underline-offset-8 decoration-jobloop-primary-green">
+          {content.title}
+        </h2>
         <div className="lg:text-xl">
           <PortableText value={content.content} />
         </div>
