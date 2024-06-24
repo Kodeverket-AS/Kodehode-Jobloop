@@ -8,7 +8,7 @@ const LinkCard = ({ href, src, alt, title, description }) => {
   return (
     <a
       href={href}
-      className="flex flex-row md:flex-col md:align-start lg:flex-row p-6 shadow-md rounded-lg gap-8">
+      className="flex flex-col p-4 gap-2 sm:flex-row w-full md:flex-col md:align-start lg:flex-row md:p-6 shadow-md rounded-lg md:gap-8 hover:shadow-lg">
       <Image
         src={src}
         width={500}
@@ -19,7 +19,7 @@ const LinkCard = ({ href, src, alt, title, description }) => {
 
       <div>
         <div className="w-full ">
-          <h2 className="text-xl font-bold">{title}</h2>
+          <h2 className="text-xl font-bold hover:underline">{title}</h2>
           <p className="text-lg">{description}</p>
           <div className="hover:underline text-blue-500">Les mer</div>
         </div>
@@ -30,7 +30,7 @@ const LinkCard = ({ href, src, alt, title, description }) => {
 
 export default function LandingLinks() {
   return (
-    <div className="flex flex-col justify-center gap-8 w-full px-8 pb-12 pt-8">
+    <div className="flex flex-col justify-center gap-8 w-full px-8 pt-8">
       <h2 className="text-center underline underline-offset-8 decoration-jobloop-primary-green">
         Hvordan kan vi hjelpe deg?
       </h2>

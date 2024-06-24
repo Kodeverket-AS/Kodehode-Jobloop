@@ -3,71 +3,52 @@
 import Link from "next/link";
 import Image from "next/image";
 import danialigdery from "../public/danialigdery.jpg";
-import { LinkButton } from "./Buttons";
+import { LinkButton, LinkButtonContained } from "./Buttons";
 import { PortableText } from "@portabletext/react";
 
 export default function LandingHero({ content }) {
   return (
     <>
-      {/* Mobile view */}
-      <div className="absolute top-0 block w-full -z-10 md:hidden">
-        <div className="w-full h-[18rem]">
-          <div className=" absolute bg-gradient-to-b from-[rgba(34,34,34,0.82)] to-[rgba(34,34,34,0.33)] z-50 h-full w-full" />
-          <Image
-            src={content.image}
-            width={500}
-            height={500}
-            className="object-cover w-full h-full"
-            alt={content.alt}
-          />
-        </div>
-        <div className="absolute left-0 right-0 z-50 text-kv-white top-24 2xs:top-28">
-          <h1 className="text-3xl text-center">{content.title}</h1>
-          <h2 className="px-8 text-center">
-            Tilpasset opplæring og rekruttering til IT-bransjen
-          </h2>
-        </div>
-        <div className="absolute z-50 p-8 bg-kv-white top-60 rounded-t-3xl 2xs:top-60 xs:top-[16.5rem] sm:top-[19rem]">
-          <p>
-            Vi rekrutterer kandidater som av ulike grunner har havnet utenfor
-            arbeidslivet og lærer dem opp til å bli frontend-utviklere. Gjennom
-            en kombinasjon av teoretisk opplæring og praksis vil kandidatene
-            lære seg de viktigste teknologiene og bli klar for en karriere innen
-            utvikling.
-          </p>
+      <div className="relative h-[80vh] w-screen">
+        <Image
+          src={content.image}
+          height={500}
+          width={2000}
+          alt="Scenic landscape"
+          className="absolute inset-0 h-full w-full object-cover"
+        />
+        <div className="absolute inset-0 flex flex-col items-center justify-center bg-black/50 p-6 text-center text-white">
+          <div className="space-y-4">
+            <h1 className="text-6xl text-kv-white md:text-7xl lg:text-9xl">
+              {content.title}
+            </h1>
+            <p className=" text-kv-white lg:text-3xl">
+              Tilpasset opplæring og rekruttering til <br /> IT-bransjen
+            </p>
+          </div>
         </div>
       </div>
-      <div className="hidden md:block">
-        <div className="absolute top-0 left-0 flex justify-center w-full h-[26rem] -z-50 lg:h-[34rem] 2xl:h-[50rem]">
-          <div className="absolute bg-gradient-to-b from-[rgba(34,34,34,0.82)] to-[rgba(34,34,34,0.33)] z-50 h-full w-full" />
-          <Image
-            height={500}
-            width={2000}
-            alt={content.alt || "lærer som forklarer"}
-            src={content.image}
-            className="object-cover w-full h-full"
-          />
-        </div>
-        <div className="flex flex-col items-center px-24 py-24 text-center 2xl:py-44 text-kv-white">
-          <h1 className="text-6xl text-kv-white lg:text-9xl">
-            {content.title}
-          </h1>
-          <p className="text-3xl text-kv-white lg:text-5xl">
-            Tilpasset opplæring og rekruttering til IT-bransjen
-          </p>
-        </div>
-      </div>
-
-      {/* Desktop view */}
-      <div className="flex-col hidden w-full gap-32 pt-32 pb-0 md:flex lg:pt-36 2xl:pt-72">
-        <div className="flex justify-center px-12">
-          <div className="flex flex-col-reverse lg:flex-row justify-center gap-4 lg:gap-12 w-full">
-            <div className="flex flex-col w-full lg:w-1/2 gap-10 mr-5">
-              <div className="text-lg lg:text-xl text-kv-black tracking-wide leading-relaxed pt-4">
-                <PortableText value={content.content} />
+      <div className="bg-kv-white bg-opacity-90 rounded-md backdrop-blur-md pt-4 px-4 pb-8 md:pb-0 flex flex-col justify-between w-full gap-32 md:flex-row">
+        <div className="flex justify-center px-4">
+          <div className="flex flex-col-reverse lg:flex-row gap-4 lg:gap-12 w-full">
+            <div className="flex flex-col w-full md:w-1/2 gap-10">
+              {/* <div className="text-lg lg:text-xl text-kv-black tracking-wide leading-relaxed pt-4">
+                 <PortableText value={content.content} /> 
+              </div> */}
+              <div className="flex flex-col gap-4">
+                <h2 className="underline decoration-4 underline-offset-8 decoration-jobloop-primary-green">
+                  Hva gjør vi?
+                </h2>
+                <p className="text-lg md:text-3xl text-neutral-500">
+                  Vi rekrutterer kandidater som av ulike grunner har havnet
+                  utenfor arbeidslivet og lærer dem opp til å bli
+                  frontend-utviklere. Gjennom en kombinasjon av teoretisk
+                  opplæring og praksis vil kandidatene lære seg de viktigste
+                  teknologiene og bli klar for en karriere innen utvikling.
+                </p>
               </div>
               <div>
-                <LinkButton
+                <LinkButtonContained
                   Path={"/kontakt"}
                   Text={"Kontakt oss"}
                 />

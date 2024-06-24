@@ -58,7 +58,7 @@ export function LinkButtonContained({ Path, Text }) {
       href={Path}
       title={`Gå til ${Path}`}
       aria-label={`Lenke til underside ${Path}`}
-      className="px-8 py-4 text-lg transition-all text-kv-white  border-2 rounded-full bg-neutral-900 border-neutral-900 hover:bg-kv-white hover:border-neutral-900 focus:bg-kv-white focus:border-neutral-900 focus:text-neutral-900">
+      className="px-8 py-4 text-xl transition-all text-kv-white border-2 rounded-full bg-neutral-900 border-neutral-900 hover:bg-kv-white hover:border-neutral-900 hover:text-neutral-900 focus:bg-kv-white focus:border-neutral-900 focus:text-neutral-900">
       {Text}
     </Link>
   );
