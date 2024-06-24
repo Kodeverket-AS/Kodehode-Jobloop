@@ -32,7 +32,7 @@ export default function RootLayout({ children }) {
     <html
       lang="no-nb"
       className={roboto.className}>
-      <body>
+      <body className="overflow-x-hidden">
         <Navigation />
         <div className="max-w-screen-2xl mx-auto">{children}</div>
         <ScrollToTopButton />

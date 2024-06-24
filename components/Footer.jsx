@@ -30,12 +30,12 @@ const contactInformation = [
 export default function Footer() {
   return (
     <footer className="py-8 text-kv-white bg-neutral-600">
-      <div className="flex flex-col px-4 py-8 md:flex-row justify-around gap-4 md:mx-auto">
+      <div className="flex flex-col px-4 py-8 md:flex-row justify-around gap-8 md:mx-auto">
         <div className="flex flex-col justify-center gap-8">
           <h3>Kontakt</h3>
           {contactInformation.map((person) => (
             <div
-              className="flex flex-col gap-2 pb-4 justify-center border-b-2 border-kv-white border-opacity-40"
+              className="flex flex-col gap-2 pb-4 justify-center md:border-b-2 md:border-kv-white"
               key={person.name}>
               <b>{person.name}</b>
               <a
@@ -51,9 +51,9 @@ export default function Footer() {
             </div>
           ))}
         </div>
-        <div className="items-left gap-8 md:flex md:flex-col md:items-center">
+        <div className="items-left gap-8 flex flex-col md:items-center">
           <h3>Linker</h3>
-          <div className="w-32">
+          <div className="w-28">
             <a
               href="https://jobloop.no/"
               target="_blank"
@@ -67,7 +67,7 @@ export default function Footer() {
               />
             </a>
           </div>
-          <div className="w-32">
+          <div className="w-28">
             <a
               href="https://www.kodeverketbergen.no/"
               target="_blank"
