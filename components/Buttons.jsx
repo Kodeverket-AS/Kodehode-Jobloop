@@ -47,7 +47,7 @@ export function LinkButton({ Path, Text }) {
       href={Path}
       title={`Gå til ${Path}`}
       aria-label={`Lenke til underside ${Path}`}
-      className="px-8 py-4 text-lg transition-all text-neutral-900 border-2 bg-kv-white border-neutral-900 rounded-full hover:bg-neutral-900 hover:border-2 hover:border-neutral-900 hover:text-kv-white focus:bg-neutral-900 focus:border-neutral-900 focus:text-kv-white">
+      className="px-8 py-4 text-lg md:text-xl transition-all text-neutral-900 border-2 bg-kv-white border-neutral-900 rounded-full hover:bg-neutral-900 hover:border-2 hover:border-neutral-900 hover:text-kv-white focus:bg-neutral-900 focus:border-neutral-900 focus:text-kv-white">
       {Text}
     </Link>
   );
@@ -58,7 +58,7 @@ export function LinkButtonContained({ Path, Text }) {
       href={Path}
       title={`Gå til ${Path}`}
       aria-label={`Lenke til underside ${Path}`}
-      className="px-8 py-4 text-xl transition-all text-kv-white border-2 rounded-full bg-neutral-900 border-neutral-900 hover:bg-kv-white hover:border-neutral-900 hover:text-neutral-900 focus:bg-kv-white focus:border-neutral-900 focus:text-neutral-900">
+      className="px-8 py-4 text-lg md:text-xl text-kv-white border-2 rounded-full bg-neutral-900 border-neutral-900 hover:bg-kv-white hover:border-neutral-900 hover:text-neutral-900 focus:bg-kv-white focus:border-neutral-900 focus:text-neutral-900">
       {Text}
     </Link>
   );
@@ -72,7 +72,7 @@ export function ExternalLinkButton({ Path, Text, ariaLabel }) {
       target="_blank"
       rel="noopener noreferrer"
       aria-label={ariaLabel}
-      className="px-8 py-2 text-lg transition-all text-neutral-900 border-2 bg-kv-white border-neutral-900 rounded-full hover:bg-neutral-900 hover:border-2 hover:border-neutral-900 hover:text-kv-white focus:bg-neutral-900 focus:border-neutral-900 focus:text-kv-white">
+      className="px-8 py-2 text-lg w-full md:w-auto text-neutral-900 border-2 bg-kv-white border-neutral-900 rounded-full hover:bg-neutral-900 hover:border-2 hover:border-neutral-900 hover:text-kv-white focus:bg-neutral-900 focus:border-neutral-900 focus:text-kv-white">
       {Text}
     </a>
   );
@@ -83,7 +83,7 @@ export function LinkButtonColour({ Path, Text }) {
     <Link
       href={Path}
       title={`Gå til ${Path}`}
-      className="px-6 py-2 transition-all border-2 md:px-8 text-neutral-900 border-neutral-900 rounded-full hover:bg-neutral-900 hover:border-none hover:text-kv-white focus:bg-neutral-900 focus:text-kv-white">
+      className="px-8 py-4 border-2 md:px-8 text-neutral-900 border-neutral-900 rounded-full hover:bg-neutral-900 hover:border-none hover:text-kv-white focus:bg-neutral-900 focus:text-kv-white">
       {Text}
     </Link>
   );
