@@ -32,7 +32,7 @@ const PagesArray = [
 
 export default function Navbar() {
   return (
-    <nav className="w-full">
+    <nav className="max-w-screen-2xl mx-auto">
       <div className="flex items-center justify-between">
         <div className="p-4">
           <Link
@@ -70,7 +70,7 @@ export default function Navbar() {
 
 export function NavbarAlt({ textWhite }) {
   return (
-    <nav className="w-full">
+    <nav className="max-w-screen-2xl mx-auto">
       <div className="flex items-center justify-between 3xl:justify-around">
         <div className="flex flex-row items-end p-4">
           <Link
