@@ -27,49 +27,13 @@ export default function Navigation() {
   } else if (pathname === kontakt) {
     navbar = <NavbarAlt />;
   } else if (pathname === samarbeidspartner) {
-    navbar = (
-      <>
-        <div className="block md:hidden">
-          <Navbar />
-        </div>
-        <div className="hidden md:block">
-          <NavbarAlt subpage="Samarbeidspartner" />
-        </div>
-      </>
-    );
+    navbar = <NavbarAlt subpage="Samarbeidspartner" />;
   } else if (pathname === arbeidsgiver) {
-    navbar = (
-      <>
-        <div className="block md:hidden">
-          <Navbar />
-        </div>
-        <div className="hidden md:block">
-          <NavbarAlt subpage="Arbeidsgiver" />
-        </div>
-      </>
-    );
+    navbar = <NavbarAlt subpage="Arbeidsgiver" />;
   } else if (pathname === deltaker) {
-    navbar = (
-      <>
-        <div className="block md:hidden">
-          <Navbar />
-        </div>
-        <div className="hidden md:block">
-          <NavbarAlt subpage="Deltaker" />
-        </div>
-      </>
-    );
+    navbar = <NavbarAlt subpage="Deltaker" />;
   } else if (pathname === visjon) {
-    navbar = (
-      <>
-        {/* <div className="block md:hidden">
-          <Navbar />
-        </div> */}
-        <div>
-          <NavbarAlt />
-        </div>
-      </>
-    );
+    navbar = <NavbarAlt />;
   } else if (pathname === faq) {
     navbar = <NavbarAlt />;
   } else {
