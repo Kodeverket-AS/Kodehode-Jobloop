@@ -3,70 +3,34 @@
 import Link from "next/link";
 import Image from "next/image";
 import { PortableText } from "@portabletext/react";
-import { LinkButton } from "./Buttons";
+import { LinkButtonContained } from "./Buttons";
 
 export default function HeroSub({ content, buttonText }) {
   return (
-    <>
-      {/* 
-      ==========================
-      ****** Mobile view ******
-      ==========================
-      */}
-      <div className="absolute top-0 block w-full -z-10 md:hidden">
+    <section className="w-screen py-12">
+      <div className="flex flex-col-reverse md:flex-row justify-center gap-8 max-w-screen-2xl mx-auto px-4">
         <div className="w-full">
-          <div className="absolute bg-gradient-to-b from-[rgba(34,34,34,0.82)] to-[rgba(34,34,34,0.33)] z-50 h-full w-full" />
-          <Image
-            src={content.image}
-            width={500}
-            height={500}
-            alt={content.alt || ""}
-            className="w-full"
-          />
-        </div>
-        <div className="absolute left-0 right-0 mx-auto w-72 top-24 2xs:top-28 sm:w-[34rem]">
-          <h1 className="absolute z-50 text-center text-kv-white leading-tight">
+          <h2 className="text-lg xl:text-3xl underline underline-offset-8 pb-4 decoration-jobloop-primary-green">
             {content.title}
-          </h1>
-        </div>
-        <div className="absolute z-50 p-8 text-jobloop-darker-green text-lg bg-kv-white top-52 rounded-t-3xl 2xs:top-60 xs:top-[16.5rem] sm:top-[19rem] sm:p-10 bottom-0">
-          <PortableText value={content.content} />
-        </div>
-      </div>
-
-      {/* 
-      ==========================
-      ****** Desktop view ******
-      ==========================
-      */}
-      <div className="hidden md:flex-row md:flex lg:px-24 lg:pt-24 md:px-12 md:pt-10 max-w-[1600px]">
-        <div className="w-1/2 flex flex-col gap-4">
-          <div className="border-b-8 pb-2 border-jobloop-primary-green">
-            <h1 className="text-black tracking-tight">{content.title}</h1>
+          </h2>
+          <div className="pb-12 leading-normal text-xl lg:text-2xl lg:leading-normal">
+            <PortableText value={content.content} />
           </div>
-          <div className="lg:pr-20">
-            <div className="text-lg lg:text-xl text-jobloop-darker-green">
-              <PortableText value={content.content} />
-            </div>
-
-            <div className="mt-10">
-              <LinkButton
-                Path="/kontakt"
-                Text={buttonText}
-              />
-            </div>
-          </div>
+          <LinkButtonContained
+            Path={"/kontakt"}
+            Text={buttonText}
+          />
         </div>
-        <div className="w-1/2 pt-6 pl-0 md:pl-6">
+        <div className="w-full">
           <Image
             src={content.image}
             width={500}
             height={500}
-            className="mx-auto my-auto rounded w-[32rem]"
             alt={content.alt || ""}
+            className="rounded w-full"
           />
         </div>
       </div>
-    </>
+    </section>
   );
 }

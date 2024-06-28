@@ -1,12 +1,9 @@
 "use client";
 
-import Link from "next/link";
-import Image from "next/image";
-
 export default function CourseCard({ content }) {
   return (
     <div className="flex flex-col rounded-md px-5 py-3 shadow-md md:py-5 bg-kv-white">
-      <h3 className="tracking-tight">{content.title}</h3>
+      <h3>{content.title}</h3>
       <p className="pb-3 border-b-4 border-jobloop-primary-orange md:pt-5">
         {content.subheader}
       </p>

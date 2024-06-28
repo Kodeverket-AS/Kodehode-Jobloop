@@ -17,7 +17,7 @@ export default async function Oppdragsgiver() {
   const data = await getData();
   //console.log(data.courseTypes);
   return (
-    <main className="flex flex-col items-center min-h-screen p-0">
+    <main className="flex flex-col items-center min-h-screen pt-20">
       <HeroSub
         content={data.heroSub[4]}
         buttonText={"Kontakt oss"}
