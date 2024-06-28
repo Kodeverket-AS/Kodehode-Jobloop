@@ -2,32 +2,30 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { LinkButton } from "./Buttons";
-import Fargefigur from "../public/Fargefigur.svg";
+import { LinkButtonContained } from "./Buttons";
 
 export default function LinkToFaq() {
   return (
-    <div className="w-full pt-10 md:pt-20">
-      <div className="flex flex-col items-center">
-        <div className="border-b-4 border-jobloop-primary-green pb-4 mb-8">
-          <h1 className="tracking-tight">Har du flere spørsmål?</h1>
-        </div>
-        <div className="z-0">
-          <LinkButton
-            path="/FAQ"
-            text="Gå til FAQ"
-          />
+    <section className="w-screen py-12">
+      <div className="w-full pb-28">
+        <div className="flex flex-col gap-12 max-w-lg m-auto rounded-md bg-jobloop-primary-green/10 p-12">
+          <div>
+            <h2 className="text-center underline underline-offset-8 decoration-jobloop-primary-green">
+              Har du flere spørsmål?
+            </h2>
+            <p className="text-center">
+              Vi har samlet de mest stilte spørsmålene i FAQ-seksjonen.
+            </p>
+          </div>
+
+          <div className="m-auto">
+            <LinkButtonContained
+              path="/FAQ"
+              text="Gå til FAQ"
+            />
+          </div>
         </div>
       </div>
-      <div className="flex justify-end w-full md:mt-[-130px] mt-[-70px] sm:mt-[-100px] 2xl:mt-[-233px]">
-        <Image
-          src={Fargefigur}
-          width={1000}
-          height={1000}
-          className="w-1/2 mr-0"
-          alt="abstrakt illustrasjon"
-        />
-      </div>
-    </div>
+    </section>
   );
 }
