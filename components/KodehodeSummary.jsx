@@ -23,8 +23,8 @@ export default function KodehodeSummary({ content1, content2 }) {
             <PortableText value={content1.content3} />
           </div>
           {/* <LinkButton
-            Path={"/kontakt"}
-            Text={"Kontakt oss"}
+            path={"/kontakt"}
+            text={"Kontakt oss"}
           /> */}
         </div>
         <div className="w-full">

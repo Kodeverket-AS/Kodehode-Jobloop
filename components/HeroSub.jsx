@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import Image from "next/image";
 import { PortableText } from "@portabletext/react";
 import { LinkButtonContained } from "./Buttons";
@@ -17,8 +16,8 @@ export default function HeroSub({ content, buttonText }) {
             <PortableText value={content.content} />
           </div>
           <LinkButtonContained
-            Path={"/kontakt"}
-            Text={buttonText}
+            path={"/kontakt"}
+            text={buttonText}
           />
         </div>
         <div className="w-full">

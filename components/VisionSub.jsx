@@ -29,8 +29,8 @@ export default function VisionTop({ content }) {
               </div>
               <div className="flex justify-start mt-10">
                 <LinkButton
-                  Path="/kontakt"
-                  Text="Kontakt oss"
+                  path="/kontakt"
+                  text="Kontakt oss"
                 />
               </div>
             </div>
@@ -59,8 +59,8 @@ export default function VisionTop({ content }) {
             </div>
             <div className="mt-10">
               <LinkButton
-                Path="/kontakt"
-                Text="Kontakt oss"
+                path="/kontakt"
+                text="Kontakt oss"
               />
             </div>
           </div>

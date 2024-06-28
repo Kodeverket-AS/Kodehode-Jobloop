@@ -40,8 +40,8 @@ export default function Vision2Part({
               <PortableText value={content.content} />
             </div>
             <ExternalLinkButton
-              Path={link}
-              Text={linkText}
+              path={link}
+              text={linkText}
               ariaLabel={linkAria}
             />
           </div>

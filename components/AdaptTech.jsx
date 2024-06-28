@@ -31,8 +31,8 @@ export default function AdaptTech({ content1, content2 }) {
           </div>
           <div className="hidden py-8 md:block">
             <LinkButton
-              Path={"/kodesprak"}
-              Text={"Se alle kodespråk"}
+              path={"/kodesprak"}
+              text={"Se alle kodespråk"}
             />
           </div>
         </div>
@@ -64,8 +64,8 @@ export default function AdaptTech({ content1, content2 }) {
         </div>
         <div className="block py-8 mx-auto md:hidden">
           <LinkButton
-            Path={"/kodesprak"}
-            Text={"Se kodespråk"}
+            path={"/kodesprak"}
+            text={"Se kodespråk"}
           />
         </div>
       </div>

@@ -26,8 +26,8 @@ export default function LandingVisjon({ content }) {
             <PortableText value={content.content} />
           </div>
           <LinkButton
-            Path={"/visjon"}
-            Text={"Les om vår visjon"}
+            path={"/visjon"}
+            text={"Les om vår visjon"}
           />
         </div>
       </div>
