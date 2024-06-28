@@ -27,8 +27,8 @@ export default function OmOssTop({ content, buttonText }) {
         </div>
         <div className="flex justify-start mt-10">
           <LinkButton
-            Path="/kontakt"
-            Text={buttonText}
+            path="/kontakt"
+            text={buttonText}
           />
         </div>
       </div>

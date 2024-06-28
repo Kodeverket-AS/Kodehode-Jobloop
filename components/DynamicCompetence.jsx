@@ -2,26 +2,40 @@
 
 import Image from "next/image";
 
+const LinkCard = ({ id, src, title, description }) => {
+  return (
+    <div
+      key={id}
+      className="group bg-kv-white max-w-md flex flex-col p-4 gap-2 sm:flex-row w-full md:flex-col md:align-start lg:flex-row md:p-6 shadow-md rounded-lg md:gap-8 hover:shadow-lg">
+      <Image
+        src={src}
+        width={64}
+        height={64}
+        className="stroke-2 stroke-jobloop-primary-green h-20 w-16 group-hover:rotate-3 transition-transform duration-300 ease-in-out"
+        alt={`Grafikkikon av ${src}`}
+      />
+      {/* Text */}
+      <div>
+        <div className="w-full ">
+          <h2 className="text-xl font-bold ">{title}</h2>
+          <p className="text-lg">{description}</p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
 export default function DynamicCompetence({ content }) {
   return (
-    <div className="flex flex-col px-10 items-start w-full min-h-full pb-20 text-left md:w-screen lg:px-24 md:items-center">
-      <div className="grid w-full h-full grid-cols-1 gap-4 sm:gap-8 sm:grid-cols-2 md:grid-cols-3 align-center">
+    <div className="">
+      <div className="flex flex-wrap md:flex-row gap-8">
         {content.map((item, index) => (
-          <div
-            key={item.id + index}
-            className="w-full h-full p-4 transition-all duration-300 shadow-md rotate-0 rounded-md bg-kv-white text-kv-black hover:text-jobloop-darker-green hover:shadow-lg hover:rotate-1">
-            <Image
-              src={item.logo}
-              width={300}
-              height={300}
-              className="w-16 h-16 md:w-32 md:h-32"
-              alt={item.alt || ""}
-            />
-            <div>
-              <h3 className="tracking-tight">{item.title}</h3>
-              <p>{item.content}</p>
-            </div>
-          </div>
+          <LinkCard
+            key={item.id}
+            src={item.logo}
+            title={item.title}
+            description={item.content}
+          />
         ))}
       </div>
     </div>

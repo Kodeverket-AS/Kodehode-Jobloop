@@ -23,8 +23,8 @@ export default function KodehodeInternship({ content1, content2 }) {
           <div>
             <div className="hidden py-8 md:block">
               <LinkButton
-                Path={"/kontakt"}
-                Text={"Kontakt oss"}
+                path={"/kontakt"}
+                text={"Kontakt oss"}
               />
             </div>
             <em className="text-sm">
@@ -40,8 +40,8 @@ export default function KodehodeInternship({ content1, content2 }) {
         </div>
         <div className="block mx-auto pt-8 md:hidden">
           <LinkButton
-            Path={"/kontakt"}
-            Text={"Kontakt oss"}
+            path={"/kontakt"}
+            text={"Kontakt oss"}
           />
         </div>
         <div className="block py-2 mx-auto md:hidden">

@@ -4,30 +4,33 @@ import Image from "next/image";
 
 export default function Offices({ content }) {
   return (
-    <div className="px-8 pt-10 pb-10 text-center md:w-screen md:px-12 lg:px-24">
-      <div className="border-b-4 border-jobloop-primary-green pb-2 mb-6">
-        <h2 className="tracking-tight">Våre lokaler</h2>
-      </div>
-      <div className="grid w-full h-full grid-cols-2 gap-8 md:grid-cols-3 lg:grid-cols-4 align-center">
-        {content.map((offices, index) => (
-          <div
-            key={offices.id + index}
-            className="w-full">
-            <Image
-              src={offices.image}
-              width={500}
-              height={500}
-              className="rounded-md w-full h-40 object-cover"
-              alt={offices.alt || ""}
-            />
-            <div className="text-left pt-1">
-              <h3>{offices.title}</h3>
-              <p>{offices.adresse}</p>
-              <p>{offices.postnr}</p>
+    <section className="bg-neutral-50 w-screen py-12">
+      <div className="max-w-screen-2xl mx-auto p-4">
+        <h2 className="underline decoration-jobloop-primary-green underline-offset-8 pb-4">
+          Våre lokaler
+        </h2>
+
+        <div className="grid w-full h-full grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8   align-center">
+          {content.map((offices, index) => (
+            <div
+              key={offices.id + index}
+              className="w-full">
+              <Image
+                src={offices.image}
+                width={500}
+                height={500}
+                className="rounded-md w-full h-40 object-cover"
+                alt={offices.alt || ""}
+              />
+              <div className="text-left pt-1">
+                <h3>{offices.title}</h3>
+                <p>{offices.adresse}</p>
+                <p>{offices.postnr}</p>
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
-    </div>
+    </section>
   );
 }

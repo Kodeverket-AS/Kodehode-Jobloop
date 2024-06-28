@@ -45,8 +45,8 @@ export default function LandingHero({ content }) {
             utvikling.
           </p>
           <LinkButtonContained
-            Path={"/kontakt"}
-            Text={"Kontakt oss"}
+            path={"/kontakt"}
+            text={"Kontakt oss"}
           />
         </div>
 

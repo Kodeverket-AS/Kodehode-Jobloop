@@ -14,8 +14,8 @@ export default function LinkToFaq() {
         </div>
         <div className="z-0">
           <LinkButton
-            Path="/FAQ"
-            Text="Gå til FAQ"
+            path="/FAQ"
+            text="Gå til FAQ"
           />
         </div>
       </div>
