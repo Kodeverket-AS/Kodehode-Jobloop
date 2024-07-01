@@ -23,7 +23,7 @@ export default function Results({ content }) {
           </h2>
 
           <div>
-            <div className="text-lg md:text-2xl pb-2 italic">
+            <div className=" text-lg md:text-3xl pb-2 italic">
               <PortableText value={content.content} />
             </div>
             <b> - {content.person}</b>
@@ -34,7 +34,7 @@ export default function Results({ content }) {
             rel="noopener noreferrer"
             aria-label="lenke til artikkelen"
             className="text-blue-500 hover:text-blue-700 group-hover:font-bold hover:underline underline-offset-8">
-            Les mer på Kode24
+            Les hele artikkelen på Kode24
           </a>
         </div>
       </div>
