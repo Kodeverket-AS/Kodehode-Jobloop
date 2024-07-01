@@ -72,7 +72,7 @@ export function ExternalLinkButton({ path, text, ariaLabel }) {
       target="_blank"
       rel="noopener noreferrer"
       aria-label={ariaLabel}
-      className="px-8 py-2 text-lg w-full md:w-auto text-neutral-900 border-2 bg-kv-white border-neutral-900 rounded-full hover:bg-neutral-900 hover:border-2 hover:border-neutral-900 hover:text-kv-white focus:bg-neutral-900 focus:border-neutral-900 focus:text-kv-white">
+      className="px-8 py-4 text-lg w-full md:w-auto text-neutral-900 border-2 bg-kv-white border-neutral-900 rounded-full hover:bg-neutral-900 hover:border-2 hover:border-neutral-900 hover:text-kv-white focus:bg-neutral-900 focus:border-neutral-900 focus:text-kv-white">
       {text}
     </a>
   );
