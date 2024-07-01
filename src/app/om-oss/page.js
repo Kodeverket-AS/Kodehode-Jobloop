@@ -29,9 +29,8 @@ export default async function About() {
             buttonText="Kontakt oss"
             key={heroSubData._id}
           />
-          <div className="flex flex-col items-center ">
-            <JobloopPodium content={data.about} />
-          </div>
+
+          <JobloopPodium content={data.about} />
         </div>
       </main>
     </>

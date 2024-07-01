@@ -5,7 +5,7 @@ import { Button } from "@mui/material";
 
 const JobLoopPodiumCard = ({ title, content, image, link }) => {
   return (
-    <div className="flex flex-col items-start gap-8 sm:w-full md:w-full md:items-start">
+    <div className="flex flex-col items-start gap-8 pb-8 sm:w-full md:w-full md:items-start">
       <div className="w-full">
         <Image
           src={image}
@@ -19,10 +19,12 @@ const JobLoopPodiumCard = ({ title, content, image, link }) => {
         <h2>{title}</h2>
       </div>
       <PortableText value={content} />
-      <ExternalLinkButton
-        path={link}
-        text={`Mer om ${title}`}
-      />
+      <div>
+        <ExternalLinkButton
+          path={link}
+          text={`Mer om ${title}`}
+        />
+      </div>
     </div>
   );
 };
@@ -42,7 +44,7 @@ export default function JobloopPodium({ content }) {
 
   return (
     <section className="w-screen py-12">
-      <div className="flex flex-col md:flex-row justify-center gap-8 max-w-screen-2xl mx-auto px-4">
+      <div className="flex flex-col md:flex-row justify-center gap-12 max-w-screen-2xl mx-auto px-4">
         <JobLoopPodiumCard
           title={content[0].title}
           content={jobloopFilteredContent}
