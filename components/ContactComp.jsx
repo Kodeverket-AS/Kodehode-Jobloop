@@ -5,9 +5,9 @@ import { LinkButton } from "./Buttons";
 
 export default function ContactComp({ imageOne, title, content, _id, alt }) {
   return (
-    <div className="flex justify-center w-screen px-8 py-20 sm:px-10 md:px-12 lg:px-24">
-      <div className="max-w-[1600px]">
-        <div className="flex flex-col w-full gap-10 md:flex-row md:gap-7 ">
+    <section className="w-screen py-12">
+      <div className="flex flex-col md:flex-row justify-center gap-8 max-w-screen-2xl mx-auto px-4">
+        <div className="flex flex-col md:flex-row justify-center gap-8 max-w-screen-2xl mx-auto px-4">
           <div className="w-full">
             <Image
               width={400}
@@ -18,12 +18,14 @@ export default function ContactComp({ imageOne, title, content, _id, alt }) {
             />
           </div>
 
-          <div className="flex flex-col justify-center w-full gap-8 text-kv-black ">
-            <div className="w-full border-b-8 pb-4 border-jobloop-primary-orange ">
-              <h2 className="">{title}</h2>
+          <div className="flex flex-col gap-4 w-full">
+            <h2 className="text-kv-black underline underline-offset-8 decoration-jobloop-primary-orange">
+              {title}
+            </h2>
+            <div className="text-xl">
+              <PortableText value={content} />
             </div>
-            <PortableText value={content} />
-            <div className="">
+            <div className="py-8">
               <LinkButton
                 path={"/kontakt"}
                 text={"Kontakt oss"}
@@ -32,6 +34,6 @@ export default function ContactComp({ imageOne, title, content, _id, alt }) {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

@@ -20,10 +20,12 @@ const ImageCard = ({ src, alt, title }) => (
 
 export default function AdaptTech({ content1, content2 }) {
   return (
-    <div className="w-full bg-neutral-100">
-      <div className="flex flex-col justify-between gap-8 mx-auto px-8 py-20 md:flex-row md:px-12 md:w-screen lg:px-24 2xl:justify-center 2xl:max-w-[1600px]">
+    <section className="w-screen py-12">
+      <div className="flex flex-col md:flex-row justify-center gap-8 max-w-screen-2xl mx-auto px-4">
         <div className="flex flex-col gap-4 w-full">
-          <h2 className="text-kv-black ">{content1[0].title}</h2>
+          <h2 className="text-kv-black underline underline-offset-8 pb-4 decoration-jobloop-primary-orange">
+            {content1[0].title}
+          </h2>
           <div>
             <div className="text-kv-black text-lg leading-relaxed">
               <PortableText value={content1[0].content} />
@@ -36,7 +38,7 @@ export default function AdaptTech({ content1, content2 }) {
             />
           </div>
         </div>
-        <div className="w-full mx-auto justify-center align-middle text-kv-black flex flex-col gap-4">
+        <div className="w-full mx-auto justify-center align-middle text-kv-black flex flex-col">
           <div className="w-full flex flex-row justify-between md:justify-center">
             <ImageCard
               src={content2[0].logo}
@@ -69,6 +71,6 @@ export default function AdaptTech({ content1, content2 }) {
           />
         </div>
       </div>
-    </div>
+    </section>
   );
 }
