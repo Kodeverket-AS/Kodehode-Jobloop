@@ -2,60 +2,78 @@ import Image from "next/image";
 import { ExternalLinkButton } from "./Buttons";
 import { PortableText } from "@portabletext/react";
 
-export default function Vision2Part({
-  content,
-  imgSide,
-  link,
-  linkText,
-  linkAria,
-  title,
-}) {
+// Version with Image on Left and text on Right.
+export function VisionTextRight({ content, link, linkText, linkAria, title }) {
   return (
-    <div
-      key={content._id}
-      className={`flex justify-center align-text-top w-screen text-kv-black`}>
+    <section className="w-screen py-12">
       <div
-        className={`flex max-w-[1600px] w-5/6 justify-between gap-8 ${
-          imgSide == "left"
-            ? "flex-col lg:flex-row"
-            : "flex-col-reverse lg:flex-row-reverse"
-        }`}>
-        <div className="w-full">
-          <Image
-            width={1000}
-            height={1000}
-            className="w-full"
-            src={content.ImageTwo}
-            alt={content.AltTwo || ""}
-          />
-        </div>
-        <div className="flex flex-col w-full gap-4">
-          <div className="border-b-2 border-jobloop-primary-orange pb-2">
-            <h2 className="text-2xl font-extrabold  text-kv-black md:text-3xl">
-              {title}
-            </h2>
-          </div>
-          <div>
-            <div className="pb-8 text-lg">
-              <PortableText value={content.content} />
-            </div>
-            <ExternalLinkButton
-              path={link}
-              text={linkText}
-              ariaLabel={linkAria}
+        key={content._id}
+        className="flex flex-col md:flex-row justify-center gap-12 max-w-screen-2xl mx-auto px-4">
+        <div className="flex justify-between gap-8">
+          <div className="w-full">
+            <Image
+              width={1000}
+              height={1000}
+              className="w-full"
+              src={content.ImageTwo}
+              alt={content.AltTwo || ""}
             />
           </div>
-          {/* <div className="w-fit pb-4">
-              <Image
-                width={500}
-                height={500}
-                className="w-full "
-                src={content.ImageOne}
-                alt={content.AltOne || ""}
+          <div className="flex flex-col w-full gap-4">
+            <h2 className="text-lg xl:text-3xl underline underline-offset-8 pb-4 decoration-jobloop-primary-orange">
+              {title}
+            </h2>
+            <div>
+              <div className="pb-8 text-lg md:text-xl">
+                <PortableText value={content.content} />
+              </div>
+              <ExternalLinkButton
+                path={link}
+                text={linkText}
+                ariaLabel={linkAria}
               />
-            </div> */}
+            </div>
+          </div>
         </div>
       </div>
-    </div>
+    </section>
+  );
+}
+
+// Version with Image on Right and text on Left.
+export function VisionTextLeft({ content, link, linkText, linkAria, title }) {
+  return (
+    <section className="w-screen py-12">
+      <div
+        key={content._id}
+        className="flex flex-col md:flex-row justify-center gap-12 max-w-screen-2xl mx-auto px-4">
+        <div className="flex justify-between gap-8">
+          <div className="flex flex-col w-full gap-4">
+            <h2 className="text-lg xl:text-3xl underline underline-offset-8 pb-4 decoration-jobloop-primary-orange">
+              {title}
+            </h2>
+            <div>
+              <div className="pb-8 text-lg md:text-xl">
+                <PortableText value={content.content} />
+              </div>
+              <ExternalLinkButton
+                path={link}
+                text={linkText}
+                ariaLabel={linkAria}
+              />
+            </div>
+          </div>
+          <div className="w-full">
+            <Image
+              width={1000}
+              height={1000}
+              className="w-full"
+              src={content.ImageTwo}
+              alt={content.AltTwo || ""}
+            />
+          </div>
+        </div>
+      </div>
+    </section>
   );
 }
