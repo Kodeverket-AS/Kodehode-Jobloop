@@ -4,6 +4,7 @@ import Offices from "../../../components/Offices";
 import Teachers from "../../../components/Teachers";
 import JobloopPodium from "../../../components/JobloopPodium";
 import OmOssTop from "../../../components/OmOssTop";
+import LinkToFaq from "../../../components/LinkToFaq";
 
 export const metadata = {
   title: "Om oss | Kodehode",
@@ -21,15 +22,16 @@ export default async function About() {
   //console.log(data.about);
   return (
     <>
-      <main className="flex flex-col items-center min-h-screen p-0">
-        <OmOssTop
-          content={heroSubData}
-          buttonText="Kontakt oss"
-          key={heroSubData._id}
-        />
-
+      <main className="flex flex-col items-center min-h-screen py-20">
         <div className="flex flex-col items-center ">
-          <JobloopPodium content={data.about} />
+          <OmOssTop
+            content={heroSubData}
+            buttonText="Kontakt oss"
+            key={heroSubData._id}
+          />
+          <div className="flex flex-col items-center ">
+            <JobloopPodium content={data.about} />
+          </div>
         </div>
       </main>
     </>
