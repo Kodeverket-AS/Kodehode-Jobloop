@@ -11,7 +11,7 @@ export default function KodehodeSummary({ content1, content2 }) {
     <section className="w-screen py-12">
       <div className="flex flex-col md:flex-row justify-center gap-8 max-w-screen-2xl mx-auto px-4">
         <div className="w-full">
-          <h2 className=" underline underline-offset-8 pb-4 decoration-jobloop-primary-orange">
+          <h2 className="underline underline-offset-8 pb-4 decoration-jobloop-primary-orange">
             {content1.title}
           </h2>
           <div className="pb-12 leading-normal md:text-xl lg:leading-normal">

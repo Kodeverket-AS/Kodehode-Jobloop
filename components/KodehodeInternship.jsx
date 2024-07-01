@@ -9,8 +9,8 @@ import { LinkButton } from "./Buttons";
 
 export default function KodehodeInternship({ content1, content2 }) {
   return (
-    <div className="w-full bg-neutral-100 ">
-      <div className="flex flex-col gap-8 mx-auto px-8 py-20 md:flex-row md:px-12 sm:px-10 lg:px-24 2xl:justify-center 2xl:max-w-[1600px]">
+    <section className="w-screen py-12">
+      <div className="flex flex-col md:flex-row justify-center gap-8 max-w-screen-2xl mx-auto px-4">
         <div className="flex flex-col gap-4">
           <h2>{content1[0].title}</h2>
           <div className="text-lg ">
@@ -50,6 +50,6 @@ export default function KodehodeInternship({ content1, content2 }) {
           </em>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
