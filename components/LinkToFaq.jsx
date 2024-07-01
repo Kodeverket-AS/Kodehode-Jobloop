@@ -8,9 +8,9 @@ export default function LinkToFaq() {
   return (
     <section className="w-screen py-12">
       <div className="w-full pb-28">
-        <div className="flex flex-col gap-12 max-w-lg m-auto rounded-md bg-jobloop-primary-green/10 p-12">
+        <div className="group flex flex-col gap-12 max-w-lg m-auto border-2 border-jobloop-primary-green/0 hover:border-jobloop-primary-green/30 rounded-md bg-jobloop-primary-green/10 p-12">
           <div>
-            <h2 className="text-center underline underline-offset-8 decoration-jobloop-primary-green">
+            <h2 className="text-center underline underline-offset-8 text-kv-black decoration-jobloop-primary-green">
               Har du flere spørsmål?
             </h2>
             <p className="text-center">

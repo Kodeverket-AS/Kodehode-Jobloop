@@ -14,7 +14,7 @@ export default function VideoComp1({ url, alt }) {
           title="YouTube video player"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           allowFullScreen
-          className="mx-auto shadow-md"
+          className="mx-auto"
           alt={alt}
         />
       </div>
@@ -26,7 +26,7 @@ export default function VideoComp1({ url, alt }) {
           title="YouTube video player"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           allowFullScreen
-          className="mx-auto shadow-md w-full h-[416px] lg:w-[1000px] lg:h-[562px]"
+          className="mx-auto w-full h-[416px] lg:w-[1000px] lg:h-[562px]"
           alt={alt}
         />
       </div>

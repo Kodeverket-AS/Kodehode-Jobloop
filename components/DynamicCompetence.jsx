@@ -11,7 +11,7 @@ const LinkCard = ({ id, src, title, description }) => {
         src={src}
         width={64}
         height={64}
-        className="stroke-2 stroke-jobloop-primary-green h-20 w-16 group-hover:rotate-3 transition-transform duration-300 ease-in-out"
+        className=" h-20 w-16 group-hover:rotate-3 transition-transform duration-300 ease-in-out"
         alt={`Grafikkikon av ${src}`}
       />
       {/* Text */}
