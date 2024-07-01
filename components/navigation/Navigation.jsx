@@ -21,7 +21,7 @@ export default function Navigation() {
   let navbar;
 
   if (pathname === techstack) {
-    navbar = <NavbarAlt textWhite="yes" />;
+    navbar = <NavbarAlt />;
   } else if (pathname === about) {
     navbar = <NavbarAlt />;
   } else if (pathname === kontakt) {
