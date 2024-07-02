@@ -22,7 +22,7 @@ export default function LandingVisjon({ content }) {
           <h2 className="underline underline-offset-8 pb-4 decoration-jobloop-primary-orange">
             {content.title}
           </h2>
-          <div className="pb-12 leading-normal text-xl lg:text-2xl lg:leading-normal">
+          <div className="pb-12 leading-normal text-xl">
             <PortableText value={content.content} />
           </div>
           <LinkButton
