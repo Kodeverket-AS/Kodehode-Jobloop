@@ -23,7 +23,7 @@ export default function ContactComp({ imageOne, title, content, _id, alt }) {
           isButton={true}
           path={"/kontakt"}
           text={"Kontakt oss"}
-          isContained={false}
+          isContained={true}
           isOrange={true}
         />
       }
