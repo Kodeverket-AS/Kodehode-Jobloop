@@ -24,7 +24,7 @@ export function VisionTextRight({ content, link, linkText, linkAria, title }) {
           isButton={true}
           path={link}
           text={linkText}
-          isContained={true}
+          isContained={false}
           isOrange={false}
         />
       }
@@ -83,7 +83,7 @@ export function VisionTextLeft({ content, link, linkText, linkAria, title }) {
           isButton={true}
           path={link}
           text={linkText}
-          isContained={true}
+          isContained={false}
           isOrange={false}
         />
       }
