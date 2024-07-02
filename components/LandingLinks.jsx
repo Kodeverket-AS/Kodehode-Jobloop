@@ -13,7 +13,7 @@ const LinkCard = ({ href, src, title, description }) => {
         src={src}
         width={64}
         height={64}
-        className="stroke-2 stroke-jobloop-primary-green h-20 w-16 group-hover:rotate-3 transition-transform duration-300 ease-in-out"
+        className=" h-20 w-16 group-hover:-rotate-2 transition-transform duration-300 ease-in-out"
         alt={`Grafikkikon av ${src}`}
       />
       {/* Text */}
@@ -35,7 +35,7 @@ export default function LandingLinks() {
         <h2 className="text-center underline underline-offset-8 decoration-jobloop-primary-green">
           Hvordan kan vi hjelpe deg?
         </h2>
-        <div className="flex flex-col md:flex-row gap-8">
+        <div className="flex flex-col lg:flex-row gap-8">
           <LinkCard
             href="/arbeidsgiver"
             src={koffert}

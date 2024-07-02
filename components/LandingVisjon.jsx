@@ -8,7 +8,7 @@ import { PortableText } from "@portabletext/react";
 export default function LandingVisjon({ content }) {
   return (
     <section className="w-screen py-12">
-      <div className="flex flex-col md:flex-row justify-center gap-8 max-w-screen-2xl mx-auto px-4">
+      <div className="flex flex-col xl:flex-row justify-center gap-8 max-w-screen-2xl mx-auto px-4">
         <div className="w-full">
           <Image
             src={content.image}

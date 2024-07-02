@@ -6,7 +6,7 @@ import Image from "next/image";
 export default function VideoComp1({ url, alt }) {
   return (
     <>
-      <div className="block w-full md:hidden">
+      <div className="block w-full mx-auto md:hidden">
         <iframe
           // width="300"
           // height="169"

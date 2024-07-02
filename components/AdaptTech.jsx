@@ -21,7 +21,7 @@ const ImageCard = ({ src, alt, title }) => (
 export default function AdaptTech({ content1, content2 }) {
   return (
     <section className="w-screen py-12">
-      <div className="flex flex-col md:flex-row justify-center gap-8 max-w-screen-2xl mx-auto px-4">
+      <div className="flex flex-col xl:flex-row justify-center gap-8 max-w-screen-2xl mx-auto px-4">
         <div className="flex flex-col gap-4 w-full">
           <h2 className="text-kv-black underline underline-offset-8 pb-4 decoration-jobloop-primary-orange">
             {content1[0].title}
@@ -31,7 +31,7 @@ export default function AdaptTech({ content1, content2 }) {
               <PortableText value={content1[0].content} />
             </div>
           </div>
-          <div className="hidden py-8 md:block">
+          <div className="hidden py-8 ">
             <LinkButton
               path={"/kodesprak"}
               text={"Se alle kodespråk"}

@@ -2,7 +2,7 @@
 
 import React from "react";
 import { usePathname } from "next/navigation";
-import Navbar, { NavbarAlt } from "./Navbar";
+import { NavbarWhite, NavbarColor } from "./Navbar";
 import MyPathname from "./MyPathname";
 
 // Definer URL endpoints.
@@ -21,23 +21,23 @@ export default function Navigation() {
   let navbar;
 
   if (pathname === techstack) {
-    navbar = <NavbarAlt />;
+    navbar = <NavbarColor />;
   } else if (pathname === about) {
-    navbar = <NavbarAlt />;
+    navbar = <NavbarColor />;
   } else if (pathname === kontakt) {
-    navbar = <NavbarAlt />;
+    navbar = <NavbarWhite />;
   } else if (pathname === samarbeidspartner) {
-    navbar = <NavbarAlt subpage="Samarbeidspartner" />;
+    navbar = <NavbarColor subpage="Samarbeidspartner" />;
   } else if (pathname === arbeidsgiver) {
-    navbar = <NavbarAlt subpage="Arbeidsgiver" />;
+    navbar = <NavbarColor subpage="Arbeidsgiver" />;
   } else if (pathname === deltaker) {
-    navbar = <NavbarAlt subpage="Deltaker" />;
+    navbar = <NavbarColor subpage="Deltaker" />;
   } else if (pathname === visjon) {
-    navbar = <NavbarAlt />;
+    navbar = <NavbarColor />;
   } else if (pathname === faq) {
-    navbar = <NavbarAlt />;
+    navbar = <NavbarColor />;
   } else {
-    navbar = <Navbar />;
+    navbar = <NavbarWhite />;
   }
 
   return <div className="absolute w-full z-50">{navbar}</div>;

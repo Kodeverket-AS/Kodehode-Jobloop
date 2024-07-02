@@ -30,7 +30,7 @@ const PagesArray = [
   },
 ];
 
-export default function Navbar() {
+export function NavbarWhite() {
   return (
     <nav className="max-w-screen-2xl mx-auto">
       <div className="flex items-center justify-between">
@@ -68,7 +68,7 @@ export default function Navbar() {
   );
 }
 
-export function NavbarAlt({ textWhite }) {
+export function NavbarColor({ textWhite }) {
   return (
     <nav className="max-w-screen-2xl mx-auto">
       <div className="flex items-center justify-between 3xl:justify-around">
@@ -93,7 +93,7 @@ export function NavbarAlt({ textWhite }) {
                 href={page.href}
                 aria-label={page.label}
                 className={`px-4 md:portrait:pl-4 md:portrait:pr-2 lg:px-4 font-bold ${
-                  !textWhite ? "text-jobloop-primary-green" : "text-kv-white"
+                  !textWhite ? "text-neutral-900" : "text-kv-white"
                 } md:hover:underline underline-offset-4`}>
                 {page.name}
               </Link>

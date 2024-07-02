@@ -5,8 +5,8 @@ import { PortableText } from "@portabletext/react";
 
 export default function StudyInParts({ content }) {
   return (
-    <section className="bg-neutral-50 w-screen py-12">
-      <div className="flex flex-col-reverse md:flex-row justify-center gap-8 max-w-screen-2xl mx-auto p-4">
+    <section className="w-screen py-12">
+      <div className="flex flex-col-reverse md:flex-row justify-center gap-8 max-w-screen-2xl mx-auto px-4 pb-8">
         <div className="w-full">
           <h2 className="underline decoration-jobloop-primary-green underline-offset-8 pb-4">
             {content[0].title}

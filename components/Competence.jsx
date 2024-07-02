@@ -26,7 +26,7 @@ export default function Competence({ content1, content2 }) {
   //console.log(content1);
   return (
     <section className="w-screen py-12">
-      <div className="flex flex-col md:flex-row-reverse justify-center gap-8 max-w-screen-2xl mx-auto px-4">
+      <div className="flex flex-col xl:flex-row-reverse justify-center gap-8 max-w-screen-2xl mx-auto px-4">
         <div className="w-full">
           <h2 className="underline underline-offset-8 pb-4 decoration-jobloop-primary-orange">
             {content1.title}

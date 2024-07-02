@@ -30,7 +30,7 @@ export default function FourIconRow({ title, content }) {
             {title}
           </h2>
 
-          <div className="flex flex-col gap-8 md:flex-row pb-8 justify-center max-w-3xl m-auto ">
+          <div className="flex flex-col gap-8 md:flex-row pb-8 justify-center m-auto ">
             <LanguageCard {...content[0]} />
             <LanguageCard {...content[1]} />
 

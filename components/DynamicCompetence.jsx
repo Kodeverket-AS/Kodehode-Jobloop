@@ -6,7 +6,7 @@ const LinkCard = ({ id, src, title, description }) => {
   return (
     <div
       key={id}
-      className="group bg-kv-white max-w-md flex flex-col p-4 gap-2 sm:flex-row w-full md:flex-col md:align-start lg:flex-row md:p-6 shadow-md rounded-lg md:gap-8 hover:shadow-lg">
+      className="group bg-kv-white  lg:max-w-md  flex flex-col p-4 gap-2 sm:flex-row w-full md:flex-col md:align-start lg:flex-row md:p-6 shadow-md rounded-lg md:gap-8 hover:shadow-lg">
       <Image
         src={src}
         width={64}

@@ -22,19 +22,19 @@ export default function LandingHero({ content }) {
             <h1 className="text-6xl text-kv-white underline underline-offset-8 decoration-jobloop-primary-green group-hover:decoration-jobloop-primary-orange md:text-7xl lg:text-9xl">
               {content.title}
             </h1>
-            <p className=" text-kv-white lg:text-3xl">
+            <p className="xl:opacity-0 transition-all group-hover:opacity-100 text-kv-white lg:text-3xl">
               Tilpasset opplæring og rekruttering til <br /> IT-bransjen
             </p>
           </div>
         </div>
       </div>
 
-      <section className="flex flex-col-reverse justify-between py-12 px-4 lg:flex-row gap-4 md:gap-16 w-full">
+      <section className="flex flex-col-reverse justify-between py-12 px-4 xl:flex-row gap-4 md:gap-16 w-full">
         {/* <div className="text-lg lg:text-xl text-kv-black tracking-wide leading-relaxed pt-4">
                  <PortableText value={content.content} /> 
               </div> */}
         <div className="w-full ">
-          <h2 className="underline decoration-4 pb-4 underline-offset-8 decoration-jobloop-primary-green">
+          <h2 className="md:text-4xl underline decoration-4 pb-4 underline-offset-8 decoration-jobloop-primary-green">
             Hva gjør vi?
           </h2>
           <p className="text-xl pb-12 leading-normal md:text-2xl md:leading-normal">
@@ -53,9 +53,10 @@ export default function LandingHero({ content }) {
         <div className="w-full ">
           <Image
             width={800}
+            height={800}
             alt="kodemiljø"
             src={danialigdery}
-            className="object-contain rounded"
+            className="object-contain w-full rounded"
           />
         </div>
       </section>

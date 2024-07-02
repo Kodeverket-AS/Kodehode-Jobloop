@@ -7,7 +7,7 @@ import { LinkButtonContained } from "./Buttons";
 export default function VisionTop({ content }) {
   return (
     <section className="w-screen py-12">
-      <div className="flex flex-col md:flex-row-reverse justify-center gap-12 max-w-screen-2xl mx-auto px-4">
+      <div className="flex flex-col xl:flex-row-reverse justify-center gap-12 max-w-screen-2xl mx-auto px-4">
         <div>
           <Image
             src={content.image}
@@ -18,7 +18,7 @@ export default function VisionTop({ content }) {
           />
         </div>
         <div className="w-full">
-          <h2 className="text-lg xl:text-3xl underline underline-offset-8 pb-4 decoration-jobloop-primary-green">
+          <h2 className="lg:text-4xl underline underline-offset-8 pb-4 decoration-jobloop-primary-green">
             {content.title}
           </h2>
 

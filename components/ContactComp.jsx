@@ -5,7 +5,7 @@ import { LinkButton } from "./Buttons";
 
 export default function ContactComp({ imageOne, title, content, _id, alt }) {
   return (
-    <section className="w-screen py-12">
+    <section className="w-screen py-12 bg-jobloop-primary-orange/10">
       <div className="flex flex-col md:flex-row justify-center gap-8 max-w-screen-2xl mx-auto px-4">
         <div className="flex flex-col md:flex-row justify-center gap-8 max-w-screen-2xl mx-auto px-4">
           <div className="w-full">
