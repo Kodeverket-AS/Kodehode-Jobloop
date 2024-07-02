@@ -4,13 +4,13 @@ import Image from "next/image";
 
 export default function Offices({ content }) {
   return (
-    <section className="bg-neutral-50 w-screen py-12">
-      <div className="max-w-screen-2xl mx-auto p-4">
+    <section className="w-screen py-12 bg-jobloop-primary-green/10">
+      <div className="max-w-screen-2xl mx-auto px-4">
         <h2 className="underline decoration-jobloop-primary-green underline-offset-8 pb-4">
           Våre lokaler
         </h2>
 
-        <div className="grid w-full h-full grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8   align-center">
+        <div className="grid w-full h-full grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8 align-center">
           {content.map((offices, index) => (
             <div
               key={offices.id + index}

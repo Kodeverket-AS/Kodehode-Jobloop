@@ -49,7 +49,7 @@ export default async function Deltaker() {
           content1={data.relevantCompetence[0]}
           content2={data.competenceIcons}
         />
-        <div className="w-full flex flex-col gap-8 pb-12">
+        <section className="w-full flex flex-col gap-8 pb-12">
           <h2 className="text-center underline decoration-4 pb-8 underline-offset-8 decoration-jobloop-primary-green">
             Design i Figma
           </h2>
@@ -58,7 +58,7 @@ export default async function Deltaker() {
             url="https://www.youtube.com/embed/6riX-2lnIyg?si=g3aOkgbSOaBsJE-B&amp;"
             alt={"Timelapse video av noen som designer en nettside i Figma"}
           />
-        </div>
+        </section>
         <Teachers
           content={teachers}
           title={"Våre veiledere"}
@@ -71,12 +71,12 @@ export default async function Deltaker() {
           <Results content={data.results[0]} />
         </div>
         <ImageGallery content={data.ImageGallery} />
-        <div className="w-full pb-12">
+        <section className="w-full pb-12">
           <VideoComp1
             url="https://www.youtube.com/embed/gIrgqXD27EI?si=bh2im5jdpu-apCIQ&amp;"
             alt={"Timelapse av noen som koder en app i React Native"}
           />
-        </div>
+        </section>
         <LinkToFaq />
       </div>
     </main>

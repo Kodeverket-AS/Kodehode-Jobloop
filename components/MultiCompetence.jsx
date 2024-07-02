@@ -11,7 +11,7 @@ export default function MultiCompetence({ content1, content2 }) {
       content2 &&
       content2.length !== 0 ? (
         <div className="flex flex-col max-w-screen-2xl mx-auto px-4">
-          <div className="w-full md:w-3/6 pb-8">
+          <div className="w-full xl:w-3/6 pb-8">
             <h2 className="underline underline-offset-8 pb-4 decoration-jobloop-primary-green">
               {content1.title}
             </h2>
@@ -20,7 +20,7 @@ export default function MultiCompetence({ content1, content2 }) {
               <PortableText value={content1.content} />
             </div>
           </div>
-          <div className="w-ful">
+          <div className="w-full">
             <DynamicCompetence content={content2} />
           </div>
         </div>

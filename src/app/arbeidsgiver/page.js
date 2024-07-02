@@ -27,7 +27,7 @@ export default async function Bedrift() {
     <main className="flex flex-col items-center min-h-screen pt-20">
       <HeroSub
         content={data.heroSub[6]}
-        buttonText={"Søk etter kandidater"}
+        buttonText={"Finn kandidater"}
         key={data.heroSub[6]._id}
       />
 

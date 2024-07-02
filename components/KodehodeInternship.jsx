@@ -10,9 +10,11 @@ import { LinkButton } from "./Buttons";
 export default function KodehodeInternship({ content1, content2 }) {
   return (
     <section className="w-screen py-12">
-      <div className="flex flex-col md:flex-row justify-center gap-8 max-w-screen-2xl mx-auto px-4">
+      <div className="flex flex-col xl:flex-row justify-center gap-8 max-w-screen-2xl mx-auto px-4">
         <div className="flex flex-col gap-4">
-          <h2>{content1[0].title}</h2>
+          <h2 className="underline underline-offset-8 pb-4 decoration-jobloop-primary-orange">
+            {content1[0].title}
+          </h2>
           <div className="text-lg ">
             <PortableText value={content1[0].content1} />
             <br />

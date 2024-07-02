@@ -3,9 +3,10 @@
 import Link from "next/link";
 import Image from "next/image";
 import { urlFor } from "@/app/page";
+import { LinkButtonContained } from "./Buttons";
 
 const VeilederCard = ({ imageUrl, imageAlt, name, role }) => (
-  <div className="flex flex-row w-full pb-10 mx-auto md:flex-col md:w-40 md:pb-0 md:mx-0 lg:w-48">
+  <div className="flex flex-row w-full pb-10 mx-auto md:flex-col md:w-40 md:pb-0 md:mx-0 lg:w-48 ">
     <div className="w-1/2 pr-3 md:mb-2 md:w-full h-[170px] md:pr-0 md:h-[190px] sm:h-[250px]">
       <Image
         src={imageUrl}
@@ -25,9 +26,9 @@ const VeilederCard = ({ imageUrl, imageAlt, name, role }) => (
 export default function Teachers({ content, title }) {
   //console.log(content[0]);
   return (
-    <section className="bg-neutral-50 w-screen py-12">
-      <div className="flex flex-col items-center w-full px-8 py-20 bg-neutral-50 lg:px-24 ">
-        <h2 className="underline decoration-4 pb-8 underline-offset-8 decoration-jobloop-primary-green">
+    <section className="w-screen py-12 bg-jobloop-primary-orange/10">
+      <div className="flex flex-col items-center w-full px-8 lg:px-24 ">
+        <h2 className="underline decoration-4 pb-8 underline-offset-8 decoration-jobloop-primary-orange">
           {title}
         </h2>
         <div className="flex flex-col-reverse md:flex-row justify-center gap-8 max-w-screen-2xl mx-auto p-4">
@@ -111,6 +112,10 @@ export default function Teachers({ content, title }) {
             role={content[3].role}
           />
         </div>
+        <LinkButtonContained
+          path="/kontakt"
+          text="Kontakt oss"
+        />
       </div>
     </section>
   );

@@ -7,9 +7,9 @@ import { LinkButtonContained } from "./Buttons";
 export default function HeroSub({ content, buttonText }) {
   return (
     <section className="w-screen py-12">
-      <div className="flex flex-col-reverse md:flex-row justify-center gap-8 max-w-screen-2xl mx-auto px-4">
+      <div className="flex flex-col-reverse xl:flex-row justify-center gap-8 max-w-screen-2xl mx-auto px-4">
         <div className="w-full">
-          <h2 className="text-lg xl:text-3xl underline underline-offset-8 pb-4 decoration-jobloop-primary-green">
+          <h2 className=" md:text-4xl underline underline-offset-8 pb-4 decoration-jobloop-primary-green">
             {content.title}
           </h2>
           <div className="pb-12 leading-normal text-xl lg:text-2xl lg:leading-normal">
