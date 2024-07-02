@@ -11,7 +11,7 @@ const LinkCard = ({ id, src, title, description }) => {
         src={src}
         width={64}
         height={64}
-        className=" h-20 w-16 group-hover:rotate-3 transition-transform duration-300 ease-in-out"
+        className="h-20 w-16 group-hover:rotate-3 transition-transform duration-300 ease-in-out"
         alt={`Grafikkikon av ${src}`}
       />
       {/* Text */}
@@ -31,7 +31,7 @@ export default function DynamicCompetence({ content }) {
       <div className="flex flex-wrap md:flex-row gap-8">
         {content.map((item, index) => (
           <LinkCard
-            key={item.id}
+            key={index}
             src={item.logo}
             title={item.title}
             description={item.content}

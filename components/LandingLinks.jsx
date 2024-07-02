@@ -19,9 +19,11 @@ const LinkCard = ({ href, src, title, description }) => {
       {/* Text */}
       <div>
         <div className="w-full ">
-          <h2 className="text-xl font-bold ">{title}</h2>
-          <p className="text-lg">{description}</p>
-          <div className="group-hover:underline text-blue-500">Les mer</div>
+          <h4>{title}</h4>
+          <p className="text-base">{description}</p>
+          <div className="font-normal group-hover:font-bold group-hover:underline text-blue-500">
+            <p>Les mer</p>
+          </div>
         </div>
       </div>
     </a>
@@ -32,9 +34,9 @@ export default function LandingLinks() {
   return (
     <section className="w-screen py-12">
       <div className=" flex flex-col justify-center gap-8 max-w-screen-2xl mx-auto px-4">
-        <h2 className="text-center underline underline-offset-8 decoration-jobloop-primary-green">
+        <h3 className="text-center underline underline-offset-8 decoration-jobloop-primary-green">
           Hvordan kan vi hjelpe deg?
-        </h2>
+        </h3>
         <div className="flex flex-col lg:flex-row gap-8">
           <LinkCard
             href="/arbeidsgiver"

@@ -1,9 +1,8 @@
 "use client";
 
-import Link from "next/link";
 import Image from "next/image";
-import { PortableText } from "@portabletext/react";
-import { LinkButton } from "./Buttons";
+import { SectionComponent } from "./SectionComponent.jsx";
+import { TextBlock } from "./TextBlockComponent.jsx";
 
 const ImageCard = ({ src, alt, title }) => (
   <div className="flex flex-col w-24 my-3 text-center 2xs:w-32 xs:w-36 sm:w-64">
@@ -20,24 +19,18 @@ const ImageCard = ({ src, alt, title }) => (
 
 export default function AdaptTech({ content1, content2 }) {
   return (
-    <section className="w-screen py-12">
-      <div className="flex flex-col xl:flex-row justify-center gap-8 max-w-screen-2xl mx-auto px-4">
-        <div className="flex flex-col gap-4 w-full">
-          <h2 className="text-kv-black underline underline-offset-8 pb-4 decoration-jobloop-primary-orange">
-            {content1[0].title}
-          </h2>
-          <div>
-            <div className="text-kv-black text-lg leading-relaxed">
-              <PortableText value={content1[0].content} />
-            </div>
-          </div>
-          <div className="hidden py-8 ">
-            <LinkButton
-              path={"/kodesprak"}
-              text={"Se alle kodespråk"}
-            />
-          </div>
-        </div>
+    <SectionComponent
+      leftContent={
+        <TextBlock
+          title={content1[0].title}
+          content={content1[0].content}
+          isOrange={true}
+          isContained={false}
+          path={"/kodesprak"}
+          text={"Se alle kodespråk"}
+        />
+      }
+      rightContent={
         <div className="w-full mx-auto justify-center align-middle text-kv-black flex flex-col">
           <div className="w-full flex flex-row justify-between md:justify-center">
             <ImageCard
@@ -64,13 +57,7 @@ export default function AdaptTech({ content1, content2 }) {
             />
           </div>
         </div>
-        <div className="block py-8 mx-auto md:hidden">
-          <LinkButton
-            path={"/kodesprak"}
-            text={"Se kodespråk"}
-          />
-        </div>
-      </div>
-    </section>
+      }
+    />
   );
 }

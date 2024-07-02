@@ -2,6 +2,8 @@
 
 import Link from "next/link";
 import Image from "next/image";
+import { SectionComponent } from "./SectionComponent";
+import { TextBlock } from "./TextBlockComponent";
 import { PortableText } from "@portabletext/react";
 
 const CompetenceCard = ({ src, alt, title, content }) => (
@@ -23,47 +25,44 @@ const CompetenceCard = ({ src, alt, title, content }) => (
 );
 
 export default function Competence({ content1, content2 }) {
-  //console.log(content1);
   return (
-    <section className="w-screen py-12">
-      <div className="flex flex-col xl:flex-row-reverse justify-center gap-8 max-w-screen-2xl mx-auto px-4">
-        <div className="w-full">
-          <h2 className="underline underline-offset-8 pb-4 decoration-jobloop-primary-orange">
-            {content1.title}
-          </h2>
-          <div className="text-lg leading-relaxed">
-            <PortableText value={content1.content} />
-          </div>
+    <SectionComponent
+      reverseLayoutOrder={true}
+      leftContent={
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-4 justify-between md:justify-evenly">
+          <CompetenceCard
+            src={content2[0].logo}
+            alt={content2[0].alt || ""}
+            title={content2[0].title}
+            content={content2[0].content}
+          />
+          <CompetenceCard
+            src={content2[1].logo}
+            alt={content2[1].alt || ""}
+            title={content2[1].title}
+            content={content2[1].content}
+          />
+          <CompetenceCard
+            src={content2[2].logo}
+            alt={content2[2].alt || ""}
+            title={content2[2].title}
+            content={content2[2].content}
+          />
+          <CompetenceCard
+            src={content2[3].logo}
+            alt={content2[3].alt || ""}
+            title={content2[3].title}
+            content={content2[3].content}
+          />
         </div>
-        <div className=" w-full ">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-4 justify-between md:justify-evenly">
-            <CompetenceCard
-              src={content2[0].logo}
-              alt={content2[0].alt || ""}
-              title={content2[0].title}
-              content={content2[0].content}
-            />
-            <CompetenceCard
-              src={content2[1].logo}
-              alt={content2[1].alt || ""}
-              title={content2[1].title}
-              content={content2[1].content}
-            />
-            <CompetenceCard
-              src={content2[2].logo}
-              alt={content2[2].alt || ""}
-              title={content2[2].title}
-              content={content2[2].content}
-            />
-            <CompetenceCard
-              src={content2[3].logo}
-              alt={content2[3].alt || ""}
-              title={content2[3].title}
-              content={content2[3].content}
-            />
-          </div>
-        </div>
-      </div>
-    </section>
+      }
+      rightContent={
+        <TextBlock
+          title={content1.title}
+          content={content1.content}
+          isOrange={false}
+        />
+      }
+    />
   );
 }

@@ -22,7 +22,7 @@ const JobLoopPodiumCard = ({ title, content, image, link }) => {
       <div>
         <ExternalLinkButton
           path={link}
-          text={`Mer om ${title}`}
+          text={`Besøk nettsiden til ${title}`}
         />
       </div>
     </div>
