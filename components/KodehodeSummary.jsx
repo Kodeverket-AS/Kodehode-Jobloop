@@ -1,33 +1,25 @@
 "use client";
 
-import { PortableText } from "@portabletext/react";
 import { useState } from "react";
 import CourseCard from "./CourseCard";
-import { ButtonGroup, Button } from "flowbite-react";
+import { SectionComponent } from "./SectionComponent";
+import { TextBlock } from "./TextBlockComponent";
 
 export default function KodehodeSummary({ content1, content2 }) {
   const [active, setActive] = useState(content2[1]);
   return (
-    <section className="w-screen py-12">
-      <div className="flex flex-col md:flex-row justify-center gap-8 max-w-screen-2xl mx-auto px-4">
-        <div className="w-full">
-          <h2 className="underline underline-offset-8 pb-4 decoration-jobloop-primary-orange">
-            {content1.title}
-          </h2>
-          <div className="pb-12 leading-normal md:text-xl lg:leading-normal">
-            <div className="pb-4">
-              <PortableText value={content1.content1} />
-              <PortableText value={content1.content2} />
-            </div>
-
-            <PortableText value={content1.content3} />
-          </div>
-          {/* <LinkButton
-            path={"/kontakt"}
-            text={"Kontakt oss"}
-          /> */}
-        </div>
-        <div className="w-full">
+    <SectionComponent
+      leftContent={
+        <TextBlock
+          title={content1.title}
+          content={content1.content1}
+          content2={content1.content2}
+          content3={content1.content3}
+          isOrange={true}
+        />
+      }
+      rightContent={
+        <div>
           <div className="w-full mb-4 flex rounded-lg border-2 border-jobloop-primary-orange overflow-hidden">
             <button
               key={content2[1]._id}
@@ -55,7 +47,7 @@ export default function KodehodeSummary({ content1, content2 }) {
             content={active}
           />
         </div>
-      </div>
-    </section>
+      }
+    />
   );
 }

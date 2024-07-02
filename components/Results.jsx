@@ -1,14 +1,13 @@
 "use client";
 
-import Link from "next/link";
 import Image from "next/image";
 import { PortableText } from "@portabletext/react";
+import { SectionComponent } from "./SectionComponent";
 
 export default function Results({ content }) {
-  //console.log(content);
   return (
-    <section className="group w-screen py-12">
-      <div className=" flex flex-col md:flex-row justify-center gap-8 max-w-screen-2xl mx-auto px-4">
+    <SectionComponent
+      leftContent={
         <Image
           src={content.image}
           width={500}
@@ -16,7 +15,8 @@ export default function Results({ content }) {
           alt={content.alt}
           className="w-full rounded-md shadow-md"
         />
-
+      }
+      rightContent={
         <div className=" flex flex-col gap-8 w-full">
           <h2 className="underline underline-offset-8 decoration-jobloop-primary-orange group-hover:decoration-jobloop-primary-green">
             Kodehode gir resultater
@@ -37,7 +37,7 @@ export default function Results({ content }) {
             Les hele artikkelen på Kode24
           </a>
         </div>
-      </div>
-    </section>
+      }
+    />
   );
 }

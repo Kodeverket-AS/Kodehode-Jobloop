@@ -21,7 +21,10 @@ export default function MultiCompetence({ content1, content2 }) {
             </div>
           </div>
           <div className="w-full">
-            <DynamicCompetence content={content2} />
+            <DynamicCompetence
+              key={content2.id}
+              content={content2}
+            />
           </div>
         </div>
       ) : (
