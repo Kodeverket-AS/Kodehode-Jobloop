@@ -33,8 +33,8 @@ export default async function Deltaker() {
   ];
   console.log(data.competenceIcons);
   return (
-    <main className="flex flex-col items-center min-h-screen pt-20">
-      <div className="flex flex-col items-center ">
+    <main className=" flex flex-col justify-center items-center min-h-screen pt-20">
+      <div className="w-11/12 flex flex-col gap-12 items-center justify-center ">
         <HeroSub
           content={data.heroSub[2]}
           buttonText={"Jeg er interessert!"}
@@ -74,7 +74,7 @@ export default async function Deltaker() {
           title={"Våre veiledere"}
         />
 
-        <div className="w-screen">
+        <div className="w-full">
           <Results content={data.results[0]} />
         </div>
         <ImageGallery content={data.ImageGallery} />

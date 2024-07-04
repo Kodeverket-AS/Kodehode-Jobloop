@@ -22,7 +22,7 @@ export const SectionComponent = ({
   return (
     <section className={`w-full py-12 ${backgroundColor}`}>
       <div
-        className={`flex ${flexDirection} xl:flex-row justify-center gap-4 xl:gap-8 max-w-screen-2xl mx-auto px-4`}>
+        className={`flex ${flexDirection} xl:flex-row justify-center gap-4 xl:gap-8 w-full mx-auto px-4`}>
         <div className="w-full">{leftContent}</div>
         <div className="w-full">{rightContent}</div>
       </div>

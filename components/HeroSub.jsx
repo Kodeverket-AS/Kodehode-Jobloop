@@ -2,14 +2,14 @@
 
 import Image from "next/image";
 import { SectionComponent } from "./SectionComponent";
-import { TextBlock } from "./TextBlockComponent";
+import { TextBlock, TextBlockHeader } from "./TextBlockComponent";
 
 export default function HeroSub({ content, buttonText }) {
   return (
     <SectionComponent
       reverseLayoutOrder={true}
       leftContent={
-        <TextBlock
+        <TextBlockHeader
           title={content.title}
           content={content.content}
           isButton={true}

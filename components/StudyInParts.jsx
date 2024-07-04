@@ -6,7 +6,7 @@ import { TextBlock } from "./TextBlockComponent";
 
 export default function StudyInParts({ content }) {
   return (
-    <section>
+    <section className="w-full">
       <SectionComponent
         leftContent={
           <TextBlock

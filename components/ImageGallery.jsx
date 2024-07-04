@@ -5,9 +5,9 @@ import Image from "next/image";
 
 export default function ImageGallery({ content }) {
   return (
-    <section className=" w-screen py-12">
-      <div className="flex px-4 gap-2 md:gap-4 max-w-screen-2xl mx-auto">
-        <div className="flex flex-col gap-2 md:gap-4 justify-between w-1/2 md:w-2/3 ">
+    <section className=" w-full py-12">
+      <div className="flex px-4 gap-2 md:gap-8 max-w-full-2xl mx-auto">
+        <div className="flex flex-col gap-2 md:gap-8 justify-between w-1/2 md:w-2/3 ">
           <div className="h-1/2">
             <Image
               src={content[0].image1}

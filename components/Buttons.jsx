@@ -55,13 +55,10 @@ export function LinkButton({ path, text }) {
 
 export function SmallButton({ path, text }) {
   return (
-    <Link
-      href={path}
-      title={`Gå til ${path}`}
-      aria-label={`Lenke til underside ${path}`}
-      className=" flex w-24 py-1 px-1 justify-center font-medium text-sm md:text-base text-kv-white border-2 rounded-full bg-neutral-900 border-neutral-900 hover:bg-kv-white/0 hover:border-neutral-900 hover:text-neutral-900 focus:bg-kv-white focus:border-neutral-900 focus:text-neutral-900">
+    <div
+      className=" flex w-24 py-2 px-3 justify-center items-center font-medium text-sm md:text-base text-kv-white border-2 rounded-full bg-neutral-900 border-neutral-900 hover:bg-kv-white/0 hover:border-neutral-900 hover:text-neutral-900 focus:bg-kv-white focus:border-neutral-900 focus:text-neutral-900">
       {text}
-    </Link>
+    </div>
   );
 }
 

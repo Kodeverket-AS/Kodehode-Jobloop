@@ -7,7 +7,7 @@ import { LinkButtonContained } from "./Buttons";
 
 const VeilederCard = ({ imageUrl, imageAlt, name, role }) => (
   <div className="flex flex-row w-full pb-10 mx-auto md:flex-col md:w-40 md:pb-0 md:mx-0 lg:w-48 ">
-    <div className="w-1/2 pr-3 md:mb-2 md:w-full h-[170px] md:pr-0 md:h-[190px] sm:h-[250px]">
+    <div className="w-1/2 pr-3 md:mb-2 md:w-[240px] h-[170px] md:pr-0 md:h-[240px] sm:h-[250px]">
       <Image
         src={imageUrl}
         width={300}
@@ -31,7 +31,7 @@ export default function Teachers({ content, title }) {
         <h2 className="underline decoration-4 pb-8 underline-offset-8 decoration-jobloop-primary-orange">
           {title}
         </h2>
-        <div className="flex flex-col-reverse md:flex-row justify-center gap-8 max-w-screen-2xl mx-auto p-4">
+        <div className="flex flex-col-reverse md:flex-row justify-center gap-24 max-w-screen-2xl mx-auto p-4">
           <VeilederCard
             imageUrl={
               content[0].hotspot

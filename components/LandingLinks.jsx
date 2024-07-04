@@ -12,30 +12,35 @@ const LinkCard = ({ href, src, title, description }) => {
   return (
     <a
       href={href}
-      className="group bg-kv-white flex flex-col gap-2 sm:flex-col w-full md:flex-col md:align-start lg:flex-col  shadow-md rounded-lg md:gap-8 hover:shadow-lg ">
-      <Image
-        src={src}
-        width={200}
-        height={200}
-        className=" h-4/6 w-full rounded-t-lg"
-        alt={`Grafikkikon av ${src}`}
-      />
+      className="w-full"
+      >
+      <div className="w-5/6 bg-kv-white flex flex-col gap-2 sm:flex-col w-full md:flex-col md:align-start lg:flex-col  shadow-md rounded-lg md:gap-8 hover:shadow-lg ">
+          <div >
+              <Image
+                src={src}
+                width={200}
+                height={200}
+                className=" h-full w-full rounded-t-lg"
+                alt={`Grafikkikon av ${src}`}
+              />
+          </div>
       {/* Text */}
-      <div>
-        <div className="w-full sm:p-3 flex flex-col gap-4 sm:pb-7 lg:pb-3">
           <div>
-            <h4 className="text-lg">{title}</h4>
-            <p className="text-base">{description}</p>
-          </div>
+            <div className="w-full sm:p-3 flex flex-col gap-4 sm:pb-7 lg:pb-3">
+              <div>
+                <h4 className="text-lg">{title}</h4>
+                <p className="text-base">{description}</p>
+              </div>
 
-          <div>
-             <SmallButton path={href} text={"Les mer"}/>
+              <div>
+                <SmallButton  text={"Les mer"}/>
+              </div>
+              {/* <div className="font-normal group-hover:font-bold group-hover:underline text-blue-500">
+                <p>Les mer</p>
+              </div> */}
+            </div>
           </div>
-          {/* <div className="font-normal group-hover:font-bold group-hover:underline text-blue-500">
-            <p>Les mer</p>
-          </div> */}
-        </div>
-      </div>
+       </div>
     </a>
   );
 };
@@ -47,7 +52,7 @@ export default function LandingLinks() {
         <h2 className="text-center underline underline-offset-8 decoration-jobloop-primary-green">
           Hvordan kan vi hjelpe deg?
         </h2>
-        <div className="flex flex-col lg:flex-row gap-8">
+        <div className="flex flex-col justify-center lg:flex-row gap-8">
           <LinkCard
             href="/arbeidsgiver"
             src={Kraken}
