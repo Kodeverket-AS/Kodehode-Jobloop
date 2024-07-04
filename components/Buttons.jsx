@@ -47,18 +47,32 @@ export function LinkButton({ path, text }) {
       href={path}
       title={`Gå til ${path}`}
       aria-label={`Lenke til underside ${path}`}
-      className="px-8 py-4 text-sm md:text-base transition-all text-neutral-900 border-2 bg-kv-white/0 border-neutral-900 rounded-full hover:bg-neutral-900 hover:border-2 hover:border-neutral-900 hover:text-kv-white focus:bg-neutral-900 focus:border-neutral-900 focus:text-kv-white">
+      className="px-8 py-4 font-semibold text-sm md:text-base transition-all text-neutral-900 border-2 bg-kv-white/0 border-neutral-900 rounded-full hover:bg-neutral-900 hover:border-2 hover:border-neutral-900 hover:text-kv-white focus:bg-neutral-900 focus:border-neutral-900 focus:text-kv-white">
       {text}
     </Link>
   );
 }
+
+export function SmallButton({ path, text }) {
+  return (
+    <Link
+      href={path}
+      title={`Gå til ${path}`}
+      aria-label={`Lenke til underside ${path}`}
+      className=" flex w-24 py-1 px-1 justify-center font-medium text-sm md:text-base text-kv-white border-2 rounded-full bg-neutral-900 border-neutral-900 hover:bg-kv-white/0 hover:border-neutral-900 hover:text-neutral-900 focus:bg-kv-white focus:border-neutral-900 focus:text-neutral-900">
+      {text}
+    </Link>
+  );
+}
+
+
 export function LinkButtonContained({ path, text }) {
   return (
     <Link
       href={path}
       title={`Gå til ${path}`}
       aria-label={`Lenke til underside ${path}`}
-      className="px-8 py-4 text-sm md:text-base text-kv-white border-2 rounded-full bg-neutral-900 border-neutral-900 hover:bg-kv-white/0 hover:border-neutral-900 hover:text-neutral-900 focus:bg-kv-white focus:border-neutral-900 focus:text-neutral-900">
+      className="px-8 py-4 font-semibold text-sm md:text-base text-kv-white border-2 rounded-full bg-neutral-900 border-neutral-900 hover:bg-kv-white/0 hover:border-neutral-900 hover:text-neutral-900 focus:bg-kv-white focus:border-neutral-900 focus:text-neutral-900">
       {text}
     </Link>
   );

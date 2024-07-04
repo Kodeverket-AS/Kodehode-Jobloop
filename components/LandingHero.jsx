@@ -14,7 +14,7 @@ export default function LandingHero({ content }) {
     "Vi rekrutterer kandidater som av ulike grunner har havnet utenfor arbeidslivet og lærer dem opp til å bli frontend-utviklere. Gjennom en kombinasjon av teoretisk opplæring og praksis vil kandidatene lære seg de viktigste teknologiene og bli klar for en karriere innen utvikling.";
   return (
     <>
-      <div className="group relative h-[80vh] w-screen">
+      <div className="group relative h-[80vh] w-full">
         <Image
           src={content.image}
           height={500}
@@ -34,28 +34,7 @@ export default function LandingHero({ content }) {
         </div>
       </div>
 
-      <SectionComponent
-        reverseLayoutOrder={true}
-        leftContent={
-          <TextBlock
-            title={missionTitle}
-            contentString={missionStatement}
-            isButton={true}
-            isContained={true}
-            path={"/kontakt"}
-            text={"Kontakt oss"}
-          />
-        }
-        rightContent={
-          <Image
-            src={danialigdery}
-            height={500}
-            width={500}
-            alt="kodemiljø"
-            className="object-contain w-full rounded"
-          />
-        }
-      />
+     
     </>
   );
 }

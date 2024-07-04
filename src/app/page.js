@@ -4,14 +4,16 @@ import LandingHero from "../../components/LandingHero";
 import LandingLinks from "../../components/LandingLinks";
 import LandingVisjon from "../../components/LandingVisjon";
 import imageUrlBuilder from "@sanity/image-url";
+import LandingIntro from "../../components/LandingIntro";
 
 export default async function Home() {
   const data = await getData();
 
   return (
-    <main className="flex flex-col items-center min-h-screen">
+    <main className="flex flex-col items-center min-h-screen ">
       <LandingHero content={data.heroSub[1]} />
-      <section className=" flex flex-col px-4 pb-12 items-center">
+      <section className=" flex flex-col gap-12 px-4 pb-12 p-20 items-center w-11/12">
+        <LandingIntro/>
         <LandingLinks />
         <LandingVisjon content={data.visionLanding[0]} />
       </section>
