@@ -14,7 +14,7 @@ export default function LandingVisjon({ content }) {
             width={500}
             height={500}
             alt={content.alt || ""}
-            className="rounded w-11/12"
+            className="rounded w-full lg:pr-12"
           />
         </div>
       }

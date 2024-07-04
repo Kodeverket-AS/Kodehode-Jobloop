@@ -12,17 +12,17 @@ const LinkCard = ({ href, src, title, description }) => {
   return (
     <a
       href={href}
-      className="group bg-kv-white flex flex-col gap-2 sm:flex-row w-full md:flex-col md:align-start lg:flex-col  shadow-md rounded-lg md:gap-8 hover:shadow-lg">
+      className="group bg-kv-white flex flex-col gap-2 sm:flex-col w-full md:flex-col md:align-start lg:flex-col  shadow-md rounded-lg md:gap-8 hover:shadow-lg ">
       <Image
         src={src}
         width={200}
         height={200}
-        className=" h-4/6 w-full "
+        className=" h-4/6 w-full rounded-t-lg"
         alt={`Grafikkikon av ${src}`}
       />
       {/* Text */}
       <div>
-        <div className="w-full md:p-3 flex flex-col gap-4 ">
+        <div className="w-full sm:p-3 flex flex-col gap-4 sm:pb-7 lg:pb-3">
           <div>
             <h4 className="text-lg">{title}</h4>
             <p className="text-base">{description}</p>
