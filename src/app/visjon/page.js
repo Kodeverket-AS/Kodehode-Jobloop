@@ -17,7 +17,7 @@ export default async function Vision() {
   return (
     <>
       <main className="flex flex-col items-center min-h-screen py-20">
-        <div className="flex flex-col gap-8 items-center ">
+        <div className="w-11/12 flex flex-col gap-12 items-center ">
           <VisionTop
             content={data.heroSub[3]}
             key={data.heroSub[3]._id}

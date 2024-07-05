@@ -12,7 +12,7 @@ export function VisionTextRight({ content, link, linkText, linkAria, title }) {
         <Image
           width={1000}
           height={1000}
-          className="w-full"
+          className="w-11/12"
           src={content.ImageTwo}
           alt={content.AltTwo || ""}
         />
@@ -71,7 +71,7 @@ export function VisionTextLeft({ content, link, linkText, linkAria, title }) {
         <Image
           width={1000}
           height={1000}
-          className="w-full"
+          className="w-11/12"
           src={content.ImageTwo}
           alt={content.AltTwo || ""}
         />

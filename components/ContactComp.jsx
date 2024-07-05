@@ -1,10 +1,10 @@
 import Image from "next/image";
-import { SectionComponent } from "./SectionComponent";
+import { SectionComponent, SectionComponentwBG } from "./SectionComponent";
 import { TextBlock } from "./TextBlockComponent";
 
 export default function ContactComp({ imageOne, title, content, _id, alt }) {
   return (
-    <SectionComponent
+    <SectionComponentwBG
       isBgColor={true}
       bgColorOrange
       leftContent={

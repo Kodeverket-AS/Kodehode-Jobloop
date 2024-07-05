@@ -18,7 +18,7 @@ export default async function Oppdragsgiver() {
   //console.log(data.courseTypes);
   return (
     <main className="flex flex-col items-center min-h-screen pt-20">
-      <div className="flex flex-col items-center md:mt-0">
+      <div className=" w-11/12 flex flex-col items-center md:mt-0">
         <HeroSub
           content={data.heroSub[4]}
           buttonText={"Kontakt oss"}
@@ -42,7 +42,7 @@ export default async function Oppdragsgiver() {
           content2={data.competenceIcons}
         />
 
-        <div className="w-full">
+        <div className="w-screen">
           <Offices content={data.OurLocals} />
         </div>
 

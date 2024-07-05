@@ -25,10 +25,10 @@ export default function FourIconRow({ title, content }) {
   return (
     <section className="w-screen py-12">
       {content && content.length !== 0 ? (
-        <div className="flex flex-col justify-center max-w-screen-2xl mx-auto px-2">
-          <h3 className="text-center  underline underline-offset-8 pb-8 decoration-jobloop-primary-orange">
+        <div className="flex flex-col gap-4 justify-center max-w-screen-2xl mx-auto px-2">
+          <h2 className="text-center  underline underline-offset-8 pb-8 decoration-jobloop-primary-orange">
             {title}
-          </h3>
+          </h2>
 
           <div className="flex flex-col gap-8 md:flex-row pb-8 justify-center m-auto ">
             <LanguageCard {...content[0]} />
