@@ -17,14 +17,11 @@ export const TextBlock = ({
 }) => {
   return (
     <div className=" flex flex-col gap-4 w-full">
-      <h2
-        className={`pl-1 text-kv-black underline underline-offset-8 pb-2 ${
-          isOrange
-            ? "decoration-jobloop-primary-orange"
-            : "decoration-jobloop-primary-green"
-        }`}>
-        {title}
-      </h2>
+          <h2
+            className="border-b-8 pr-2  border-jobloop-primary-green pl-1 text-kv-black pb-4 w-fit" >
+            {title}
+          </h2>
+       
 
         <div className="flex flex-col gap-12">
               <div className="pl-1 w-5/6 flex flex-col  text-kv-black text-base xl:text-lg xl:max-w-[70ch]">
@@ -78,10 +75,11 @@ export const TextBlockHeader = ({
   isOrange,
 }) => {
   return (
-    <div className=" flex flex-col gap-4 w-full">
-      <div className="border-b-8 w-5/6">
+    <div className=" flex flex-col gap-4 w-full ">
+      
+      <div className="w-5/6">
           <h1
-            className="pl-1 text-[60px] leading-[1.15] text-kv-black pb-2">
+            className="border-b-8 border-jobloop-primary-green pl-1 text-[60px] leading-[1.15] text-kv-black pb-2 w-fit">
             {title}
           </h1>
       </div>

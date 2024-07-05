@@ -13,9 +13,9 @@ export default async function Techstack() {
   }
 
   return (
-    <main className="flex flex-col items-center min-h-screen py-20">
-      <div className="flex flex-col items-center ">
-        <section className="w-screen py-12">
+    <main className="flex flex-col items-center min-h-screen py-36">
+      <div className=" w-11/12 flex flex-col items-center ">
+        <section className="w-full py-12">
           <div className="flex flex-col justify-center gap-12 max-w-screen-2xl mx-auto px-4">
             <div className="w-full flex flex-col gap-8 md:w-1/2">
               <h1 className="text-2xl underline underline-offset-8 decoration-jobloop-primary-green text-black md:text-5xl">

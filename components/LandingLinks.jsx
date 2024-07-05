@@ -47,12 +47,12 @@ const LinkCard = ({ href, src, title, description }) => {
 
 export default function LandingLinks() {
   return (
-    <section className="w-full py-12">
-      <div className=" flex flex-col justify-center gap-12 max-w-screen-2xl mx-auto px-4">
-        <h2 className="text-center underline underline-offset-8 decoration-jobloop-primary-green">
+    <section className="w-full  py-12">
+      <div className=" flex flex-col justify-center items-center gap-12 max-w-screen-2xl mx-auto px-4">
+        <h2 className="text-center pb-4 border-b-8 border-jobloop-primary-green w-fit">
           Hvordan kan vi hjelpe deg?
         </h2>
-        <div className="flex flex-col justify-center lg:flex-row gap-8">
+        <div className="flex w-full flex-col justify-center lg:flex-row gap-8">
           <LinkCard
             href="/arbeidsgiver"
             src={Kraken}

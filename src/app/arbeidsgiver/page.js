@@ -25,7 +25,7 @@ export default async function Bedrift() {
 
   return (
     <main className="justify-center flex flex-col items-center min-h-screen pt-20">
-      <div className="flex flex-col items-center w-11/12">
+      <div className="flex flex-col items-center w-11/12 gap-12">
           <HeroSub
             content={data.heroSub[6]}
             buttonText={"Finn kandidater"}

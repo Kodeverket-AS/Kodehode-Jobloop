@@ -18,7 +18,7 @@ export default function Results({ content }) {
       }
       rightContent={
         <div className=" flex flex-col gap-8 w-full">
-          <h2 className="underline underline-offset-8 decoration-jobloop-primary-orange group-hover:decoration-jobloop-primary-green">
+          <h2 className="border-b-8 border-jobloop-primary-orange w-fit pb-2">
             Kodehode gir resultater
           </h2>
 

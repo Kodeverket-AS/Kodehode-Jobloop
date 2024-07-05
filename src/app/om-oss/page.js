@@ -23,7 +23,7 @@ export default async function About() {
   return (
     <>
       <main className="flex flex-col items-center min-h-screen py-20">
-        <div className="flex flex-col items-center ">
+        <div className="flex w-11/12 flex-col items-center ">
           <OmOssTop
             content={heroSubData}
             buttonText="Kontakt oss"

@@ -43,8 +43,8 @@ export default function JobloopPodium({ content }) {
   const podiumFilteredContent = filterEmptyContentBlocks(content[1].content);
 
   return (
-    <section className="w-screen py-12">
-      <div className="flex flex-col md:flex-row justify-center gap-12 max-w-screen-2xl mx-auto px-4">
+    <section className="w-full py-12">
+      <div className="flex flex-col md:flex-row justify-center gap-12 w-full mx-auto px-4">
         <JobLoopPodiumCard
           title={content[0].title}
           content={jobloopFilteredContent}

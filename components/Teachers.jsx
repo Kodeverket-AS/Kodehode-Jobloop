@@ -27,8 +27,8 @@ export default function Teachers({ content, title }) {
   //console.log(content[0]);
   return (
     <section className="w-screen py-12 bg-jobloop-primary-orange/10">
-      <div className="flex flex-col items-center w-full px-8 lg:px-24 ">
-        <h2 className="underline decoration-4 pb-8 underline-offset-8 decoration-jobloop-primary-orange">
+      <div className="flex flex-col gap-4 items-center w-full px-8 lg:px-24 ">
+        <h2 className="border-b-8 border-jobloop-primary-orange pb-2">
           {title}
         </h2>
         <div className="flex flex-col-reverse md:flex-row justify-center gap-24 max-w-screen-2xl mx-auto p-4">
