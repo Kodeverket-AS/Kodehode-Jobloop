@@ -81,7 +81,7 @@ export const TextBlockHeader = ({
     <div className=" flex flex-col gap-4 w-full">
       <div className="border-b-8 w-5/6">
           <h1
-            className="pl-1 text-[70px] leading-snug text-kv-black pb-2">
+            className="pl-1 text-[60px] leading-light text-kv-black pb-2">
             {title}
           </h1>
       </div>
