@@ -79,7 +79,7 @@ export const TextBlockHeader = ({
       
       <div className="w-5/6">
           <h1
-            className="border-b-8 border-jobloop-primary-green pl-1 text-[60px] leading-[1.15] text-kv-black pb-2 w-fit">
+            className="border-b-8 border-jobloop-primary-green pl-1 text-[35px] lg:text-[60px] leading-[1.15] text-kv-black pb-2 w-fit">
             {title}
           </h1>
       </div>
