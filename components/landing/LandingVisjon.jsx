@@ -1,8 +1,8 @@
 "use client";
 
 import Image from "next/image";
-import { SectionComponent } from "./SectionComponent";
-import { TextBlock } from "./TextBlockComponent";
+import { SectionComponent } from "../SectionComponent";
+import { TextBlock } from "../TextBlockComponent";
 
 export default function LandingVisjon({ content }) {
   return (

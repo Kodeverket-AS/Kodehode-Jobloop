@@ -2,11 +2,11 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import danialigdery from "../public/danialigdery.jpg";
-import { LinkButton, LinkButtonContained } from "./Buttons";
+import danialigdery from "../../public/danialigdery.jpg"
+import { LinkButton, LinkButtonContained } from "../Buttons";
 // import { PortableText } from "@portabletext/react";
-import { SectionComponent } from "./SectionComponent";
-import { TextBlock } from "./TextBlockComponent";
+import { SectionComponent } from "../SectionComponent";
+import { TextBlock } from "../TextBlockComponent";
 
 export default function LandingHero({ content }) {
   const missionTitle = "Hva gjør vi?";

@@ -1,12 +1,12 @@
 "use client";
 import Image from "next/image";
-import dokument from "../public/dokument.svg";
-import koffert from "../public/koffert.svg";
-import hatt from "../public/hatt.svg";
-import Miquelena from "../public/miguelAngelMiquelena.jpg"
-import Kenny from "../public/kennyEliason.jpg"
-import Kraken from "../public/krakenimages.jpg"
-import { SmallButton } from "./Buttons";
+import dokument from "../../public/dokument.svg";
+import koffert from "../../public/koffert.svg";
+import hatt from "../../public/hatt.svg";
+import Miquelena from "../../public/miguelAngelMiquelena.jpg"
+import Kenny from "../../public/kennyEliason.jpg"
+import Kraken from "../../public/krakenimages.jpg"
+import { SmallButton } from "../Buttons";
 
 const LinkCard = ({ href, src, title, description }) => {
   return (

@@ -1,10 +1,10 @@
 import { Client } from "../../lib/sanity";
 import "./globals.css";
-import LandingHero from "../../components/LandingHero";
-import LandingLinks from "../../components/LandingLinks";
-import LandingVisjon from "../../components/LandingVisjon";
+import LandingHero from "../../components/landing/LandingHero";
+import LandingLinks from "../../components/landing/LandingLinks";
+import LandingVisjon from "../../components/landing/LandingVisjon";
 import imageUrlBuilder from "@sanity/image-url";
-import LandingIntro from "../../components/LandingIntro";
+import LandingIntro from "../../components/landing/LandingIntro";
 
 export default async function Home() {
   const data = await getData();

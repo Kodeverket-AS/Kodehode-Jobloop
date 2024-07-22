@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { PortableText } from "@portabletext/react";
-import { ExternalLinkButton } from "./Buttons";
+import { ExternalLinkButton } from "../../../../components/Buttons";
 import { Button } from "@mui/material";
 
 const JobLoopPodiumCard = ({ title, content, image, link }) => {
