@@ -1,10 +1,10 @@
 //import HeroSub from "../../../components/HeroSub";
 import { getData } from "../page";
-import Offices from "../../../components/Offices";
-import Teachers from "../../../components/Teachers";
+// import Offices from "../../../components/Offices";
+// import Teachers from "../../../components/Teachers";
 import JobloopPodium from "../../../components/JobloopPodium";
-import OmOssTop from "../../../components/OmOssTop";
-import LinkToFaq from "../../../components/LinkToFaq";
+import OmOssTop from "./components/OmOssTop";
+// import LinkToFaq from "../../../components/LinkToFaq";
 
 export const metadata = {
   title: "Om oss | Kodehode",

@@ -1,11 +1,7 @@
 import { getData } from "../page";
 import ContactComp from "../../../components/ContactComp";
-
-import {
-  VisionTextLeft,
-  VisionTextRight,
-} from "../../../components/Vision2Part";
-import VisionTop from "../../../components/VisionSub";
+import { VisionTextLeft, VisionTextRight } from "./components/Vision2Part";
+import VisionTop from "./components/VisionSub";
 
 export const metadata = {
   title: "Vår Visjon: Det finnes et mangfold av potensial | Kodehode",

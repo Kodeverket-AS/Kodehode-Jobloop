@@ -1,4 +1,4 @@
-import DynamicCompetence from "./DynamicCompetence";
+import DynamicCompetence from "../DynamicCompetence";
 import { PortableText } from "@portabletext/react";
 import { AlertError } from "../AlertComponent";
 

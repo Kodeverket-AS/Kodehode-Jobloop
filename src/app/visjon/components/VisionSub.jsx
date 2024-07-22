@@ -1,8 +1,8 @@
 "use client";
 
 import Image from "next/image";
-import { SectionComponent } from "./SectionComponent";
-import { TextBlock, TextBlockHeader } from "./TextBlockComponent";
+import { SectionComponent } from "../../../../components/SectionComponent";
+import { TextBlock, TextBlockHeader } from "../../../../components/TextBlockComponent";
 
 export default function VisionTop({ content }) {
   return (

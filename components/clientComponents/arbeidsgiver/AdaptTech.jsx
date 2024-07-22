@@ -1,8 +1,8 @@
 "use client";
 
 import Image from "next/image";
-import { SectionComponent } from "./SectionComponent.jsx";
-import { TextBlock } from "./TextBlockComponent.jsx";
+import { SectionComponent } from "../../SectionComponent.jsx";
+import { TextBlock } from "../../TextBlockComponent.jsx";
 
 const ImageCard = ({ src, alt, title }) => (
   <div className="flex flex-col w-24 my-3 text-center 2xs:w-32 xs:w-36 sm:w-64">

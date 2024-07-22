@@ -2,8 +2,8 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { SectionComponent } from "./SectionComponent";
-import { TextBlock } from "./TextBlockComponent";
+import { SectionComponent } from "../../SectionComponent";
+import { TextBlock } from "../../TextBlockComponent";
 import { PortableText } from "@portabletext/react";
 
 const CompetenceCard = ({ src, alt, title, content }) => (

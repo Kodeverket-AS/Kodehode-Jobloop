@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { AlertError } from "./AlertComponent";
+import { AlertError } from "../AlertComponent";
 
 const LanguageCard = ({ title, content, logo, alt }) => {
   return (

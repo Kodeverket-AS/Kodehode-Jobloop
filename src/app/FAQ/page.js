@@ -5,7 +5,7 @@ import { FaqBedrift } from "./components/FAQcomp";
 import { FaqVirk } from "./components/FAQcomp";
 import { getData } from "../page";
 import { ToggleBtn } from "../../../components/Buttons";
-import HeroSub from "../../../components/HeroSub";
+// import HeroSub from "../../../components/HeroSub";
 
 export const metadata = {
   title: "FAQ: Ofte stitle spørsmål | Kodehode",
