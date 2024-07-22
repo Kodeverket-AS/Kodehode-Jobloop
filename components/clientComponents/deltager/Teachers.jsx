@@ -3,7 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { urlFor } from "@/app/page";
-import { LinkButtonContained } from "./Buttons";
+import { LinkButtonContained } from "../../Buttons";
 
 const VeilederCard = ({ imageUrl, imageAlt, name, role }) => (
   <div className="flex flex-row w-full pb-10 mx-auto md:flex-col md:w-40 md:pb-0 md:mx-0 lg:w-48 ">

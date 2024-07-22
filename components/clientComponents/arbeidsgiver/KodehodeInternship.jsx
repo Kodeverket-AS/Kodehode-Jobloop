@@ -1,8 +1,8 @@
 "use client";
 
 import InternshipCard from "./InternshipCard";
-import { SectionComponent } from "./SectionComponent";
-import { TextBlock } from "./TextBlockComponent";
+import { SectionComponent } from "../../SectionComponent";
+import { TextBlock } from "../../TextBlockComponent";
 
 export default function KodehodeInternship({ content1, content2 }) {
   return (

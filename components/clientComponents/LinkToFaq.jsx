@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { LinkButtonContained } from "./Buttons";
+import { LinkButtonContained } from "../Buttons";
 
 export default function LinkToFaq() {
   return (

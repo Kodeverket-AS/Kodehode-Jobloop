@@ -1,8 +1,8 @@
 "use client";
 
 import Image from "next/image";
-import { SectionComponent } from "./SectionComponent";
-import { TextBlock, TextBlockHeader } from "./TextBlockComponent";
+import { SectionComponent } from "../SectionComponent";
+import { TextBlockHeader, TextBlock } from "../TextBlockComponent";
 
 export default function HeroSub({ content, buttonText }) {
   return (

@@ -1,6 +1,6 @@
 import DynamicCompetence from "./DynamicCompetence";
 import { PortableText } from "@portabletext/react";
-import { AlertError } from "./AlertComponent";
+import { AlertError } from "../AlertComponent";
 
 export default function MultiCompetence({ content1, content2 }) {
   //console.log(content1);

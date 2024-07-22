@@ -11,6 +11,8 @@ module.exports = {
         "2xs": "375px",
         xs: "425px",
         "3xl": "2600px",
+        xl: "1500px",
+        
       },
       colors: {
         kv: {

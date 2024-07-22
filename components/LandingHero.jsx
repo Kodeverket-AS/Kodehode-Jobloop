@@ -14,7 +14,7 @@ export default function LandingHero({ content }) {
     "Vi rekrutterer kandidater som av ulike grunner har havnet utenfor arbeidslivet og lærer dem opp til å bli frontend-utviklere. Gjennom en kombinasjon av teoretisk opplæring og praksis vil kandidatene lære seg de viktigste teknologiene og bli klar for en karriere innen utvikling.";
   return (
     <>
-      <div className="group relative h-[50vh] lg:h-[80vh] w-full">
+      <div className="group relative h-[40vh] md:h-[30vh] lg:h-[50vh] xl:h-[90vh] w-full">
         <Image
           src={content.image}
           height={500}

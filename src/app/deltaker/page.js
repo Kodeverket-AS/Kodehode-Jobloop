@@ -1,13 +1,13 @@
-import HeroSub from "../../../components/HeroSub";
+import HeroSub from "../../../components/clientComponents/HeroSub";
 import { getData } from "../page";
 import KodehodeSummary from "../../../components/KodehodeSummary";
-import StudyInParts from "../../../components/StudyInParts";
-import Results from "../../../components/Results";
+import StudyInParts from "../../../components/clientComponents/StudyInParts";
+import Results from "../../../components/clientComponents/Results";
 import ImageGallery from "../../../components/ImageGallery";
-import LinkToFaq from "../../../components/LinkToFaq";
+import LinkToFaq from "../../../components/clientComponents/LinkToFaq";
 import VideoComp1 from "../../../components/VideoComp1";
-import Teachers from "../../../components/Teachers";
-import MultiCompetence from "../../../components/MultiCompetence";
+import Teachers from "../../../components/clientComponents/deltager/Teachers";
+import MultiCompetence from "../../../components/clientComponents/MultiCompetence";
 
 /**
  * ========================================================================

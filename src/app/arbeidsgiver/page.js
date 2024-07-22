@@ -1,13 +1,13 @@
-import HeroSub from "../../../components/HeroSub";
+import HeroSub from "../../../components/clientComponents/HeroSub";
 import { getData } from "../page";
-import FourIconRow from "../../../components/FourIconRow";
-import KodehodeInternship from "../../../components/KodehodeInternship";
-import Competence from "../../../components/Competence";
+import FourIconRow from "../../../components/clientComponents/FourIconRow";
+import KodehodeInternship from "../../../components/clientComponents/arbeidsgiver/KodehodeInternship";
+import Competence from "../../../components/clientComponents/arbeidsgiver/Competence";
 import ContactComp from "../../../components/ContactComp";
-import LinkToFaq from "../../../components/LinkToFaq";
-import AdaptTech from "../../../components/AdaptTech";
-import CompanyCarousel from "../../../components/CompanyCarousel";
-import Results from "../../../components/Results";
+import LinkToFaq from "../../../components/clientComponents/LinkToFaq";
+import AdaptTech from "../../../components/clientComponents/arbeidsgiver/AdaptTech";
+import CompanyCarousel from "../../../components/clientComponents/arbeidsgiver/CompanyCarousel";
+import Results from "../../../components/clientComponents/Results";
 
 export const metadata = {
   title: "Arbeidsgiver: Dyktige junior-utviklere til din bedrift? | Kodehode",
