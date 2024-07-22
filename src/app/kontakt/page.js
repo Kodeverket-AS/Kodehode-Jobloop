@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { LocationCheck } from "../../../components/ContactUsSection";
+import { LocationCheck } from "./components/ContactUsSection";
 import { getData } from "../page";
 
 export const metadata = {

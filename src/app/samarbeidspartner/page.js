@@ -1,10 +1,10 @@
 import HeroSub from "../../../components/clientComponents/HeroSub";
 import { getData } from "../page";
-import KodehodeSummary from "../../../components/KodehodeSummary";
+import KodehodeSummary from "../../../components/clientComponents/KodehodeSummary";
 import StudyInParts from "../../../components/clientComponents/StudyInParts";
 import FourIconRow from "../../../components/clientComponents/FourIconRow";
 import Offices from "../../../components/Offices";
-import ImageGallery from "../../../components/ImageGallery";
+import ImageGallery from "../../../components/clientComponents/ImageGallery";
 import LinkToFaq from "../../../components/clientComponents/LinkToFaq";
 import MultiCompetence from "../../../components/clientComponents/MultiCompetence";
 import { AlertError } from "../../../components/AlertComponent";

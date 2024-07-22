@@ -1,8 +1,8 @@
 import Image from "next/image";
 import { NavbarAlt } from "../../../components/navigation/Navbar";
-import { FaqDeltager } from "../../../components/FAQcomp";
-import { FaqBedrift } from "../../../components/FAQcomp";
-import { FaqVirk } from "../../../components/FAQcomp";
+import { FaqDeltager } from "./components/FAQcomp";
+import { FaqBedrift } from "./components/FAQcomp";
+import { FaqVirk } from "./components/FAQcomp";
 import { getData } from "../page";
 import { ToggleBtn } from "../../../components/Buttons";
 import HeroSub from "../../../components/HeroSub";

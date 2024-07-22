@@ -1,0 +1,1 @@
+komponenter for om oss siden

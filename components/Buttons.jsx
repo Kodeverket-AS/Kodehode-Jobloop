@@ -3,9 +3,9 @@
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import { FaArrowUp } from "react-icons/fa";
-import { FaqDeltager } from "./FAQcomp";
-import { FaqBedrift } from "./FAQcomp";
-import { FaqVirk } from "./FAQcomp";
+import { FaqDeltager } from "../src/app/FAQ/components/FAQcomp";
+import { FaqBedrift } from "../src/app/FAQ/components/FAQcomp";
+import { FaqVirk } from "../src/app/FAQ/components/FAQcomp";
 
 export function ScrollToTopButton() {
   const [isVisible, setIsVisible] = useState(false);
