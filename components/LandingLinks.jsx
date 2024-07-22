@@ -26,7 +26,7 @@ const LinkCard = ({ href, src, title, description }) => {
           </div>
       {/* Text */}
           <div>
-            <div className="w-full p-3 flex flex-col gap-4  lg:pb-3">
+            <div className="w-full p-5 flex flex-col gap-4  lg:pb-5">
               <div>
                 <h4 className="text-lg">{title}</h4>
                 <p className="text-base">{description}</p>
