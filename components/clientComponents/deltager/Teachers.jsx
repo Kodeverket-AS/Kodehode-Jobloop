@@ -31,7 +31,7 @@ export default function Teachers({ content, title }) {
         <h2 className="border-b-8 border-jobloop-primary-orange pb-2">
           {title}
         </h2>
-        <div className="flex flex-col-reverse md:flex-row justify-center gap-24 max-w-screen-2xl mx-auto p-4">
+        <div className="flex flex-col-reverse lg:flex-row md:flex-wrap justify-center gap-24 max-w-screen-2xl mx-auto p-4">
           <VeilederCard
             imageUrl={
               content[0].hotspot

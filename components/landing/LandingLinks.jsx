@@ -52,7 +52,7 @@ export default function LandingLinks() {
         <h2 className="md:text-left lg:text-center pb-4 border-b-8 border-jobloop-primary-green w-fit">
           Hvordan kan vi hjelpe deg?
         </h2>
-        <div className="flex w-full flex-col justify-center lg:flex-row gap-8">
+        <div className="flex w-full flex-col justify-center md:flex-row gap-8">
           <LinkCard
             href="/arbeidsgiver"
             src={Kraken}
