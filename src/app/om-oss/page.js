@@ -19,7 +19,7 @@ export default async function About() {
     data.personDatabase[6],
     data.personDatabase[7],
   ];
-  //console.log(data.about);
+
   return (
     <>
       <main className="flex flex-col items-center min-h-screen py-20">
