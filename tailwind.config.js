@@ -14,8 +14,10 @@ module.exports = {
       },
       colors: {
         kv: {
-          black: "#0B1215",
-          white: "#FFFAFA",
+          // black: "#0B1215",
+          // white: "#FFFAFA",
+          black: "#1d1d1f",
+          white: "#FFFFFF",
         },
         /* Farger fra Jobloop | Kodehode Figma Design Fil */
         jobloop: {

@@ -89,7 +89,7 @@ export function LinkButtonColour({ path, text }) {
   );
 }
 
-export function ToggleBtn({
+export function ToggleButton({
   titleDel,
   titleBed,
   titleVirk,
@@ -103,136 +103,92 @@ export function ToggleBtn({
   contentQuestThree,
   contentSvarThree,
 }) {
-  const [isDelVisible, setDelIsVisible] = useState(true);
-  const [isBedVisible, setBedIsVisible] = useState(false);
-  const [isVirkVisible, setVirkIsVisible] = useState(false);
+  const tabs = [
+    {
+      id: "del",
+      title: titleDel,
+      id: idOne,
+      contentQ: contentQuestOne,
+      contentS: contentSvarOne,
+      component: FaqDeltager,
+    },
+    {
+      id: "bed",
+      title: titleBed,
+      id: idTwo,
+      contentQ: contentQuestTwo,
+      contentS: contentSvarTwo,
+      component: FaqBedrift,
+    },
+    {
+      id: "virk",
+      title: titleVirk,
+      id: idThree,
+      contentQ: contentQuestThree,
+      contentS: contentSvarThree,
+      component: FaqVirk,
+    },
+  ];
 
-  function handleDelToggle() {
-    setDelIsVisible(!isDelVisible);
-    setBedIsVisible(false);
-    setVirkIsVisible(false);
-  }
+  const [activeTab, setActiveTab] = useState(tabs[0].id); // Set the initial value to "del"
 
-  function handleBedToggle() {
-    setBedIsVisible(!isBedVisible);
-    setDelIsVisible(false);
-    setVirkIsVisible(false);
-  }
-
-  function handleVirkToggle() {
-    setVirkIsVisible(!isVirkVisible);
-    setDelIsVisible(false);
-    setBedIsVisible(false);
-  }
+  const handleTabChange = (id) => {
+    setActiveTab(id);
+  };
 
   return (
-    <div className="flex flex-col w-full gap-7">
+    <div className="flex flex-col w-full gap-8">
       <div className="flex justify-center w-full">
-        <div className="flex flex-col items-start justify-center w-3/6 gap-4 ml-24 md:w-full md:flex-row md:p-20 md:gap-7">
-          <div>
-            <button
-              onClick={handleDelToggle}
-              className={`md:p-7 w-fit flex flex-row gap-3 items-start md:items-center rounded-3xl h-7 lg:h-10 border-solid border-2  transition-all duration-600 text-sm
-                        ${
-                          isDelVisible
-                            ? "md:border-jobloop-primary-orange border-[#fafafa]"
-                            : " border-[#fafafa]"
-                        }`}>
-              <div
-                className={`flex items-center justify-center w-4 h-4 md:w-7 md:h-7  rounded-full ${
-                  isDelVisible ? " bg-jobloop-primary-orange " : " bg-gray-200"
-                }`}>
-                <div
-                  className={`w-2 h-2 rounded-full ${
-                    isDelVisible ? " bg-kv-white " : " bg-transparent"
+        <div className="text-kv-black/70 flex flex-row flex-wrap rounded-full overflow-hidden border-2 border-jobloop-primary-orange w-fit items-start justify-start sm:justify-center md:flex-row ">
+          {tabs.map((tab) => (
+            <div key={tab.id}>
+              <button
+                onClick={() => handleTabChange(tab.id)}
+                className={`flex p-4 gap-2 items-center border-r
+                  ${
+                    activeTab === tab.id
+                      ? "border-neutral-200 bg-jobloop-primary-orange/10"
+                      : " border-neutral-200"
                   }`}>
-                  {" "}
-                </div>
-              </div>
-              <p>{titleDel}</p>
-            </button>
-          </div>
-
-          <div>
-            <button
-              onClick={handleBedToggle}
-              className={`md:p-7 flex flex-row gap-3 items-start md:items-center rounded-3xl w-fit h-7 lg:h-10 border-solid border-2 transition-all duration-600 text-sm
-                        ${
-                          isBedVisible
-                            ? "md:border-jobloop-primary-orange border-[#fafafa]"
-                            : " border-[#fafafa]"
-                        }`}>
-              <div
-                className={` flex items-center justify-center w-4 h-4 md:w-7 md:h-7   rounded-full ${
-                  isBedVisible ? " bg-jobloop-primary-orange " : " bg-gray-200"
-                }`}>
                 <div
-                  className={`w-2 h-2 rounded-full ${
-                    isBedVisible ? " bg-kv-white " : " bg-transparent"
+                  className={`hidden md:flex items-center justify-center rounded-full ${
+                    activeTab === tab.id
+                      ? " bg-jobloop-primary-orange "
+                      : " bg-neutral-200"
                   }`}>
-                  {" "}
+                  <div
+                    className={`w-3 h-3 rounded-full ${
+                      activeTab === tab.id
+                        ? " bg-joblog-primary-orange "
+                        : " bg-transparent"
+                    }`}>
+                    {" "}
+                  </div>
                 </div>
-              </div>
-              <p>{titleBed}</p>
-            </button>
-          </div>
-
-          <div>
-            <button
-              onClick={handleVirkToggle}
-              className={`md:p-7 flex flex-row gap-3 items-start md:items-center rounded-3xl lg:w-44 w-fit h-7 lg:h-10 border-solid border-2 transition-all duration-600 text-sm 
-                          ${
-                            isVirkVisible
-                              ? "md:border-jobloop-primary-orange border-[#fafafa]"
-                              : " border-[#fafafa]"
-                          }`}>
-              <div
-                className={` flex items-center justify-center w-4 h-4 md:w-7 md:h-7 rounded-full ${
-                  isVirkVisible ? " bg-jobloop-primary-orange " : " bg-gray-200"
-                }`}>
-                <div
-                  className={`w-2 h-2 rounded-full ${
-                    isVirkVisible ? " bg-kv-white " : " bg-transparent"
+                <p
+                  className={`text-sm md:text-base ${
+                    activeTab === tab.id && "text-kv-black/100  "
                   }`}>
-                  {" "}
-                </div>
-              </div>
-              <p>{titleVirk}</p>
-            </button>
-          </div>
+                  {tab.title}
+                </p>
+              </button>
+            </div>
+          ))}
         </div>
       </div>
 
       <div className="flex justify-center w-full">
-        <div>
-          {isDelVisible && (
-            <FaqDeltager
-              id={idOne}
-              contentQ={contentQuestOne}
-              contentS={contentSvarOne}
-            />
-          )}
-        </div>
-
-        <div>
-          {isBedVisible && (
-            <FaqBedrift
-              id={idTwo}
-              contentQ={contentQuestTwo}
-              contentS={contentSvarTwo}
-            />
-          )}
-        </div>
-
-        <div>
-          {isVirkVisible && (
-            <FaqVirk
-              id={idThree}
-              contentQ={contentQuestThree}
-              contentS={contentSvarThree}
-            />
-          )}
-        </div>
+        {tabs.map((tab) => (
+          <div key={tab.id}>
+            {activeTab === tab.id && (
+              <tab.component
+                id={tab.id}
+                contentQ={tab.contentQ}
+                contentS={tab.contentS}
+              />
+            )}
+          </div>
+        ))}
       </div>
     </div>
   );

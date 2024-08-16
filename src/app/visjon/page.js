@@ -1,6 +1,5 @@
 import { getData } from "../page";
 import ContactComp from "../../../components/ContactComp";
-
 import {
   VisionTextLeft,
   VisionTextRight,
@@ -25,17 +24,18 @@ export default async function Vision() {
           <VisionTextRight
             content={data.VisionSections[1]}
             link="https://glode.no/"
-            linkText="Mer om Gløde"
+            linkText="Gå til Gløde.no"
             linkAria="Les mer om Gløde på deres nettside"
             title="Gløde"
           />
           <VisionTextLeft
             content={data.VisionSections[0]}
             link="https://www.fontenehusetbergen.no/"
-            linkText="Mer om Fontenehuset"
+            linkText="Gå til Fontenehuset.no"
             linkAria="Les mer om Fontenehuset Bergen på deres nettside"
             title="Fontenehuset Bergen"
           />
+
           {/* <div className="w-full">
             <div className="w-fit m-auto mt-8 md:mt-16">
               <h1 className="text-2xl font-extrabold text-center md:text-4xl ">

@@ -26,7 +26,7 @@ export const TextBlock = ({
         {title}
       </h2>
 
-      <div className="text-kv-black text-base xl:text-lg xl:max-w-[70ch]">
+      <div className="text-kv-black/70 text-base xl:leading-relaxed xl:text-xl xl:max-w-[70ch]">
         {content ? (
           <>
             <div>

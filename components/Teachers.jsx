@@ -26,7 +26,7 @@ const VeilederCard = ({ imageUrl, imageAlt, name, role }) => (
 export default function Teachers({ content, title }) {
   //console.log(content[0]);
   return (
-    <section className="w-screen py-12 bg-jobloop-primary-orange/10">
+    <section className="w-screen my-24 py-24 bg-jobloop-primary-orange/10">
       <div className="flex flex-col items-center w-full px-8 lg:px-24 ">
         <h2 className="underline decoration-4 pb-8 underline-offset-8 decoration-jobloop-primary-orange">
           {title}

@@ -17,7 +17,7 @@ export default function Results({ content }) {
         />
       }
       rightContent={
-        <div className=" flex flex-col gap-8 w-full">
+        <div className=" flex flex-col gap-8 w-full group">
           <h2 className="underline underline-offset-8 decoration-jobloop-primary-orange group-hover:decoration-jobloop-primary-green">
             Kodehode gir resultater
           </h2>
@@ -33,7 +33,7 @@ export default function Results({ content }) {
             target="blank"
             rel="noopener noreferrer"
             aria-label="lenke til artikkelen"
-            className="text-blue-500 hover:text-blue-700 group-hover:font-bold hover:underline underline-offset-8">
+            className="text-blue-600 hover:text-blue-700 group-hover:font-bold hover:underline underline-offset-4">
             Les hele artikkelen på Kode24
           </a>
         </div>
