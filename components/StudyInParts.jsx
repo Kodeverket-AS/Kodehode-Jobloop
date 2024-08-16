@@ -21,7 +21,7 @@ export default function StudyInParts({ content }) {
             width={500}
             height={500}
             alt={content[0].alt || ""}
-            className="rounded w-full"
+            className=" w-full rounded-xl"
           />
         }
       />
@@ -34,7 +34,7 @@ export default function StudyInParts({ content }) {
             width={500}
             height={500}
             alt={content[1].alt || ""}
-            className="rounded w-full"
+            className="rounded-xl w-full"
           />
         }
         rightContent={

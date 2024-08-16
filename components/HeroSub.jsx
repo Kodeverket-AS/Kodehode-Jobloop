@@ -24,7 +24,7 @@ export default function HeroSub({ content, buttonText }) {
           width={500}
           height={500}
           alt={content.alt || ""}
-          className="rounded w-full"
+          className=" w-full rounded-xl"
         />
       }
     />

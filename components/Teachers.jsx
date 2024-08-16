@@ -12,7 +12,7 @@ const VeilederCard = ({ imageUrl, imageAlt, name, role }) => (
         src={imageUrl}
         width={300}
         height={300}
-        className="relative object-cover w-full h-full border rounded border-kv-white"
+        className="relative object-cover w-full h-full border rounded-lg border-kv-white"
         alt={imageAlt || ""}
       />
     </div>

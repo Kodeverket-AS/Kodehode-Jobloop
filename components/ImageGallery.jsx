@@ -13,7 +13,7 @@ export default function ImageGallery({ content }) {
               src={content[0].image1}
               width={500}
               height={500}
-              className="object-cover w-full h-full rounded"
+              className="object-cover w-full h-full rounded-xl"
               alt={content[0].alt1 || ""}
             />
           </div>
@@ -22,7 +22,7 @@ export default function ImageGallery({ content }) {
               src={content[0].image2}
               width={500}
               height={500}
-              className="object-cover w-full h-full rounded"
+              className="object-cover w-full h-full rounded-xl"
               alt={content[0].alt2 || ""}
             />
           </div>
@@ -32,7 +32,7 @@ export default function ImageGallery({ content }) {
             src={content[0].image3}
             width={500}
             height={500}
-            className="object-cover w-full h-full rounded"
+            className="object-cover w-full h-full rounded-xl"
             alt={content[0].alt3 || ""}
           />
         </div>
