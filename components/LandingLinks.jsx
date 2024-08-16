@@ -8,7 +8,7 @@ const LinkCard = ({ href, src, title, description }) => {
   return (
     <a
       href={href}
-      className="group bg-kv-white flex flex-col p-4 gap-2 sm:flex-row w-full md:flex-col md:align-start lg:flex-row md:p-6 shadow-md rounded-lg md:gap-8 hover:shadow-lg">
+      className="group flex flex-col p-4 gap-2 sm:flex-row w-full md:flex-col md:align-start lg:flex-row md:p-6 shadow-md rounded-lg md:gap-8 hover:shadow-lg">
       <Image
         src={src}
         width={64}
@@ -20,8 +20,8 @@ const LinkCard = ({ href, src, title, description }) => {
       <div>
         <div className="w-full ">
           <h4>{title}</h4>
-          <p className="text-base">{description}</p>
-          <div className="font-normal group-hover:font-bold group-hover:underline text-blue-500">
+          <p className="text-base text-kv-black/70">{description}</p>
+          <div className="font-normal group-hover:font-bold group-hover:underline text-blue-600">
             <p>Les mer</p>
           </div>
         </div>
@@ -32,11 +32,11 @@ const LinkCard = ({ href, src, title, description }) => {
 
 export default function LandingLinks() {
   return (
-    <section className="w-screen py-12">
-      <div className=" flex flex-col justify-center gap-8 max-w-screen-2xl mx-auto px-4">
-        <h3 className="text-center underline underline-offset-8 decoration-jobloop-primary-green">
+    <section className="w-screen py-24 lg:py-48">
+      <div className=" flex flex-col justify-center gap-12 max-w-screen-2xl mx-auto px-4">
+        <h2 className="text-center underline underline-offset-8 decoration-jobloop-primary-green">
           Hvordan kan vi hjelpe deg?
-        </h3>
+        </h2>
         <div className="flex flex-col lg:flex-row gap-8">
           <LinkCard
             href="/arbeidsgiver"

@@ -74,7 +74,7 @@ export default async function Deltaker() {
           title={"Våre veiledere"}
         />
 
-        <div className="w-screen">
+        <div className="w-screen pb-24">
           <Results content={data.results[0]} />
         </div>
         <ImageGallery content={data.ImageGallery} />

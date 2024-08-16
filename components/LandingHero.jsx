@@ -38,7 +38,8 @@ export default function LandingHero({ content }) {
         reverseLayoutOrder={true}
         leftContent={
           <TextBlock
-            title={missionTitle}
+            // title={missionTitle}
+            title="Vi utdanner morgendagens utviklere"
             contentString={missionStatement}
             isButton={true}
             isContained={true}

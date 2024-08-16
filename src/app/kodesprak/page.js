@@ -18,7 +18,7 @@ export default async function Techstack() {
         <section className="w-screen py-12">
           <div className="flex flex-col justify-center gap-12 max-w-screen-2xl mx-auto px-4">
             <div className="w-full flex flex-col gap-8 md:w-1/2">
-              <h1 className="text-2xl underline underline-offset-8 decoration-jobloop-primary-green text-black md:text-5xl">
+              <h1 className="text-2xl underline underline-offset-8 decoration-jobloop-primary-green text-kv-black md:text-5xl">
                 {data.heroSub[5].title}
               </h1>
               <div className="text-lg md:text-2xl ">

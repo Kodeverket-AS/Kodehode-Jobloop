@@ -20,7 +20,7 @@ export default function MultiCompetence({ content1, content2 }) {
               <PortableText value={content1.content} />
             </div>
           </div>
-          <div className="w-full">
+          <div className="w-full mx-auto">
             <DynamicCompetence
               key={content2.id}
               content={content2}
