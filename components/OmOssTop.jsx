@@ -23,7 +23,7 @@ export default function OmOssTop({ content, buttonText }) {
           src={content.image}
           width={1080}
           height={964}
-          className="mx-auto w-full my-auto rounded"
+          className="mx-auto w-full my-auto rounded-xl"
           alt={content.alt || ""}
         />
       }

@@ -13,7 +13,7 @@ export default function Results({ content }) {
           width={500}
           height={500}
           alt={content.alt}
-          className="w-full rounded-md shadow-md"
+          className="w-full rounded-xl shadow-md"
         />
       }
       rightContent={

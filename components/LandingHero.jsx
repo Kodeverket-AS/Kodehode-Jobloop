@@ -9,7 +9,7 @@ import { SectionComponent } from "./SectionComponent";
 import { TextBlock } from "./TextBlockComponent";
 
 export default function LandingHero({ content }) {
-  const missionTitle = "Hva gjør vi?";
+  const missionTitle = "Vi utdanner morgendagens utviklere";
   const missionStatement =
     "Vi rekrutterer kandidater som av ulike grunner har havnet utenfor arbeidslivet og lærer dem opp til å bli frontend-utviklere. Gjennom en kombinasjon av teoretisk opplæring og praksis vil kandidatene lære seg de viktigste teknologiene og bli klar for en karriere innen utvikling.";
   return (
@@ -38,8 +38,7 @@ export default function LandingHero({ content }) {
         reverseLayoutOrder={true}
         leftContent={
           <TextBlock
-            // title={missionTitle}
-            title="Vi utdanner morgendagens utviklere"
+            title={missionTitle}
             contentString={missionStatement}
             isButton={true}
             isContained={true}
@@ -53,7 +52,7 @@ export default function LandingHero({ content }) {
             height={500}
             width={500}
             alt="kodemiljø"
-            className="object-contain w-full rounded"
+            className="object-cover  w-full rounded-xl"
           />
         }
       />
