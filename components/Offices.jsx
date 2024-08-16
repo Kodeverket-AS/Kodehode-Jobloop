@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Offices({ content }) {
   return (
@@ -12,22 +13,25 @@ export default function Offices({ content }) {
 
         <div className="grid w-full h-full grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8 align-center">
           {content.map((offices, index) => (
-            <div
+            <Link
+              href="/kontakt"
               key={offices.id + index}
-              className="w-full">
+              className="w-full group">
               <Image
                 src={offices.image}
                 width={500}
                 height={500}
-                className="rounded-md w-full h-40 object-cover"
+                className="rounded-md w-full h-40 object-cover transition-all group-hover:rounded-lg"
                 alt={offices.alt || ""}
               />
               <div className="text-left pt-1">
-                <h3>{offices.title}</h3>
+                <h3 className="group-hover:underline decoration-jobloop-primary-orange underline-offset-4">
+                  {offices.title}
+                </h3>
                 <p>{offices.adresse}</p>
                 <p>{offices.postnr}</p>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>

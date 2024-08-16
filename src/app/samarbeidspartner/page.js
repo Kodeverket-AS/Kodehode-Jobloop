@@ -8,6 +8,7 @@ import ImageGallery from "../../../components/ImageGallery";
 import LinkToFaq from "../../../components/LinkToFaq";
 import MultiCompetence from "../../../components/MultiCompetence";
 import { AlertError } from "../../../components/AlertComponent";
+import LinkToKontakt from "../../../components/LinkToKontakt";
 
 export const metadata = {
   title: "Samarbeidspartner: Har du en deltaker med IT-interesse? | Kodehode",
@@ -42,8 +43,9 @@ export default async function Oppdragsgiver() {
           content2={data.competenceIcons}
         />
 
-        <div className="w-full">
+        <div className="w-full py-24">
           <Offices content={data.OurLocals} />
+          <LinkToKontakt />
         </div>
 
         <ImageGallery content={data.ImageGallery} />

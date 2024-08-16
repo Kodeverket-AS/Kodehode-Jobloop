@@ -6,6 +6,8 @@ import { FaqVirk } from "../../../components/FAQcomp";
 import { getData } from "../page";
 import { ToggleButton } from "../../../components/Buttons";
 import HeroSub from "../../../components/HeroSub";
+import LinkToKontakt from "../../../components/LinkToKontakt";
+import LandingLinks from "../../../components/LandingLinks";
 
 export const metadata = {
   title: "FAQ: Ofte stitle spørsmål | Kodehode",
@@ -39,6 +41,8 @@ export default async function FAQ() {
             idThree={faqData.FAQ[2]._id}
           />
         </div>
+        <LandingLinks />
+        <LinkToKontakt />
       </main>
     </>
   );
