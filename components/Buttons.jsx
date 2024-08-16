@@ -58,7 +58,7 @@ export function LinkButtonContained({ path, text }) {
       href={path}
       title={`Gå til ${path}`}
       aria-label={`Lenke til underside ${path}`}
-      className="px-8 py-4 text-sm md:text-base text-kv-white border-2 rounded-full bg-neutral-900 border-neutral-900 hover:bg-kv-white/0 hover:border-neutral-900 hover:text-neutral-900 focus:bg-kv-white focus:border-neutral-900 focus:text-neutral-900">
+      className="px-8 py-4 text-sm md:text-base text-kv-white border-2 rounded-full bg-neutral-900 border-neutral-900 hover:bg-kv-white/0 hover:border-neutral-900 hover:text-neutral-900 focus:bg-kv-white focus:border-neutral-900 focus:text-neutral-900 ">
       {text}
     </Link>
   );
@@ -139,12 +139,12 @@ export function ToggleButton({
   return (
     <div className="flex flex-col w-full gap-8">
       <div className="flex justify-center w-full">
-        <div className="text-kv-black/70 flex flex-row flex-wrap rounded-full overflow-hidden border-2 border-jobloop-primary-orange w-fit items-start justify-start sm:justify-center md:flex-row ">
+        <div className="text-kv-black/70 flex flex-row flex-wrap divide-x rounded-full overflow-hidden border-2 border-jobloop-primary-orange w-fit items-start justify-start sm:justify-center md:flex-row ">
           {tabs.map((tab) => (
             <div key={tab.id}>
               <button
                 onClick={() => handleTabChange(tab.id)}
-                className={`flex p-4 gap-2 items-center border-r
+                className={`flex p-4 gap-2 items-center
                   ${
                     activeTab === tab.id
                       ? "border-neutral-200 bg-jobloop-primary-orange/10"
