@@ -20,7 +20,7 @@ export default function LinkToKontakt() {
 
           <div className="m-auto">
             <LinkButtonContained
-              path="/Kontakt"
+              path="/kontakt"
               text="Kontakt Oss"
             />
           </div>
