@@ -39,7 +39,7 @@ export function LocationCheck({ content }) {
 
   return (
     <section className="w-screen py-12">
-      <div className="flex flex-col  justify-center gap-12 max-w-screen-2xl mx-auto px-4">
+      <div className="flex flex-col justify-center gap-12 max-w-screen-2xl mx-auto px-4">
         <div className="flex flex-col gap-2 pb-2">
           <div className="border-b-2 pb-1">
             <b>Velg sted :</b>
