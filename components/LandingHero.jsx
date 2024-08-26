@@ -62,7 +62,7 @@ export default function LandingHero({ content }) {
                     <div className='flex flex-row justify-center w-full '>
                         <div className='flex flex-col w-1/2 gap-8 mr-4'>
                             <h2>Bli med på å forme fremtidens IT-talenter!</h2>
-                            <div className=' text-lg mr-14'>
+                            <div className='  text-lg mr-14 tracking-wide leading-9	'>
                                 <PortableText value={content.content} />
                             </div>
                             <div>
@@ -72,7 +72,7 @@ export default function LandingHero({ content }) {
                                 />
                             </div>
                         </div>
-                        <div className='w-1/2 ml-5'>
+                        <div className='w-1/2 ml-8 mt-24'>
                             <Image
                                 width={800}
                                 alt='kodemiljø'

@@ -8,8 +8,11 @@ export default function VisionTop({ content }) {
     <>
       <div className="hidden md:block">
         <div className="md:flex flex-col px-10 max-w-[1600px] mt-32 mb-20">
-          <div className="justify-center md:flex max-w-[1600px] mb-14">
-            <h1 className="w-full text-center text-jobloop-primary-green">{content.title}</h1>
+          <div className="justify-center md:flex wfull mb-14 flex-col">
+            <div className="w-fit m-auto">
+              <h1 className="w-full text-center text-kv-black">{content.title}</h1>
+              <hr className="w-full mt-2 h-2 bg-jobloop-primary-green" />
+            </div>
           </div>
           <div className="md:flex-row md:flex justify-around mx-auto max-w-[1600px]">
             <div>
@@ -40,9 +43,10 @@ export default function VisionTop({ content }) {
           </div>
           {/* Text container */}
           <div className="flex flex-col w-full px-8 sm:px-10 sm:my-10 md:w-1/2 md:my-0 md:px-0">
-            <h1 className="py-10 text-start text-jobloop-primary-green md:pb-10 md:pt-0">
-              {content.title}
-            </h1>
+            <div className="w-fit m-auto my-4">
+              <h1 className="w-full text-center text-kv-black">{content.title}</h1>
+              <hr className="w-full h-2 bg-jobloop-primary-green mt-2" />
+            </div>
             <PortableText value={content.content} />
           </div>
         </div>
