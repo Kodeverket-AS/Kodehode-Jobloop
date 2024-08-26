@@ -31,7 +31,7 @@ export default async function Deltaker() {
     data.personDatabase[4],
     data.personDatabase[5],
   ];
-  console.log(data.competenceIcons);
+  // console.log(data.competenceIcons);
   return (
     <main className="flex flex-col items-center min-h-screen pt-20">
       <div className="flex flex-col items-center ">

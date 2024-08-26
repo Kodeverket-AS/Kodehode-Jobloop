@@ -24,10 +24,10 @@ export default function LandingHero({ content }) {
         />
         <div className="absolute inset-0 flex flex-col items-center justify-center bg-black/60 backdrop-blur-sm p-6 text-center text-white">
           <div className="space-y-4">
-            <h1 className="text-6xl text-kv-white underline underline-offset-8 decoration-jobloop-primary-green group-hover:decoration-jobloop-primary-orange md:text-7xl lg:text-9xl">
+            <h1 className="text-6xl text-kv-white underline transition-all duration-500 underline-offset-8 decoration-jobloop-primary-green group-hover:decoration-jobloop-primary-orange md:text-7xl lg:text-9xl">
               {content.title}
             </h1>
-            <p className="xl:opacity-0 transition-all group-hover:opacity-100 text-kv-white lg:text-3xl">
+            <p className="text-kv-white lg:text-3xl">
               Tilpasset opplæring og rekruttering til <br /> IT-bransjen
             </p>
           </div>

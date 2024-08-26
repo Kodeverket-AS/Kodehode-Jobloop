@@ -136,6 +136,8 @@ export function ToggleButton({
     setActiveTab(id);
   };
 
+  console.log("Only a mother can love this following code, lol");
+
   return (
     <div className="flex flex-col w-full gap-8">
       <div className="flex justify-center w-full">
