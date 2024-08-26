@@ -39,7 +39,6 @@ export function ScrollToTopButton() {
   );
 }
 
-
 export function LinkButton({ Path, Text }) {
   return (
     <Link
@@ -52,7 +51,7 @@ export function LinkButton({ Path, Text }) {
   );
 }
 
-export function ExternalLinkButton({ Path, Text, ariaLabel, background }) {
+export function ExternalLinkButton({ Path, Text, ariaLabel, color }) {
   return (
     <a
       href={Path}
@@ -60,8 +59,8 @@ export function ExternalLinkButton({ Path, Text, ariaLabel, background }) {
       rel="noopener noreferrer"
       aria-label={ariaLabel}
       className={`px-8 py-2 transition-all ${
-        background
-          ? `bg-${background} text-kv-white border-kv-white hover:bg-kv-white hover:text-kv-black focus:bg-kv-white focus:text-kv-black`
+        color
+          ? `bg-kv-white text-${color} border-${color} hover:bg-${color} hover:text-kv-white focus:bg-${color} focus:text-kv-white`
           : "bg-kv-white text-kv-black border-kv-black hover:bg-jobloop-primary-orange hover:text-kv-white focus:text-kv-white focus:bg-jobloop-primary-orange"
       }  border-2  border-solid max-w-fit rounded-3xl hover:border-none`}
     >
@@ -70,12 +69,11 @@ export function ExternalLinkButton({ Path, Text, ariaLabel, background }) {
   );
 }
 
-
 export function LinkButtonColour({ Path, Text }) {
   return (
     <Link
       href={Path}
-      className="px-6 py-2 transition-all border-2 md:px-8 text-kv-white border-kv-white rounded-3xl hover:bg-kv-white hover:border-none hover:text-kv-black focus:bg-kv-white focus:text-kv-black"
+      className="px-6 py-2 transition-all border-2 md:px-8 text-jobloop-darker-orange border-jobloop-darker-orange rounded-3xl hover:bg-jobloop-darker-orange hover:border-none hover:text-kv-white focus:bg-jobloop-darker-orange focus:text-kv-white"
     >
       {Text}
     </Link>
