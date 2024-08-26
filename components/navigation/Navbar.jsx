@@ -28,6 +28,11 @@ const PagesArray = [
     href: "/kodesprak",
     label: "Gå til denne undersiden for å lese mer om kodespråkene våre",
   },
+  {
+    name: "Kontakt Oss",
+    href: "/kontakt",
+    label: "Gå til denne undersiden for å lese mer om kodespråkene våre",
+  },
 ];
 
 export function NavbarWhite() {
@@ -49,15 +54,32 @@ export function NavbarWhite() {
         </div>
         <div>
           <div className="hidden h-auto p-4 md:block">
-            {PagesArray.map((page) => (
-              <Link
-                key={page.name}
-                href={page.href}
-                aria-label={page.label}
-                className="px-4 font-bold text-kv-white md:hover:underline underline-offset-4">
-                {page.name}
-              </Link>
-            ))}
+            {PagesArray.map((page) =>
+              page.href === "/kontakt" ? (
+                <Link
+                  key={page.name}
+                  href={page.href}
+                  aria-label={page.label}
+                  className="py-2 px-4 rounded-md border border-jobloop-primary-green font-medium text-kv-white bg-jobloop-primary-green/20 md:hover:bg-jobloop-primary-green/10  underline-offset-4">
+                  {page.name}
+                </Link>
+              ) : (
+                <Link
+                  key={page.name}
+                  href={page.href}
+                  aria-label={page.label}
+                  className="px-4 font-bold text-kv-white md:hover:underline underline-offset-4">
+                  {page.name}
+                </Link>
+                // <Link
+                //   key={page.name}
+                //   href={page.href}
+                //   aria-label={page.label}
+                //   className="px-4 font-bold text-kv-white md:hover:underline underline-offset-4">
+                //   {page.name}
+                // </Link>
+              )
+            )}
           </div>
           <div className="px-4">
             <HamburgerMenu hamFill="white" />
@@ -87,17 +109,39 @@ export function NavbarColor({ textWhite }) {
         </div>
         <div>
           <div className="hidden h-auto p-4 md:block">
-            {PagesArray.map((page) => (
-              <Link
-                key={page.name}
-                href={page.href}
-                aria-label={page.label}
-                className={`px-4 md:portrait:pl-4 md:portrait:pr-2 lg:px-4 font-bold ${
-                  !textWhite ? "text-neutral-900" : "text-kv-white"
-                } md:hover:underline underline-offset-4`}>
-                {page.name}
-              </Link>
-            ))}
+            {PagesArray.map(
+              (page) =>
+                page.href === "/kontakt" ? (
+                  <Link
+                    key={page.name}
+                    href={page.href}
+                    aria-label={page.label}
+                    className={`py-2 px-4 rounded-md border border-jobloop-primary-green bg-jobloop-primary-green/10 font-medium ${
+                      !textWhite ? "text-neutral-950" : "text-kv-black"
+                    } md:hover:bg-jobloop-primary-green/20`}>
+                    {page.name}
+                  </Link>
+                ) : (
+                  <Link
+                    key={page.name}
+                    href={page.href}
+                    aria-label={page.label}
+                    className={`px-4 md:portrait:pl-4 md:portrait:pr-2 lg:px-4 font-bold ${
+                      !textWhite ? "text-neutral-900" : "text-kv-white"
+                    } md:hover:underline underline-offset-4`}>
+                    {page.name}
+                  </Link>
+                )
+              // <Link
+              //   key={page.name}
+              //   href={page.href}
+              //   aria-label={page.label}
+              //   className={`px-4 md:portrait:pl-4 md:portrait:pr-2 lg:px-4 font-bold ${
+              //     !textWhite ? "text-neutral-900" : "text-kv-white"
+              //   } md:hover:underline underline-offset-4`}>
+              //   {page.name}
+              // </Link>
+            )}
           </div>
           <div className="px-4">
             <HamburgerMenu hamFill="colour" />
