@@ -4,6 +4,7 @@ import LandingHero from "../../components/LandingHero";
 import LandingLinks from "../../components/LandingLinks";
 import LandingVisjon from "../../components/LandingVisjon";
 import imageUrlBuilder from "@sanity/image-url";
+import LinkToFaq from "../../components/LinkToFaq";
 
 export default async function Home() {
   const data = await getData();
@@ -14,6 +15,7 @@ export default async function Home() {
         <LandingLinks />
         <LandingVisjon content={data.visionLanding[0]} />
       </section>
+      <LinkToFaq />
     </main>
   );
 }

@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { SectionComponent } from "./SectionComponent.jsx";
+import { SectionComponent } from "./SectionComponents.jsx";
 import { TextBlock } from "./TextBlockComponent.jsx";
 
 const ImageCard = ({ src, alt, title }) => (

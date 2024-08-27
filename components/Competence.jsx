@@ -2,12 +2,12 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { SectionComponent } from "./SectionComponent";
+import { SectionComponent } from "./SectionComponents";
 import { TextBlock } from "./TextBlockComponent";
 import { PortableText } from "@portabletext/react";
 
 const CompetenceCard = ({ src, alt, title, content }) => (
-  <div className="group w-full flex flex-col shadow-md hover:shadow-lg p-4 rounded transition-all">
+  <div className="group bg-kv-white w-full flex flex-col shadow-sm shadow-jobloop-primary-green hover:shadow-lg p-4 rounded-lg transition-all duration-300">
     <Image
       src={src}
       width={64}
@@ -16,8 +16,9 @@ const CompetenceCard = ({ src, alt, title, content }) => (
       alt={alt || ""}
     />
     <div className="w-full ">
-      <div className="border-b-2 group-hover:border-jobloop-primary-orange py-2 tracking-tight">
+      <div className=" group-hover:border-jobloop-primary-green py-2 tracking-tight">
         <h3>{title}</h3>
+        <div className="h-[2px] w-0 transition-all duration-500 group-hover:w-full shadow-inner rounded-full group-hover:shadow-jobloop-primary-green"></div>
       </div>
       <p className="text-sm leading-relaxed py-2">{content}</p>
     </div>
@@ -28,6 +29,8 @@ export default function Competence({ content1, content2 }) {
   return (
     <SectionComponent
       reverseLayoutOrder={true}
+      isBgColor={true}
+      bgColorGreen={true}
       leftContent={
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-4 justify-between md:justify-evenly">
           <CompetenceCard

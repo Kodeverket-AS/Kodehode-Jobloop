@@ -3,15 +3,16 @@
 import Link from "next/link";
 import Image from "next/image";
 import danialigdery from "../public/danialigdery.jpg";
-import { LinkButton, LinkButtonContained } from "./Buttons";
-import { PortableText } from "@portabletext/react";
-import { SectionComponent } from "./SectionComponent";
+// import { LinkButton, LinkButtonContained } from "./Buttons";
+// import { PortableText } from "@portabletext/react";
+import { SectionComponent } from "./SectionComponents";
 import { TextBlock } from "./TextBlockComponent";
+import { LinkButtonContained } from "./Buttons";
 
 export default function LandingHero({ content }) {
   const missionTitle = "Vi utdanner morgendagens utviklere";
   const missionStatement =
-    "Vi rekrutterer kandidater som av ulike årsaker har havnet utenfor arbeidslivet og trener dem opp til å bli lovende junior utviklere. Gjennom en kombinasjon av teoretisk opplæring og praksis vil kandidatene lære seg de viktigste verktøyene for å bli klar til en karriere innen utvikling.";
+    "Vi rekrutterer kandidater som av ulike årsaker har havnet utenfor arbeidslivet og trener dem opp til å bli lovende junior utviklere. Gjennom en kombinasjon av teoretisk opplæring og praksis vil kandidatene lære seg de viktigste verktøyene for å bli klar til en karriere innen utvikling. Vårt fokus er å finne dyktige mennesker som sammen blir en god match.";
   // const missionStatement = content.content;
 
   return (
@@ -57,7 +58,7 @@ export default function LandingHero({ content }) {
             height={500}
             width={500}
             alt="kodemiljø"
-            className="object-cover  w-full rounded-xl"
+            className="object-cover w-full rounded-xl"
           />
         }
       />

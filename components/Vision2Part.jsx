@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { ExternalLinkButton } from "./Buttons";
 import { PortableText } from "@portabletext/react";
-import { SectionComponent } from "./SectionComponent";
+import { SectionComponent } from "./SectionComponents";
 import { TextBlock } from "./TextBlockComponent";
 
 // Version with Image on Left and text on Right.

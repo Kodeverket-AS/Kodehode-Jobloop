@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { SectionComponent } from "./SectionComponent";
+import { SectionComponent } from "./SectionComponents";
 import { TextBlock } from "./TextBlockComponent";
 
 export default function StudyInParts({ content }) {
