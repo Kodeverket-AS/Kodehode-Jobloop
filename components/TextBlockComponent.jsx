@@ -5,10 +5,10 @@ import { LinkButton, LinkButtonContained } from "./Buttons";
 
 export const TextBlock = ({
   title,
-  content,
+  content, // If more than one string of content, use content, content2 and content3
   content2,
   content3,
-  contentString,
+  contentString, // If only one single string of content
   isButton,
   path: buttonPath,
   text: buttonText,
