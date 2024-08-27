@@ -42,6 +42,9 @@ export default function LandingHero({ content, content2, content3 }) {
           <TextBlock
             title={missionTitle}
             contentString={missionStatement}
+            // When getting data from sanity, use the below code instead of contentString.
+            // Remember to change the missionStatement variable to = content.content
+            // content={missionStatement}
             isButton={true}
             isContained={true}
             path={"/kontakt"}
