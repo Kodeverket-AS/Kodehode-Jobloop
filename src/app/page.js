@@ -7,7 +7,6 @@ import imageUrlBuilder from "@sanity/image-url";
 
 export default async function Home() {
   const data = await getData();
-
   return (
     <main className="flex flex-col items-center min-h-screen">
       <LandingHero content={data.heroSub[1]} />
