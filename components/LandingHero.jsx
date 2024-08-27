@@ -8,7 +8,7 @@ import { PortableText } from "@portabletext/react";
 import { SectionComponent } from "./SectionComponent";
 import { TextBlock } from "./TextBlockComponent";
 
-export default function LandingHero({ content, content2, content3 }) {
+export default function LandingHero({ content }) {
   const missionTitle = "Vi utdanner morgendagens utviklere";
   const missionStatement =
     "Vi rekrutterer kandidater som av ulike årsaker har havnet utenfor arbeidslivet og trener dem opp til å bli lovende junior utviklere. Gjennom en kombinasjon av teoretisk opplæring og praksis vil kandidatene lære seg de viktigste verktøyene for å bli klar til en karriere innen utvikling.";
