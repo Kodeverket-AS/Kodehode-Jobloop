@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { PortableText } from "@portabletext/react";
-import { SectionComponent } from "./SectionComponent";
+import { SectionComponent } from "./SectionComponents";
 
 export default function Results({ content }) {
   return (

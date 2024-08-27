@@ -41,7 +41,7 @@ export default async function FAQ() {
             idThree={faqData.FAQ[2]._id}
           />
         </div>
-        <LandingLinks />
+        {/* <LandingLinks /> */}
         <LinkToKontakt />
       </main>
     </>

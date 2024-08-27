@@ -35,14 +35,17 @@ export default async function Bedrift() {
         title={"Hva ser Kodehode etter hos samarbeidspartnere?"}
         content={data.egsCoop}
       />
+
       <KodehodeInternship
         content1={data.origin}
         content2={data.internship}
       />
+
       <Competence
         content1={data.relevantCompetence[1]}
         content2={data.competenceIconsBuissness}
       />
+
       <AdaptTech
         content1={data.adaptTech}
         content2={techIcons}

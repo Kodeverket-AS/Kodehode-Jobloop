@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { SectionComponent } from "./SectionComponent";
+import { SectionComponent } from "./SectionComponents";
 import { TextBlock } from "./TextBlockComponent";
 
 export default function ContactComp({ imageOne, title, content, _id, alt }) {

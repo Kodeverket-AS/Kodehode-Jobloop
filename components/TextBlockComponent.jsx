@@ -42,7 +42,7 @@ export const TextBlock = ({
 
       <div className="py-4">
         {isButton && (
-          <div>
+          <div className="flex justify-start">
             {isContained ? (
               <LinkButtonContained
                 path={buttonPath}

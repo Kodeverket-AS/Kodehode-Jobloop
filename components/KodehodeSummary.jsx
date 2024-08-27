@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import CourseCard from "./CourseCard";
-import { SectionComponent } from "./SectionComponent";
+import { SectionComponent } from "./SectionComponents";
 import { TextBlock } from "./TextBlockComponent";
 
 export default function KodehodeSummary({ content1, content2 }) {

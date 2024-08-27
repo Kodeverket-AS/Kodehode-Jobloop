@@ -30,7 +30,7 @@ export function ScrollToTopButton() {
     <button
       onClick={scrollToTop}
       aria-label="Scroll til toppen"
-      className={` z-50 p-4 fixed md:bottom-8 bottom-4 md:right-8 right-4 transition-all duration-200  bg-neutral-900 text-kv-white rounded-full hover:scale-[0.90] border border-kv-white shadow ${
+      className={` z-50 p-4 fixed md:bottom-8 bottom-4 md:right-8 right-4 transition-all duration-200  bg-kv-black text-kv-white rounded-full hover:scale-[0.90] border border-kv-white shadow ${
         isVisible ? "opacity-100 " : "opacity-0 cursor-default"
       }`}>
       <FaArrowUp
@@ -47,7 +47,7 @@ export function LinkButton({ path, text }) {
       href={path}
       title={`Gå til ${path}`}
       aria-label={`Lenke til underside ${path}`}
-      className="px-8 py-4 text-sm md:text-base transition-all text-neutral-900 border-2 bg-kv-white/0 border-neutral-900 rounded-full hover:bg-neutral-900 hover:border-2 hover:border-neutral-900 hover:text-kv-white focus:bg-neutral-900 focus:border-neutral-900 focus:text-kv-white">
+      className="text-base w-fit py-4 px-8 rounded-full shadow-sm border border-kv-black hover:shadow-lg bg-kv-white transition-all scale-100 hover:scale-105 text-kv-black">
       {text}
     </Link>
   );
@@ -58,7 +58,7 @@ export function LinkButtonContained({ path, text }) {
       href={path}
       title={`Gå til ${path}`}
       aria-label={`Lenke til underside ${path}`}
-      className="px-8 py-4 text-sm md:text-base text-kv-white border-2 rounded-full bg-neutral-900 border-neutral-900 hover:bg-kv-white/0 hover:border-neutral-900 hover:text-neutral-900 focus:bg-kv-white focus:border-neutral-900 focus:text-neutral-900 ">
+      className="text-base w-fit py-4 px-8 rounded-full shadow-sm hover:shadow-lg bg-kv-black hover:bg-kv-black/95 transition-all scale-100 hover:scale-105 text-kv-white">
       {text}
     </Link>
   );
@@ -72,7 +72,7 @@ export function ExternalLinkButton({ path, text, ariaLabel }) {
       target="_blank"
       rel="noopener noreferrer"
       aria-label={ariaLabel}
-      className="px-8 py-4 text-sm md:text-base w-full md:w-auto text-neutral-900 border-2 bg-kv-white border-neutral-900 rounded-md hover:bg-neutral-900 hover:border-2 hover:border-neutral-900 hover:text-kv-white focus:bg-neutral-900 focus:border-neutral-900 focus:text-kv-white">
+      className="text-base w-fit py-4 px-8 rounded-md shadow-sm shadow-jobloop-primary-green hover:shadow-lg bg-kv-black hover:bg-kv-black/95 transition-all scale-100 hover:scale-105 text-kv-white">
       {text}
     </a>
   );
@@ -83,7 +83,7 @@ export function LinkButtonColour({ path, text }) {
     <Link
       href={path}
       title={`Gå til ${path}`}
-      className="px-8 py-4 text-sm md:text-base text-neutral-900 border-neutral-900 rounded-full hover:bg-neutral-900 hover:border-none hover:text-kv-white focus:bg-neutral-900 focus:text-kv-white">
+      className="transition-all scale-100 hover:scale-105 px-8 py-4 text-sm md:text-base text-neutral-900 border-neutral-900 rounded-full hover:bg-neutral-900 hover:border-none hover:text-kv-white focus:bg-neutral-900 focus:text-kv-white">
       {text}
     </Link>
   );
