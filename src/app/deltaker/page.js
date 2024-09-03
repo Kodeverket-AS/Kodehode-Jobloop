@@ -77,7 +77,9 @@ export default async function Deltaker() {
         <div className="w-screen pb-24">
           <Results content={data.results[0]} />
         </div>
-        <ImageGallery content={data.ImageGallery} />
+        <div className="hidden xl:block">
+          <ImageGallery content={data.ImageGallery} />
+        </div>
         {/* <section className="w-full pb-12">
           <VideoComp1
             url="https://www.youtube.com/embed/gIrgqXD27EI?si=bh2im5jdpu-apCIQ&amp;"

@@ -48,7 +48,9 @@ export default async function Oppdragsgiver() {
           <LinkToKontakt />
         </div>
 
-        <ImageGallery content={data.ImageGallery} />
+        <div className="hidden xl:block">
+          <ImageGallery content={data.ImageGallery} />
+        </div>
 
         <LinkToFaq />
       </div>

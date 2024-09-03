@@ -7,7 +7,7 @@ import danialigdery from "../public/danialigdery.jpg";
 // import { PortableText } from "@portabletext/react";
 import { SectionComponent } from "./SectionComponents";
 import { TextBlock } from "./TextBlockComponent";
-import { LinkButtonContained } from "./Buttons";
+// import { LinkButtonContained } from "./Buttons";
 
 export default function LandingHero({ content }) {
   const missionTitle = "Vi utdanner morgendagens utviklere";
