@@ -1,29 +1,32 @@
 "use client";
 
-import Link from "next/link";
 import Image from "next/image";
-import { LinkButton } from "./Buttons";
-import { PortableText } from "@portabletext/react";
+import { SectionComponent } from "./SectionComponents";
+import { TextBlock } from "./TextBlockComponent";
 
 export default function LandingVisjon({ content }) {
   return (
-    <div className="flex flex-col justify-center gap-10 px-8 py-20 md:flex-row sm:px-10 md:px-12 lg:px-24 2xl:max-w-[1600px]">
-      <div className="w-full md:w-1/2">
-        <Image
-          src={content.image}
-          width={500}
-          height={300}
-          alt={content.alt || ""}
-          className="rounded"
-        />
-      </div>
-      <div className="flex flex-col gap-4 md:w-1/2">
-        <h2>{content.title}</h2>
-        <PortableText value={content.content} />
-        <div className="pt-5">
-          <LinkButton Path={"/visjon"} Text={"Se mer"} />
+    <SectionComponent
+      leftContent={
+        <div>
+          <Image
+            src={content.image}
+            width={500}
+            height={500}
+            alt={content.alt || ""}
+            className="w-full rounded-xl"
+          />
         </div>
-      </div>
-    </div>
+      }
+      rightContent={
+        <TextBlock
+          title={content.title}
+          content={content.content}
+          isButton={true}
+          path={"/visjon"}
+          text={"Les om vår visjon"}
+        />
+      }
+    />
   );
 }

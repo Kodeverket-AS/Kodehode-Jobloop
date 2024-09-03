@@ -6,8 +6,10 @@
 
 :root {
   /* KV standard black and white */
-  --kv-black: #0b1215;
-  --kv-white: #fffafa;
+  /* --kv-black: #0b1215; */
+  /* --kv-white: #fffafa; */
+  --kv-black: #1d1d1f;
+  --kv-white: #ffffff;
 
   /* JOBLOOP COLORS */
   /* Hovedfarger */

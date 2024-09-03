@@ -2,7 +2,7 @@
 
 import React from "react";
 import { usePathname } from "next/navigation";
-import Navbar, { NavbarAlt } from "./Navbar";
+import { NavbarWhite, NavbarColor } from "./Navbar";
 import MyPathname from "./MyPathname";
 
 // Definer URL endpoints.
@@ -21,75 +21,24 @@ export default function Navigation() {
   let navbar;
 
   if (pathname === techstack) {
-    navbar = <NavbarAlt textWhite="yes" />;
+    navbar = <NavbarColor />;
   } else if (pathname === about) {
-    navbar = <NavbarAlt />;
+    navbar = <NavbarColor />;
   } else if (pathname === kontakt) {
-    navbar = <NavbarAlt />;
+    navbar = <NavbarWhite />;
   } else if (pathname === samarbeidspartner) {
-    navbar = (
-      <>
-        <div className="block md:hidden">
-          <Navbar />
-        </div>
-        <div className="hidden md:block">
-          <NavbarAlt subpage="Samarbeidspartner" />
-        </div>
-      </>
-    );
+    navbar = <NavbarColor subpage="Samarbeidspartner" />;
   } else if (pathname === arbeidsgiver) {
-    navbar = (
-      <>
-        <div className="block md:hidden">
-          <Navbar />
-        </div>
-        <div className="hidden md:block">
-          <NavbarAlt subpage="Arbeidsgiver" />
-        </div>
-      </>
-    );
+    navbar = <NavbarColor subpage="Arbeidsgiver" />;
   } else if (pathname === deltaker) {
-    navbar = (
-      <>
-        <div className="block md:hidden">
-          <Navbar />
-        </div>
-        <div className="hidden md:block">
-          <NavbarAlt subpage="Deltaker" />
-        </div>
-      </>
-    );
+    navbar = <NavbarColor subpage="Deltaker" />;
   } else if (pathname === visjon) {
-    navbar = (
-      <>
-        {/* <div className="block md:hidden">
-          <Navbar />
-        </div> */}
-        <div>
-          <NavbarAlt />
-        </div>
-      </>
-    );
+    navbar = <NavbarColor />;
   } else if (pathname === faq) {
-    navbar = <NavbarAlt />;
+    navbar = <NavbarColor />;
   } else {
-    navbar = <Navbar />;
+    navbar = <NavbarWhite />;
   }
 
-  return (
-    <div>
-      {/* 
-      1. Over i denne komponenten har vi en if-setning som sjekker om vi er på en av 
-      de to sidene vi ønsker å ha en annen navbar på. Fordel er at vi kan legge til flere
-      sider her hvis vi ønsker det og legge til flere else if-setninger.
-      2. Hvis vi er på en av disse sidene, og vi har en skjerm som er mindre eller lik 1024px, 
-      så vil vi rendere NavbarAlt.
-      3. Ellers vil vi rendere Navbar.
-      4. navbar er en variabel som vi bruker til å rendere den riktige navbar-komponenten.
-        */}
-      {navbar}
-      {/* Les om dette komponentet i komponentfilen */}
-      {/*<MyPathname />*/}
-    </div>
-  );
+  return <div className="absolute w-full z-50">{navbar}</div>;
 }
