@@ -116,7 +116,7 @@ export function NavbarColor({ textWhite }) {
                     key={page.name}
                     href={page.href}
                     aria-label={page.label}
-                    className={`py-2 px-4 rounded-md border border-jobloop-primary-green bg-jobloop-primary-green/10 font-medium ${
+                    className={`py-2 px-4 rounded-full border border-jobloop-primary-green bg-jobloop-primary-green/10 font-medium ${
                       !textWhite ? "text-neutral-950" : "text-kv-black"
                     } md:hover:bg-jobloop-primary-green/20`}>
                     {page.name}
