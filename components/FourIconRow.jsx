@@ -26,40 +26,32 @@ const LanguageCard = ({ title, content, logo, alt, icon }) => {
   );
 };
 
-export default function FourIconRow({ title, content }) {
+export default function FourIconsRow({ title, content, icons }) {
   return (
-    <section className="w-screen py-12 text-kv-black">
+    <section className="w-full py-12 text-kv-black">
       {content && content.length !== 0 ? (
         <div className="px-4 flex flex-col justify-center mx-auto">
           <h3 className="text-2xl md:text-3xl text-center underline underline-offset-8 pb-12 decoration-jobloop-primary-orange">
             {title}
           </h3>
 
-          <div className="flex flex-col gap-8 md:flex-row pb-8 justify-center m-auto ">
+          <div className="flex flex-col gap-8 md:flex-row pb-8 justify-center">
             <LanguageCard
               {...content[0]}
-              icon={
-                <LuGoal className="pb-2 h-12 w-12 text-jobloop-primary-orange" />
-              }
+              icon={icons[0]}
             />
             <LanguageCard
               {...content[1]}
-              icon={
-                <MdAllInclusive className="pb-2 h-12 w-12 text-jobloop-primary-orange" />
-              }
+              icon={icons[1]}
             />
 
             <LanguageCard
               {...content[2]}
-              icon={
-                <MdAutoGraph className="pb-2 h-12 w-12 text-jobloop-primary-orange" />
-              }
+              icon={icons[2]}
             />
             <LanguageCard
               {...content[3]}
-              icon={
-                <RiTeamFill className="pb-2 h-12 w-12 text-jobloop-primary-orange" />
-              }
+              icon={icons[3]}
             />
           </div>
         </div>

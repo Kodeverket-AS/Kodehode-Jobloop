@@ -82,9 +82,7 @@ export default function Footer() {
           <sub>eller</sub>
           <Link
             href="/FAQ"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Lenke til Kodeverkets nettside"
+            aria-label="Gå til FAQ siden"
             className="group flex items-center gap-1 w-fit py-3 px-6 rounded-full transition-all border border-kv-black scale-100 hover:scale-105 text-kv-black">
             <h4 className="w-full">Gå til FAQ</h4>
           </Link>
