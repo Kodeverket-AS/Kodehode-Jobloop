@@ -18,7 +18,7 @@ export const TextBlock = ({
   return (
     <div className="flex flex-col gap-4 w-full">
       <h2
-        className={`text-kv-black underline underline-offset-8 pb-2 ${
+        className={`text-kv-black text-2xl md:text-3xl underline underline-offset-8 pb-2 ${
           isOrange
             ? "decoration-jobloop-primary-orange"
             : "decoration-jobloop-primary-green"

@@ -15,7 +15,7 @@ export default async function Home() {
         <LandingLinks />
         <LandingVisjon content={data.visionLanding[0]} />
       </section>
-      <LinkToFaq />
+      {/* <LinkToFaq /> */}
     </main>
   );
 }
