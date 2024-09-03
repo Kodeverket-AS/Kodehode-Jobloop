@@ -52,7 +52,7 @@ export default async function Oppdragsgiver() {
           <ImageGallery content={data.ImageGallery} />
         </div>
 
-        <LinkToFaq />
+        {/* <LinkToFaq /> */}
       </div>
     </main>
   );

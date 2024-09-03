@@ -86,7 +86,7 @@ export default async function Deltaker() {
             alt={"Timelapse av noen som koder en app i React Native"}
           />
         </section> */}
-        <LinkToFaq />
+        {/* <LinkToFaq /> */}
       </div>
     </main>
   );

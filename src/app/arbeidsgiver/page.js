@@ -59,7 +59,7 @@ export default async function Bedrift() {
         alt={data.kontaktseksjon[0].altOne || ""}
       />
       <Results content={data.results[0]} />
-      <LinkToFaq />
+      {/* <LinkToFaq /> */}
     </main>
   );
 }
