@@ -30,7 +30,7 @@ export default function Footer() {
   return (
     <footer className="w-full pb-8 text-kv-black bg-jobloop-primary-green/10 border-t border-jobloop-primary-green">
       <div className="container flex flex-col md:flex-row mx-auto  pt-8 pb-24 gap-12">
-        <div className="w-full flex flex-col text-center gap-8 order-1">
+        <div className="w-full flex flex-col items-center text-center gap-8 order-1">
           <h2 className="text-3xl">Kontakt for</h2>
           {contactInformation.map((person) => (
             <div
@@ -89,24 +89,24 @@ export default function Footer() {
             <h4 className="w-full">Gå til FAQ</h4>
           </Link>
         </div>
-        <div className="w-full flex flex-col text-center order-3 gap-8">
+        <div className="w-full flex flex-col text-center items-center order-3 gap-8">
           <div>
             <h2 className="text-3xl">Side for</h2>
           </div>
           <Link
-            className="hover:underline"
+            className="transition-all duration-200 underline underline-offset-2 lg:hover:underline-offset-4"
             href="/arbeidsgiver"
             aria-label="Gå til underside for arbeidsgiver">
             Arbeidsgiver
           </Link>
           <Link
-            className="hover:underline"
+            className="transition-all duration-200 underline underline-offset-2 lg:hover:underline-offset-4"
             href="/deltaker"
             aria-label="Gå til underside for deltaker">
             Deltaker
           </Link>
           <Link
-            className="hover:underline"
+            className="transition-all duration-200 underline underline-offset-2 lg:hover:underline-offset-4"
             href="/samarbeidspartner"
             aria-label="Gå til underside for samarbeidspartner">
             Samarbeidspartner
