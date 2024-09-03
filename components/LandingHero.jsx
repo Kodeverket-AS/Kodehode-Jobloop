@@ -25,7 +25,7 @@ export default function LandingHero({ content }) {
           alt="Scenic landscape"
           className="absolute inset-0 h-full w-full object-cover"
         />
-        <div className="absolute inset-0 flex flex-col items-center justify-center bg-black/60 backdrop-blur-sm p-6 text-center text-white">
+        <div className="absolute inset-0 flex flex-col items-center justify-center bg-black/80 backdrop-blur-md p-6 text-center text-white">
           <div className="space-y-4">
             <h1 className="text-6xl text-kv-white underline transition-all duration-500 underline-offset-8 decoration-jobloop-primary-green group-hover:decoration-jobloop-primary-orange md:text-7xl lg:text-9xl">
               {content.title}
