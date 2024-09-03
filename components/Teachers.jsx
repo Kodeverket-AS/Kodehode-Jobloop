@@ -3,127 +3,121 @@
 import Link from "next/link";
 import Image from "next/image";
 import { urlFor } from "@/app/page";
+import { LinkButtonContained } from "./Buttons";
+
+const VeilederCard = ({ imageUrl, imageAlt, name, role }) => (
+  <div className="flex flex-row w-full pb-10 mx-auto md:flex-col md:w-40 md:pb-0 md:mx-0 lg:w-48 ">
+    <div className="w-1/2 pr-3 md:mb-2 md:w-full h-[170px] md:pr-0 md:h-[190px] sm:h-[250px]">
+      <Image
+        src={imageUrl}
+        width={300}
+        height={300}
+        className="relative object-cover w-full h-full border rounded-lg border-kv-white"
+        alt={imageAlt || ""}
+      />
+    </div>
+    <div className="w-1/2 text-left md:w-full">
+      <h3>{name}</h3>
+      <p>{role}</p>
+    </div>
+  </div>
+);
 
 export default function Teachers({ content, title }) {
   //console.log(content[0]);
   return (
-    <div className="flex flex-col items-center w-full px-8 py-20 bg-jobloop-secondary-orange sm:px-10 md:px-12 lg:px-24 md:w-screen">
-      <h2 className="pb-10">{title}</h2>
-      <div className="pt-0 pb-10 md:justify-between md:w-full md:flex xl:max-w-[1088px]">
-        <div className="flex flex-row w-full pb-10 mx-auto md:flex-col md:w-40 md:pb-0 md:mx-0 lg:w-48">
-          <div className="w-1/2 pr-3 md:mb-2 md:w-full h-[170px] md:pr-0 md:h-[190px] sm:h-[250px]">
-            <Image
-              src={
-                content[0].hotspot
-                  ? urlFor(content[0].image)
-                      .size(300, 300)
-                      .fit("crop")
-                      .crop("focalpoint")
-                      .focalPoint(content[0].hotspot.x, content[0].hotspot.y)
-                      .url()
-                  : urlFor(content[0].image)
-                      .fit("max")
-                      .width(300)
-                      .height(300)
-                      .url()
-              }
-              width={300}
-              height={300}
-              className="relative object-cover w-full h-full border rounded border-kv-white"
-              alt={content[0].alt || ""}
-            />
-          </div>
-          <div className="w-1/2 text-left md:w-full">
-            <h3>{content[0].navn}</h3>
-            <p>{content[0].role}</p>
-          </div>
+    <section className="w-screen my-24 py-24 bg-jobloop-primary-orange/10">
+      <div className="flex flex-col items-center w-full px-8 lg:px-24 ">
+        <h2 className="underline decoration-4 pb-8 underline-offset-8 decoration-jobloop-primary-orange">
+          {title}
+        </h2>
+        <div className="flex flex-col-reverse md:flex-row justify-center gap-8 max-w-screen-2xl mx-auto p-4">
+          <VeilederCard
+            imageUrl={
+              content[0].hotspot
+                ? urlFor(content[0].image)
+                    .size(300, 300)
+                    .fit("crop")
+                    .crop("focalpoint")
+                    .focalPoint(content[0].hotspot.x, content[0].hotspot.y)
+                    .url()
+                : urlFor(content[0].image)
+                    .fit("max")
+                    .width(300)
+                    .height(300)
+                    .url()
+            }
+            imageAlt={content[0].alt}
+            name={content[0].navn}
+            role={content[0].role}
+          />
+
+          <VeilederCard
+            imageUrl={
+              content[1].hotspot
+                ? urlFor(content[1].image)
+                    .size(300, 300)
+                    .fit("crop")
+                    .crop("focalpoint")
+                    .focalPoint(content[1].hotspot.x, content[1].hotspot.y)
+                    .url()
+                : urlFor(content[1].image)
+                    .fit("max")
+                    .width(300)
+                    .height(300)
+                    .url()
+            }
+            imageAlt={content[1].alt}
+            name={content[1].navn}
+            role={content[1].role}
+          />
+
+          <VeilederCard
+            imageUrl={
+              content[2].hotspot
+                ? urlFor(content[2].image)
+                    .size(300, 300)
+                    .fit("crop")
+                    .crop("focalpoint")
+                    .focalPoint(content[2].hotspot.x, content[2].hotspot.y)
+                    .url()
+                : urlFor(content[2].image)
+                    .fit("max")
+                    .width(300)
+                    .height(300)
+                    .url()
+            }
+            imageAlt={content[2].alt}
+            name={content[2].navn}
+            role={content[2].role}
+          />
+
+          <VeilederCard
+            imageUrl={
+              content[3].hotspot
+                ? urlFor(content[3].image)
+                    .size(300, 300)
+                    .fit("crop")
+                    .crop("focalpoint")
+                    .focalPoint(content[3].hotspot.x, content[3].hotspot.y)
+                    .url()
+                : urlFor(content[3].image)
+                    .fit("max")
+                    .width(300)
+                    .height(300)
+                    .url()
+            }
+            imageAlt={content[3].alt}
+            name={content[3].navn}
+            role={content[3].role}
+          />
         </div>
-        <div className="flex flex-row w-full pb-10 mx-auto md:flex-col md:w-40 md:pb-0 md:mx-0 lg:w-48">
-          <div className="w-1/2 pr-3 md:mb-2 md:w-full h-[170px] md:pr-0 md:h-[190px]  sm:h-[250px]">
-            <Image
-              src={
-                content[1].hotspot
-                  ? urlFor(content[1].image)
-                      .size(300, 300)
-                      .fit("crop")
-                      .crop("focalpoint")
-                      .focalPoint(content[1].hotspot.x, content[1].hotspot.y)
-                      .url()
-                  : urlFor(content[1].image)
-                      .fit("max")
-                      .width(300)
-                      .height(300)
-                      .url()
-              }
-              width={300}
-              height={300}
-              className="object-cover w-full h-full border rounded border-kv-white"
-              alt={content[1].alt || ""}
-            />
-          </div>
-          <div className="w-1/2 text-left md:w-full">
-            <h3>{content[1].navn}</h3>
-            <p>{content[1].role}</p>
-          </div>
-        </div>
-        <div className="flex flex-row w-full pb-10 mx-auto md:flex-col md:w-40 md:pb-0 md:mx-0 lg:w-48">
-          <div className="w-1/2 pr-3 md:mb-2 md:w-full h-[170px] md:pr-0 md:h-[190px] sm:h-[250px]">
-            <Image
-              src={
-                content[2].hotspot
-                  ? urlFor(content[2].image)
-                      .size(300, 300)
-                      .fit("crop")
-                      .crop("focalpoint")
-                      .focalPoint(content[2].hotspot.x, content[2].hotspot.y)
-                      .url()
-                  : urlFor(content[2].image)
-                      .fit("max")
-                      .width(300)
-                      .height(300)
-                      .url()
-              }
-              width={300}
-              height={300}
-              className="object-cover w-full h-full border rounded border-kv-white"
-              alt={content[2].alt || ""}
-            />
-          </div>
-          <div className="w-1/2 text-left md:w-full">
-            <h3>{content[2].navn}</h3>
-            <p>{content[2].role}</p>
-          </div>
-        </div>
-        <div className="flex flex-row w-full pb-10 mx-auto md:flex-col md:w-40 md:pb-0 md:mx-0 lg:w-48">
-          <div className="w-1/2 pr-3 md:mb-2 md:w-full h-[170px] md:pr-0 md:h-[190px] sm:h-[250px]">
-            <Image
-              src={
-                content[3].hotspot
-                  ? urlFor(content[3].image)
-                      .size(300, 300)
-                      .fit("crop")
-                      .crop("focalpoint")
-                      .focalPoint(content[3].hotspot.x, content[3].hotspot.y)
-                      .url()
-                  : urlFor(content[3].image)
-                      .fit("max")
-                      .width(300)
-                      .height(300)
-                      .url()
-              }
-              width={300}
-              height={300}
-              className="object-cover w-full h-full border rounded border-kv-white"
-              alt={content[3].alt || ""}
-            />
-          </div>
-          <div className="w-1/2 text-left md:w-full">
-            <h3>{content[3].navn}</h3>
-            <p>{content[3].role}</p>
-          </div>
-        </div>
+        <LinkButtonContained
+          path="/kontakt"
+          text="Kontakt oss"
+        />
       </div>
-    </div>
+    </section>
   );
 }
 
