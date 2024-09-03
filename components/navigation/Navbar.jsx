@@ -60,7 +60,7 @@ export function NavbarWhite() {
                   key={page.name}
                   href={page.href}
                   aria-label={page.label}
-                  className="py-2 px-4 rounded-md border border-jobloop-primary-green font-medium text-kv-white bg-jobloop-primary-green/20 md:hover:bg-jobloop-primary-green/10  underline-offset-4">
+                  className="py-2 px-4 rounded-full border border-jobloop-primary-green font-medium text-kv-white bg-jobloop-primary-green/20 md:hover:bg-jobloop-primary-green/10  underline-offset-4">
                   {page.name}
                 </Link>
               ) : (
