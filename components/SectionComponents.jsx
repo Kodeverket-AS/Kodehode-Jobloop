@@ -60,7 +60,7 @@ export const TextBlock = ({
   path: buttonPath, // if isButton = true, path for button
   text: buttonText, // if isButton = true, text for button
   isContained, //boolean to determine if button is contained or not
-  isOrange, // if isContained = true, boolean to determine if underline is orange or green
+  isOrange, // boolean to determine if underline is orange or green
 }) => {
   return (
     <article className="flex flex-col gap-4 w-full">
@@ -87,23 +87,21 @@ export const TextBlock = ({
         )}
       </div>
 
-      <div className="py-4">
-        {isButton && (
-          <div>
-            {isContained ? (
-              <LinkButtonContained
-                path={buttonPath}
-                text={buttonText}
-              />
-            ) : (
-              <LinkButton
-                path={buttonPath}
-                text={buttonText}
-              />
-            )}
-          </div>
-        )}
-      </div>
+      {isButton && (
+        <div className="flex py-4">
+          {isContained ? (
+            <LinkButtonContained
+              path={buttonPath}
+              text={buttonText}
+            />
+          ) : (
+            <LinkButton
+              path={buttonPath}
+              text={buttonText}
+            />
+          )}
+        </div>
+      )}
     </article>
   );
 };
