@@ -22,10 +22,10 @@ export default function Results({ content }) {
           </h2>
 
           <div>
-            <div className=" text-lg md:text-3xl pb-2 italic">
+            <blockquote className=" text-lg md:text-3xl pb-2 italic">
               <PortableText value={content.content} />
-            </div>
-            <b> - {content.person}</b>
+            </blockquote>
+            <cite> - {content.person}</cite>
           </div>
           <a
             href={content.link}
