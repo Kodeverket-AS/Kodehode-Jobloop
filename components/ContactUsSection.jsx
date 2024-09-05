@@ -84,9 +84,9 @@ export function LocationCheck({ content }) {
             {filteredItems.map((item, idx) => (
               <div
                 key={`items-${idx}`}
-                className="group flex flex-row h-56 w-full justify-top p-2 gap-3"
+                className="group flex flex-row h-56 w-full justify-top p-2 gap-3 rounded-xl hover:bg-jobloop-primary-green/5 border border-jobloop-primary-green/0 hover:border-jobloop-primary-green transition-all duration-300"
                 title={`Dette er ${item.navn}`}>
-                <div className="flex  h-full w-1/3 rounded-md overflow-hidden">
+                <figure className="flex h-full w-1/3 overflow-hidden rounded-md">
                   {item.image ? (
                     <Image
                       width={500}
@@ -105,25 +105,40 @@ export function LocationCheck({ content }) {
                       </p>
                     </div>
                   )}
-                </div>
-                <div className="flex flex-col w-2/3">
-                  <div className="border-b-4 group-hover:border-jobloop-primary-green mb-1 w-full">
+                </figure>
+                <address className="flex flex-col w-2/3">
+                  <div className="pb-1 w-full">
                     <h3 className="text-xl">{item.navn}</h3>
+                    <div className="h-[3px] w-0 transition-all duration-500 group-hover:w-full shadow-inner rounded-full group-hover:shadow-jobloop-primary-green"></div>
                   </div>
-                  <div>
-                    <b>Avdeling</b>
-                    <p>{item.lokasjon}</p>
-                  </div>
-                  <div>
-                    <b>E-post</b>
-                    <p>{item.mail}</p>
-                  </div>
-                  <div>
-                    <b>Telefon</b>
-                    <p>{item.tlf_nummer}</p>
-                  </div>
+                  <ul className="flex flex-col gap-2">
+                    <li>
+                      <b>Avdeling</b>
+                      <p>{item.lokasjon}</p>
+                    </li>
+                    <li>
+                      <b>E-post</b>
+                      {item && item.mail ? (
+                        <p>{item.mail}</p>
+                      ) : (
+                        <p className="text-kv-black/60 text-sm">
+                          Ingen e-post, beklager.
+                        </p>
+                      )}
+                    </li>
+                    <li>
+                      <b>Mobil</b>
+                      {item && item.tlf_nummer ? (
+                        <p>{item.tlf_nummer}</p>
+                      ) : (
+                        <p className="text-kv-black/60 text-sm">
+                          Ingen mobilnummer, beklager.
+                        </p>
+                      )}
+                    </li>
+                  </ul>
                   {/* <p>Om:{item.om}</p> */}
-                </div>
+                </address>
               </div>
             ))}
           </div>

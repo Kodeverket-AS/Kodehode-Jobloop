@@ -60,6 +60,10 @@ h6 {
   font-weight: 700;
 }
 
+address {
+  font-style: normal;
+}
+
 @media not all and (min-width: 640px) {
   h1 {
     font-size: 1.6rem;
