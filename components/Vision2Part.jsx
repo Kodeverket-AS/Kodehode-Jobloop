@@ -1,8 +1,5 @@
 import Image from "next/image";
-import { ExternalLinkButton } from "./Buttons";
-import { PortableText } from "@portabletext/react";
-import { SectionComponent } from "./SectionComponents";
-import { TextBlock } from "./TextBlockComponent";
+import { SectionComponent, TextBlock } from "./SectionComponents";
 
 // Version with Image on Left and text on Right.
 export function VisionTextRight({ content, link, linkText, linkAria, title }) {

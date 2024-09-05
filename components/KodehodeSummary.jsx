@@ -1,9 +1,7 @@
 "use client";
-
 import { useState } from "react";
 import CourseCard from "./CourseCard";
-import { SectionComponent } from "./SectionComponents";
-import { TextBlock } from "./TextBlockComponent";
+import { SectionComponent, TextBlock } from "./SectionComponents";
 
 export default function KodehodeSummary({ content1, content2 }) {
   const [active, setActive] = useState(content2[1]);
