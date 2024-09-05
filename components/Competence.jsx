@@ -1,10 +1,6 @@
 "use client";
-
-import Link from "next/link";
 import Image from "next/image";
-import { SectionComponent } from "./SectionComponents";
-import { TextBlock } from "./TextBlockComponent";
-import { PortableText } from "@portabletext/react";
+import { SectionComponent, TextBlock } from "./SectionComponents";
 
 const CompetenceCard = ({ src, alt, title, content }) => (
   <div className="group bg-kv-white w-full flex flex-col shadow-sm shadow-jobloop-primary-green hover:shadow-lg p-4 rounded-lg transition-all duration-300">
