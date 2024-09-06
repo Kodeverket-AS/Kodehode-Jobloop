@@ -9,8 +9,6 @@ export const metadata = {
 export default async function Contact() {
   const data = await getData();
 
-  console.log("data from Contact page", data.heroSub[0].image);
-
   return (
     <div className="flex flex-col items-center min-h-screen">
       <div className="group relative h-80 md:h-96 w-screen">
