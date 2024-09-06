@@ -60,6 +60,16 @@ h6 {
   font-weight: 700;
 }
 
+section {
+  padding: 0 2rem;
+}
+
+@media (max-width: 768px) {
+  section {
+    padding: 0 0rem;
+  }
+}
+
 address {
   font-style: normal;
 }
