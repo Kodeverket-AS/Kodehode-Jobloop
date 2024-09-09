@@ -9,7 +9,7 @@ import logoKodeverketHvit from "../public/logoKodeverketHvit.svg";
 const contactInformation = [
     {
         name: "Deltaker",
-        email: "team@jobloop.no ",
+        email: "inger-johanne@jobloop.no ",
     },
     {
         name: "Bedrifter",
