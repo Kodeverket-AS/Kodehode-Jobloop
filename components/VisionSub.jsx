@@ -1,56 +1,31 @@
 "use client";
-
 import Image from "next/image";
-import { PortableText } from "@portabletext/react";
+import { SectionComponent, TextBlock } from "./SectionComponents";
 
 export default function VisionTop({ content }) {
   return (
-    <>
-      <div className="hidden md:block">
-        <div className="md:flex flex-col px-10 max-w-[1600px] mt-32 mb-20">
-          <div className="justify-center md:flex wfull mb-14 flex-col">
-            <div className="w-fit m-auto">
-              <h1 className="w-full text-center text-kv-black">{content.title}</h1>
-              <hr className="w-full mt-2 h-2 bg-jobloop-primary-green" />
-            </div>
-          </div>
-          <div className="md:flex-row md:flex justify-around mx-auto max-w-[1600px]">
-            <div>
-              <Image
-                src={content.image}
-                width={1080}
-                height={964}
-                className="mx-auto my-auto rounded w-[30rem]"
-                alt={content.alt || ""}
-              />
-            </div>
-            <div className="w-1/2 pl-4">
-              <PortableText value={content.content} />
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="block md:hidden">
-        <div className="flex flex-col items-center justify-start w-full py-20 md:px-12 lg:px-24 md:flex-row md:items-start md:justify-between md:w-screen 2xl:max-w-[1600px]">
-          <div className="flex w-screen h-auto p-0 mx-auto md:pr-5 md:mx-0 md:w-[20rem] md:h-[37rem] lg:w-[24rem] 2xl:w-[32rem]">
-            <Image
-              src={content.image}
-              alt={content.alt || ""}
-              width={1000}
-              height={1000}
-              className="object-contain w-full h-full "
-            />
-          </div>
-          {/* Text container */}
-          <div className="flex flex-col w-full px-8 sm:px-10 sm:my-10 md:w-1/2 md:my-0 md:px-0">
-            <div className="w-fit m-auto my-4">
-              <h1 className="w-full text-center text-kv-black">{content.title}</h1>
-              <hr className="w-full h-2 bg-jobloop-primary-green mt-2" />
-            </div>
-            <PortableText value={content.content} />
-          </div>
-        </div>
-      </div>
-    </>
+    <SectionComponent
+      reverseLayoutOrder={true}
+      leftContent={
+        <TextBlock
+          title={content.title}
+          content={content.content}
+          isButton={true}
+          path="/kontakt"
+          text="Kontakt oss"
+          isContained={true}
+          isOrange={false}
+        />
+      }
+      rightContent={
+        <Image
+          src={content.image}
+          width={1080}
+          height={964}
+          className="mx-auto w-full my-auto rounded"
+          alt={content.alt || ""}
+        />
+      }
+    />
   );
 }

@@ -1,64 +1,69 @@
 "use client";
-
-import Link from "next/link";
 import Image from "next/image";
 import dokument from "../public/dokument.svg";
 import koffert from "../public/koffert.svg";
 import hatt from "../public/hatt.svg";
-import { LinkButton } from "./Buttons";
+import Link from "next/link";
+
+const LinkCard = ({ href, src, title, description }) => {
+  return (
+    <li className="w-full">
+      <Link
+        href={href}
+        prefetch={true}
+        className="group h-full bg-kv-white transition-all duration-300 flex flex-col p-4 gap-2 sm:flex-row w-full md:flex-col md:align-start xl:flex-row md:p-6 shadow-sm shadow-jobloop-primary-green rounded-lg xl:gap-8 hover:shadow-lg">
+        <Image
+          src={src}
+          width={64}
+          height={64}
+          className=" h-20 w-16 group-hover:-rotate-2 transition-transform duration-300 ease-in-out"
+          alt={`Grafikkikon av ${src}`}
+        />
+        {/* Text */}
+        <div>
+          <div className="w-full ">
+            <h4 className="text-xl">{title}</h4>
+            <p className="text-base text-kv-black/70">{description}</p>
+            <div className="font-normal group-hover:font-bold group-hover:underline text-blue-600">
+              <p>Les mer</p>
+            </div>
+          </div>
+        </div>
+      </Link>
+    </li>
+  );
+};
 
 export default function LandingLinks() {
   return (
-    <div className="flex flex-col w-full px-8 pt-20 sm:px-10 md:px-12 lg:px-24">
-      <div className="flex justify-center w-full">
-        <h2 className="text-center">Hvordan kan vi hjelpe deg?</h2>
-      </div>
-      <div className="flex flex-col w-full gap-20 pt-10 pb-20 justify-evenly md:flex-row md:gap-0 xl:max-w-[800px] xl:justify-between xl:mx-auto">
-        <div className="flex flex-col items-start w-40 gap-4 px-0 mx-auto text-left md:w-52 md:pr-5 lg:pr-5 md:mx-0">
-          <Image
+    <section className="w-screen py-24  bg-jobloop-primary-green/10">
+      <div className=" flex flex-col justify-center gap-12 max-w-screen-2xl mx-auto px-2">
+        <h2 className="text-center text-2xl md:text-3xl underline underline-offset-8 decoration-jobloop-primary-green">
+          Hvordan kan vi hjelpe deg?
+        </h2>
+        <menu className="flex flex-col lg:flex-row gap-4 xl:gap-8">
+          <LinkCard
+            href="/arbeidsgiver"
             src={koffert}
-            width={500}
-            height={300}
-            className="w-auto h-24 md:h-20"
-            alt=""
+            title="Arbeidsgiver"
+            description="For bedrifter som er interessert i utviklere"
           />
-          <h5 className="text-xl font-bold text-left">Arbeidsgiver</h5>
-          <p className="text-left">
-            For bedrifter som er interessert i utviklere
-          </p>
-          <div>
-            <LinkButton Path={"/arbeidsgiver"} Text={"Les mer"} />
-          </div>
-        </div>
-        <div className="flex flex-col items-start w-40 gap-4 px-0 mx-auto text-left md:w-52 md:px-5 lg:px-5 md:mx-0">
-          <Image
+
+          <LinkCard
+            href="/deltaker"
             src={hatt}
-            width={500}
-            height={300}
-            alt=""
-            className="w-auto h-24 md:h-20"
+            title="Deltaker"
+            description="For deg som vil delta på Kodehode"
           />
-          <h5 className="text-xl font-boldtext-left ">Deltager</h5>
-          <p className="text-left">For deg som vil delta på Kodehode</p>
-          <div>
-            <LinkButton Path={"/deltaker"} Text={"Les mer"} />
-          </div>
-        </div>
-        <div className="flex flex-col items-start w-40 gap-4 px-0 mx-auto text-left md:w-52 md:pl-5 lg:pl-5 md:mx-0">
-          <Image
+
+          <LinkCard
+            href="/samarbeidspartner"
             src={dokument}
-            width={500}
-            height={300}
-            alt=""
-            className="w-auto h-24 md:h-20"
+            title="Samarbeidspartner"
+            description="For virksomheter som ønsker å samarbeide"
           />
-          <h5 className="text-xl font-bold text-left">Samarbeidspartner</h5>
-          <p className="text-left">For andre virksomheter som vil samarbeide</p>
-          <div>
-            <LinkButton Path={"/samarbeidspartner"} Text={"Les mer"} />
-          </div>
-        </div>
+        </menu>
       </div>
-    </div>
+    </section>
   );
 }

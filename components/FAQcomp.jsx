@@ -1,8 +1,11 @@
 "use client";
 import { Accordion } from "flowbite-react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
-const customTheme = {
+// ======================
+// TOGGLE BUTTONS / TABS
+// ======================
+const arrowStyle = {
   title: {
     arrow: {
       base: "h-6 w-6 shrink-0",
@@ -14,108 +17,192 @@ const customTheme = {
   },
 };
 
-export function FaqDeltager({ contentQ, contentS }) {
+function FaqDeltager({ contentQ, contentS }) {
   const data = contentQ.map((element, index) => (
-    <Accordion.Panel key={index} className="w-2/3">
-      <Accordion.Title className="gap-3 p-2 text-sm focus:bg-gray-100 hover:bg-gray-100">
-        {element}
+    <Accordion.Panel key={index}>
+      <Accordion.Title className="py-4 focus:bg-jobloop-primary-green/10 hover:bg-jobloop-primary-green/10">
+        <h3 className="text-kv-black">{element}</h3>
       </Accordion.Title>
-      <Accordion.Content className="w-full">{contentS[index]}</Accordion.Content>
+      <Accordion.Content className="w-full ">
+        <p className="md:text-lg text-kv-black/70 leading-relaxed md:leading-loose">
+          {contentS[index]}
+        </p>
+      </Accordion.Content>
     </Accordion.Panel>
   ));
 
   return (
     <div className="flex justify-center w-screen">
       <Accordion
-        theme={customTheme}
-        className=" w-2/3  lg:w-2/3 lg:max-w-[1600px] lg:mx-auto"
-        collapseAll
-      >
+        theme={arrowStyle}
+        className="w-full max-w-5xl lg:mx-auto"
+        collapseAll>
         {data}
       </Accordion>
     </div>
   );
 }
 
-export function FaqBedrift({ contentQ, contentS }) {
+function FaqBedrift({ contentQ, contentS }) {
   const data = contentQ.map((element, index) => (
-    <Accordion.Panel className="w-2/3" key={index}>
-      <Accordion.Title className="gap-3 p-2 focus:border-none focus:bg-gray-100 hover:bg-gray-100">
-        {element}
+    <Accordion.Panel key={index}>
+      <Accordion.Title className="py-4 focus:bg-jobloop-primary-green/10 hover:bg-jobloop-primary-green/10">
+        <h3 className="text-kv-black">{element}</h3>
       </Accordion.Title>
-      <Accordion.Content className="w-full">{contentS[index]}</Accordion.Content>
+      <Accordion.Content className="w-full ">
+        <p className="md:text-lg text-kv-black/70 leading-relaxed md:leading-loose">
+          {contentS[index]}
+        </p>
+      </Accordion.Content>
     </Accordion.Panel>
   ));
+
   return (
     <div className="flex justify-center w-screen">
       <Accordion
-        theme={customTheme}
-        className=" w-2/3  lg:w-2/3 lg:max-w-[1600px] lg:mx-auto"
-        collapseAll
-      >
+        theme={arrowStyle}
+        className="w-full max-w-5xl lg:mx-auto"
+        collapseAll>
         {data}
       </Accordion>
     </div>
   );
 }
 
-export function FaqVirk({ contentQ, contentS }) {
+function FaqVirk({ contentQ, contentS }) {
   const data = contentQ.map((element, index) => (
-    <Accordion.Panel className="w-5/6" key={index}>
-      <Accordion.Title className="gap-3 p-2 focus:border-none focus:bg-gray-100 hover:bg-gray-100">
-        {element}
+    <Accordion.Panel key={index}>
+      <Accordion.Title className="py-4 focus:bg-jobloop-primary-green/10 hover:bg-jobloop-primary-green/10">
+        <h3 className="text-kv-black">{element}</h3>
       </Accordion.Title>
-      <Accordion.Content className="w-full">{contentS[index]}</Accordion.Content>
+      <Accordion.Content className="w-full ">
+        <p className="md:text-lg text-kv-black/70 leading-relaxed md:leading-loose">
+          {contentS[index]}
+        </p>
+      </Accordion.Content>
     </Accordion.Panel>
   ));
+
   return (
     <div className="flex justify-center w-screen">
       <Accordion
-        theme={customTheme}
-        className=" w-2/3  lg:w-2/3 lg:max-w-[1600px] lg:mx-auto"
-        collapseAll
-      >
+        theme={arrowStyle}
+        className="w-full max-w-5xl lg:mx-auto"
+        collapseAll>
         {data}
       </Accordion>
     </div>
   );
 }
 
-//   return (
+// ==============================
+// ACCORDION COMPONENT WITH TABS
+// ==============================
+export function FAQComponent({
+  titleDel,
+  titleBed,
+  titleVirk,
+  idOne,
+  idTwo,
+  idThree,
+  contentQuestOne,
+  contentSvarOne,
+  contentQuestTwo,
+  contentSvarTwo,
+  contentQuestThree,
+  contentSvarThree,
+}) {
+  const tabs = [
+    {
+      id: "del",
+      title: titleDel,
+      id: idOne,
+      contentQ: contentQuestOne,
+      contentS: contentSvarOne,
+      component: FaqDeltager,
+    },
+    {
+      id: "bed",
+      title: titleBed,
+      id: idTwo,
+      contentQ: contentQuestTwo,
+      contentS: contentSvarTwo,
+      component: FaqBedrift,
+    },
+    {
+      id: "virk",
+      title: titleVirk,
+      id: idThree,
+      contentQ: contentQuestThree,
+      contentS: contentSvarThree,
+      component: FaqVirk,
+    },
+  ];
 
-//   <div
-//   id={id}
-//   className="flex flex-col px-3 lg:px-9 mb-40 gap-7 lg:w-full lg:lg:max-w-[1100px] lg:mx-auto"
-// >
-//   <h2 className="font-bold text-center">Spørsmål og svar</h2>
-//   <Accordion collapseAll >
-//       <Accordion.Panel >
-//           <Accordion.Title className="test">{question}</Accordion.Title>
-//           <Accordion.Content className="font-bold">{answer}</Accordion.Content>
-//       </Accordion.Panel>
-//   </Accordion>
+  const [activeTab, setActiveTab] = useState(null);
 
-// </div>
-// );
+  useEffect(() => {
+    setActiveTab(tabs[0].id);
+  }, []);
 
-//     <div
-//     className="flex flex-col px-3 lg:px-9 mb-40 gap-7 lg:w-full lg:lg:max-w-[1100px] lg:mx-auto"
-//   >
-//     <h2 className="font-bold text-center">Spørsmål og svar</h2>
-//     <Accordion>
-//       <Accordion.Panel >
-//         <Accordion.Title >{content[0].question}</Accordion.Title>
-//         <Accordion.Content> {content[0].svar} </Accordion.Content>
-//       </Accordion.Panel>
-//       <Accordion.Panel >
-//         <Accordion.Title >{content[1].question}</Accordion.Title>
-//         <Accordion.Content> {content[1].svar} </Accordion.Content>
-//       </Accordion.Panel>
-//     </Accordion>
-//     </div>
-//   );
-// }
+  const handleTabChange = (id) => {
+    setActiveTab(id);
+  };
 
-// }
+  return (
+    <div className="flex flex-col w-full gap-8">
+      <div className="flex justify-center w-full">
+        <div className="text-kv-black/70 flex flex-row flex-wrap divide-x rounded-full overflow-hidden border-2 border-jobloop-primary-green w-fit items-start justify-start sm:justify-center md:flex-row ">
+          {tabs.map((tab) => (
+            <div key={tab.id}>
+              <button
+                onClick={() => handleTabChange(tab.id)}
+                className={`flex p-4 gap-2 items-center
+                  ${
+                    activeTab === tab.id
+                      ? "border-neutral-200 bg-jobloop-primary-green/10"
+                      : " border-neutral-200"
+                  }`}>
+                <div
+                  className={`hidden md:flex items-center justify-center rounded-full ${
+                    activeTab === tab.id
+                      ? " bg-jobloop-primary-green "
+                      : " bg-neutral-200"
+                  }`}>
+                  <div
+                    className={`w-3 h-3 rounded-full ${
+                      activeTab === tab.id
+                        ? " bg-joblog-primary-green "
+                        : " bg-transparent"
+                    }`}>
+                    {" "}
+                  </div>
+                </div>
+                <p
+                  className={`text-sm md:text-base ${
+                    activeTab === tab.id && "text-kv-black/100  "
+                  }`}>
+                  {tab.title}
+                </p>
+              </button>
+            </div>
+          ))}
+        </div>
+      </div>
 
-// const data = content.reverse().map((item) => {
+      <div className="flex justify-center w-full">
+        {tabs.map((tab) => (
+          <div key={tab.id}>
+            {activeTab === tab.id && (
+              <tab.component
+                id={tab.id}
+                contentQ={tab.contentQ}
+                contentS={tab.contentS}
+              />
+            )}
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
