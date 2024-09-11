@@ -9,9 +9,11 @@ import { MdOutlineOpenInNew } from "react-icons/md";
 // Contact information for the footer
 const contactInformation = [
 
+
     {
         name: "Deltaker",
         email: "inger-johanne@jobloop.no ",
+
     },
     {
         name: "Bedrifter",
@@ -135,4 +137,5 @@ export default function Footer() {
       </p>
     </footer>
   );
+
 }
