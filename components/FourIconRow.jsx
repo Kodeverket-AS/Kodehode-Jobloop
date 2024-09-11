@@ -1,62 +1,63 @@
 "use client";
 
-import Link from "next/link";
 import Image from "next/image";
+import { AlertError } from "./AlertComponent";
+import { LuGoal } from "react-icons/lu";
+import { MdAllInclusive } from "react-icons/md";
+import { MdAutoGraph } from "react-icons/md";
+import { RiTeamFill } from "react-icons/ri";
 
-export default function FourIconRow({ title, content }) {
+const LanguageCard = ({ title, content, logo, alt, icon }) => {
   return (
-    <div className="flex flex-col items-start w-full px-8 py-20 text-left text-kv-white bg-jobloop-primary-green sm:px-10 md:px-12 md:w-screen lg:px-24 md:items-center">
-      <h2 className="pb-10 md:pb-20">{title}</h2>
-      <div className="flex flex-col w-full md:flex-row md:justify-between lg:gap-16 xl:gap-32 xl:max-w-[1088px]">
-        <div className="flex flex-row justify-between mb-5 md:mb-0 md:justify-evenly md:w-1/2 lg:gap-16 xl:gap-32">
-          <div className="flex flex-col items-start mr-5 w-28 md:w-36 2xs:w-32 xs:w-36 sm:w-56 md:mr-0 lg:w-40 xl:w-44">
-            <Image
-              src={content[0].logo}
-              width={300}
-              height={300}
-              className="w-24 mb-2 md:w-32"
-              alt={content[0].alt || ""}
-            />
-            <h3 className="text-left">{content[0].title}</h3>
-            <p className="text-left">{content[0].content}</p>
-          </div>
-          <div className="flex flex-col items-start mr-5 w-28 md:mr-0 md:w-36 2xs:w-32 xs:w-36 sm:w-56 lg:w-40 xl:w-44">
-            <Image
-              src={content[1].logo}
-              width={300}
-              height={300}
-              className="w-24 mb-2 md:w-32"
-              alt={content[1].alt || ""}
-            />
-            <h3 className="text-left">{content[1].title}</h3>
-            <p className="text-left">{content[1].content}</p>
-          </div>
-        </div>
-        <div className="flex flex-row justify-between md:justify-evenly md:w-1/2 lg:gap-16 xl:gap-32">
-          <div className="flex flex-col items-start mr-5 w-28 md:mr-0 md:w-36 2xs:w-32 xs:w-36 sm:w-56 lg:w-40 xl:w-44">
-            <Image
-              src={content[2].logo}
-              width={300}
-              height={300}
-              className="w-24 mb-2 md:w-32"
-              alt={content[2].alt || ""}
-            />
-            <h3 className="text-left">{content[2].title}</h3>
-            <p className="text-left">{content[2].content}</p>
-          </div>
-          <div className="flex flex-col items-start mr-5 w-28 md:mr-0 md:w-36 2xs:w-32 xs:w-36 sm:w-56 lg:w-40 xl:w-44">
-            <Image
-              src={content[3].logo}
-              width={300}
-              height={300}
-              className="w-24 mb-2 md:w-32"
-              alt={content[3].alt || ""}
-            />
-            <h3 className="text-left">{content[3].title}</h3>
-            <p className="text-left">{content[3].content}</p>
-          </div>
-        </div>
+    <div className="pb-8 w-full">
+      {/* <Image
+        src={<GoGoal />}
+        width={300}
+        height={300}
+        className="w-20 pb-4 m-auto"
+        alt={alt || "HTML logo"}
+      /> */}
+      <div className="text-center flex flex-col items-center">
+        {icon}
+        <h3 className="text-xl md:text-2xl">{title}</h3>
+        <p className="text-kv-black/70">{content}</p>
       </div>
     </div>
+  );
+};
+
+export default function FourIconsRow({ title, content, icons }) {
+  return (
+    <section className="w-full py-12 text-kv-black">
+      {content && content.length !== 0 ? (
+        <div className="px-4 flex flex-col justify-center mx-auto">
+          <h3 className="text-2xl md:text-3xl text-center underline underline-offset-8 pb-12 decoration-jobloop-primary-orange">
+            {title}
+          </h3>
+
+          <div className="flex flex-col gap-8 md:flex-row pb-8 justify-center">
+            <LanguageCard
+              {...content[0]}
+              icon={icons[0]}
+            />
+            <LanguageCard
+              {...content[1]}
+              icon={icons[1]}
+            />
+
+            <LanguageCard
+              {...content[2]}
+              icon={icons[2]}
+            />
+            <LanguageCard
+              {...content[3]}
+              icon={icons[3]}
+            />
+          </div>
+        </div>
+      ) : (
+        <AlertError />
+      )}
+    </section>
   );
 }

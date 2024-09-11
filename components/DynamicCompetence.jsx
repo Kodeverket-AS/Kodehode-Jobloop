@@ -2,22 +2,40 @@
 
 import Image from "next/image";
 
+const LinkCard = ({ id, src, title, description }) => {
+  return (
+    <div
+      key={id}
+      className="group transition-all duration-300 bg-kv-white md:flex items-center p-2 gap-2 md:p-6 shadow-sm shadow-jobloop-primary-green rounded-lg md:gap-8 hover:shadow-lg">
+      <Image
+        src={src}
+        width={64}
+        height={64}
+        className="animate-pulse h-16 w-16 group-hover:rotate-3 transition-transform duration-300 ease-in-out"
+        alt={`Grafikkikon av ${src}`}
+      />
+      {/* Text */}
+      <div>
+        <div className="w-full ">
+          <h2 className="text-xl font-bold ">{title}</h2>
+          <p className="text-lg text-kv-black/70">{description}</p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
 export default function DynamicCompetence({ content }) {
   return (
-    <div className="flex flex-col items-start w-full min-h-full pb-20 text-left md:w-screen lg:px-24 md:items-center">
-      <div className="grid w-full h-full grid-cols-2 gap-y-20 md:gap-y-24 gap-x-8 md:grid-cols-3 align-center">
+    <div className="">
+      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
         {content.map((item, index) => (
-          <div key={item.id + index} className="flex flex-col items-start w-full h-full">
-            <Image
-              src={item.logo}
-              width={300}
-              height={300}
-              className="w-16 h-16 mb-2 md:w-32 md:h-32"
-              alt={item.alt || ""}
-            />
-            <h3 className="text-left">{item.title}</h3>
-            <p className="text-left">{item.content}</p>
-          </div>
+          <LinkCard
+            key={index}
+            src={item.logo}
+            title={item.title}
+            description={item.content}
+          />
         ))}
       </div>
     </div>
