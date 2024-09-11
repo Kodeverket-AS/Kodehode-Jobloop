@@ -1,21 +1,23 @@
 import { Client } from "../../lib/sanity";
-import Image from "next/image";
 import "./globals.css";
 import LandingHero from "../../components/LandingHero";
 import LandingLinks from "../../components/LandingLinks";
 import LandingVisjon from "../../components/LandingVisjon";
-import { LinkButton } from "../../components/Buttons";
 import imageUrlBuilder from "@sanity/image-url";
+// import LinkToFaq from "../../components/LinkToFaq";
+// import LinkToKontakt from "../../components/LinkToKontakt";
 
 export default async function Home() {
   const data = await getData();
   return (
-    <main className="flex flex-col items-center min-h-screen p-0">
+    <main className="flex flex-col items-center min-h-screen">
       <LandingHero content={data.heroSub[1]} />
-      <div className="flex flex-col items-center mt-[370px] md:mt-20">
+      <section className=" flex flex-col px-4 pb-12 items-center">
         <LandingLinks />
         <LandingVisjon content={data.visionLanding[0]} />
-      </div>
+      </section>
+      {/* <LinkToFaq /> */}
+      {/* <LinkToKontakt /> */}
     </main>
   );
 }

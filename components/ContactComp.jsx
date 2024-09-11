@@ -1,30 +1,31 @@
-//import PortableText from "react-portable-text"
-import { PortableText } from "@portabletext/react";
 import Image from "next/image";
-import { LinkButtonColour } from "./Buttons";
+import { SectionComponent, TextBlock } from "./SectionComponents";
 
 export default function ContactComp({ imageOne, title, content, _id, alt }) {
   return (
-    <div className="flex justify-center w-screen px-8 py-20 sm:px-10 md:px-12 lg:px-24">
-      <div className="max-w-[1600px]">
-        <div className="flex flex-col w-full gap-10 md:flex-row md:gap-7 ">
-          <div className="flex flex-row w-full ">
-            <div className="w-full">
-              <Image width={400} height={400} src={imageOne} alt={alt || ""} className="mx-auto" />
-            </div>
-          </div>
-          <div className="flex flex-col justify-center w-full gap-10 text-kv-black md:w-4/6">
-            <div className="w-fit m-auto">
-              <h2 className="">{title}</h2>
-              <hr className="w-full h-2 bg-jobloop-secondary-orange mt-2" />
-            </div>
-            <PortableText value={content} />
-            <div className="">
-              <LinkButtonColour Path={"/kontakt"} Text={"Kontakt oss"} />
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <SectionComponent
+      isBgColor={true}
+      bgColorOrange
+      leftContent={
+        <Image
+          width={400}
+          height={400}
+          src={imageOne}
+          alt={alt || ""}
+          className="mx-auto"
+        />
+      }
+      rightContent={
+        <TextBlock
+          title={title}
+          content={content}
+          isButton={true}
+          path={"/kontakt"}
+          text={"Kontakt oss"}
+          isContained={true}
+          isOrange={true}
+        />
+      }
+    />
   );
 }

@@ -2,11 +2,13 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import logoJobloopHvit from "../public/logoJobloopHvit.svg";
-import logoKodeverketHvit from "../public/logoKodeverketHvit.svg";
+// import logoJobloopHvit from "../public/logoJobloopHvit.svg";
+// import logoKodeverketHvit from "../public/logoKodeverketHvit.svg";
+import { MdOutlineOpenInNew } from "react-icons/md";
 
 // Contact information for the footer
 const contactInformation = [
+
     {
         name: "Deltaker",
         email: "inger-johanne@jobloop.no ",
@@ -23,189 +25,114 @@ const contactInformation = [
         phoneDisplay: "+47 48 35 87 03",
         phoneLink: "+4748358703",
     },
+
 ];
 
 export default function Footer() {
-    return (
-        <footer className='pb-8 text-kv-white bg-jobloop-primary-grey'>
-            <div className='flex-row flex-wrap items-start justify-around hidden px-12 pt-8 pb-24 md:flex gap-y-20 gap-x-8 md:px-12 2xl:max-w-[1600px] 2xl:mx-auto'>
-                <div className='flex flex-col order-2 gap-8 md:order-1'>
-                    <h2 className='text-3xl'>Kontakt</h2>
-                    {contactInformation.map((person) => (
-                        <div
-                            className='flex flex-col pb-4 border-b-2 border-kv-white border-opacity-40'
-                            key={person.name}
-                        >
-                            <b className='text-lg'>{person.name}</b>
-                            <a
-                                href={`mailto:${person.email}`}
-                                className='py-1 cursor-pointer hover:underline active:underline'
-                                target='_blank'
-                                aria-label={`Åpner email for å opprette epost til ${person.name}`}
-                            >
-                                {person.email}
-                            </a>
-                            <a
-                                href={`tel:${person.phoneLink}`}
-                                className='md:hover:underline md:active:underline'
-                                aria-label={`Åpner telefon for å ringe ${person.name}`}
-                            >
-                                {person.phoneDisplay}
-                            </a>
-                        </div>
-                    ))}
+  return (
+    <footer className="w-full pb-8 text-kv-black bg-jobloop-primary-green/10 border-t border-jobloop-primary-green">
+      <div className="container flex flex-col md:flex-row mx-auto  pt-8 pb-24 gap-12">
+        <address className="w-full flex flex-col items-center text-center gap-8 order-1">
+          <h2 className="text-3xl">Kontakt for</h2>
+          <ul className="w-full flex flex-col items-center gap-8">
+            {contactInformation.map((person) => (
+              <li
+                className="flex flex-col pb-4 border-b-2 border-kv-white border-opacity-40"
+                key={person.name}>
+                <b className="text-lg">{person.name}</b>
+                <a
+                  href={`mailto:${person.email}`}
+                  className="py-1 cursor-pointer hover:underline active:underline"
+                  target="_blank"
+                  aria-label={`Åpner email for å opprette epost til ${person.name}`}>
+                  {person.email}
+                </a>
+                <a
+                  href={`tel:${person.phoneLink}`}
+                  className="md:hover:underline md:active:underline"
+                  aria-label={`Åpner telefon for å ringe ${person.name}`}>
+                  {person.phoneDisplay}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </address>
+        <div className="w-full flex flex-col items-center gap-8 mx-auto text-center text-kv-black order-2">
+          <h2 className="text-3xl">Linker </h2>
+
+          <ul className="w-full flex flex-col items-center gap-8 ">
+            <li>
+              <a
+                href="https://jobloop.no/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Lenke til Jobloops nettside"
+                className="flex items-center gap-1 group w-fit py-3 px-6 rounded-full shadow-sm shadow-jobloop-primary-green hover:shadow-lg bg-kv-black hover:bg-kv-black/90 transition-all scale-100 hover:scale-105 text-kv-white">
+                <h4> Jobloop.no</h4>
+                <div className="relative">
+                  <MdOutlineOpenInNew />
                 </div>
-                <div className='items-center order-1 gap-8 md:flex md:flex-col md:order-2'>
-                    <h2 className='text-3xl text-center'>Linker</h2>
-                    <div className='w-32'>
-                        <a
-                            href='https://jobloop.no/'
-                            target='_blank'
-                            rel='noopener noreferrer'
-                            aria-label='Lenke til Jobloops nettside'
-                        >
-                            <Image
-                                alt='Jobloop logo'
-                                src={logoJobloopHvit}
-                                width={350}
-                                height={250}
-                            />
-                        </a>
-                    </div>
-                    <div className='w-32'>
-                        <a
-                            href='https://www.kodeverketbergen.no/'
-                            target='_blank'
-                            rel='noopener noreferrer'
-                            aria-label='Lenke til Kodeverkets nettside'
-                        >
-                            <Image
-                                alt='Kodeverket logo'
-                                src={logoKodeverketHvit}
-                                width={350}
-                                height={250}
-                            />
-                        </a>
-                    </div>
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.kodeverketbergen.no/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Lenke til Kodeverkets nettside"
+                className="group flex items-center gap-1 w-fit py-3 px-6 rounded-full bg-kv-black hover:bg-kv-black/90 transition-all scale-100 hover:scale-105 text-kv-white">
+                <h4 className="w-full">Kodeverket.no</h4>
+                <div className="relative">
+                  <MdOutlineOpenInNew />
                 </div>
-                <div className='flex flex-col order-3 gap-8'>
-                    <h2 className='text-3xl'>Sider</h2>
-                    <Link
-                        className='hover:underline'
-                        href='/arbeidsgiver'
-                        aria-label='Gå til underside for arbeidsgiver'
-                    >
-                        Arbeidsgiver
-                    </Link>
-                    <Link
-                        className='hover:underline'
-                        href='/deltaker'
-                        aria-label='Gå til underside for deltaker'
-                    >
-                        Deltaker
-                    </Link>
-                    <Link
-                        className='hover:underline'
-                        href='/samarbeidspartner'
-                        aria-label='Gå til underside for samarbeidspartner'
-                    >
-                        Samarbeidspartner
-                    </Link>
-                </div>
-            </div>
-            {/* mobile footer: */}
-            <div className='flex flex-row flex-wrap items-start justify-around px-8 pt-8 pb-24 md:hidden md:flex-wrap gap-y-20 gap-x-8 md:px-12'>
-                <div className='block w-full gap-8'>
-                    <div className='flex flex-col items-center order-1 gap-8'>
-                        <h2 className='text-3xl text-center'>Linker</h2>
-                        <div className='w-32'>
-                            <a
-                                href='https://jobloop.no/'
-                                target='_blank'
-                                rel='noopener noreferrer'
-                                aria-label='Lenke til Jobloops nettside'
-                            >
-                                <Image
-                                    alt='Jobloop logo'
-                                    src={logoJobloopHvit}
-                                    width={350}
-                                    height={250}
-                                />
-                            </a>
-                        </div>
-                        <div className='w-32'>
-                            <a
-                                href='https://www.kodeverketbergen.no/'
-                                target='_blank'
-                                rel='noopener noreferrer'
-                                aria-label='Lenke til Kodeverkets nettside'
-                            >
-                                <Image
-                                    alt='Kodeverket logo'
-                                    src={logoKodeverketHvit}
-                                    width={350}
-                                    height={250}
-                                />
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div className='flex flex-row justify-around w-full gap-8'>
-                    <div className='flex flex-col order-2 gap-8'>
-                        <h2 className='text-3xl'>Kontakt</h2>
-                        {contactInformation.map((person) => (
-                            <div
-                                className='flex flex-col pb-4 border-b-2 border-kv-white border-opacity-40'
-                                key={person.name}
-                            >
-                                <b className='text-lg'>{person.name}</b>
-                                <a
-                                    href={`mailto:${person.email}`}
-                                    className='py-1 cursor-pointer hover:underline active:underline'
-                                    target='_blank'
-                                    aria-label={`Åpner email for å opprette epost til ${person.name}`}
-                                >
-                                    {person.email}
-                                </a>
-                                <a
-                                    href={`tel:${person.phoneLink}`}
-                                    className='md:hover:underline md:active:underline'
-                                    aria-label={`Åpner telefon for å ringe ${person.name}`}
-                                >
-                                    {person.phoneDisplay}
-                                </a>
-                            </div>
-                        ))}
-                    </div>
-                    <div className='flex flex-col order-3 w-32 gap-8'>
-                        <h2 className='text-3xl'>Sider</h2>
-                        <Link
-                            className='hover:underline'
-                            href='/arbeidsgiver'
-                            aria-label='Gå til underside for arbeidsgiver'
-                        >
-                            Arbeidsgiver
-                        </Link>
-                        <Link
-                            className='hover:underline'
-                            href='/deltaker'
-                            aria-label='Gå til underside for deltaker'
-                        >
-                            Deltaker
-                        </Link>
-                        <Link
-                            className='hover:underline'
-                            href='/samarbeidspartner'
-                            aria-label='Gå til underside for samarbeidspartner'
-                        >
-                            Samarbeids- partner
-                        </Link>
-                    </div>
-                </div>
-            </div>
-            <p className='text-center'>
-                &copy; {new Date().getFullYear()} Kodehode
-            </p>
-        </footer>
-    );
+              </a>
+            </li>
+            <p className="text-sm">eller</p>
+            <li>
+              <Link
+                href="/FAQ"
+                aria-label="Gå til FAQ siden"
+                className="group flex items-center gap-1 w-fit py-3 px-6 rounded-full transition-all border border-kv-black scale-100 hover:scale-105 text-kv-black">
+                <h4 className="w-full">Gå til FAQ</h4>
+              </Link>
+            </li>
+          </ul>
+        </div>
+        <div className="w-full flex flex-col text-center items-center order-3 gap-8">
+          <div>
+            <h2 className="text-3xl">Side for</h2>
+          </div>
+          <ul className="w-full flex flex-col items-center gap-8">
+            <li>
+              <Link
+                className="transition-all duration-200 underline underline-offset-2 lg:hover:underline-offset-4"
+                href="/arbeidsgiver"
+                aria-label="Gå til underside for arbeidsgiver">
+                Arbeidsgiver
+              </Link>
+            </li>
+            <li>
+              <Link
+                className="transition-all duration-200 underline underline-offset-2 lg:hover:underline-offset-4"
+                href="/deltaker"
+                aria-label="Gå til underside for deltaker">
+                Deltaker
+              </Link>
+            </li>
+            <li>
+              <Link
+                className="transition-all duration-200 underline underline-offset-2 lg:hover:underline-offset-4"
+                href="/samarbeidspartner"
+                aria-label="Gå til underside for samarbeidspartner">
+                Samarbeidspartner
+              </Link>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <p className="text-center text-sm">
+        &copy; {new Date().getFullYear()} Kodehode
+      </p>
+    </footer>
+  );
 }
