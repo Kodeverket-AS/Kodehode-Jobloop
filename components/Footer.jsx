@@ -8,22 +8,24 @@ import { MdOutlineOpenInNew } from "react-icons/md";
 
 // Contact information for the footer
 const contactInformation = [
-  {
-    name: "Deltaker",
-    email: "team@jobloop.no ",
-  },
-  {
-    name: "Bedrifter",
-    email: "christer@jobloop.no",
-    phoneDisplay: "+47 92 88 28 04",
-    phoneLink: "+4792882804",
-  },
-  {
-    name: "Oppdragsgiver",
-    email: "inger-johanne@jobloop.no ",
-    phoneDisplay: "+47 48 35 87 03",
-    phoneLink: "+4748358703",
-  },
+
+    {
+        name: "Deltaker",
+        email: "inger-johanne@jobloop.no ",
+    },
+    {
+        name: "Bedrifter",
+        email: "christer@jobloop.no",
+        phoneDisplay: "+47 92 88 28 04",
+        phoneLink: "+4792882804",
+    },
+    {
+        name: "Oppdragsgiver",
+        email: "inger-johanne@jobloop.no ",
+        phoneDisplay: "+47 48 35 87 03",
+        phoneLink: "+4748358703",
+    },
+
 ];
 
 export default function Footer() {
