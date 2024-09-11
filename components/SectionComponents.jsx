@@ -26,7 +26,7 @@ export const SectionComponent = ({
   isBgColor = false, //boolean to turn on/off background color
   bgColorGreen = false, //turn on/off jobloop-green 10opactity background
   bgColorOrange = false, //turn on/off jobloop-orange 10opactity background
-  reverseLayoutOrder = false, //boolean to reverse layout direction aka L-R or R-L
+  reverseLayoutOrder = false, //boolean to reverse layout direction aka L-R or R-L on screens below xl
 }) => {
   let backgroundColor = "";
   if (isBgColor) {
@@ -51,21 +51,21 @@ export const SectionComponent = ({
 };
 
 export const TextBlock = ({
-  title,
+  title, //title of the section
   content, // If more than one string of content, use content, content2 and content3
-  content2,
-  content3,
+  content2, // If more than one string of content
+  content3, // If more than one string of content
   contentString, // If only one single string of content
-  isButton,
-  path: buttonPath,
-  text: buttonText,
-  isContained,
-  isOrange,
+  isButton, // boolean to determine if button is present or not
+  path: buttonPath, // if isButton = true, path for button
+  text: buttonText, // if isButton = true, text for button
+  isContained, //boolean to determine if button is contained or not
+  isOrange, // boolean to determine if underline is orange or green
 }) => {
   return (
-    <div className="flex flex-col gap-4 w-full">
+    <article className="flex flex-col gap-4 w-full">
       <h2
-        className={`text-kv-black underline underline-offset-8 pb-2 ${
+        className={`text-kv-black xl:text-4xl underline underline-offset-8 pb-2 ${
           isOrange
             ? "decoration-jobloop-primary-orange"
             : "decoration-jobloop-primary-green"
@@ -73,7 +73,7 @@ export const TextBlock = ({
         {title}
       </h2>
 
-      <div className="text-kv-black/70 text-base xl:leading-relaxed xl:text-xl xl:max-w-[70ch]">
+      <div className="text-kv-black/70 text-base xl:text-xl xl:leading-relaxed xl:max-w-[70ch]">
         {content ? (
           <>
             <div>
@@ -87,23 +87,21 @@ export const TextBlock = ({
         )}
       </div>
 
-      <div className="py-4">
-        {isButton && (
-          <div>
-            {isContained ? (
-              <LinkButtonContained
-                path={buttonPath}
-                text={buttonText}
-              />
-            ) : (
-              <LinkButton
-                path={buttonPath}
-                text={buttonText}
-              />
-            )}
-          </div>
-        )}
-      </div>
-    </div>
+      {isButton && (
+        <div className="flex py-4">
+          {isContained ? (
+            <LinkButtonContained
+              path={buttonPath}
+              text={buttonText}
+            />
+          ) : (
+            <LinkButton
+              path={buttonPath}
+              text={buttonText}
+            />
+          )}
+        </div>
+      )}
+    </article>
   );
 };

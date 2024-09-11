@@ -67,7 +67,7 @@ export default async function Oppdragsgiver() {
 
         <div className="w-full py-24">
           <Offices content={data.OurLocals} />
-          <LinkToKontakt />
+          {/* <LinkToKontakt /> */}
         </div>
 
         <div className="hidden xl:block">
