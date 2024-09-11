@@ -7,8 +7,17 @@ import ImageGallery from "../../../components/ImageGallery";
 import LinkToFaq from "../../../components/LinkToFaq";
 import VideoComp1 from "../../../components/VideoComp1";
 import Teachers from "../../../components/Teachers";
-import Platforms from "../../../components/Platforms";
 import MultiCompetence from "../../../components/MultiCompetence";
+
+/**
+ * ========================================================================
+ * WARNING:
+ * Errors occuring due to Youtube links. Temp. removed.
+ * In future Chrome versions, reading third-party cookies will be blocked.
+ * This behavior protects user data from cross-site tracking.
+ * I.E Sanity Icons on this page. = data.competenceIcons
+ * ========================================================================
+ */
 
 export const metadata = {
   title: "Deltaker: Er du vårt neste Kodehode? | Kodehode",
@@ -22,43 +31,62 @@ export default async function Deltaker() {
     data.personDatabase[4],
     data.personDatabase[5],
   ];
+  // console.log(data.competenceIcons);
   return (
-    <main className="flex flex-col items-center min-h-screen p-0">
-      <HeroSub
-        content={data.heroSub[2]}
-        buttonText={"Jeg er interessert!"}
-        key={data.heroSub[2]._id}
-      />
-      <div className="flex flex-col items-center mt-[26rem] md:mt-20">
-        <KodehodeSummary content1={data.origin[1]} content2={data.courseTypes} />
+    <main className="flex flex-col items-center min-h-screen pt-20">
+      <div className="flex flex-col items-center ">
+        <HeroSub
+          content={data.heroSub[2]}
+          buttonText={"Jeg er interessert!"}
+          key={data.heroSub[2]._id}
+        />
+        <KodehodeSummary
+          content1={data.origin[1]}
+          content2={data.courseTypes}
+        />
         <StudyInParts content={data.CourseSections} />
-        <div className="w-full bg-jobloop-primary-green">
+        {/* <div className="w-full flex flex-col gap-8 py-12">
+          <h2 className="text-center underline decoration-4 pb-8 underline-offset-8 decoration-jobloop-primary-green">
+            Koding i HTML og CSS
+          </h2>
+
           <VideoComp1
             url="https://www.youtube.com/embed/LocPs6zdkrQ?si=afaKRzcMA80WvwtW&amp;"
             alt={"Timelapse video av noen som koder en portfolio i HTML og CSS"}
           />
-        </div>
-        <MultiCompetence content1={data.relevantCompetence[0]} content2={data.competenceIcons} />
-        <div className="w-full">
+        </div> */}
+        <MultiCompetence
+          content1={data.relevantCompetence[0]}
+          content2={data.competenceIcons}
+        />
+        {/* <section className="w-full flex flex-col gap-8 pb-12">
+          <h2 className="text-center underline decoration-4 pb-8 underline-offset-8 decoration-jobloop-primary-green">
+            Design i Figma
+          </h2>
+
           <VideoComp1
             url="https://www.youtube.com/embed/6riX-2lnIyg?si=g3aOkgbSOaBsJE-B&amp;"
             alt={"Timelapse video av noen som designer en nettside i Figma"}
           />
-        </div>
-        <Teachers content={teachers} title={"Våre veiledere"} />
-        {/*<Platforms />*/}
-        {/*<div className=" bg-jobloop-secondary-orange">
+        </section> */}
+        <Teachers
+          content={teachers}
+          title={"Våre veiledere"}
+        />
+
+        <div className="w-screen pb-24">
           <Results content={data.results[0]} />
-        </div>*/}
-        <Results content={data.results[0]} />
-        <ImageGallery content={data.ImageGallery} />
-        <div className="w-full bg-jobloop-primary-green">
+        </div>
+        <div className="hidden xl:block">
+          <ImageGallery content={data.ImageGallery} />
+        </div>
+        {/* <section className="w-full pb-12">
           <VideoComp1
             url="https://www.youtube.com/embed/gIrgqXD27EI?si=bh2im5jdpu-apCIQ&amp;"
             alt={"Timelapse av noen som koder en app i React Native"}
           />
-        </div>
-        <LinkToFaq />
+        </section> */}
+        {/* <LinkToFaq /> */}
       </div>
     </main>
   );
