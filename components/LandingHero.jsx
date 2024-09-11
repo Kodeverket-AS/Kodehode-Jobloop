@@ -1,13 +1,7 @@
 "use client";
-
-import Link from "next/link";
 import Image from "next/image";
 import danialigdery from "../public/danialigdery.jpg";
-// import { LinkButton, LinkButtonContained } from "./Buttons";
-// import { PortableText } from "@portabletext/react";
-import { SectionComponent } from "./SectionComponents";
-import { TextBlock } from "./TextBlockComponent";
-// import { LinkButtonContained } from "./Buttons";
+import { SectionComponent, TextBlock } from "./SectionComponents";
 
 export default function LandingHero({ content }) {
   const missionTitle = "Vi utdanner morgendagens utviklere";
@@ -17,7 +11,7 @@ export default function LandingHero({ content }) {
 
   return (
     <>
-      <div className="group relative h-[80vh] w-screen">
+      <header className="group relative h-[80vh] w-screen">
         <Image
           src={content.image}
           height={500}
@@ -35,7 +29,7 @@ export default function LandingHero({ content }) {
             </p>
           </div>
         </div>
-      </div>
+      </header>
 
       <SectionComponent
         reverseLayoutOrder={true}
@@ -53,13 +47,15 @@ export default function LandingHero({ content }) {
           />
         }
         rightContent={
-          <Image
-            src={danialigdery}
-            height={500}
-            width={500}
-            alt="kodemiljø"
-            className="object-cover w-full rounded-xl"
-          />
+          <figure>
+            <Image
+              src={danialigdery}
+              height={500}
+              width={500}
+              alt="kodemiljø"
+              className="object-cover w-full rounded-xl"
+            />
+          </figure>
         }
       />
     </>

@@ -60,6 +60,20 @@ h6 {
   font-weight: 700;
 }
 
+section {
+  padding: 0 2rem;
+}
+
+@media (max-width: 768px) {
+  section {
+    padding: 0 0rem;
+  }
+}
+
+address {
+  font-style: normal;
+}
+
 @media not all and (min-width: 640px) {
   h1 {
     font-size: 1.6rem;

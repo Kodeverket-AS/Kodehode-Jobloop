@@ -85,7 +85,7 @@ const HamburgerMenu = ({ hamFill }) => {
             />
           </button>
 
-          <div className="flex flex-col gap-8">
+          <menu className="flex flex-col gap-8">
             {PagesArray.map((page) =>
               page.href === "/kontakt" ? (
                 <Link
@@ -111,7 +111,7 @@ const HamburgerMenu = ({ hamFill }) => {
                 </Link>
               )
             )}
-          </div>
+          </menu>
         </nav>
       </div>
     </div>

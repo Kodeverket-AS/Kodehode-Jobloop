@@ -1,7 +1,6 @@
 "use client";
 import Image from "next/image";
-import { SectionComponent } from "./SectionComponents";
-import { TextBlock } from "./TextBlockComponent";
+import { SectionComponent, TextBlock } from "./SectionComponents";
 
 export default function OmOssTop({ content, buttonText }) {
   return (

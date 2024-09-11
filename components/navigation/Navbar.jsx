@@ -53,7 +53,7 @@ export function NavbarWhite() {
           </Link>
         </div>
         <div>
-          <div className="hidden h-auto p-4 md:block">
+          <menu className="hidden h-auto p-4 md:block">
             {PagesArray.map((page) =>
               page.href === "/kontakt" ? (
                 <Link
@@ -71,16 +71,9 @@ export function NavbarWhite() {
                   className="px-4 font-bold text-kv-white md:hover:underline underline-offset-4">
                   {page.name}
                 </Link>
-                // <Link
-                //   key={page.name}
-                //   href={page.href}
-                //   aria-label={page.label}
-                //   className="px-4 font-bold text-kv-white md:hover:underline underline-offset-4">
-                //   {page.name}
-                // </Link>
               )
             )}
-          </div>
+          </menu>
           <div className="px-4">
             <HamburgerMenu hamFill="white" />
           </div>
@@ -108,41 +101,31 @@ export function NavbarColor({ textWhite }) {
           </Link>
         </div>
         <div>
-          <div className="hidden h-auto p-4 md:block">
-            {PagesArray.map(
-              (page) =>
-                page.href === "/kontakt" ? (
-                  <Link
-                    key={page.name}
-                    href={page.href}
-                    aria-label={page.label}
-                    className={`py-2 px-4 rounded-full border border-jobloop-primary-green bg-jobloop-primary-green/10 font-medium ${
-                      !textWhite ? "text-neutral-950" : "text-kv-black"
-                    } md:hover:bg-jobloop-primary-green/20`}>
-                    {page.name}
-                  </Link>
-                ) : (
-                  <Link
-                    key={page.name}
-                    href={page.href}
-                    aria-label={page.label}
-                    className={`px-4 md:portrait:pl-4 md:portrait:pr-2 lg:px-4 font-bold ${
-                      !textWhite ? "text-neutral-900" : "text-kv-white"
-                    } md:hover:underline underline-offset-4`}>
-                    {page.name}
-                  </Link>
-                )
-              // <Link
-              //   key={page.name}
-              //   href={page.href}
-              //   aria-label={page.label}
-              //   className={`px-4 md:portrait:pl-4 md:portrait:pr-2 lg:px-4 font-bold ${
-              //     !textWhite ? "text-neutral-900" : "text-kv-white"
-              //   } md:hover:underline underline-offset-4`}>
-              //   {page.name}
-              // </Link>
+          <menu className="hidden h-auto p-4 md:block">
+            {PagesArray.map((page) =>
+              page.href === "/kontakt" ? (
+                <Link
+                  key={page.name}
+                  href={page.href}
+                  aria-label={page.label}
+                  className={`py-2 px-4 rounded-full border border-jobloop-primary-green bg-jobloop-primary-green/10 font-medium ${
+                    !textWhite ? "text-neutral-950" : "text-kv-black"
+                  } md:hover:bg-jobloop-primary-green/20`}>
+                  {page.name}
+                </Link>
+              ) : (
+                <Link
+                  key={page.name}
+                  href={page.href}
+                  aria-label={page.label}
+                  className={`px-4 md:portrait:pl-4 md:portrait:pr-2 lg:px-4 font-bold ${
+                    !textWhite ? "text-neutral-900" : "text-kv-white"
+                  } md:hover:underline underline-offset-4`}>
+                  {page.name}
+                </Link>
+              )
             )}
-          </div>
+          </menu>
           <div className="px-4">
             <HamburgerMenu hamFill="colour" />
           </div>

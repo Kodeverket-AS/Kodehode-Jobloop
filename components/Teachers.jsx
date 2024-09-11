@@ -7,7 +7,7 @@ import { LinkButtonContained } from "./Buttons";
 
 const VeilederCard = ({ imageUrl, imageAlt, name, role }) => (
   <div className="flex flex-row w-full pb-10 mx-auto md:flex-col md:w-40 md:pb-0 md:mx-0 lg:w-48 ">
-    <div className="w-1/2 pr-3 md:mb-2 md:w-full h-[170px] md:pr-0 md:h-[190px] sm:h-[250px]">
+    <figure className="w-1/2 pr-3 md:mb-2 md:w-full h-[170px] md:pr-0 md:h-[190px] sm:h-[250px]">
       <Image
         src={imageUrl}
         width={300}
@@ -15,9 +15,9 @@ const VeilederCard = ({ imageUrl, imageAlt, name, role }) => (
         className="relative object-cover w-full h-full border rounded-lg border-kv-white"
         alt={imageAlt || ""}
       />
-    </div>
+    </figure>
     <div className="w-1/2 text-left md:w-full">
-      <h3>{name}</h3>
+      <b>{name}</b>
       <p>{role}</p>
     </div>
   </div>
@@ -27,7 +27,7 @@ export default function Teachers({ content, title }) {
   //console.log(content[0]);
   return (
     <section className="w-screen my-24 py-24 bg-jobloop-primary-orange/10">
-      <div className="flex flex-col items-center w-full px-8 lg:px-24 ">
+      <div className="flex flex-col items-center w-full">
         <h2 className="underline decoration-4 pb-8 underline-offset-8 decoration-jobloop-primary-orange">
           {title}
         </h2>

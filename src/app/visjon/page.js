@@ -5,6 +5,8 @@ import {
   VisionTextRight,
 } from "../../../components/Vision2Part";
 import VisionTop from "../../../components/VisionSub";
+import Link from "next/link";
+import { LinkButtonContained } from "../../../components/Buttons";
 
 export const metadata = {
   title: "Vår Visjon: Det finnes et mangfold av potensial | Kodehode",
