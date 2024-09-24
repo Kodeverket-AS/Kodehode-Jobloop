@@ -1,6 +1,5 @@
 "use client";
 
-import { Checkbox, Label } from "flowbite-react";
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import {
@@ -80,13 +79,13 @@ export function LocationCheck({ content }) {
           )}
         </div>
         {filteredItems ? (
-          <div className="grid grid-cols-1 w-full gap-6 md:grid-cols-2 lg:grid-cols-3">
+          <div className="grid grid-cols-1 w-full gap-6 md:grid-cols-2 xl:grid-cols-3">
             {filteredItems.map((item, idx) => (
               <div
                 key={`items-${idx}`}
-                className="group flex flex-row h-56 w-full justify-top p-2 gap-3 rounded-xl hover:bg-jobloop-primary-green/5 border border-jobloop-primary-green/0 hover:border-jobloop-primary-green transition-all duration-300"
+                className="group flex flex-col xs:flex-row xs:h-72 w-full justify-top p-2 gap-3 rounded-xl hover:bg-jobloop-primary-green/5 border border-jobloop-primary-green/0 hover:border-jobloop-primary-green transition-all duration-300"
                 title={`Dette er ${item.navn}`}>
-                <figure className="flex h-full w-1/3 overflow-hidden rounded-md">
+                <figure className="flex h-80 xs:h-full w-full xs:w-1/3 overflow-hidden rounded-md">
                   {item.image ? (
                     <Image
                       width={500}
@@ -106,10 +105,13 @@ export function LocationCheck({ content }) {
                     </div>
                   )}
                 </figure>
-                <address className="flex flex-col w-2/3">
+                <address className="flex flex-col xs:w-2/3">
                   <div className="pb-1 w-full">
-                    <h3 className="text-xl">{item.navn}</h3>
-                    <div className="h-[3px] w-0 transition-all duration-500 group-hover:w-full shadow-inner rounded-full group-hover:shadow-jobloop-primary-green"></div>
+                    <h3 className="text-xl leading-none">{item.navn}</h3>
+                    <p className="text-xs text-kv-black/60 pb-1">
+                      {item.stilling}
+                    </p>
+                    <div className="h-[2px] w-0 transition-all duration-500 group-hover:w-full shadow-inner rounded-full group-hover:shadow-jobloop-primary-green"></div>
                   </div>
                   <ul className="flex flex-col gap-2">
                     <li>
