@@ -43,7 +43,7 @@ export default async function FAQ() {
           />
         </div>
         {/* <LandingLinks /> */}
-        <LinkToKontakt />
+        {/* <LinkToKontakt /> */}
       </main>
     </>
   );
