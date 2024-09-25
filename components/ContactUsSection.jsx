@@ -1,4 +1,5 @@
 "use client";
+// Kommentar for å lure systemet.
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
