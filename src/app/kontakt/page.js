@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { LocationCheck } from "../../../components/ContactUsSection";
 import { getData } from "../page";
+// Kommentar for å lure systemet.
 
 export const metadata = {
   title: "Kontakt oss | Kodehode",
