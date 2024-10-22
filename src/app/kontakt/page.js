@@ -3,6 +3,7 @@ import { LocationCheck } from "../../../components/ContactUsSection";
 import { getData } from "../page";
 
 // Tester ny commit til pull request etter Public repo
+// Tester ny commit til pull request etter gitignore .env rm cache
 
 export const metadata = {
     title: "Kontakt oss | Kodehode",
