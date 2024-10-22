@@ -1,7 +1,8 @@
 import Image from "next/image";
 import { LocationCheck } from "../../../components/ContactUsSection";
 import { getData } from "../page";
-// Kommentar for å lure systemet.
+
+// Tester ny commit til pull request etter Public repo
 
 export const metadata = {
   title: "Kontakt oss | Kodehode",
