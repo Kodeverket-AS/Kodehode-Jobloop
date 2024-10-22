@@ -34,7 +34,6 @@ export function LocationCheck({ content }) {
       setFilteredItems([...content]);
     }
   };
-  console.log(filters);
 
   return (
     <section className="w-screen py-12">
@@ -91,7 +90,9 @@ export function LocationCheck({ content }) {
                       width={500}
                       height={500}
                       className="w-full h-full object-cover object-center"
-                      alt={`Profilbilde ${item.navn}` || "profilbilder"}
+                      alt={
+                        `Profilbilde ${item.navn}` || "profilbilder"
+                      }
                       src={item.image || ""}
                     />
                   ) : (
@@ -107,7 +108,9 @@ export function LocationCheck({ content }) {
                 </figure>
                 <address className="flex flex-col xs:w-2/3">
                   <div className="pb-1 w-full">
-                    <h3 className="text-xl leading-none">{item.navn}</h3>
+                    <h3 className="text-xl leading-none">
+                      {item.navn}
+                    </h3>
                     <p className="text-xs text-kv-black/60 pb-1">
                       {item.stilling}
                     </p>
