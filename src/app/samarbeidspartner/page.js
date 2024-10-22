@@ -15,12 +15,19 @@ import { FaJsSquare } from "react-icons/fa";
 import { FaReact } from "react-icons/fa";
 
 export const metadata = {
-  title: "Samarbeidspartner: Har du en deltaker med IT-interesse? | Kodehode",
+  title:
+    "Samarbeidspartner: Har du en deltaker med IT-interesse? | Kodehode",
 };
 
 export default async function Oppdragsgiver() {
   const data = await getData();
-  //console.log(data.courseTypes);
+  if (!data) {
+    return (
+      <div className="w-screen h-screen flex flex-col justify-center items-center">
+        <AlertError />
+      </div>
+    );
+  }
   return (
     <main className="flex flex-col items-center min-h-screen pt-20">
       <div className="flex flex-col items-center md:mt-0">
@@ -65,7 +72,7 @@ export default async function Oppdragsgiver() {
           content2={data.competenceIcons}
         />
 
-        <div className="w-full py-24">
+        <div className="py-24">
           <Offices content={data.OurLocals} />
           {/* <LinkToKontakt /> */}
         </div>
