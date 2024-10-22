@@ -6,7 +6,6 @@ import LandingVisjon from "../../components/LandingVisjon";
 import imageUrlBuilder from "@sanity/image-url";
 // import LinkToFaq from "../../components/LinkToFaq";
 // import LinkToKontakt from "../../components/LinkToKontakt";
-// Hello check
 
 export default async function Home() {
   const data = await getData();

@@ -1,5 +1,4 @@
 "use client";
-// Kommentar for å lure systemet.
 
 import { Checkbox, Label } from "flowbite-react";
 import { useState, useEffect } from "react";
