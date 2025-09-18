@@ -2,9 +2,6 @@
 import { Accordion } from "flowbite-react";
 import { useState, useEffect } from "react";
 
-// ======================
-// TOGGLE BUTTONS / TABS
-// ======================
 const arrowStyle = {
   title: {
     arrow: {
@@ -20,11 +17,11 @@ const arrowStyle = {
 function FaqDeltager({ contentQ, contentS }) {
   const data = contentQ.map((element, index) => (
     <Accordion.Panel key={index}>
-      <Accordion.Title className="py-4 focus:bg-jobloop-primary-green/10 hover:bg-jobloop-primary-green/10">
-        <h3 className="text-kv-black">{element}</h3>
+      <Accordion.Title className="py-6 px-6 focus:bg-jobloop-primary-green/10 hover:bg-jobloop-primary-green/10 transition-all duration-300 border-b border-gray-100 last:border-b-0">
+        <h3 className="text-kv-black font-semibold text-lg">{element}</h3>
       </Accordion.Title>
-      <Accordion.Content className="w-full ">
-        <p className="md:text-lg text-kv-black/70 leading-relaxed md:leading-loose">
+      <Accordion.Content className="w-full px-6 py-6 bg-gray-50/50">
+        <p className="md:text-lg text-kv-black/80 leading-relaxed md:leading-loose">
           {contentS[index]}
         </p>
       </Accordion.Content>
@@ -32,10 +29,10 @@ function FaqDeltager({ contentQ, contentS }) {
   ));
 
   return (
-    <div className="flex justify-center w-screen">
+    <div className="flex justify-center w-full">
       <Accordion
         theme={arrowStyle}
-        className="w-full max-w-5xl lg:mx-auto"
+        className="w-full max-w-4xl mx-auto bg-white rounded-xl shadow-lg border border-gray-100 overflow-hidden"
         collapseAll>
         {data}
       </Accordion>
@@ -46,11 +43,11 @@ function FaqDeltager({ contentQ, contentS }) {
 function FaqBedrift({ contentQ, contentS }) {
   const data = contentQ.map((element, index) => (
     <Accordion.Panel key={index}>
-      <Accordion.Title className="py-4 focus:bg-jobloop-primary-green/10 hover:bg-jobloop-primary-green/10">
-        <h3 className="text-kv-black">{element}</h3>
+      <Accordion.Title className="py-6 px-6 focus:bg-jobloop-primary-green/10 hover:bg-jobloop-primary-green/10 transition-all duration-300 border-b border-gray-100 last:border-b-0">
+        <h3 className="text-kv-black font-semibold text-lg">{element}</h3>
       </Accordion.Title>
-      <Accordion.Content className="w-full ">
-        <p className="md:text-lg text-kv-black/70 leading-relaxed md:leading-loose">
+      <Accordion.Content className="w-full px-6 py-6 bg-gray-50/50">
+        <p className="md:text-lg text-kv-black/80 leading-relaxed md:leading-loose">
           {contentS[index]}
         </p>
       </Accordion.Content>
@@ -58,10 +55,10 @@ function FaqBedrift({ contentQ, contentS }) {
   ));
 
   return (
-    <div className="flex justify-center w-screen">
+    <div className="flex justify-center w-full">
       <Accordion
         theme={arrowStyle}
-        className="w-full max-w-5xl lg:mx-auto"
+        className="w-full max-w-4xl mx-auto bg-white rounded-xl shadow-lg border border-gray-100 overflow-hidden"
         collapseAll>
         {data}
       </Accordion>
@@ -72,11 +69,11 @@ function FaqBedrift({ contentQ, contentS }) {
 function FaqVirk({ contentQ, contentS }) {
   const data = contentQ.map((element, index) => (
     <Accordion.Panel key={index}>
-      <Accordion.Title className="py-4 focus:bg-jobloop-primary-green/10 hover:bg-jobloop-primary-green/10">
-        <h3 className="text-kv-black">{element}</h3>
+      <Accordion.Title className="py-6 px-6 focus:bg-jobloop-primary-green/10 hover:bg-jobloop-primary-green/10 transition-all duration-300 border-b border-gray-100 last:border-b-0">
+        <h3 className="text-kv-black font-semibold text-lg">{element}</h3>
       </Accordion.Title>
-      <Accordion.Content className="w-full ">
-        <p className="md:text-lg text-kv-black/70 leading-relaxed md:leading-loose">
+      <Accordion.Content className="w-full px-6 py-6 bg-gray-50/50">
+        <p className="md:text-lg text-kv-black/80 leading-relaxed md:leading-loose">
           {contentS[index]}
         </p>
       </Accordion.Content>
@@ -84,10 +81,10 @@ function FaqVirk({ contentQ, contentS }) {
   ));
 
   return (
-    <div className="flex justify-center w-screen">
+    <div className="flex justify-center w-full">
       <Accordion
         theme={arrowStyle}
-        className="w-full max-w-5xl lg:mx-auto"
+        className="w-full max-w-4xl mx-auto bg-white rounded-xl shadow-lg border border-gray-100 overflow-hidden"
         collapseAll>
         {data}
       </Accordion>
@@ -95,9 +92,6 @@ function FaqVirk({ contentQ, contentS }) {
   );
 }
 
-// ==============================
-// ACCORDION COMPONENT WITH TABS
-// ==============================
 export function FAQComponent({
   titleDel,
   titleBed,
@@ -150,58 +144,58 @@ export function FAQComponent({
   };
 
   return (
-    <div className="flex flex-col w-full gap-8">
-      <div className="flex justify-center w-full">
-        <div className="text-kv-black/70 flex flex-row flex-wrap divide-x rounded-full overflow-hidden border-2 border-jobloop-primary-green w-fit items-start justify-start sm:justify-center md:flex-row ">
-          {tabs.map((tab) => (
-            <div key={tab.id}>
-              <button
-                onClick={() => handleTabChange(tab.id)}
-                className={`flex p-4 gap-2 items-center
-                  ${
-                    activeTab === tab.id
-                      ? "border-neutral-200 bg-jobloop-primary-green/10"
-                      : " border-neutral-200"
-                  }`}>
-                <div
-                  className={`hidden md:flex items-center justify-center rounded-full ${
-                    activeTab === tab.id
-                      ? " bg-jobloop-primary-green "
-                      : " bg-neutral-200"
-                  }`}>
-                  <div
-                    className={`w-3 h-3 rounded-full ${
-                      activeTab === tab.id
-                        ? " bg-joblog-primary-green "
-                        : " bg-transparent"
-                    }`}>
-                    {" "}
-                  </div>
-                </div>
-                <p
-                  className={`text-sm md:text-base ${
-                    activeTab === tab.id && "text-kv-black/100  "
-                  }`}>
-                  {tab.title}
-                </p>
-              </button>
-            </div>
+    <div className="flex flex-col w-full gap-12">
+      <div className="flex justify-center w-full px-4">
+        <div className="inline-flex flex-wrap sm:flex-nowrap gap-6 md:gap-12 justify-center">
+          {tabs.map((tab, index) => (
+            <button
+              key={tab.id}
+              onClick={() => handleTabChange(tab.id)}
+              className={`relative flex flex-col items-center gap-3 px-4 py-6 font-medium text-base md:text-lg lg:text-xl transition-all duration-300 group ${
+                activeTab === tab.id
+                  ? "text-jobloop-primary-green"
+                  : "text-kv-black/60 hover:text-kv-black"
+              }`}>
+              
+              <span className="relative z-10 whitespace-nowrap">
+                {tab.title}
+              </span>
+              
+              <div
+                className={`h-1 rounded-full transition-all duration-300 ${
+                  activeTab === tab.id
+                    ? "w-full bg-jobloop-primary-green"
+                    : "w-0 bg-jobloop-primary-green group-hover:w-8"
+                }`}
+              />
+            </button>
           ))}
         </div>
       </div>
 
       <div className="flex justify-center w-full">
-        {tabs.map((tab) => (
-          <div key={tab.id}>
-            {activeTab === tab.id && (
-              <tab.component
-                id={tab.id}
-                contentQ={tab.contentQ}
-                contentS={tab.contentS}
-              />
-            )}
-          </div>
-        ))}
+        <div className="w-full max-w-4xl">
+          {tabs.map((tab) => (
+            <div 
+              key={tab.id}
+              className={`transition-all duration-500 transform ${
+                activeTab === tab.id 
+                  ? "opacity-100 translate-y-0 scale-100" 
+                  : "opacity-0 translate-y-4 scale-95 absolute -z-10"
+              }`}
+            >
+              {activeTab === tab.id && (
+                <div className="animate-in fade-in duration-500">
+                  <tab.component
+                    id={tab.id}
+                    contentQ={tab.contentQ}
+                    contentS={tab.contentS}
+                  />
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
