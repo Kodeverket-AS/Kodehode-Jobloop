@@ -66,13 +66,13 @@ export default async function FAQ() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center w-full max-w-md sm:max-w-none mx-auto">
               <a 
                 href="/kontakt" 
-                className="inline-flex items-center justify-center px-8 py-3 bg-jobloop-primary-green text-white font-medium rounded-full hover:bg-jobloop-primary-green/90 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 w-full sm:w-auto"
+                className="inline-flex items-center justify-center px-8 py-3 bg-jobloop-primary-green text-white font-medium rounded-full hover:bg-kv-white hover:border-2 hover:border-jobloop-primary-green hover:text-jobloop-primary-green transition-all duration-300 shadow-md hover:shadow-lg w-full sm:w-auto"
               >
                 Kontakt oss
               </a>
               <a 
                 href="mailto:kontakt@kodehode.no" 
-                className="inline-flex items-center justify-center px-8 py-3 border-2 border-jobloop-primary-green text-jobloop-primary-green font-medium rounded-full hover:bg-jobloop-primary-green hover:text-white transition-all duration-300 w-full sm:w-auto"
+                className="inline-flex items-center justify-center px-8 py-3 border-2 border-jobloop-primary-green text-jobloop-primary-green font-medium rounded-full hover:bg-jobloop-primary-green hover:text-white transition-colors duration-200 w-full sm:w-auto"
               >
                 Send e-post
               </a>
