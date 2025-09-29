@@ -11,22 +11,22 @@ const LinkCard = ({ href, src, title, description }) => {
       <Link
         href={href}
         prefetch={true}
-        className="group h-full bg-kv-white transition-all duration-300 flex flex-col p-4 gap-2 sm:flex-row w-full md:flex-col md:align-start xl:flex-row md:p-6 shadow-sm shadow-jobloop-primary-green rounded-lg xl:gap-8 hover:shadow-lg">
-        <Image
-          src={src}
-          width={64}
-          height={64}
-          className=" h-20 w-16 group-hover:-rotate-2 transition-transform duration-300 ease-in-out"
-          alt={`Grafikkikon av ${src}`}
-        />
-        {/* Text */}
-        <div>
-          <div className="w-full ">
-            <h4 className="text-xl">{title}</h4>
-            <p className="text-base text-kv-black/70">{description}</p>
-            <div className="font-normal group-hover:font-bold group-hover:underline text-blue-600">
-              <p>Les mer</p>
-            </div>
+        className="group block p-8 bg-kv-white rounded-2xl hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
+        <div className="text-center">
+          <div className="w-20 h-20 mx-auto mb-6 bg-gray-100 rounded-2xl flex items-center justify-center group-hover:bg-jobloop-primary-green group-hover:scale-105 transition-all duration-300">
+            <Image
+              src={src}
+              width={40}
+              height={40}
+              className="group-hover:brightness-0 group-hover:invert transition-all duration-300"
+              alt={`Grafikkikon av ${src}`}
+            />
+          </div>
+          <h3 className="text-2xl font-bold text-kv-black mb-3">{title}</h3>
+          <p className="text-kv-black/60 mb-6 text-lg leading-relaxed">{description}</p>
+          <div className="inline-flex items-center gap-2 text-jobloop-primary-green font-semibold text-lg group-hover:gap-3 transition-all duration-300">
+            <span>Les mer</span>
+            <span className="group-hover:translate-x-1 transition-transform duration-300">→</span>
           </div>
         </div>
       </Link>
@@ -36,12 +36,17 @@ const LinkCard = ({ href, src, title, description }) => {
 
 export default function LandingLinks() {
   return (
-    <section className="w-screen py-24  bg-jobloop-primary-green/10">
-      <div className=" flex flex-col justify-center gap-12 max-w-screen-2xl mx-auto px-2">
-        <h2 className="text-center text-2xl md:text-3xl underline underline-offset-8 decoration-jobloop-primary-green">
-          Hvordan kan vi hjelpe deg?
-        </h2>
-        <menu className="flex flex-col lg:flex-row gap-4 xl:gap-8">
+    <section className="w-screen py-16 bg-gray-50">
+      <div className="flex flex-col justify-center gap-12 max-w-screen-2xl mx-auto px-6">
+        <div className="text-center space-y-3">
+          <h2 className="text-2xl md:text-3xl font-bold text-kv-black">
+            Hvordan kan vi hjelpe deg?
+          </h2>
+          <p className="text-base text-kv-black/60 max-w-2xl mx-auto">
+            Uansett om du er bedrift, deltaker eller samarbeidspartner - vi har løsninger for deg
+          </p>
+        </div>
+        <menu className="grid grid-cols-1 lg:grid-cols-3 gap-4">
           <LinkCard
             href="/arbeidsgiver"
             src={koffert}
