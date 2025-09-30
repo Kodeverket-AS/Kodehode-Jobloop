@@ -19,7 +19,7 @@ export default function HeroSub({ content, buttonText }) {
       rightContent={
         <Image
           src={content.image}
-          width={500}
+          width={800}
           height={500}
           alt={content.alt || ""}
           className=" w-full rounded-xl"

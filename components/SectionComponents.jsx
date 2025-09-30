@@ -46,7 +46,7 @@ export const SectionComponent = ({
             {leftContent}
           </div>
           <div className="flex-1 flex items-center justify-center">
-            <div className="w-full [&_img]:w-full [&_img]:h-auto [&_img]:object-cover [&_img]:max-h-[800px]">
+            <div className="w-full [&_img]:w-full [&_img]:h-auto [&_img]:object-cover [&_img]:max-h-[400px]">
               {rightContent}
             </div>
           </div>

@@ -49,19 +49,19 @@ export default async function Oppdragsgiver() {
           content={data.mainTech}
           icons={[
             <FaHtml5
-              className="pb-2 h-12 w-12 text-jobloop-primary-orange"
+              className="pb-2 h-8 w-8 md:h-12 md:w-12 text-jobloop-primary-orange"
               key="html-icon"
             />,
             <FaCss3Alt
-              className="pb-2 h-12 w-12 text-jobloop-primary-orange"
+              className="pb-2 h-8 w-8 md:h-12 md:w-12 text-jobloop-primary-orange"
               key="css-icon"
             />,
             <FaJsSquare
-              className="pb-2 h-12 w-12 text-jobloop-primary-orange"
+              className="pb-2 h-8 w-8 md:h-12 md:w-12 text-jobloop-primary-orange"
               key="js-icon"
             />,
             <FaReact
-              className="pb-2 h-12 w-12 text-jobloop-primary-orange"
+              className="pb-2 h-8 w-8 md:h-12 md:w-12 text-jobloop-primary-orange"
               key="react-icon"
             />,
           ]}

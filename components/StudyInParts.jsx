@@ -29,7 +29,7 @@ export default function StudyInParts({ content }) {
         leftContent={
           <Image
             src={content[1].image}
-            width={500}
+            width={800}
             height={500}
             alt={content[1].alt || ""}
             className="rounded-xl w-full"

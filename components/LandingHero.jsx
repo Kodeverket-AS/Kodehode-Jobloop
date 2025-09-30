@@ -51,7 +51,7 @@ export default function LandingHero({ content }) {
             <Image
               src={danialigdery}
               height={500}
-              width={500}
+              width={800}
               alt="kodemiljø"
               className="object-cover w-full rounded-xl"
             />

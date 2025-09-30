@@ -9,7 +9,7 @@ import { RiTeamFill } from "react-icons/ri";
 
 const LanguageCard = ({ title, content, logo, alt, icon }) => {
   return (
-    <div className="pb-8 w-full">
+    <div className="pb-4 md:pb-8 w-full">
       {/* <Image
         src={<GoGoal />}
         width={300}
@@ -19,7 +19,7 @@ const LanguageCard = ({ title, content, logo, alt, icon }) => {
       /> */}
       <div className="text-center flex flex-col items-center">
         {icon}
-        <h3 className="text-xl md:text-2xl">{title}</h3>
+        <h3 className="text-lg md:text-xl lg:text-2xl">{title}</h3>
         <p className="text-kv-black/70">{content}</p>
       </div>
     </div>
@@ -28,14 +28,14 @@ const LanguageCard = ({ title, content, logo, alt, icon }) => {
 
 export default function FourIconsRow({ title, content, icons }) {
   return (
-    <section className="w-full py-12 text-kv-black">
+    <section className="w-full  text-kv-black">
       {content && content.length !== 0 ? (
         <div className="px-4 flex flex-col justify-center mx-auto">
           <h3 className="text-2xl md:text-3xl text-center underline underline-offset-8 pb-12 decoration-jobloop-primary-orange">
             {title}
           </h3>
 
-          <div className="flex flex-col gap-8 md:flex-row pb-8 justify-center">
+          <div className="grid grid-cols-2 md:flex md:flex-row gap-4 md:gap-8 pb-8 justify-center">
             <LanguageCard
               {...content[0]}
               icon={icons[0]}
