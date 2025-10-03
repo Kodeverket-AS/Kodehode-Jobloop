@@ -10,7 +10,7 @@ import {
 } from "@mui/material";
 
 export function LocationCheck({ content }) {
-  // const [selectedFilters, setSelectedFilters] = useState([]);
+
   const [selectedFilters, setSelectedFilters] = useState("");
   const [filteredItems, setFilteredItems] = useState(content);
 
@@ -36,121 +36,141 @@ export function LocationCheck({ content }) {
   };
 
   return (
-    <section className="w-screen py-12">
-      <div className="flex flex-col justify-center gap-12 max-w-screen-2xl mx-auto px-4">
-        <div className="flex flex-col gap-2 pb-2">
-          <div className="border-b-2 pb-1">
-            <b>Velg sted :</b>
-          </div>
-          {filterItems ? (
-            <FormControl className="flex flex-row gap-8 ">
+    <div className="w-full max-w-7xl mx-auto px-4">
+      <div className="flex flex-col gap-8">
+        <div className="flex flex-col gap-4">
+          <div className="flex flex-wrap items-center gap-4 pb-4 border-b border-jobloop-primary-green/20">
+            <span className="text-lg font-semibold text-kv-black">Velg sted:</span>
+            <FormControl className="flex flex-row flex-wrap gap-4">
               <RadioGroup
                 value={selectedFilters}
-                onChange={handleFilterChange}>
+                onChange={handleFilterChange}
+                className="flex flex-row flex-wrap gap-4">
                 <FormControlLabel
                   value=""
-                  control={<Radio />}
+                  control={<Radio sx={{ 
+                    color: 'var(--jobloop-primary-green)',
+                    '&.Mui-checked': {
+                      color: 'var(--jobloop-primary-orange)',
+                    },
+                  }} />}
                   label="Alle byer"
                   aria-label="Velg alle byene"
+                  className="text-kv-black"
                 />
-                <div>
-                  {filters.map((location, idx) => (
-                    <FormControlLabel
-                      key={`filters-${idx}`}
-                      value={location}
-                      control={<Radio />}
-                      label={location}
-                      aria-label="Velg en av byene som er tilgjengelig."
-                    />
-                  ))}
-                </div>
+                {filters.map((location, idx) => (
+                  <FormControlLabel
+                    key={`filters-${idx}`}
+                    value={location}
+                    control={<Radio sx={{ 
+                      color: 'var(--jobloop-primary-green)',
+                      '&.Mui-checked': {
+                        color: 'var(--jobloop-primary-orange)',
+                      },
+                    }} />}
+                    label={location}
+                    aria-label="Velg en av byene som er tilgjengelig."
+                    className="text-kv-black"
+                  />
+                ))}
               </RadioGroup>
             </FormControl>
-          ) : (
-            <b>Ingen ansatte funnet</b>
-          )}
+          </div>
+          <div className="text-sm text-kv-black/70 pb-4">
+            {filteredItems && selectedFilters !== "" ? (
+              <span>{`${filteredItems.length} personer i ${selectedFilters}`}</span>
+            ) : (
+              <span>{`${filteredItems.length} personer fordelt over ${filters.length} byer.`}</span>
+            )}
+          </div>
         </div>
-        <div className="border-b-2 pb-1">
-          {filteredItems && selectedFilters !== "" ? (
-            <b>{`${filteredItems.length} personer i ${selectedFilters}`}</b>
-          ) : (
-            <b>{`${filteredItems.length} personer fordelt over ${filters.length} byer.`}</b>
-          )}
-        </div>
+        
         {filteredItems ? (
-          <div className="grid grid-cols-1 w-full gap-6 md:grid-cols-2 xl:grid-cols-3">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-10">
             {filteredItems.map((item, idx) => (
               <div
                 key={`items-${idx}`}
-                className="group flex flex-col xs:flex-row xs:h-72 md:h-60 w-full justify-top p-2 gap-3 rounded-xl hover:bg-jobloop-primary-green/5 border border-jobloop-primary-green/0 hover:border-jobloop-primary-green transition-all duration-300"
+                className="group bg-kv-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-jobloop-primary-green/20 hover:border-jobloop-primary-green/70 flex flex-row h-64 sm:h-72"
                 title={`Dette er ${item.navn}`}>
-                <figure className="flex h-80 xs:h-full w-full xs:w-1/3 overflow-hidden rounded-md">
+                
+                <div className="relative w-40 sm:w-44 lg:w-48 h-full overflow-hidden flex-shrink-0 group-hover:scale-105 transition-transform duration-300">
                   {item.image ? (
                     <Image
-                      width={500}
-                      height={500}
-                      className="w-full h-full object-cover object-center"
-                      alt={
-                        `Profilbilde ${item.navn}` || "profilbilder"
-                      }
-                      src={item.image || ""}
+                      width={200}
+                      height={300}
+                      className="w-full h-full object-cover object-center  transition-transform duration-300"
+                      alt={`Profilbilde ${item.navn}`}
+                      src={item.image}
                     />
                   ) : (
-                    <div className="w-full h-full bg-gray-200 flex flex-col justify-center text-xs">
-                      <p className="text-center">
-                        <b>
-                          Bilde mangler av: <br />
-                        </b>{" "}
-                        {item.navn}
+                    <div className="w-full h-full bg-jobloop-primary-green/10 flex flex-col justify-center items-center text-center p-2">
+                      <div className="w-12 h-12 bg-jobloop-primary-green/20 rounded-full flex items-center justify-center mb-1">
+                        <span className="text-xl text-jobloop-primary-green">👤</span>
+                      </div>
+                      <p className="text-xs text-kv-black/60">
+                        <b>Bilde mangler</b>
                       </p>
                     </div>
                   )}
-                </figure>
-                <address className="flex flex-col xs:w-2/3">
-                  <div className="pb-1 w-full">
-                    <h3 className="text-xl leading-none">
-                      {item.navn}
-                    </h3>
-                    <p className="text-xs text-kv-black/60 pb-1">
-                      {item.stilling}
-                    </p>
-                    <div className="h-[2px] w-0 transition-all duration-500 group-hover:w-full shadow-inner rounded-full group-hover:shadow-jobloop-primary-green"></div>
+                </div>
+                
+                <div className="flex-1 p-3 sm:p-4 lg:p-6 flex flex-col justify-center">
+                  <div className="space-y-2 sm:space-y-3 lg:space-y-4">
+                    <div>
+                      <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-kv-black leading-tight">
+                        {item.navn}
+                      </h3>
+                      <p className="text-sm sm:text-base lg:text-lg text-jobloop-primary-green font-medium">
+                        {item.stilling}
+                      </p>
+                      <div className="h-0.5 sm:h-1 w-0 bg-jobloop-primary-orange transition-all duration-500 group-hover:w-full mt-1 sm:mt-2 lg:mt-3"></div>
+                    </div>
+                    
+                    <div className="space-y-1 sm:space-y-2 lg:space-y-3 text-xs sm:text-sm lg:text-base">
+                      <div>
+                        <span className="font-semibold text-kv-black/80">Avdeling: </span>
+                        <span className="text-kv-black/70">{item.lokasjon}</span>
+                      </div>
+                      
+                      <div>
+                        <span className="font-semibold text-kv-black/80">E-post: </span>
+                        {item && item.mail ? (
+                          <a 
+                            href={`mailto:${item.mail}`}
+                            className="text-jobloop-primary-green hover:text-jobloop-primary-orange transition-colors duration-200 break-all"
+                          >
+                            {item.mail}
+                          </a>
+                        ) : (
+                          <span className="text-kv-black/50">Ikke tilgjengelig</span>
+                        )}
+                      </div>
+                      
+                      <div>
+                        <span className="font-semibold text-kv-black/80">Mobil: </span>
+                        {item && item.tlf_nummer ? (
+                          <a 
+                            href={`tel:${item.tlf_nummer}`}
+                            className="text-jobloop-primary-green hover:text-jobloop-primary-orange transition-colors duration-200"
+                          >
+                            {item.tlf_nummer}
+                          </a>
+                        ) : (
+                          <span className="text-kv-black/50">Ikke tilgjengelig</span>
+                        )}
+                      </div>
+                    </div>
                   </div>
-                  <ul className="flex flex-col gap-2">
-                    <li>
-                      <b>Avdeling</b>
-                      <p>{item.lokasjon}</p>
-                    </li>
-                    <li>
-                      <b>E-post</b>
-                      {item && item.mail ? (
-                        <p>{item.mail}</p>
-                      ) : (
-                        <p className="text-kv-black/60 text-sm">
-                          Ingen e-post, beklager.
-                        </p>
-                      )}
-                    </li>
-                    <li>
-                      <b>Mobil</b>
-                      {item && item.tlf_nummer ? (
-                        <p>{item.tlf_nummer}</p>
-                      ) : (
-                        <p className="text-kv-black/60 text-sm">
-                          Ingen mobilnummer, beklager.
-                        </p>
-                      )}
-                    </li>
-                  </ul>
-                  {/* <p>Om:{item.om}</p> */}
-                </address>
+                </div>
               </div>
             ))}
           </div>
         ) : (
-          <b>Ingen ansatte funnet</b>
+          <div className="text-center py-12">
+            <p className="text-kv-black/60">Ingen ansatte funnet</p>
+          </div>
         )}
       </div>
-    </section>
+    </div>
   );
 }

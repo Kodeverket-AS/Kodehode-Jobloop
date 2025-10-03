@@ -34,7 +34,7 @@ export default function RootLayout({ children }) {
       className={roboto.className}>
       <body className="overflow-x-hidden">
         <Navigation />
-        <div className="max-w-screen-2xl overflow-hidden md:overflow-visible mx-auto">
+        <div className="overflow-hidden md:overflow-visible">
           {children}
         </div>
         <ScrollToTopButton />
