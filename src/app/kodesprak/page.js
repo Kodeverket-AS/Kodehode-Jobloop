@@ -43,7 +43,7 @@ export default async function Techstack() {
               <h2 className="text-xl md:text-2xl font-bold text-kv-black mb-6 text-center">
                 Teknologier vi bruker
               </h2>
-              <div className="grid grid-cols-3 md:grid-cols-5 gap-4 md:gap-6">
+              <div className="grid grid-cols-3 md:grid-cols-4 gap-4 md:gap-6 lg:grid-cols-6 ">
                 <div className="flex flex-col items-center gap-2 group">
                   <div className="w-16 h-16 md:w-20 md:h-20 rounded-xl flex items-center justify-center transition-all duration-300 group-hover:scale-110">
                     <FaHtml5 className="w-10 h-10 md:w-12 md:h-12 text-[#E34F26]" />
