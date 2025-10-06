@@ -3,7 +3,8 @@ import { getData } from "../page";
 import Offices from "../../../components/Offices";
 import Teachers from "../../../components/Teachers";
 import JobloopPodium from "../../../components/JobloopPodium";
-import OmOssTop from "../../../components/OmOssTop";
+import { SectionComponent, TextBlock } from "../../../components/SectionComponents";
+import Image from "next/image";
 import LinkToFaq from "../../../components/LinkToFaq";
 
 export const metadata = {
@@ -24,10 +25,28 @@ export default async function About() {
     <>
       <main className="flex flex-col items-center min-h-screen py-20">
         <div className="flex flex-col items-center ">
-          <OmOssTop
-            content={heroSubData}
-            buttonText="Kontakt oss"
-            key={heroSubData._id}
+          <SectionComponent
+            reverseLayoutOrder={true}
+            leftContent={
+              <TextBlock
+                title={heroSubData.title}
+                content={heroSubData.content}
+                isButton={true}
+                path="/kontakt"
+                text="Kontakt oss"
+                isContained={true}
+                isOrange={false}
+              />
+            }
+            rightContent={
+              <Image
+                src={heroSubData.image}
+                width={1080}
+                height={964}
+                className="mx-auto w-full my-auto rounded-xl"
+                alt={heroSubData.alt || ""}
+              />
+            }
           />
 
           <JobloopPodium content={data.about} />

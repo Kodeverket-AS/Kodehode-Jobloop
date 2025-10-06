@@ -36,7 +36,7 @@ const LinkCard = ({ href, src, title, description }) => {
 
 export default function LandingLinks() {
   return (
-    <section className="w-screen py-16 bg-gray-50">
+    <section className="w-screen py-16 bg-jobloop-primary-grey/5">
       <div className="flex flex-col justify-center gap-12 max-w-screen-2xl mx-auto px-6">
         <div className="text-center space-y-3">
           <h2 className="text-2xl md:text-3xl font-bold text-kv-black">

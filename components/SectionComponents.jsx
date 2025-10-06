@@ -26,6 +26,7 @@ export const SectionComponent = ({
   isBgColor = false, //boolean to turn on/off background color
   bgColorGreen = false, //turn on/off jobloop-green 10opactity background
   bgColorOrange = false, //turn on/off jobloop-orange 10opactity background
+  bgColorGrey = false, //turn on/off jobloop-grey 5opactity background
   reverseLayoutOrder = false, //boolean to reverse layout direction aka L-R or R-L on screens below xl
   centerVertically = false, //boolean to center content vertically
 }) => {
@@ -35,6 +36,8 @@ export const SectionComponent = ({
       ? "bg-jobloop-primary-green/10"
       : bgColorOrange
       ? "bg-jobloop-primary-orange/10"
+      : bgColorGrey
+      ? "bg-jobloop-primary-grey/5"
       : "";
   }
 
@@ -46,7 +49,7 @@ export const SectionComponent = ({
             {leftContent}
           </div>
           <div className="flex-1 flex items-center justify-center">
-            <div className="w-full [&_img]:w-full [&_img]:h-auto [&_img]:object-cover [&_img]:max-h-[400px]">
+            <div className="w-full [&_img]:w-full [&_img]:h-auto [&_img]:object-cover [&_img]:rounded-xl">
               {rightContent}
             </div>
           </div>

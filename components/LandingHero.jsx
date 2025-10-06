@@ -32,7 +32,6 @@ export default function LandingHero({ content }) {
       </header>
 
       <SectionComponent
-        reverseLayoutOrder={true}
         leftContent={
           <TextBlock
             title={missionTitle}
