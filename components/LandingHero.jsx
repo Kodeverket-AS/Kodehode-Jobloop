@@ -11,7 +11,7 @@ export default function LandingHero({ content }) {
 
   return (
     <>
-      <header className="group relative h-[80vh] w-screen">
+      <header className="group relative h-[50vh] sm:h-[55vh] md:h-[65vh] lg:h-[70vh] w-screen pt-28">
         <Image
           src={content.image}
           height={500}
@@ -19,13 +19,13 @@ export default function LandingHero({ content }) {
           alt="Scenic landscape"
           className="absolute inset-0 h-full w-full object-cover"
         />
-        <div className="absolute inset-0 flex flex-col items-center justify-center bg-black/60 backdrop-blur-sm p-6 text-center text-white">
-          <div className="space-y-4">
-            <h1 className="text-6xl text-kv-white underline transition-all duration-500 underline-offset-8 decoration-jobloop-primary-green group-hover:decoration-jobloop-primary-orange md:text-7xl lg:text-9xl">
+        <div className="absolute inset-0 flex flex-col items-center justify-center bg-black/60 backdrop-blur-sm p-4 sm:p-6 text-center text-white">
+          <div className="space-y-2 sm:space-y-4">
+            <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-9xl text-kv-white underline transition-all duration-500 underline-offset-4 sm:underline-offset-8 decoration-jobloop-primary-green group-hover:decoration-jobloop-primary-orange">
               {content.title}
             </h1>
-            <p className="text-kv-white lg:text-3xl">
-              Tilpasset opplæring og rekruttering til <br /> IT-bransjen
+            <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-3xl text-kv-white">
+              Tilpasset opplæring og rekruttering til <br className="hidden sm:block" /> IT-bransjen
             </p>
           </div>
         </div>

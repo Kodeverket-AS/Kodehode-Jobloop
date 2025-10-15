@@ -13,13 +13,12 @@ export default async function Vision() {
 
   return (
     <>
-      <main className="flex flex-col items-center min-h-screen py-20">
-        <div className="flex flex-col gap-4 d:gap-8 items-center ">
-          <VisionTop
-            content={data.heroSub[3]}
-            key={data.heroSub[3]._id}
-          />
-          <SectionComponent
+      <main className="flex flex-col items-center justify-between min-h-screen pt-28 space-y-16 mb-12 px-4">
+        <VisionTop
+          content={data.heroSub[3]}
+          key={data.heroSub[3]._id}
+        />
+        <SectionComponent
             leftContent={
               <TextBlock
                 title="Gløde"
@@ -76,14 +75,13 @@ export default async function Vision() {
           {/* <div className="flex justify-center h-fit max-w-[1600px] min-h-fit mb-8 md:mb-16">
             <EndorsementComp data={data.endorsement} />
           </div> */}
-          <ContactComp
-            key={data.kontaktseksjon[0]._id}
-            imageOne={data.kontaktseksjon[0].ImageOne}
-            title={data.kontaktseksjon[0].title}
-            content={data.kontaktseksjon[0].content}
-            alt={data.kontaktseksjon[0].altOne}
-          />
-        </div>
+        <ContactComp
+          key={data.kontaktseksjon[0]._id}
+          imageOne={data.kontaktseksjon[0].ImageOne}
+          title={data.kontaktseksjon[0].title}
+          content={data.kontaktseksjon[0].content}
+          alt={data.kontaktseksjon[0].altOne}
+        />
       </main>
     </>
   );

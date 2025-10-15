@@ -32,13 +32,15 @@ export default function RootLayout({ children }) {
     <html
       lang="no-nb"
       className={roboto.className}>
-      <body className="overflow-x-hidden">
+      <body className=" flex flex-col   mx-auto  bg-kv-white">
         <Navigation />
-        <div className="overflow-hidden md:overflow-visible">
+        <div className="mb-10" >
           {children}
         </div>
         <ScrollToTopButton />
-        <Footer />
+        <div className="-mx-3 md:-mx-5 2xl:mx-0">
+          <Footer />
+        </div>
       </body>
     </html>
   );

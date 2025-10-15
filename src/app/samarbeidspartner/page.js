@@ -29,8 +29,7 @@ export default async function Oppdragsgiver() {
     );
   }
   return (
-    <main className="flex flex-col items-center min-h-screen pt-20">
-      <div className="flex flex-col items-center md:mt-0">
+    <main className="flex flex-col items-center justify-between min-h-screen pt-28 space-y-16 mb-12 px-4">
         <HeroSub
           content={data.heroSub[4]}
           buttonText={"Kontakt oss"}
@@ -72,7 +71,7 @@ export default async function Oppdragsgiver() {
           content2={data.competenceIcons}
         />
 
-        <div className="py-24">
+        <div className="">
           <Offices content={data.OurLocals} />
           {/* <LinkToKontakt /> */}
         </div>
@@ -82,7 +81,6 @@ export default async function Oppdragsgiver() {
         </div>
 
         {/* <LinkToFaq /> */}
-      </div>
     </main>
   );
 }

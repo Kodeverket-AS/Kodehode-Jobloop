@@ -9,7 +9,7 @@ const LinkCard = ({ id, src, title, description }) => {
       className="bg-kv-white rounded-2xl shadow-lg overflow-hidden">
       <div className="p-6">
         <div className="flex items-center gap-4 mb-4">
-          <div className="w-16 h-16 bg-gradient-to-br from-jobloop-primary-green/10 to-jobloop-primary-orange/10 rounded-xl flex items-center justify-center">
+          <div className="w-16 h-16 bg-jobloop-primary-grey/5 rounded-xl flex items-center justify-center">
             <Image
               src={src}
               width={40}

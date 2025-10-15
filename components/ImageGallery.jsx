@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export default function ImageGallery({ content }) {
   return (
-    <section className="w-screen py-16 bg-gradient-to-br from-jobloop-primary-green/5 to-jobloop-primary-orange/5">
+    <section className="w-screen py-8 bg-jobloop-primary-grey/5">
       <div className="max-w-screen-2xl mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-kv-black mb-4">

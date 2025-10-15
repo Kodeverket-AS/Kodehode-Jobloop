@@ -23,8 +23,7 @@ export default async function About() {
 
   return (
     <>
-      <main className="flex flex-col items-center min-h-screen py-20">
-        <div className="flex flex-col items-center ">
+      <main className="flex flex-col items-center justify-between min-h-screen pt-28 space-y-16 mb-12 px-4">
           <SectionComponent
             reverseLayoutOrder={true}
             leftContent={
@@ -49,8 +48,7 @@ export default async function About() {
             }
           />
 
-          <JobloopPodium content={data.about} />
-        </div>
+          <JobloopPodium content={data.about}           />
       </main>
     </>
   );

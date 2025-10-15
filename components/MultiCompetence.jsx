@@ -4,7 +4,7 @@ import { AlertError } from "./AlertComponent";
 
 export default function MultiCompetence({ content1, content2 }) {
   return (
-    <section className="w-screen py-16 bg-gradient-to-br from-jobloop-primary-green/5 to-jobloop-primary-orange/5">
+    <section className="w-screen py-8 bg-jobloop-primary-grey/5">
       {content1 &&
       content1.length !== 0 &&
       content2 &&

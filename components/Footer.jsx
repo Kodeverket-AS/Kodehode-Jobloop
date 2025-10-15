@@ -30,7 +30,7 @@ const contactInformation = [
 
 export default function Footer() {
   return (
-    <footer className="w-full bg-jobloop-primary-grey/5 border-t border-jobloop-primary-green/20">
+    <footer className="w-screen bg-jobloop-primary-grey/5 border-t border-jobloop-primary-green/20">
       <div className="container mx-auto px-6 py-8">
         <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-8 ">
           <div>

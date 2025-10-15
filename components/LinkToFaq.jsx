@@ -6,7 +6,7 @@ import { LinkButtonContained } from "./Buttons";
 
 export default function LinkToFaq() {
   return (
-    <section className="w-screen py-12">
+    <section className="w-screen py-8">
       <div className="w-full pb-28">
         <div className="group flex flex-col gap-8 max-w-lg m-auto border-2 border-jobloop-primary-green/0 hover:border-jobloop-primary-green/30 rounded-md bg-jobloop-primary-green/10 p-12">
           <div>

@@ -21,9 +21,9 @@ export default async function FAQ() {
 
   return (
     <>
-      <main className="flex flex-col items-center justify-start w-full min-h-screen">
-        <section className="w-full  pt-32 pb-16">
-          <div className="container mx-auto px-4">
+      <main className="flex flex-col items-center justify-between min-h-screen pt-28 space-y-16 mb-12 px-4">
+        <div className="w-full">
+          <div className="container mx-auto">
             <div className="text-center space-y-6">
              
                 <h1 className="text-2xl underline underline-offset-8 decoration-jobloop-primary-green text-kv-black md:text-5xl font-bold leading-tight">
@@ -34,9 +34,9 @@ export default async function FAQ() {
               </p>
             </div>
           </div>
-        </section>
+        </div>
 
-        <section className="w-full ">
+        <div className="w-full">
           <div className="container mx-auto max-w-6xl">
             <FAQComponent
               titleDel={faqData.FAQ[0].title}
@@ -53,10 +53,10 @@ export default async function FAQ() {
               idThree={faqData.FAQ[2]._id}
             />
           </div>
-        </section>
+        </div>
 
-        <section className="w-full py-16 bg-gradient-to-r from-jobloop-primary-green/5 to-jobloop-primary-orange/5">
-          <div className="container mx-auto px-4 text-center">
+        <div className="w-screen bg-jobloop-primary-grey/5">
+          <div className="container mx-auto text-center  py-8">
             <h2 className="text-2xl md:text-3xl font-bold text-kv-black mb-4">
               Fant du ikke svaret du lette etter?
             </h2>
@@ -78,7 +78,7 @@ export default async function FAQ() {
               </a>
             </div>
           </div>
-        </section>
+        </div>
       </main>
     </>
   );

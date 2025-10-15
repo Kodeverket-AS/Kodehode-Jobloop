@@ -36,16 +36,21 @@ export function LocationCheck({ content }) {
   };
 
   return (
-    <div className="w-full max-w-7xl mx-auto px-4">
+    <div className="w-full max-w-7xl mx-auto">
       <div className="flex flex-col gap-8">
         <div className="flex flex-col gap-4">
           <div className="flex flex-wrap items-center gap-4 pb-4 border-b border-jobloop-primary-green/20">
             <span className="text-lg font-semibold text-kv-black">Velg sted:</span>
-            <FormControl className="flex flex-row flex-wrap gap-4">
+            <FormControl>
               <RadioGroup
                 value={selectedFilters}
                 onChange={handleFilterChange}
-                className="flex flex-row flex-wrap gap-4">
+                sx={{ 
+                  display: 'flex',
+                  flexDirection: 'row',
+                  flexWrap: 'wrap',
+                  gap: 2
+                }}>
                 <FormControlLabel
                   value=""
                   control={<Radio sx={{ 
@@ -56,7 +61,7 @@ export function LocationCheck({ content }) {
                   }} />}
                   label="Alle byer"
                   aria-label="Velg alle byene"
-                  className="text-kv-black"
+                  sx={{ color: 'var(--kv-black)' }}
                 />
                 {filters.map((location, idx) => (
                   <FormControlLabel
@@ -70,7 +75,7 @@ export function LocationCheck({ content }) {
                     }} />}
                     label={location}
                     aria-label="Velg en av byene som er tilgjengelig."
-                    className="text-kv-black"
+                    sx={{ color: 'var(--kv-black)' }}
                   />
                 ))}
               </RadioGroup>

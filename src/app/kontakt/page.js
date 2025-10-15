@@ -15,8 +15,8 @@ export default async function Contact() {
     const data = await getData();
 
     return (
-        <div className='flex flex-col min-h-screen bg-kv-white'>
-            <section className='relative h-[60vh] w-full overflow-hidden !p-0'>
+        <div className='min-h-screen bg-kv-white'>
+            <section className='relative h-[60vh] w-screen overflow-hidden !p-0'>
                 <Image
                     src={data.heroSub[1].image}
                     height={800}
@@ -38,7 +38,7 @@ export default async function Contact() {
                 </div>
             </section>
 
-            <main className='w-full max-w-7xl mx-auto px-4 py-16 space-y-20'>
+            <main className='flex flex-col items-center justify-between min-h-screen pt-28 space-y-16 mb-12 px-4'>
                 <section className='text-center space-y-8'>
                     <div className='max-w-4xl mx-auto space-y-6'>
                         <div className='space-y-4'>

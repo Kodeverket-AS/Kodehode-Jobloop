@@ -42,7 +42,7 @@ export const SectionComponent = ({
   }
 
   return (
-    <section className={`w-screen py-24 ${backgroundColor}`}>
+    <section className={`w-screen ${backgroundColor} ${isBgColor ? 'py-8' : ''}`}>
       <div className="max-w-screen-2xl mx-auto px-4">
         <div className={`flex flex-col md:flex-row gap-8 ${reverseLayoutOrder ? 'md:flex-row-reverse' : ''}`}>
           <div className="flex-1 flex items-center">
