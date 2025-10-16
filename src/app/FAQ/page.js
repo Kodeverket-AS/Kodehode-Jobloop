@@ -6,7 +6,6 @@ import { FaqVirk } from "../../../components/FAQcomp";
 import { getData } from "../page";
 // import { ToggleButton } from "../../../components/Buttons";
 import { FAQComponent } from "../../../components/FAQcomp";
-import HeroSub from "../../../components/HeroSub";
 import LinkToKontakt from "../../../components/LinkToKontakt";
 import LandingLinks from "../../../components/LandingLinks";
 
@@ -21,7 +20,7 @@ export default async function FAQ() {
 
   return (
     <>
-      <main className="flex flex-col items-center justify-between min-h-screen pt-28 space-y-16 mb-12 px-4">
+      <main className="flex flex-col items-center justify-between min-h-screen pt-28 space-y-16 lg:space-y-24 my-12 px-4">
         <div className="w-full">
           <div className="container mx-auto">
             <div className="text-center space-y-6">

@@ -3,15 +3,19 @@ import Image from "next/image";
 import { SectionComponent, TextBlock } from "./SectionComponents.jsx";
 
 const ImageCard = ({ src, alt, title }) => (
-  <div className="flex flex-col w-24 my-3 text-center 2xs:w-32 xs:w-36 sm:w-64">
-    <Image
-      src={src}
-      width={300}
-      height={300}
-      className="w-20 mx-auto mb-2 2xs:w-28 sm:w-32"
-      alt={alt || "Logo av teknologi"}
-    />
-    <h3 className="text-kv-black">{title}</h3>
+  <div className="group bg-kv-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-jobloop-primary-green/10 hover:border-jobloop-primary-green/30 p-6 text-center cursor-pointer">
+    <div className="flex flex-col items-center space-y-4">
+      <div className="p-4 rounded-xl bg-jobloop-primary-green/10 group-hover:bg-jobloop-primary-orange/10 transition-colors duration-300">
+        <Image
+          src={src}
+          width={80}
+          height={80}
+          className="w-16 h-16 object-contain"
+          alt={alt || "Logo av teknologi"}
+        />
+      </div>
+      <h3 className="text-lg font-bold text-kv-black">{title}</h3>
+    </div>
   </div>
 );
 
@@ -29,8 +33,8 @@ export default function AdaptTech({ content1, content2 }) {
         />
       }
       rightContent={
-        <div className="w-full mx-auto justify-center align-middle text-kv-black flex flex-col">
-          <div className="w-full flex flex-row justify-between md:justify-center">
+        <div className="w-full">
+          <div className="grid grid-cols-2 gap-4">
             <ImageCard
               src={content2[0].logo}
               alt={content2[0].alt || ""}
@@ -41,8 +45,6 @@ export default function AdaptTech({ content1, content2 }) {
               alt={content2[1].alt || ""}
               title={content2[1].title}
             />
-          </div>
-          <div className="w-full flex flex-row justify-between md:justify-center">
             <ImageCard
               src={content2[2].logo}
               alt={content2[2].alt || ""}

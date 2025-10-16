@@ -12,7 +12,7 @@ const JobLoopPodiumCard = ({ title, content, image, link }) => {
         href={link}
         target="_blank"
         rel="noopener noreferrer"
-        className="absolute top-4 right-4 p-2 rounded-full bg-jobloop-primary-green/10 hover:bg-jobloop-primary-green/20 text-jobloop-primary-green hover:text-jobloop-primary-orange transition-all duration-200 group-hover:scale-110"
+        className="absolute top-4 right-4 p-2 rounded-full bg-jobloop-primary-green/10 hover:bg-jobloop-primary-green/20 text-jobloop-primary-green hover:text-jobloop-primary-orange transition-all duration-200 group-hover:scale-110 cursor-pointer"
         aria-label={`Besøk nettsiden til ${title}`}
       >
         <MdOpenInNew size={20} />

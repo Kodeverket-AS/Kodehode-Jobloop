@@ -1,4 +1,4 @@
-import HeroSub from "../../../components/HeroSub";
+import { SectionComponent, TextBlock } from "../../../components/SectionComponents";
 import { getData } from "../page";
 import KodehodeInternship from "../../../components/KodehodeInternship";
 import Competence from "../../../components/Competence";
@@ -7,6 +7,7 @@ import AdaptTech from "../../../components/AdaptTech";
 import CompanyCarousel from "../../../components/CompanyCarousel";
 import Results from "../../../components/Results";
 import FourIconsTerms from "../../../components/FourIconRow";
+import Image from "next/image";
 import { LuGoal } from "react-icons/lu";
 import { MdAllInclusive } from "react-icons/md";
 import { MdAutoGraph } from "react-icons/md";
@@ -27,11 +28,29 @@ export default async function Bedrift() {
   ];
 
   return (
-    <main className="flex flex-col items-center justify-between min-h-screen pt-28 space-y-16 mb-12 px-4">
-      <HeroSub
-        content={data.heroSub[6]}
-        buttonText={"Finn kandidater"}
-        key={data.heroSub[6]._id}
+    <main className="flex flex-col items-center justify-between min-h-screen pt-28 space-y-16 lg:space-y-24 my-12 px-4">
+      <SectionComponent
+        reverseLayoutOrder={false}
+        leftContent={
+          <TextBlock
+            title={data.heroSub[6].title}
+            content={data.heroSub[6].content}
+            isButton={true}
+            path="/kontakt"
+            text="Finn kandidater"
+            isContained={true}
+            isOrange={false}
+          />
+        }
+        rightContent={
+          <Image
+            src={data.heroSub[6].image}
+            width={800}
+            height={500}
+            className="w-full rounded-xl"
+            alt={data.heroSub[6].alt || ""}
+          />
+        }
       />
 
       <FourIconsTerms

@@ -95,7 +95,7 @@ export function LocationCheck({ content }) {
             {filteredItems.map((item, idx) => (
               <div
                 key={`items-${idx}`}
-                className="group bg-kv-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-jobloop-primary-green/20 hover:border-jobloop-primary-green/70 flex flex-row h-64 sm:h-72"
+                className="group bg-kv-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-jobloop-primary-green/20 hover:border-jobloop-primary-green/70 flex flex-row h-64 sm:h-72 cursor-pointer"
                 title={`Dette er ${item.navn}`}>
                 
                 <div className="relative w-40 sm:w-44 lg:w-48 h-full overflow-hidden flex-shrink-0 group-hover:scale-105 transition-transform duration-300">

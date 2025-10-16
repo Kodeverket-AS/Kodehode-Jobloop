@@ -44,14 +44,16 @@ export const SectionComponent = ({
   return (
     <section className={`w-screen ${backgroundColor} ${isBgColor ? 'py-8' : ''}`}>
       <div className="max-w-screen-2xl mx-auto px-4">
-        <div className={`flex flex-col md:flex-row gap-8 ${reverseLayoutOrder ? 'md:flex-row-reverse' : ''}`}>
-          <div className="flex-1 flex items-center">
-            {leftContent}
-          </div>
-          <div className="flex-1 flex items-center justify-center">
+        <div className={`flex flex-col lg:flex-row gap-8 ${reverseLayoutOrder ? 'lg:flex-row-reverse' : ''}`}>
+          {/* Image always on top for mobile and tablet */}
+          <div className="flex-1 flex items-center justify-center lg:order-2">
             <div className="w-full [&_img]:w-full [&_img]:h-auto [&_img]:object-cover [&_img]:rounded-xl">
               {rightContent}
             </div>
+          </div>
+          {/* Text content */}
+          <div className="flex-1 flex items-center lg:order-1">
+            {leftContent}
           </div>
         </div>
       </div>

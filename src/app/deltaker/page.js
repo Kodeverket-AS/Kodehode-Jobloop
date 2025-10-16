@@ -1,13 +1,13 @@
-import HeroSub from "../../../components/HeroSub";
+import { SectionComponent, TextBlock } from "../../../components/SectionComponents";
 import { getData } from "../page";
 import KodehodeSummary from "../../../components/KodehodeSummary";
-import StudyInParts from "../../../components/StudyInParts";
 import Results from "../../../components/Results";
 import ImageGallery from "../../../components/ImageGallery";
 import LinkToFaq from "../../../components/LinkToFaq";
 import VideoComp1 from "../../../components/VideoComp1";
 import Teachers from "../../../components/Teachers";
 import MultiCompetence from "../../../components/MultiCompetence";
+import Image from "next/image";
 
 /**
  * ========================================================================
@@ -33,17 +33,71 @@ export default async function Deltaker() {
   ];
   // console.log(data.competenceIcons);
   return (
-    <main className="flex flex-col items-center justify-between min-h-screen pt-28 space-y-16 mb-12 px-4">
-        <HeroSub
-          content={data.heroSub[2]}
-          buttonText={"Jeg er interessert!"}
-          key={data.heroSub[2]._id}
+    <main className="flex flex-col items-center justify-between min-h-screen pt-28 space-y-16 lg:space-y-24 my-12 px-4">
+        <SectionComponent
+          leftContent={
+            <Image
+              src={data.heroSub[2].image}
+              width={800}
+              height={500}
+              className="w-full rounded-xl"
+              alt={data.heroSub[2].alt || ""}
+            />
+          }
+          rightContent={
+            <TextBlock
+              title={data.heroSub[2].title}
+              content={data.heroSub[2].content}
+              isButton={true}
+              path="/kontakt"
+              text="Jeg er interessert!"
+              isContained={true}
+              isOrange={false}
+            />
+          }
         />
         <KodehodeSummary
           content1={data.origin[1]}
           content2={data.courseTypes}
         />
-        <StudyInParts content={data.CourseSections} />
+        <SectionComponent
+          leftContent={
+            <Image
+              src={data.CourseSections[0].image}
+              width={500}
+              height={500}
+              alt={data.CourseSections[0].alt || ""}
+              className="w-full rounded-xl"
+            />
+          }
+          rightContent={
+            <TextBlock
+              title={data.CourseSections[0].title}
+              content={data.CourseSections[0].content}
+              isButton={false}
+            />
+          }
+        />
+
+        <SectionComponent
+          reverseLayoutOrder={true}
+          leftContent={
+            <Image
+              src={data.CourseSections[1].image}
+              width={800}
+              height={500}
+              alt={data.CourseSections[1].alt || ""}
+              className="rounded-xl w-full"
+            />
+          }
+          rightContent={
+            <TextBlock
+              title={data.CourseSections[1].title}
+              content={data.CourseSections[1].content}
+              isButton={false}
+            />
+          }
+        />
         {/* <div className="w-full flex flex-col gap-8 py-12">
           <h2 className="text-center underline decoration-4 pb-8 underline-offset-8 decoration-jobloop-primary-green">
             Koding i HTML og CSS

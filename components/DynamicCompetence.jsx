@@ -6,10 +6,10 @@ const LinkCard = ({ id, src, title, description }) => {
   return (
     <div
       key={id}
-      className="bg-kv-white rounded-2xl shadow-lg overflow-hidden">
+      className="group bg-kv-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-jobloop-primary-green/10 hover:border-jobloop-primary-green/30 overflow-hidden cursor-pointer">
       <div className="p-6">
         <div className="flex items-center gap-4 mb-4">
-          <div className="w-16 h-16 bg-jobloop-primary-grey/5 rounded-xl flex items-center justify-center">
+          <div className="w-16 h-16 bg-jobloop-primary-green/10 group-hover:bg-jobloop-primary-orange/10 rounded-xl flex items-center justify-center transition-colors duration-300">
             <Image
               src={src}
               width={40}
@@ -18,7 +18,7 @@ const LinkCard = ({ id, src, title, description }) => {
             />
           </div>
           <div className="flex-1">
-            <h3 className="text-xl font-bold text-kv-black">
+            <h3 className="text-xl font-bold text-kv-black group-hover:text-jobloop-primary-orange transition-colors duration-300">
               {title}
             </h3>
           </div>

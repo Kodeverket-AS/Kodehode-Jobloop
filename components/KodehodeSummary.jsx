@@ -17,25 +17,25 @@ export default function KodehodeSummary({ content1, content2 }) {
         />
       }
       rightContent={
-        <div>
-          <div className="w-full mb-4 flex rounded-lg border-2 border-jobloop-primary-orange overflow-hidden">
+        <div className="space-y-6">
+          <div className="w-full flex rounded-2xl border-2 border-jobloop-primary-green/20 overflow-hidden shadow-lg">
             <button
               key={content2[1]._id}
               onClick={() => setActive(content2[1])}
-              className={`w-full py-2 underline-offset-4 active:underline hover:underline focus:underline ${
+              className={`w-full py-4 px-6 font-semibold transition-all duration-200 ${
                 active === content2[1] && active !== content2[0]
-                  ? " bg-jobloop-primary-orange "
-                  : "bg-kv-white "
+                  ? "bg-jobloop-primary-orange text-kv-white"
+                  : "bg-kv-white text-kv-black hover:bg-jobloop-primary-green/5"
               }`}>
               {content2[1].duration}
             </button>
             <button
               key={content2[0]._id}
               onClick={() => setActive(content2[0])}
-              className={`w-full py-2 underline-offset-4 active:underline hover:underline focus:underline ${
+              className={`w-full py-4 px-6 font-semibold transition-all duration-200 ${
                 active === content2[0]
-                  ? " bg-jobloop-primary-orange "
-                  : "bg-kv-white "
+                  ? "bg-jobloop-primary-orange text-kv-white"
+                  : "bg-kv-white text-kv-black hover:bg-jobloop-primary-green/5"
               }`}>
               {content2[0].duration}
             </button>

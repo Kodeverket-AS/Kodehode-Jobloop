@@ -23,7 +23,7 @@ export default async function About() {
 
   return (
     <>
-      <main className="flex flex-col items-center justify-between min-h-screen pt-28 space-y-16 mb-12 px-4">
+      <main className="flex flex-col items-center justify-between min-h-screen pt-28 space-y-16 lg:space-y-24 my-12 px-4">
           <SectionComponent
             reverseLayoutOrder={true}
             leftContent={

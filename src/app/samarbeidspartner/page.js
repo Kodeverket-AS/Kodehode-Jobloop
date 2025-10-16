@@ -1,7 +1,6 @@
-import HeroSub from "../../../components/HeroSub";
+import { SectionComponent, TextBlock } from "../../../components/SectionComponents";
 import { getData } from "../page";
 import KodehodeSummary from "../../../components/KodehodeSummary";
-import StudyInParts from "../../../components/StudyInParts";
 import Offices from "../../../components/Offices";
 import ImageGallery from "../../../components/ImageGallery";
 import LinkToFaq from "../../../components/LinkToFaq";
@@ -9,6 +8,7 @@ import MultiCompetence from "../../../components/MultiCompetence";
 import { AlertError } from "../../../components/AlertComponent";
 import LinkToKontakt from "../../../components/LinkToKontakt";
 import FourIconsRow from "../../../components/FourIconRow";
+import Image from "next/image";
 import { FaHtml5 } from "react-icons/fa";
 import { FaCss3Alt } from "react-icons/fa";
 import { FaJsSquare } from "react-icons/fa";
@@ -29,11 +29,29 @@ export default async function Oppdragsgiver() {
     );
   }
   return (
-    <main className="flex flex-col items-center justify-between min-h-screen pt-28 space-y-16 mb-12 px-4">
-        <HeroSub
-          content={data.heroSub[4]}
-          buttonText={"Kontakt oss"}
-          key={data.heroSub[4]._id}
+    <main className="flex flex-col items-center justify-between min-h-screen pt-28 space-y-16 lg:space-y-24 my-12 px-4">
+        <SectionComponent
+          reverseLayoutOrder={true}
+          leftContent={
+            <TextBlock
+              title={data.heroSub[4].title}
+              content={data.heroSub[4].content}
+              isButton={true}
+              path="/kontakt"
+              text="Kontakt oss"
+              isContained={true}
+              isOrange={false}
+            />
+          }
+          rightContent={
+            <Image
+              src={data.heroSub[4].image}
+              width={800}
+              height={500}
+              className="w-full rounded-xl"
+              alt={data.heroSub[4].alt || ""}
+            />
+          }
         />
 
         <KodehodeSummary
@@ -41,7 +59,44 @@ export default async function Oppdragsgiver() {
           content2={data.courseTypes}
         />
 
-        <StudyInParts content={data.CourseSections} />
+        <SectionComponent
+          leftContent={
+            <TextBlock
+              title={data.CourseSections[0].title}
+              content={data.CourseSections[0].content}
+              isButton={false}
+            />
+          }
+          rightContent={
+            <Image
+              src={data.CourseSections[0].image}
+              width={500}
+              height={500}
+              alt={data.CourseSections[0].alt || ""}
+              className="w-full rounded-xl"
+            />
+          }
+        />
+
+        <SectionComponent
+          reverseLayoutOrder={false}
+          leftContent={
+            <Image
+              src={data.CourseSections[1].image}
+              width={800}
+              height={500}
+              alt={data.CourseSections[1].alt || ""}
+              className="rounded-xl w-full"
+            />
+          }
+          rightContent={
+            <TextBlock
+              title={data.CourseSections[1].title}
+              content={data.CourseSections[1].content}
+              isButton={false}
+            />
+          }
+        />
 
         <FourIconsRow
           title={"Noen av våre kodespråk"}

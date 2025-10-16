@@ -38,9 +38,9 @@ export default function RootLayout({ children }) {
           {children}
         </div>
         <ScrollToTopButton />
-        <div className="-mx-3 md:-mx-5 2xl:mx-0">
+  
           <Footer />
-        </div>
+      
       </body>
     </html>
   );

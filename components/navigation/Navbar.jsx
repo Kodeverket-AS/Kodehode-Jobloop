@@ -39,12 +39,12 @@ export function NavbarWhite() {
   return (
     <nav className="max-w-screen-2xl mx-auto">
       <div className="flex items-center justify-between">
-        <div className="p-4">
+        <div className="pl-4">
           <Link
             href="/"
             aria-label="Gå til landingssiden">
             <Image
-              className="w-52 lg:w-60"
+              className="w-52 lg:w-60 cursor-pointer"
               src={logoDesktopHvit}
               width={350}
               height={220}
@@ -60,7 +60,7 @@ export function NavbarWhite() {
                   key={page.name}
                   href={page.href}
                   aria-label={page.label}
-                  className="py-2 px-4 rounded-full border border-jobloop-primary-green font-medium text-kv-white bg-jobloop-primary-green/20 md:hover:bg-jobloop-primary-green/10  underline-offset-4">
+                  className="py-2 px-6 rounded-full border-2 border-jobloop-primary-green font-semibold text-kv-white bg-jobloop-primary-green/20 hover:bg-jobloop-primary-green hover:border-jobloop-primary-orange transition-all duration-300 shadow-md hover:shadow-lg cursor-pointer">
                   {page.name}
                 </Link>
               ) : (
@@ -68,7 +68,7 @@ export function NavbarWhite() {
                   key={page.name}
                   href={page.href}
                   aria-label={page.label}
-                  className="px-4 font-bold text-kv-white md:hover:underline underline-offset-4">
+                  className="px-4  text-lg  text-kv-white md:hover:underline underline-offset-4 cursor-pointer">
                   {page.name}
                 </Link>
               )
@@ -92,7 +92,7 @@ export function NavbarColor({ textWhite }) {
             href="/"
             aria-label="Gå til landingssiden">
             <Image
-              className="w-52 lg:w-60"
+              className="w-52 lg:w-60 cursor-pointer"
               src={logoDesktopFarge}
               width={350}
               height={220}
@@ -108,9 +108,9 @@ export function NavbarColor({ textWhite }) {
                   key={page.name}
                   href={page.href}
                   aria-label={page.label}
-                  className={`py-2 px-4 rounded-full border border-jobloop-primary-green bg-jobloop-primary-green/10 font-medium ${
-                    !textWhite ? "text-neutral-950" : "text-kv-black"
-                  } md:hover:bg-jobloop-primary-green/20`}>
+                  className={`py-2 px-6 rounded-full border-2 border-jobloop-primary-green bg-jobloop-primary-green/10 font-semibold transition-all duration-300 shadow-md hover:shadow-lg hover:bg-jobloop-primary-green hover:border-jobloop-primary-orange cursor-pointer ${
+                    !textWhite ? "text-neutral-950 hover:text-kv-white" : "text-kv-black hover:text-kv-white"
+                  }`}>
                   {page.name}
                 </Link>
               ) : (
@@ -118,7 +118,7 @@ export function NavbarColor({ textWhite }) {
                   key={page.name}
                   href={page.href}
                   aria-label={page.label}
-                  className={`px-4 md:portrait:pl-4 md:portrait:pr-2 lg:px-4 font-bold ${
+                  className={`px-4 md:portrait:pl-4 md:portrait:pr-2 lg:px-4 text-lg font-medium cursor-pointer ${
                     !textWhite ? "text-neutral-900" : "text-kv-white"
                   } md:hover:underline underline-offset-4`}>
                   {page.name}

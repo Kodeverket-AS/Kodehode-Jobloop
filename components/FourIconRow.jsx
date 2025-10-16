@@ -9,18 +9,13 @@ import { RiTeamFill } from "react-icons/ri";
 
 const LanguageCard = ({ title, content, logo, alt, icon }) => {
   return (
-    <div className="pb-4 md:pb-8 w-full">
-      {/* <Image
-        src={<GoGoal />}
-        width={300}
-        height={300}
-        className="w-20 pb-4 m-auto"
-        alt={alt || "HTML logo"}
-      /> */}
-      <div className="text-center flex flex-col items-center">
-        {icon}
-        <h3 className="text-lg md:text-xl lg:text-2xl">{title}</h3>
-        <p className="text-kv-black/70">{content}</p>
+    <div className="group bg-kv-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-jobloop-primary-green/10 hover:border-jobloop-primary-green/30 p-6 text-center cursor-pointer">
+      <div className="flex flex-col items-center space-y-4">
+        <div className="p-3 rounded-xl bg-jobloop-primary-green/10 group-hover:bg-jobloop-primary-orange/10 transition-colors duration-300">
+          {icon}
+        </div>
+        <h3 className="text-lg md:text-xl font-bold text-kv-black">{title}</h3>
+        <p className="text-kv-black/70 leading-relaxed">{content}</p>
       </div>
     </div>
   );
@@ -28,14 +23,16 @@ const LanguageCard = ({ title, content, logo, alt, icon }) => {
 
 export default function FourIconsRow({ title, content, icons }) {
   return (
-    <section className="w-full  text-kv-black">
+    <section className="w-full text-kv-black">
       {content && content.length !== 0 ? (
-        <div className="px-4 flex flex-col justify-center mx-auto">
-          <h3 className="text-2xl md:text-3xl text-center underline underline-offset-8 pb-12 decoration-jobloop-primary-orange">
-            {title}
-          </h3>
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="text-center mb-12">
+            <h3 className="text-3xl md:text-4xl font-bold text-kv-black mb-6 underline underline-offset-8 decoration-jobloop-primary-green">
+              {title}
+            </h3>
+          </div>
 
-          <div className="grid grid-cols-2 md:flex md:flex-row gap-4 md:gap-8 pb-8 justify-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <LanguageCard
               {...content[0]}
               icon={icons[0]}
@@ -44,7 +41,6 @@ export default function FourIconsRow({ title, content, icons }) {
               {...content[1]}
               icon={icons[1]}
             />
-
             <LanguageCard
               {...content[2]}
               icon={icons[2]}

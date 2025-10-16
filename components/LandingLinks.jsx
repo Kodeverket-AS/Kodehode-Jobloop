@@ -11,7 +11,7 @@ const LinkCard = ({ href, src, title, description }) => {
       <Link
         href={href}
         prefetch={true}
-        className="group block p-8 bg-kv-white rounded-2xl hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
+        className="group block p-8 bg-kv-white rounded-2xl hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 cursor-pointer">
         <div className="text-center">
           <div className="w-20 h-20 mx-auto mb-6 bg-gray-100 rounded-2xl flex items-center justify-center group-hover:bg-jobloop-primary-green group-hover:scale-105 transition-all duration-300">
             <Image

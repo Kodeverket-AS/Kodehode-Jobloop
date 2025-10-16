@@ -38,7 +38,7 @@ export default async function Contact() {
                 </div>
             </section>
 
-            <main className='flex flex-col items-center justify-between min-h-screen pt-28 space-y-16 mb-12 px-4'>
+            <main className='flex flex-col items-center justify-between min-h-screen pt-28 space-y-16 lg:space-y-24 mb-12 px-4'>
                 <section className='text-center space-y-8'>
                     <div className='max-w-4xl mx-auto space-y-6'>
                         <div className='space-y-4'>

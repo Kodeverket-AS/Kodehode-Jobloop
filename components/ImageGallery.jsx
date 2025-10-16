@@ -8,23 +8,23 @@ export default function ImageGallery({ content }) {
     <section className="w-screen py-8 bg-jobloop-primary-grey/5">
       <div className="max-w-screen-2xl mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-kv-black mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-kv-black mb-6 underline underline-offset-8 decoration-jobloop-primary-green">
             Se hvordan vi jobber
           </h2>
-          <p className="text-kv-black/70 text-lg max-w-2xl mx-auto">
+          <p className="text-kv-black/70 text-lg max-w-2xl mx-auto leading-relaxed">
             Praktisk undervisning, digitale verktøy og prosjektarbeid
           </p>
         </div>
         
         <div className="flex gap-2 md:gap-4 h-[800px]">
           <div className="flex flex-col gap-2 md:gap-4 w-2/3">
-            <figure className="relative rounded-2xl overflow-hidden cursor-pointer flex-1">
+            <figure className="group relative rounded-2xl overflow-hidden cursor-pointer flex-1 shadow-lg hover:shadow-xl transition-all duration-300">
               <Link href="/visjon" className="block h-full">
                 <Image
                   src={content[0].image1}
                   width={500}
                   height={500}
-                  className="object-cover w-full h-full transition-all saturate-0 hover:saturate-100 brightness-100 hover:brightness-105"
+                  className="object-cover w-full h-full transition-all duration-300 group-hover:scale-105 saturate-0 hover:saturate-100 brightness-100 hover:brightness-105"
                   alt={content[0].alt1 || ""}
                 />
               </Link>
@@ -40,13 +40,13 @@ export default function ImageGallery({ content }) {
                 </Link>
               </figcaption>
             </figure>
-            <figure className="relative rounded-2xl overflow-hidden cursor-pointer flex-1">
+            <figure className="group relative rounded-2xl overflow-hidden cursor-pointer flex-1 shadow-lg hover:shadow-xl transition-all duration-300">
               <Link href="/arbeidsgiver" className="block h-full">
                 <Image
                   src={content[0].image2}
                   width={500}
                   height={500}
-                  className="object-cover w-full h-full transition-all saturate-0 hover:saturate-100 brightness-100 hover:brightness-105"
+                  className="object-cover w-full h-full transition-all duration-300 group-hover:scale-105 saturate-0 hover:saturate-100 brightness-100 hover:brightness-105"
                   alt={content[0].alt2 || ""}
                 />
               </Link>
@@ -63,13 +63,13 @@ export default function ImageGallery({ content }) {
               </figcaption>
             </figure>
           </div>
-          <figure className="relative rounded-2xl overflow-hidden cursor-pointer w-1/3">
+          <figure className="group relative rounded-2xl overflow-hidden cursor-pointer w-1/3 shadow-lg hover:shadow-xl transition-all duration-300">
             <Link href="/kontakt" className="block h-full">
               <Image
                 src={content[0].image3}
                 width={500}
                 height={500}
-                className="object-cover w-full h-full transition-all saturate-0 hover:saturate-100 brightness-100 hover:brightness-105 hover:sepia hover:hue-rotate-12"
+                className="object-cover w-full h-full transition-all duration-300 group-hover:scale-105 saturate-0 hover:saturate-100 brightness-100 hover:brightness-105 hover:sepia hover:hue-rotate-12"
                 alt={content[0].alt3 || ""}
               />
             </Link>

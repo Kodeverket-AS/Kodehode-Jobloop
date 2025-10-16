@@ -9,31 +9,33 @@ export default function Results({ content }) {
       leftContent={
         <Image
           src={content.image}
-          width={800}
-          height={500}
+          width={600}
+          height={400}
           alt={content.alt}
-          className="w-full rounded-xl shadow-md"
+          className="w-full rounded-xl shadow-md max-h-[400px] object-cover object-top"
         />
       }
       rightContent={
-        <div className=" flex flex-col gap-8 w-full group">
-          <h2 className="underline underline-offset-8 decoration-jobloop-primary-orange group-hover:decoration-jobloop-primary-green">
+        <div className="flex flex-col gap-8 w-full group">
+          <h2 className="text-3xl md:text-4xl font-bold text-kv-black underline underline-offset-8 decoration-jobloop-primary-green group-hover:decoration-jobloop-primary-orange transition-all duration-300">
             Kodehode gir resultater
           </h2>
 
-          <div>
-            <blockquote className=" text-lg md:text-3xl pb-2 italic">
+          <div className="bg-jobloop-primary-green/5 rounded-2xl p-8 border border-jobloop-primary-green/10">
+            <blockquote className="text-lg md:text-2xl pb-4 italic text-kv-black/80 leading-relaxed">
               <PortableText value={content.content} />
             </blockquote>
-            <cite> - {content.person}</cite>
+            <cite className="text-jobloop-primary-green font-semibold"> - {content.person}</cite>
           </div>
+          
           <a
             href={content.link}
             target="blank"
             rel="noopener noreferrer"
             aria-label="lenke til artikkelen"
-            className="text-blue-600 hover:text-blue-700 group-hover:font-bold hover:underline underline-offset-4">
+            className="inline-flex items-center text-jobloop-primary-green hover:text-jobloop-primary-orange  transition-colors duration-200 relative group w-fit cursor-pointer">
             Les hele artikkelen på Kode24
+            <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-jobloop-primary-orange transition-all duration-300 group-hover:w-full"></span>
           </a>
         </div>
       }

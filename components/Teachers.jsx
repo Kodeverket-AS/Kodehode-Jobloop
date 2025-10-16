@@ -6,32 +6,39 @@ import { urlFor } from "@/app/page";
 import { LinkButtonContained } from "./Buttons";
 
 const VeilederCard = ({ imageUrl, imageAlt, name, role }) => (
-  <div className="flex flex-row w-full pb-10 mx-auto md:flex-col md:w-40 md:pb-0 md:mx-0 lg:w-48 ">
-    <figure className="w-1/2 pr-3 md:mb-2 md:w-full h-[170px] md:pr-0 md:h-[190px] sm:h-[250px]">
-      <Image
-        src={imageUrl}
-        width={300}
-        height={300}
-        className="relative object-cover w-full h-full border rounded-lg border-kv-white"
-        alt={imageAlt || ""}
-      />
-    </figure>
-    <div className="w-1/2 text-left md:w-full">
-      <b>{name}</b>
-      <p>{role}</p>
+  <Link href="/kontakt" className="block">
+    <div className="group bg-kv-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-jobloop-primary-green/10 hover:border-jobloop-primary-green/30 overflow-hidden cursor-pointer">
+      <figure className="w-full h-64 md:h-72 overflow-hidden">
+        <Image
+          src={imageUrl}
+          width={300}
+          height={400}
+          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+          alt={imageAlt || ""}
+        />
+      </figure>
+      <div className="p-6 text-center">
+        <h3 className="text-xl font-bold text-kv-black mb-2">{name}</h3>
+        <p className="text-jobloop-primary-green font-medium">{role}</p>
+      </div>
     </div>
-  </div>
+  </Link>
 );
 
 export default function Teachers({ content, title }) {
   //console.log(content[0]);
   return (
-    <section className="w-screen my-24 py-24 bg-jobloop-primary-orange/10">
-      <div className="flex flex-col items-center w-full">
-        <h2 className="underline decoration-4 pb-8 underline-offset-8 decoration-jobloop-primary-orange">
-          {title}
-        </h2>
-        <div className="flex flex-col-reverse md:flex-row justify-center gap-8 max-w-screen-2xl mx-auto p-4">
+    <section className="w-screen py-8 bg-jobloop-primary-grey/5">
+      <div className="max-w-7xl mx-auto px-4">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold text-kv-black mb-6 underline underline-offset-8 decoration-jobloop-primary-green">
+            {title}
+          </h2>
+          <p className="text-lg text-kv-black/70">
+            Møt våre erfarne veiledere som hjelper deg gjennom Kodehode-programmet
+          </p>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           <VeilederCard
             imageUrl={
               content[0].hotspot
@@ -112,10 +119,6 @@ export default function Teachers({ content, title }) {
             role={content[3].role}
           />
         </div>
-        <LinkButtonContained
-          path="/kontakt"
-          text="Kontakt oss"
-        />
       </div>
     </section>
   );

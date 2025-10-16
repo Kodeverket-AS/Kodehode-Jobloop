@@ -24,7 +24,7 @@ const CompetenceCard = ({ src, alt, title, content }) => (
 export default function Competence({ content1, content2 }) {
   return (
     <SectionComponent
-      reverseLayoutOrder={true}
+      reverseLayoutOrder={false}
       isBgColor={true}
       bgColorGreen={true}
       leftContent={

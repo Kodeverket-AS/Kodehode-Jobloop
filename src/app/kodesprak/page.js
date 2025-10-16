@@ -15,7 +15,7 @@ export default async function Techstack() {
   }
 
   return (
-    <main className="flex flex-col items-center justify-between min-h-screen pt-28 space-y-16 mb-12 px-4">
+    <main className="flex flex-col items-center justify-between min-h-screen pt-28 space-y-16 lg:space-y-24 my-12 px-4">
       <section className="relative w-full min-h-screen flex items-center justify-center">
       
         <div className="absolute inset-0 z-0">
