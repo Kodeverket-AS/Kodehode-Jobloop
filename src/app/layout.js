@@ -12,19 +12,48 @@ const roboto = Roboto({
 
 export const metadata = {
   title: "Kodehode: Kodekurs og rekruttering til IT-bransjen",
-  description:
-    "Dyktige junior-utviklere til din bedrift? Kodehode er et programmeringskurs med en praktisk tilnærming til IT-utvikler faget. Vi fokuserer på de viktigste og mest dagsaktuelle teknologiene for dagens og fremtidens marked. Sammen omdanner vi utenforskap til viktig og ettertraktet arbeidskraft.",
-  /*keywords: [
-    "Kode",
-    "Programmerings",
-    "AMO", 
-    "IT-Utvikler",
-    "Frontend",
+  description: "Dyktige junior-utviklere til din bedrift? Kodehode er et programmeringskurs med en praktisk tilnærming til IT-utvikler faget. Vi fokuserer på de viktigste og mest dagsaktuelle teknologiene for dagens og fremtidens marked. Sammen omdanner vi utenforskap til viktig og ettertraktet arbeidskraft.",
+  keywords: [
+    "kodekurs",
+    "programmeringskurs", 
+    "IT-utvikler",
+    "frontend utvikler",
+    "junior utvikler",
+    "rekruttering IT",
     "HTML",
     "CSS",
-    "Javascript",
+    "JavaScript",
     "React",
-  ],*/
+    "Next.js",
+    "Tailwind CSS",
+    "Node.js",
+    "MongoDB",
+    "Git",
+    "VS Code",
+    "Express",
+    ".NET",
+    "AMO",
+    "kodehode",
+    "jobloop"
+  ],
+  authors: [{ name: "Kodehode" }],
+  creator: "Kodehode",
+  publisher: "Kodehode",
+  robots: "index, follow",
+  openGraph: {
+    type: "website",
+    locale: "no_NB",
+    url: "https://kodehode.no",
+    title: "Kodehode: Kodekurs og rekruttering til IT-bransjen",
+    description: "Dyktige junior-utviklere til din bedrift? Kodehode er et programmeringskurs med en praktisk tilnærming til IT-utvikler faget.",
+    siteName: "Kodehode",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Kodehode: Kodekurs og rekruttering til IT-bransjen",
+    description: "Dyktige junior-utviklere til din bedrift? Kodehode er et programmeringskurs med en praktisk tilnærming til IT-utvikler faget.",
+  },
+  viewport: "width=device-width, initial-scale=1",
 };
 
 export default function RootLayout({ children }) {
@@ -32,14 +61,13 @@ export default function RootLayout({ children }) {
     <html
       lang="no-nb"
       className={roboto.className}>
-      <body className=" flex flex-col   mx-auto  bg-kv-white">
+      <body className=" flex flex-col   mx-auto  bg-kv-white overflow-x-hidden">
         <Navigation />
         <div className="mb-10" >
           {children}
         </div>
         <ScrollToTopButton />
-  
-          <Footer />
+        <Footer />
       
       </body>
     </html>

@@ -2,17 +2,17 @@
 
 import Link from "next/link";
 import { useState, useEffect } from "react";
-import { FaArrowUp } from "react-icons/fa";
 import { FaqDeltager } from "./FAQcomp";
 import { FaqBedrift } from "./FAQcomp";
 import { FaqVirk } from "./FAQcomp";
+import { FaArrowUp } from "react-icons/fa";
 
 export function ScrollToTopButton() {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
     function handleScroll() {
-      setIsVisible(window.scrollY > 0);
+      setIsVisible(window.scrollY > 300);
     }
 
     window.addEventListener("scroll", handleScroll);
@@ -27,17 +27,18 @@ export function ScrollToTopButton() {
   }
 
   return (
-    <button
-      onClick={scrollToTop}
-      aria-label="Scroll til toppen"
-      className={`z-50 p-4 fixed md:bottom-8 bottom-4 md:right-8 right-4 transition-all duration-200 bg-jobloop-primary-green text-kv-white rounded-full hover:scale-[0.90] hover:bg-jobloop-primary-green/90 shadow-lg hover:shadow-xl ${
-        isVisible ? "opacity-100 cursor-pointer" : "opacity-0 cursor-default"
-      }`}>
-      <FaArrowUp
-        className="w-6 h-6"
-        strokeWidth={1.5}
-      />
-    </button>
+    <div className="fixed bottom-6 right-0 left-0 z-50 pointer-events-none">
+      <div className="max-w-screen-2xl mx-auto px-4 flex justify-end">
+        <button
+          onClick={scrollToTop}
+          aria-label="Scroll til toppen"
+          className={`p-3 transition-all duration-300 bg-jobloop-primary-green text-kv-white rounded-full hover:scale-110 hover:bg-jobloop-primary-green/90 shadow-lg hover:shadow-xl cursor-pointer pointer-events-auto ${
+            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-2 pointer-events-none"
+          }`}>
+          <FaArrowUp className="w-5 h-5" />
+        </button>
+      </div>
+    </div>
   );
 }
 
