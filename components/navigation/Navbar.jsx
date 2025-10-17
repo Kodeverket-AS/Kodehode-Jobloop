@@ -37,7 +37,7 @@ const PagesArray = [
 
 export function NavbarWhite() {
   return (
-    <nav className="max-w-screen-2xl mx-auto">
+    <nav className="max-w-screen-2xl mx-auto mt-4">
       <div className="flex items-center justify-between">
         <div className="pl-4">
           <Link
@@ -85,7 +85,7 @@ export function NavbarWhite() {
 
 export function NavbarColor({ textWhite }) {
   return (
-    <nav className="max-w-screen-2xl mx-auto">
+    <nav className="max-w-screen-2xl mx-auto mt-4">
       <div className="flex items-center justify-between 3xl:justify-around">
         <div className="flex flex-row items-end p-4">
           <Link

@@ -26,8 +26,8 @@ const contactInformation = [
 export default function Footer() {
   return (
     <footer className="w-screen bg-jobloop-primary-grey/5 border-t border-jobloop-primary-green/20">
-      <div className="container mx-auto px-6 py-8">
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-8 ">
+      <div className="container mx-auto md:px-6 py-8">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-10 md:gap-8 ">
           <div>
             <h3 className="text-xl font-bold mb-4 text-jobloop-primary-green">Kontakt</h3>
             <div className="space-y-3">
@@ -116,7 +116,7 @@ export default function Footer() {
           </div>
         </div>
         
-        <div className="mt-8 pt-6 border-t border-jobloop-primary-green/20 text-center">
+        <div className="mt-8 pt-6 border-t border-jobloop-primary-green/20 md:text-center mx-auto">
           <p className="text-kv-black/60">
             &copy; {new Date().getFullYear()} Kodehode. Alle rettigheter forbeholdt.
           </p>

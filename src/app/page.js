@@ -13,7 +13,7 @@ export default async function Home() {
     return (
       <>
 
-               <main className="flex flex-col items-center justify-between min-h-screen space-y-16 lg:space-y-24 mb-12 px-4">
+               <main className="flex flex-col items-center justify-between min-h-screen space-y-16 lg:space-y-24 mb-12 px-4 ">
 
         <LandingHero content={data.heroSub[1]} />
           <LandingLinks />
