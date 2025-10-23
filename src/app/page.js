@@ -4,23 +4,31 @@ import LandingHero from "../../components/LandingHero";
 import LandingLinks from "../../components/LandingLinks";
 import LandingVisjon from "../../components/LandingVisjon";
 import imageUrlBuilder from "@sanity/image-url";
-// import LinkToFaq from "../../components/LinkToFaq";
-// import LinkToKontakt from "../../components/LinkToKontakt";
+import LinkToFaq from "../../components/LinkToFaq";
+import LinkToKontakt from "../../components/LinkToKontakt";
 // Hello check
 
 export default async function Home() {
   const data = await getData();
-  return (
-    <main className="flex flex-col items-center min-h-screen">
-      <LandingHero content={data.heroSub[1]} />
-      <section className=" flex flex-col px-4 pb-12 items-center">
-        <LandingLinks />
-        <LandingVisjon content={data.visionLanding[0]} />
-      </section>
-      {/* <LinkToFaq /> */}
-      {/* <LinkToKontakt /> */}
-    </main>
-  );
+    return (
+      <>
+
+               <main className="flex flex-col items-center justify-between min-h-screen space-y-16 lg:space-y-24 mb-12 px-4 ">
+
+        <LandingHero content={data.heroSub[1]} />
+          <LandingLinks />
+          <LandingVisjon content={data.visionLanding[0]} />
+          <div className="flex flex-col lg:flex-row lg:items-stretch gap-8 w-full max-w-6xl">
+            <div className="flex-1">
+              <LinkToFaq />
+            </div>
+            <div className="flex-1">
+              <LinkToKontakt />
+            </div>
+          </div>
+        </main>
+      </>
+    );
 }
 
 const builder = imageUrlBuilder(Client);

@@ -5,7 +5,7 @@ export default function ContactComp({ imageOne, title, content, _id, alt }) {
   return (
     <SectionComponent
       isBgColor={true}
-      bgColorOrange
+      bgColorGrey
       leftContent={
         <Image
           width={400}

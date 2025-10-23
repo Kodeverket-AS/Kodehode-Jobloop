@@ -1,12 +1,8 @@
 import { getData } from "../page";
 import ContactComp from "../../../components/ContactComp";
-import {
-  VisionTextLeft,
-  VisionTextRight,
-} from "../../../components/Vision2Part";
+import { SectionComponent, TextBlock } from "../../../components/SectionComponents";
 import VisionTop from "../../../components/VisionSub";
-import Link from "next/link";
-import { LinkButtonContained } from "../../../components/Buttons";
+import Image from "next/image";
 
 export const metadata = {
   title: "Vår Visjon: Det finnes et mangfold av potensial | Kodehode",
@@ -17,25 +13,55 @@ export default async function Vision() {
 
   return (
     <>
-      <main className="flex flex-col items-center min-h-screen py-20">
-        <div className="flex flex-col gap-8 items-center ">
-          <VisionTop
-            content={data.heroSub[3]}
-            key={data.heroSub[3]._id}
+      <main className="flex flex-col items-center justify-between min-h-screen pt-28 space-y-16 lg:space-y-24 my-12 px-4">
+        <VisionTop
+          content={data.heroSub[3]}
+          key={data.heroSub[3]._id}
+        />
+        <SectionComponent
+            leftContent={
+              <TextBlock
+                title="Gløde"
+                content={data.VisionSections[1].content}
+                isButton={true}
+                path="https://glode.no/"
+                text="Gå til Gløde.no"
+                isContained={false}
+                isOrange={false}
+              />
+            }
+            rightContent={
+              <Image
+                width={1200}
+                height={800}
+                className="w-full h-auto object-cover"
+                src={data.VisionSections[1].ImageTwo}
+                alt={data.VisionSections[1].AltTwo || ""}
+              />
+            }
           />
-          <VisionTextRight
-            content={data.VisionSections[1]}
-            link="https://glode.no/"
-            linkText="Gå til Gløde.no"
-            linkAria="Les mer om Gløde på deres nettside"
-            title="Gløde"
-          />
-          <VisionTextLeft
-            content={data.VisionSections[0]}
-            link="https://www.fontenehusetbergen.no/"
-            linkText="Gå til Fontenehuset.no"
-            linkAria="Les mer om Fontenehuset Bergen på deres nettside"
-            title="Fontenehuset Bergen"
+          <SectionComponent
+            reverseLayoutOrder={true}
+            leftContent={
+              <TextBlock
+                title="Fontenehuset Bergen"
+                content={data.VisionSections[0].content}
+                isButton={true}
+                path="https://www.fontenehusetbergen.no/"
+                text="Gå til Fontenehuset.no"
+                isContained={false}
+                isOrange={false}
+              />
+            }
+            rightContent={
+              <Image
+                width={1200}
+                height={800}
+                className="w-full h-auto object-cover"
+                src={data.VisionSections[0].ImageTwo}
+                alt={data.VisionSections[0].AltTwo || ""}
+              />
+            }
           />
 
           {/* <div className="w-full">
@@ -49,14 +75,13 @@ export default async function Vision() {
           {/* <div className="flex justify-center h-fit max-w-[1600px] min-h-fit mb-8 md:mb-16">
             <EndorsementComp data={data.endorsement} />
           </div> */}
-          <ContactComp
-            key={data.kontaktseksjon[0]._id}
-            imageOne={data.kontaktseksjon[0].ImageOne}
-            title={data.kontaktseksjon[0].title}
-            content={data.kontaktseksjon[0].content}
-            alt={data.kontaktseksjon[0].altOne}
-          />
-        </div>
+        <ContactComp
+          key={data.kontaktseksjon[0]._id}
+          imageOne={data.kontaktseksjon[0].ImageOne}
+          title={data.kontaktseksjon[0].title}
+          content={data.kontaktseksjon[0].content}
+          alt={data.kontaktseksjon[0].altOne}
+        />
       </main>
     </>
   );

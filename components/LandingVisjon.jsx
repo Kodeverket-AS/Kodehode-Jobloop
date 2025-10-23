@@ -6,13 +6,12 @@ export default function LandingVisjon({ content }) {
   return (
     <SectionComponent
       leftContent={
-        <div>
+        <div className="relative w-full h-[400px]">
           <Image
             src={content.image}
-            width={500}
-            height={500}
             alt={content.alt || ""}
-            className="w-full rounded-xl"
+            fill
+            className="object-cover rounded-xl"
           />
         </div>
       }

@@ -26,7 +26,9 @@ export const SectionComponent = ({
   isBgColor = false, //boolean to turn on/off background color
   bgColorGreen = false, //turn on/off jobloop-green 10opactity background
   bgColorOrange = false, //turn on/off jobloop-orange 10opactity background
+  bgColorGrey = false, //turn on/off jobloop-grey 5opactity background
   reverseLayoutOrder = false, //boolean to reverse layout direction aka L-R or R-L on screens below xl
+  centerVertically = false, //boolean to center content vertically
 }) => {
   let backgroundColor = "";
   if (isBgColor) {
@@ -34,17 +36,26 @@ export const SectionComponent = ({
       ? "bg-jobloop-primary-green/10"
       : bgColorOrange
       ? "bg-jobloop-primary-orange/10"
+      : bgColorGrey
+      ? "bg-jobloop-primary-grey/5"
       : "";
   }
 
-  const flexDirection = reverseLayoutOrder ? "flex-col-reverse" : "flex-col";
-
   return (
-    <section className={`w-screen py-24 ${backgroundColor}`}>
-      <div
-        className={`flex ${flexDirection} xl:flex-row justify-center gap-4 xl:gap-8 max-w-screen-2xl mx-auto px-4`}>
-        <div className="w-full">{leftContent}</div>
-        <div className="w-full">{rightContent}</div>
+    <section className={`w-screen ${backgroundColor} ${isBgColor ? 'py-8' : ''}`}>
+      <div className="max-w-screen-2xl mx-auto px-4">
+        <div className={`flex flex-col lg:flex-row gap-8 ${reverseLayoutOrder ? 'lg:flex-row-reverse' : ''}`}>
+          {/* Image always on top for mobile and tablet */}
+          <div className="flex-1 flex items-center justify-center lg:order-2">
+            <div className="w-full [&_img]:w-full [&_img]:h-auto [&_img]:object-cover [&_img]:rounded-xl">
+              {rightContent}
+            </div>
+          </div>
+          {/* Text content */}
+          <div className="flex-1 flex items-center lg:order-1">
+            {leftContent}
+          </div>
+        </div>
       </div>
     </section>
   );
@@ -61,9 +72,13 @@ export const TextBlock = ({
   text: buttonText, // if isButton = true, text for button
   isContained, //boolean to determine if button is contained or not
   isOrange, // boolean to determine if underline is orange or green
+  isCentered = false, // boolean to center text
 }) => {
+  const textAlignment = isCentered ? "text-center" : "text-left";
+  const buttonAlignment = isCentered ? "justify-center" : "justify-start";
+  
   return (
-    <article className="flex flex-col gap-4 w-full">
+    <article className={`flex flex-col gap-4 w-full ${textAlignment} my-auto`}>
       <h2
         className={`text-kv-black xl:text-4xl underline underline-offset-8 pb-2 ${
           isOrange
@@ -73,7 +88,7 @@ export const TextBlock = ({
         {title}
       </h2>
 
-      <div className="text-kv-black/70 text-base xl:text-xl xl:leading-relaxed xl:max-w-[70ch]">
+      <div className={`text-kv-black/70 text-base xl:text-xl xl:leading-relaxed ${isCentered ? "max-w-4xl mx-auto" : "xl:max-w-[70ch]"}`}>
         {content ? (
           <>
             <div>
@@ -88,7 +103,7 @@ export const TextBlock = ({
       </div>
 
       {isButton && (
-        <div className="flex py-4">
+        <div className={`flex py-4 ${buttonAlignment}`}>
           {isContained ? (
             <LinkButtonContained
               path={buttonPath}
