@@ -6,7 +6,7 @@ import Image from "next/image";
 // import logoKodeverketHvit from "../public/logoKodeverketHvit.svg";
 import { MdOutlineOpenInNew } from "react-icons/md";
 
-// Contact information for the footer
+// Contact information for the footer.
 const contactInformation = [
   {
     name: "Deltaker/Oppdragsgiver",
@@ -17,8 +17,8 @@ const contactInformation = [
   {
     name: "Bedrifter",
     email: "christer@jobloop.no",
-    phoneDisplay: "+47 92 88 28 04",
-    phoneLink: "+4792882804",
+    phoneDisplay: "+47 41 39 23 35",
+    phoneLink: "+4751292335",
   },
   
 ];
