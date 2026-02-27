@@ -30,16 +30,16 @@ export default async function Techstack() {
           </div>
 
           <div className="relative z-10 px-3 sm:px-4 md:px-6 py-12 sm:py-16 md:py-20 min-h-[60vh] sm:min-h-[70vh] md:min-h-screen flex flex-col justify-center">
-            <div className="w-full max-w-[92%] sm:max-w-[85%] md:max-w-[75%] lg:max-w-[70%] mx-auto bg-white/80 backdrop-blur-sm rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 lg:p-12 shadow-xl sm:shadow-2xl">
-            <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl underline underline-offset-4 sm:underline-offset-8 decoration-jobloop-primary-green text-kv-black mb-4 sm:mb-6">
+            <div className="w-full max-w-[92%] sm:max-w-[85%] md:max-w-[75%] lg:max-w-[70%] mx-auto bg-white/80 backdrop-blur-sm rounded-xl sm:rounded-2xl p-6 md:p-8 lg:p-12 shadow-xl sm:shadow-2xl">
+            <h1 className="text-kv-black text-2xl md:text-3xl xl:text-4xl underline underline-offset-8 decoration-jobloop-primary-green pb-2 mb-6">
               {data.heroSub[5].title}
             </h1>
-            <div className="text-base sm:text-lg md:text-xl lg:text-2xl text-kv-black/80 mb-6 sm:mb-8">
+            <div className="text-kv-black/70 text-base xl:text-xl xl:leading-relaxed mb-8">
               <PortableText value={data.heroSub[5].content} />
             </div>
             
             <div className="pt-6 sm:pt-8 border-t border-jobloop-primary-green/20">
-              <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-kv-black mb-4 sm:mb-6 text-center">
+              <h2 className="text-xl md:text-2xl font-bold text-kv-black mb-6 text-center">
                 Teknologier vi bruker
               </h2>
               <div className="grid grid-cols-3 md:grid-cols-4 gap-4 md:gap-6 lg:grid-cols-6 ">

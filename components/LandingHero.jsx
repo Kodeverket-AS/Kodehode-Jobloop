@@ -34,6 +34,7 @@ export default function LandingHero({ content }) {
         leftContent={
           <TextBlock
             title={missionTitle}
+            titleClassName="leading-relaxed"
             contentString={missionStatement}
             // When getting data from sanity, use the below code instead of contentString.
             // Remember to change the missionStatement variable to = content.content
