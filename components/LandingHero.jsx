@@ -4,9 +4,8 @@ import danialigdery from "../public/danialigdery.jpg";
 import { SectionComponent, TextBlock } from "./SectionComponents";
 
 export default function LandingHero({ content }) {
-  const missionTitle = "Vi utdanner morgendagens utviklere";
-  const missionStatement =
-    "Vi rekrutterer kandidater som av ulike årsaker har havnet utenfor arbeidslivet og trener dem opp til å bli lovende junior utviklere. Gjennom en kombinasjon av teoretisk opplæring og praksis vil kandidatene lære seg de viktigste verktøyene for å bli klar til en karriere innen utvikling. Vårt fokus er å finne dyktige mennesker som sammen blir en god match.";
+  const missionTitle = "Menneskelig talent i et AI-drevet og mer digitalisert arbeidsliv";
+  const missionStatement = `JobLoop mobiliserer og utvikler IT talenter gjennom mestringsbasert læring og praksisnær erfaring – som passer i dag og i årene som kommer. Gjennom tett samarbeid med næringsliv og offentlig sektor utvikler deltakerne ferdigheter innen digital problemløsning, utvikling, systemforståelse, AI-assistert arbeid og teknologisk verdiskaping. JobLoop kvalifiserer mennesker til arbeid i et digitalt arbeidsliv – og styrker fremtidens kompetanse.`;
   // const missionStatement = content.content;
 
   return (
