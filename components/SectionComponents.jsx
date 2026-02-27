@@ -73,7 +73,8 @@ export const TextBlock = ({
   isContained, //boolean to determine if button is contained or not
   isOrange, // boolean to determine if underline is orange or green
   isCentered = false, // boolean to center text
-  titleClassName = "", // optional extra classes for the title (e.g. leading-relaxed)
+  titleClassName = "", // optional extra classes for the title
+  titleStyle, // optional inline style for the title (e.g. { lineHeight: 1.6 })
 }) => {
   const textAlignment = isCentered ? "text-center" : "text-left";
   const buttonAlignment = isCentered ? "justify-center" : "justify-start";
@@ -81,6 +82,7 @@ export const TextBlock = ({
   return (
     <article className={`flex flex-col gap-4 w-full ${textAlignment} my-auto`}>
       <h2
+        style={titleStyle}
         className={`text-kv-black xl:text-4xl underline underline-offset-8 pb-2 ${titleClassName} ${
           isOrange
             ? "decoration-jobloop-primary-orange"
