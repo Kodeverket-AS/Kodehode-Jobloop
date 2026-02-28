@@ -29,30 +29,15 @@ export default function Competence({ content1, content2 }) {
       bgColorGreen={true}
       leftContent={
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-4 justify-between md:justify-evenly">
-          <CompetenceCard
-            src={content2[0].logo}
-            alt={content2[0].alt || ""}
-            title={content2[0].title}
-            content={content2[0].content}
-          />
-          <CompetenceCard
-            src={content2[1].logo}
-            alt={content2[1].alt || ""}
-            title={content2[1].title}
-            content={content2[1].content}
-          />
-          <CompetenceCard
-            src={content2[2].logo}
-            alt={content2[2].alt || ""}
-            title={content2[2].title}
-            content={content2[2].content}
-          />
-          <CompetenceCard
-            src={content2[3].logo}
-            alt={content2[3].alt || ""}
-            title={content2[3].title}
-            content={content2[3].content}
-          />
+          {content2?.map((item) => (
+            <CompetenceCard
+              key={item._id}
+              src={item.logo}
+              alt={item.alt || ""}
+              title={item.title}
+              content={item.content}
+            />
+          ))}
         </div>
       }
       rightContent={
