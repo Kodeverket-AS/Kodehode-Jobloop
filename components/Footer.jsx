@@ -16,9 +16,9 @@ const contactInformation = [
   },
   {
     name: "Bedrifter",
-    email: "christer@jobloop.no",
-    phoneDisplay: "+47 41 39 23 35",
-    phoneLink: "+4751292335",
+    email: "daniel.g@jobloop.no",
+    phoneDisplay: "+47 923 52 363",
+    phoneLink: "+4792352363",
   },
   
 ];
