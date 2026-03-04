@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import { SectionComponent, TextBlock } from "./SectionComponents";
+import { TextBlock } from "./SectionComponents";
 
 const CompetenceCard = ({ src, alt, title, content }) => (
   <div className="group bg-kv-white w-full flex flex-col shadow-sm shadow-jobloop-primary-green hover:shadow-lg p-4 rounded-lg transition-all duration-300">
@@ -23,45 +23,25 @@ const CompetenceCard = ({ src, alt, title, content }) => (
 
 export default function Competence({ content1, content2 }) {
   return (
-    <SectionComponent
-      reverseLayoutOrder={false}
-      isBgColor={true}
-      bgColorGreen={true}
-      leftContent={
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-4 justify-between md:justify-evenly">
-          <CompetenceCard
-            src={content2[0].logo}
-            alt={content2[0].alt || ""}
-            title={content2[0].title}
-            content={content2[0].content}
-          />
-          <CompetenceCard
-            src={content2[1].logo}
-            alt={content2[1].alt || ""}
-            title={content2[1].title}
-            content={content2[1].content}
-          />
-          <CompetenceCard
-            src={content2[2].logo}
-            alt={content2[2].alt || ""}
-            title={content2[2].title}
-            content={content2[2].content}
-          />
-          <CompetenceCard
-            src={content2[3].logo}
-            alt={content2[3].alt || ""}
-            title={content2[3].title}
-            content={content2[3].content}
-          />
-        </div>
-      }
-      rightContent={
+    <section className="w-screen bg-jobloop-primary-green/10 py-8">
+      <div className="max-w-screen-2xl mx-auto px-4 flex flex-col gap-8">
         <TextBlock
           title={content1.title}
           content={content1.content}
           isOrange={false}
         />
-      }
-    />
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+          {content2?.map((item) => (
+            <CompetenceCard
+              key={item._id}
+              src={item.logo}
+              alt={item.alt || ""}
+              title={item.title}
+              content={item.content}
+            />
+          ))}
+        </div>
+      </div>
+    </section>
   );
 }

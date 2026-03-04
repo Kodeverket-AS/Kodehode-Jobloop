@@ -48,6 +48,39 @@ export default async function About() {
             }
           />
 
+          <section className="w-full max-w-screen-2xl mx-auto px-4">
+            <article className="flex flex-col gap-6 w-full my-auto py-10 px-6 md:py-12 md:px-10 rounded-2xl bg-jobloop-primary-green/5 border-l-4 border-jobloop-primary-green shadow-sm">
+              <h2 className="text-kv-black text-2xl md:text-3xl xl:text-4xl underline underline-offset-8 pb-2 decoration-jobloop-primary-green">
+                Tilpasning til et AI-drevet arbeidsliv
+              </h2>
+              <div className="text-kv-black/70 text-base xl:text-xl xl:leading-relaxed space-y-4">
+                <p>
+                  Arbeidslivet endrer seg raskt som følge av kunstig intelligens og ny teknologi. JobLoop
+                  videreutvikler derfor kontinuerlig det faglige innholdet i Kodehode for å sikre at kompetansen
+                  vi utvikler er relevant for virksomhetenes behov – både i dag og i årene som kommer.
+                </p>
+                <p>
+                  Gjennom smidige læreplaner, tett samarbeid med IT-bransjen og innsikt fra forskningsmiljøer
+                  ved NTNU og SINTEF, identifiserer vi ferdigheter med varig verdi og tilpasser opplæringen til
+                  endrede kompetansebehov. Samtidig arbeider en dedikert prosjektleder med å integrere
+                  kunstig intelligens og ny teknologi i læreplaner og undervisning, i tråd med JobLoops
+                  KI-strategi og tydelige styringsmål fulgt opp av styret.
+                </p>
+                <p>
+                  Kodehode utvikles derfor løpende mot kompetanse innen AI-assistert arbeid,
+                  systemforståelse, sikker drift, dataforståelse og digital implementering. Tett dialog med
+                  arbeidslivet sikrer at opplæringen dreies mot roller med varig etterspørsel og bort fra sårbar
+                  spesialisering.
+                </p>
+                <p>
+                  Slik sikrer JobLoop at deltakerne utvikler kompetanse virksomheter faktisk trenger – og at
+                  Kodehode til enhver tid møter kompetansebehovene i et stadig mer digitalt og AI-drevet
+                  arbeidsliv.
+                </p>
+              </div>
+            </article>
+          </section>
+
           <JobloopPodium content={data.about}           />
       </main>
     </>
