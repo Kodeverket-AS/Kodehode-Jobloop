@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import { SectionComponent, TextBlock } from "./SectionComponents";
+import { TextBlock } from "./SectionComponents";
 
 const CompetenceCard = ({ src, alt, title, content }) => (
   <div className="group bg-kv-white w-full flex flex-col shadow-sm shadow-jobloop-primary-green hover:shadow-lg p-4 rounded-lg transition-all duration-300">
@@ -23,12 +23,14 @@ const CompetenceCard = ({ src, alt, title, content }) => (
 
 export default function Competence({ content1, content2 }) {
   return (
-    <SectionComponent
-      reverseLayoutOrder={false}
-      isBgColor={true}
-      bgColorGreen={true}
-      leftContent={
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-4 justify-between md:justify-evenly">
+    <section className="w-screen bg-jobloop-primary-green/10 py-8">
+      <div className="max-w-screen-2xl mx-auto px-4 flex flex-col gap-8">
+        <TextBlock
+          title={content1.title}
+          content={content1.content}
+          isOrange={false}
+        />
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {content2?.map((item) => (
             <CompetenceCard
               key={item._id}
@@ -39,14 +41,7 @@ export default function Competence({ content1, content2 }) {
             />
           ))}
         </div>
-      }
-      rightContent={
-        <TextBlock
-          title={content1.title}
-          content={content1.content}
-          isOrange={false}
-        />
-      }
-    />
+      </div>
+    </section>
   );
 }
