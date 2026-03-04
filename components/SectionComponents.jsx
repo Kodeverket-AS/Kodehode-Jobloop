@@ -29,6 +29,7 @@ export const SectionComponent = ({
   bgColorGrey = false, //turn on/off jobloop-grey 5opactity background
   reverseLayoutOrder = false, //boolean to reverse layout direction aka L-R or R-L on screens below xl
   centerVertically = false, //boolean to center content vertically
+  textFirstOnColumn = false, 
 }) => {
   let backgroundColor = "";
   if (isBgColor) {
@@ -41,18 +42,19 @@ export const SectionComponent = ({
       : "";
   }
 
+  const orderLeft = textFirstOnColumn ? "order-1" : "lg:order-1";
+  const orderRight = textFirstOnColumn ? "order-2" : "lg:order-2";
+
   return (
     <section className={`w-screen ${backgroundColor} ${isBgColor ? 'py-8' : ''}`}>
       <div className="max-w-screen-2xl mx-auto px-4">
         <div className={`flex flex-col lg:flex-row gap-8 ${reverseLayoutOrder ? 'lg:flex-row-reverse' : ''}`}>
-          {/* Image always on top for mobile and tablet */}
-          <div className="flex-1 flex items-center justify-center lg:order-2">
+          <div className={`flex-1 flex items-center justify-center ${orderRight}`}>
             <div className="w-full [&_img]:w-full [&_img]:h-auto [&_img]:object-cover [&_img]:rounded-xl">
               {rightContent}
             </div>
           </div>
-          {/* Text content */}
-          <div className="flex-1 flex items-center lg:order-1">
+          <div className={`flex-1 flex items-center ${orderLeft}`}>
             {leftContent}
           </div>
         </div>
