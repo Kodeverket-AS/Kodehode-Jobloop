@@ -25,6 +25,8 @@ export default async function Bedrift() {
     data.mainTech[5],
     data.mainTech[6],
     data.mainTech[7],
+    data.mainTech[8],
+    data.mainTech[9],
   ];
 
   return (
