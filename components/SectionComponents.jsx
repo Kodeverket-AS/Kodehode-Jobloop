@@ -46,7 +46,7 @@ export const SectionComponent = ({
   const orderRight = textFirstOnColumn ? "order-2" : "lg:order-2";
 
   return (
-    <section className={`w-screen ${backgroundColor} ${isBgColor ? 'py-8' : ''}`}>
+    <section className={`w-screen ${backgroundColor} ${isBgColor ? 'py-8' : ''} [&_h1]:leading-relaxed [&_h2]:leading-relaxed`}>
       <div className="max-w-screen-2xl mx-auto px-4">
         <div className={`flex flex-col lg:flex-row gap-8 ${reverseLayoutOrder ? 'lg:flex-row-reverse' : ''}`}>
           <div className={`flex-1 flex items-center justify-center ${orderRight}`}>
