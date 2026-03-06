@@ -92,3 +92,33 @@ address {
   max-width: 75%;
   margin: auto;
 }
+
+
+@keyframes hero-fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(1rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.animate-hero-in {
+  animation: hero-fade-in-up 0.7s ease-out forwards;
+}
+.animate-hero-in-delay {
+  animation: hero-fade-in-up 0.7s ease-out 0.15s forwards;
+  opacity: 0;
+}
+
+
+a:focus-visible,
+button:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--kv-white), 0 0 0 4px var(--jobloop-primary-green);
+}
+a:focus-visible.rounded-full,
+button:focus-visible.rounded-full {
+  border-radius: 9999px;
+}

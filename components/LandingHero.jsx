@@ -20,10 +20,10 @@ export default function LandingHero({ content }) {
         />
         <div className="absolute inset-0 flex flex-col items-center justify-center bg-black/60 backdrop-blur-sm p-4 sm:p-6 text-center text-white">
           <div className="space-y-2 sm:space-y-4">
-            <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-9xl text-kv-white underline transition-all duration-500 underline-offset-4 sm:underline-offset-8 decoration-jobloop-primary-green group-hover:decoration-jobloop-primary-orange">
+            <h1 className="animate-hero-in text-3xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-9xl text-kv-white underline transition-all duration-300 underline-offset-4 sm:underline-offset-8 decoration-jobloop-primary-green group-hover:decoration-jobloop-primary-orange">
               {content.title}
             </h1>
-            <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-3xl text-kv-white">
+            <p className="animate-hero-in-delay text-sm sm:text-base md:text-lg lg:text-xl xl:text-3xl text-kv-white">
               Tilpasset opplæring og rekruttering til <br className="hidden sm:block" /> IT-bransjen
             </p>
           </div>

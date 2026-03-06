@@ -3,7 +3,7 @@ import Image from "next/image";
 import { TextBlock } from "./SectionComponents";
 
 const CompetenceCard = ({ src, alt, title, content }) => (
-  <div className="group bg-kv-white w-full flex flex-col shadow-sm shadow-jobloop-primary-green hover:shadow-lg p-4 rounded-lg transition-all duration-300">
+  <div className="group bg-kv-white w-full flex flex-col shadow-md hover:shadow-xl shadow-jobloop-primary-green/20 p-4 rounded-2xl transition-all duration-300">
     <Image
       src={src}
       width={64}

@@ -48,7 +48,7 @@ export function LinkButton({ path, text }) {
       href={path}
       title={`Gå til ${path}`}
       aria-label={`Lenke til underside ${path}`}
-      className="text-base w-full sm:w-fit py-4 px-8 rounded-full shadow-sm border-2 border-jobloop-primary-green hover:shadow-lg bg-kv-white hover:bg-jobloop-primary-green/10 transition-all scale-100 hover:scale-105 text-kv-black hover:text-jobloop-primary-green text-center cursor-pointer">
+      className="text-base w-full sm:w-fit py-4 px-8 rounded-full shadow-sm border-2 border-jobloop-primary-green hover:shadow-lg bg-kv-white hover:bg-jobloop-primary-green/10 transition-all duration-300 scale-100 hover:scale-105 text-kv-black hover:text-jobloop-primary-green text-center cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-jobloop-primary-green focus-visible:ring-offset-2">
       {text}
     </Link>
   );
@@ -59,7 +59,7 @@ export function LinkButtonContained({ path, text }) {
       href={path}
       title={`Gå til ${path}`}
       aria-label={`Lenke til underside ${path}`}
-      className="text-base w-full sm:w-fit py-4 px-8 rounded-full shadow-lg hover:shadow-xl bg-jobloop-primary-green hover:bg-kv-white hover:border-2 hover:border-jobloop-primary-green hover:text-jobloop-primary-green transition-all duration-300 transform hover:scale-105 text-kv-white text-center cursor-pointer">
+      className="text-base w-full sm:w-fit py-4 px-8 rounded-full shadow-lg hover:shadow-xl bg-jobloop-primary-green hover:bg-kv-white hover:border-2 hover:border-jobloop-primary-green hover:text-jobloop-primary-green transition-all duration-300 transform hover:scale-105 text-kv-white text-center cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-jobloop-primary-green focus-visible:ring-offset-2">
       {text}
     </Link>
   );
@@ -73,7 +73,7 @@ export function ExternalLinkButton({ path, text, ariaLabel }) {
       target="_blank"
       rel="noopener noreferrer"
       aria-label={ariaLabel}
-      className="text-base w-full sm:w-fit py-4 px-8 rounded-full shadow-lg hover:shadow-xl bg-jobloop-primary-orange hover:bg-jobloop-primary-orange/90 transition-all scale-100 hover:scale-105 text-kv-white text-center cursor-pointer">
+      className="text-base w-full sm:w-fit py-4 px-8 rounded-full shadow-lg hover:shadow-xl bg-jobloop-primary-orange hover:bg-jobloop-primary-orange/90 transition-all duration-300 scale-100 hover:scale-105 text-kv-white text-center cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-jobloop-primary-green focus-visible:ring-offset-2">
       {text}
     </a>
   );
@@ -84,7 +84,7 @@ export function LinkButtonColour({ path, text }) {
     <Link
       href={path}
       title={`Gå til ${path}`}
-      className="transition-all scale-100 hover:scale-105 px-8 py-4 text-sm md:text-base text-jobloop-primary-green border-2 border-jobloop-primary-green rounded-full hover:bg-jobloop-primary-green hover:border-jobloop-primary-green hover:text-kv-white focus:bg-jobloop-primary-green focus:text-kv-white w-full sm:w-fit text-center cursor-pointer">
+      className="transition-all duration-300 scale-100 hover:scale-105 px-8 py-4 text-sm md:text-base text-jobloop-primary-green border-2 border-jobloop-primary-green rounded-full hover:bg-jobloop-primary-green hover:border-jobloop-primary-green hover:text-kv-white focus:bg-jobloop-primary-green focus:text-kv-white w-full sm:w-fit text-center cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-jobloop-primary-green focus-visible:ring-offset-2">
       {text}
     </Link>
   );

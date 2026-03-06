@@ -4,7 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 // import logoJobloopHvit from "../public/logoJobloopHvit.svg";
 // import logoKodeverketHvit from "../public/logoKodeverketHvit.svg";
-import { MdOutlineOpenInNew } from "react-icons/md";
+import { MdOutlineOpenInNew, MdEmail, MdPhone } from "react-icons/md";
 
 // Contact information for the footer.
 const contactInformation = [
@@ -25,7 +25,7 @@ const contactInformation = [
 
 export default function Footer() {
   return (
-    <footer className="w-screen bg-jobloop-primary-grey/5 border-t border-jobloop-primary-green/20">
+    <footer className="w-screen bg-jobloop-primary-grey/10 border-t border-jobloop-primary-green/20">
       <div className="container mx-auto md:px-6 py-8">
         <div className="grid grid-cols-2 md:grid-cols-3 gap-10 md:gap-8 ">
           <div>
@@ -36,17 +36,17 @@ export default function Footer() {
                   <h4 className="font-semibold text-kv-black mb-2">{person.name}</h4>
                   <a 
                     href={`mailto:${person.email}`} 
-                    className="block text-kv-black/70 hover:text-kv-black transition-all duration-200 mb-1 relative group w-fit"
+                    className="flex items-center gap-2 text-kv-black/70 hover:text-jobloop-primary-orange transition-colors duration-200 mb-1 w-fit focus:outline-none focus-visible:ring-2 focus-visible:ring-jobloop-primary-green focus-visible:ring-offset-2 rounded"
                   >
+                    <MdEmail className="w-5 h-5 text-jobloop-primary-green shrink-0" aria-hidden />
                     {person.email}
-                    <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-jobloop-primary-orange transition-all duration-300 group-hover:w-full"></span>
                   </a>
                   <a 
                     href={`tel:${person.phoneLink}`} 
-                    className="block text-kv-black/70 hover:text-kv-black transition-all duration-200 relative group w-fit cursor-pointer"
+                    className="flex items-center gap-2 text-kv-black/70 hover:text-jobloop-primary-orange transition-colors duration-200 w-fit cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-jobloop-primary-green focus-visible:ring-offset-2 rounded"
                   >
+                    <MdPhone className="w-5 h-5 text-jobloop-primary-green shrink-0" aria-hidden />
                     {person.phoneDisplay}
-                    <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-jobloop-primary-orange transition-all duration-300 group-hover:w-full"></span>
                   </a>
                 </div>
               ))}
@@ -62,26 +62,23 @@ export default function Footer() {
                     href="https://jobloop.no/" 
                     target="_blank" 
                     rel="noopener noreferrer" 
-                    className="block text-kv-black/70 hover:text-kv-black transition-all duration-200 relative group w-fit cursor-pointer"
+                    className="block text-kv-black/70 hover:text-jobloop-primary-orange transition-colors duration-200 w-fit cursor-pointer"
                   >
                     Jobloop.no
-                    <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-jobloop-primary-orange transition-all duration-300 group-hover:w-full"></span>
                   </a>
                   <a 
                     href="https://www.kodeverketbergen.no/" 
                     target="_blank" 
                     rel="noopener noreferrer" 
-                    className="block text-kv-black/70 hover:text-kv-black transition-all duration-200 relative group w-fit cursor-pointer"
+                    className="block text-kv-black/70 hover:text-jobloop-primary-orange transition-colors duration-200 w-fit cursor-pointer"
                   >
                     Kodeverket.no
-                    <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-jobloop-primary-orange transition-all duration-300 group-hover:w-full"></span>
                   </a>
                   <Link 
                     href="/FAQ" 
-                    className="block text-kv-black/70 hover:text-kv-black transition-all duration-200 relative group w-fit cursor-pointer"
+                    className="block text-kv-black/70 hover:text-jobloop-primary-orange transition-colors duration-200 w-fit cursor-pointer"
                   >
                     FAQ
-                    <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-jobloop-primary-orange transition-all duration-300 group-hover:w-full"></span>
                   </Link>
                 </div>
               </div>
@@ -91,24 +88,21 @@ export default function Footer() {
                 <div className="space-y-2">
                   <Link 
                     href="/arbeidsgiver" 
-                    className="block text-kv-black/70 hover:text-kv-black transition-all duration-200 relative group w-fit cursor-pointer"
+                    className="block text-kv-black/70 hover:text-jobloop-primary-orange transition-colors duration-200 w-fit cursor-pointer"
                   >
                     Arbeidsgiver
-                    <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-jobloop-primary-orange transition-all duration-300 group-hover:w-full"></span>
                   </Link>
                   <Link 
                     href="/deltaker" 
-                    className="block text-kv-black/70 hover:text-kv-black transition-all duration-200 relative group w-fit cursor-pointer"
+                    className="block text-kv-black/70 hover:text-jobloop-primary-orange transition-colors duration-200 w-fit cursor-pointer"
                   >
                     Deltaker
-                    <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-jobloop-primary-orange transition-all duration-300 group-hover:w-full"></span>
                   </Link>
                   <Link 
                     href="/samarbeidspartner" 
-                    className="block text-kv-black/70 hover:text-kv-black transition-all duration-200 relative group w-fit cursor-pointer"
+                    className="block text-kv-black/70 hover:text-jobloop-primary-orange transition-colors duration-200 w-fit cursor-pointer"
                   >
                     Samarbeidspartner
-                    <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-jobloop-primary-orange transition-all duration-300 group-hover:w-full"></span>
                   </Link>
                 </div>
               </div>
