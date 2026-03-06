@@ -1,12 +1,9 @@
 "use client";
 
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
 import { NavbarWhite, NavbarColor } from "./Navbar";
-import MyPathname from "./MyPathname";
 
-// Definer URL endpoints.
-const landing = "/";
 const samarbeidspartner = "/samarbeidspartner";
 const arbeidsgiver = "/arbeidsgiver";
 const deltaker = "/deltaker";
@@ -18,27 +15,45 @@ const kontakt = "/kontakt";
 
 export default function Navigation() {
   const pathname = usePathname();
-  let navbar;
+  const [scrolled, setScrolled] = useState(false);
 
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 48);
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  let navbar;
   if (pathname === techstack) {
-    navbar = <NavbarColor />;
+    navbar = <NavbarColor pathname={pathname} />;
   } else if (pathname === about) {
-    navbar = <NavbarColor />;
+    navbar = <NavbarColor pathname={pathname} />;
   } else if (pathname === kontakt) {
-    navbar = <NavbarWhite />;
+    navbar = <NavbarWhite pathname={pathname} />;
   } else if (pathname === samarbeidspartner) {
-    navbar = <NavbarColor subpage="Samarbeidspartner" />;
+    navbar = <NavbarColor subpage="Samarbeidspartner" pathname={pathname} />;
   } else if (pathname === arbeidsgiver) {
-    navbar = <NavbarColor subpage="Arbeidsgiver" />;
+    navbar = <NavbarColor subpage="Arbeidsgiver" pathname={pathname} />;
   } else if (pathname === deltaker) {
-    navbar = <NavbarColor subpage="Deltaker" />;
+    navbar = <NavbarColor subpage="Deltaker" pathname={pathname} />;
   } else if (pathname === visjon) {
-    navbar = <NavbarColor />;
+    navbar = <NavbarColor pathname={pathname} />;
   } else if (pathname === faq) {
-    navbar = <NavbarColor />;
+    navbar = <NavbarColor pathname={pathname} />;
   } else {
-    navbar = <NavbarWhite />;
+    navbar = <NavbarWhite pathname={pathname} />;
   }
 
-  return <div className="absolute w-full z-50">{navbar}</div>;
+  const isLanding = pathname === "/";
+  return (
+    <div
+      className={`w-full z-50 transition-all duration-300 ${
+        isLanding
+          ? "absolute top-0 left-0 right-0"
+          : `sticky top-0 ${scrolled ? "bg-kv-white/95 backdrop-blur-md shadow-sm" : ""}`
+      }`}
+    >
+      {React.cloneElement(navbar, { scrolled: isLanding ? false : scrolled })}
+    </div>
+  );
 }

@@ -35,17 +35,20 @@ const PagesArray = [
   },
 ];
 
-export function NavbarWhite() {
+export function NavbarWhite({ pathname, scrolled }) {
+  const linkClass = scrolled ? "text-kv-black" : "text-kv-white";
   return (
     <nav className="max-w-screen-2xl mx-auto mt-4">
       <div className="flex items-center justify-between">
         <div className="pl-4">
           <Link
             href="/"
-            aria-label="Gå til landingssiden">
+            aria-label="Gå til landingssiden"
+            className="focus:outline-none focus-visible:ring-2 focus-visible:ring-jobloop-primary-green focus-visible:ring-offset-2 rounded"
+          >
             <Image
               className="w-52 lg:w-60 cursor-pointer"
-              src={logoDesktopHvit}
+              src={scrolled ? logoDesktopFarge : logoDesktopHvit}
               width={350}
               height={220}
               alt="Kodehode Logo"
@@ -53,14 +56,16 @@ export function NavbarWhite() {
           </Link>
         </div>
         <div>
-          <menu className="hidden h-auto p-4 md:block">
-            {PagesArray.map((page) =>
-              page.href === "/kontakt" ? (
+          <menu className="hidden h-auto p-4 md:flex md:items-center md:gap-1">
+            {PagesArray.map((page) => {
+              const isActive = pathname === page.href;
+              return page.href === "/kontakt" ? (
                 <Link
                   key={page.name}
                   href={page.href}
                   aria-label={page.label}
-                  className="py-2 px-6 rounded-full border-2 border-jobloop-primary-green font-semibold text-kv-white bg-jobloop-primary-green/20 hover:bg-jobloop-primary-green hover:border-jobloop-primary-orange transition-all duration-300 shadow-md hover:shadow-lg cursor-pointer">
+                  className="py-2 px-6 rounded-full border-2 border-jobloop-primary-green font-semibold text-kv-white bg-jobloop-primary-green/20 hover:bg-jobloop-primary-green hover:border-jobloop-primary-orange transition-all duration-300 shadow-md hover:shadow-lg cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-jobloop-primary-green focus-visible:ring-offset-2"
+                >
                   {page.name}
                 </Link>
               ) : (
@@ -68,11 +73,14 @@ export function NavbarWhite() {
                   key={page.name}
                   href={page.href}
                   aria-label={page.label}
-                  className="px-4  text-lg  text-kv-white md:hover:underline underline-offset-4 cursor-pointer">
+                  className={`px-4 text-lg ${linkClass} transition-all duration-300 rounded py-2 ${
+                    isActive ? "underline underline-offset-4 decoration-jobloop-primary-green decoration-2" : "md:hover:underline underline-offset-4"
+                  }`}
+                >
                   {page.name}
                 </Link>
-              )
-            )}
+              );
+            })}
           </menu>
           <div className="px-4">
             <HamburgerMenu hamFill="white" />
@@ -83,14 +91,16 @@ export function NavbarWhite() {
   );
 }
 
-export function NavbarColor({ textWhite }) {
+export function NavbarColor({ textWhite, pathname }) {
   return (
     <nav className="max-w-screen-2xl mx-auto mt-4">
       <div className="flex items-center justify-between 3xl:justify-around">
         <div className="flex flex-row items-end p-4">
           <Link
             href="/"
-            aria-label="Gå til landingssiden">
+            aria-label="Gå til landingssiden"
+            className="focus:outline-none focus-visible:ring-2 focus-visible:ring-jobloop-primary-green focus-visible:ring-offset-2 rounded"
+          >
             <Image
               className="w-52 lg:w-60 cursor-pointer"
               src={logoDesktopFarge}
@@ -101,16 +111,18 @@ export function NavbarColor({ textWhite }) {
           </Link>
         </div>
         <div>
-          <menu className="hidden h-auto p-4 md:block">
-            {PagesArray.map((page) =>
-              page.href === "/kontakt" ? (
+          <menu className="hidden h-auto p-4 md:flex md:items-center md:gap-1">
+            {PagesArray.map((page) => {
+              const isActive = pathname === page.href;
+              return page.href === "/kontakt" ? (
                 <Link
                   key={page.name}
                   href={page.href}
                   aria-label={page.label}
-                  className={`py-2 px-6 rounded-full border-2 border-jobloop-primary-green bg-jobloop-primary-green/10 font-semibold transition-all duration-300 shadow-md hover:shadow-lg hover:bg-jobloop-primary-green hover:border-jobloop-primary-orange cursor-pointer ${
+                  className={`py-2 px-6 rounded-full border-2 border-jobloop-primary-green bg-jobloop-primary-green/10 font-semibold transition-all duration-300 shadow-md hover:shadow-lg hover:bg-jobloop-primary-green hover:border-jobloop-primary-orange cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-jobloop-primary-green focus-visible:ring-offset-2 ${
                     !textWhite ? "text-neutral-950 hover:text-kv-white" : "text-kv-black hover:text-kv-white"
-                  }`}>
+                  }`}
+                >
                   {page.name}
                 </Link>
               ) : (
@@ -118,13 +130,14 @@ export function NavbarColor({ textWhite }) {
                   key={page.name}
                   href={page.href}
                   aria-label={page.label}
-                  className={`px-4 md:portrait:pl-4 md:portrait:pr-2 lg:px-4 text-lg font-medium cursor-pointer ${
+                  className={`px-4 md:portrait:pl-4 md:portrait:pr-2 lg:px-4 text-lg font-medium cursor-pointer transition-all duration-300 rounded py-2 ${
                     !textWhite ? "text-neutral-900" : "text-kv-white"
-                  } md:hover:underline underline-offset-4`}>
+                  } ${isActive ? "underline underline-offset-4 decoration-jobloop-primary-green decoration-2" : "md:hover:underline underline-offset-4"}`}
+                >
                   {page.name}
                 </Link>
-              )
-            )}
+              );
+            })}
           </menu>
           <div className="px-4">
             <HamburgerMenu hamFill="colour" />

@@ -93,7 +93,7 @@ export const TextBlock = ({
         {title}
       </h2>
 
-      <div className={`text-kv-black/70 text-base xl:text-xl xl:leading-relaxed ${isCentered ? "max-w-4xl mx-auto" : "xl:max-w-[70ch]"}`}>
+      <div className={`text-kv-black/70 text-base xl:text-xl leading-relaxed xl:leading-relaxed ${isCentered ? "max-w-4xl mx-auto" : "xl:max-w-[70ch]"}`}>
         {content ? (
           <>
             <div>
